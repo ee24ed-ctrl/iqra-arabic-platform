@@ -1,0 +1,451 @@
+﻿<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مكتبة 30 قصة مصورة – أقرأ بالعربية</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/awesome5.min.css">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/mobile-responsive.css">
+  <style>
+    body { direction: rtl; text-align: right; background: #f8fafc; font-family: Tahoma, Arial, sans-serif; }
+    .portal-header { background: #fff; box-shadow: 0 4px 18px rgba(0,0,0,0.06); padding: 12px 0; }
+    .portal-header img.logo { max-height: 50px; }
+    .portal-banner {
+      background: linear-gradient(120deg, rgba(28, 90, 166, 0.92), rgba(19, 64, 120, 0.92)),
+        url("../wp-content/uploads/2022/06/bg-page-title-copy.webp") center/cover no-repeat;
+      color: #fff; padding: 44px 0; text-align: center;
+    }
+    .portal-banner h1 { color: #fff; font-weight: 800; margin-bottom: 8px; }
+    .book-card {
+      background: #fff; border-radius: 16px; overflow: hidden;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); border: 1px solid #e2e8f0;
+      height: 100%; display: flex; flex-direction: column; transition: transform 0.2s;
+    }
+    .book-card:hover { transform: translateY(-4px); }
+    .book-cover { height: 160px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .book-cover svg { width: 100%; height: 100%; }
+    .book-body { padding: 16px; flex: 1; display: flex; flex-direction: column; }
+    .reader-box {
+      background: #fff; border-radius: 18px; padding: 28px;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.1); border: 1px solid #e2e8f0;
+      animation: fadeIn 0.3s ease-out;
+    }
+    .story-page-card {
+      border-radius: 16px; overflow: hidden; border: 2px solid #fde68a;
+      background: #fffbeb; margin-bottom: 18px;
+    }
+    .scene-frame {
+      padding: 12px; text-align: center;
+      min-height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .scene-frame svg { width: 100%; max-width: 440px; height: 210px; filter: drop-shadow(0 6px 12px rgba(15,23,42,0.12)); }
+    .scene-frame img.cartoon-img { width: 100%; max-width: 440px; height: 220px; object-fit: cover; border-radius: 14px; box-shadow: 0 8px 20px rgba(15,23,42,0.15); border: 3px solid #fff; }
+    .book-cover img.cover-img { width: 100%; height: 100%; object-fit: cover; }
+    .cartoon-float { animation: cartoonFloat 3s ease-in-out infinite; }
+    @keyframes cartoonFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-5px); } }
+    .story-text { font-size: 1.28rem; line-height: 2.1; color: #1e293b; padding: 18px 22px; text-align: center; font-weight: 600; }
+    .reader-box { position: relative; overflow: hidden; }
+    .quiz-panel {
+      padding: 22px; background: linear-gradient(180deg, #ffffff, #f8fafc);
+      border-top: 2px dashed #fde68a;
+    }
+    .quiz-badge {
+      display: inline-block; background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: #fff; font-weight: 800; font-size: 0.9rem; padding: 5px 14px; border-radius: 50px;
+    }
+    .quiz-question { font-size: 1.25rem; font-weight: 800; color: #0f172a; margin: 12px 0 16px; }
+    .quiz-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+    .choice-btn {
+      display: flex; align-items: center; gap: 10px; text-align: right;
+      font-size: 1.05rem; font-weight: 700; padding: 12px 16px; border-radius: 14px;
+      border: 2px solid #cbd5e1; background: #fff; color: #1e293b; cursor: pointer;
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+      transition: transform 0.18s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    }
+    .choice-btn:hover { transform: translateY(-3px); border-color: #6366f1; background: #eef2ff; box-shadow: 0 8px 18px rgba(99, 102, 241, 0.16); }
+    .choice-letter {
+      width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: #e0e7ff; color: #4338ca; font-weight: 800; font-size: 0.95rem;
+    }
+    .choice-btn.ok { border-color: #16a34a; background: linear-gradient(135deg, #dcfce7, #bbf7d0); color: #166534; animation: popSuccess 0.42s ease; }
+    .choice-btn.ok .choice-letter { background: #16a34a; color: #fff; }
+    .choice-btn.bad { border-color: #dc2626; background: #fee2e2; color: #991b1b; animation: shakeWrong 0.38s ease; }
+    .choice-btn.bad .choice-letter { background: #dc2626; color: #fff; }
+    .quiz-reward {
+      padding: 14px 18px; border-radius: 14px; font-weight: 800; font-size: 1.05rem;
+      animation: fadeIn 0.3s ease-out;
+    }
+    .quiz-reward.ok { background: #dcfce7; border: 2px solid #86efac; color: #166534; }
+    .quiz-reward.bad { background: #fee2e2; border: 2px solid #fca5a5; color: #991b1b; }
+    .confetti-piece { position: absolute; top: 10px; font-size: 22px; pointer-events: none; animation: confettiFall 1.5s ease-out forwards; z-index: 10; }
+    @keyframes popSuccess { 0% { transform: scale(1); } 45% { transform: scale(1.06); } 100% { transform: scale(1); } }
+    @keyframes shakeWrong { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-7px); } 50% { transform: translateX(7px); } 75% { transform: translateX(-5px); } }
+    @keyframes confettiFall { 0% { opacity: 1; transform: translateY(0) rotate(0deg) scale(1); } 100% { opacity: 0; transform: translateY(280px) rotate(320deg) scale(0.7); } }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body>
+  <header class="portal-header">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <a href="../index.html"><img class="logo" src="../_external/en.ireadarabic.com/wp-content/uploads/2022/07/logo.png" alt="أقرأ بالعربية"></a>
+      <nav class="d-flex flex-wrap align-items-center">
+        <a href="../index.html" class="mx-2 font-weight-bold text-dark">الصفحة الرئيسة</a>
+        <a href="../بوابة-الطالب/index.html" class="btn btn-warning btn-sm text-white mx-1">بوابة الطالب</a>
+        <a href="../الأنشطة/index.html" class="btn btn-outline-primary btn-sm mx-1">المهارات</a>
+        <a href="../المكافآت/index.html" class="btn btn-success btn-sm mx-1">🏆 المكافآت والتعزيز</a>
+        <a href="../بوابة-المعلم/index.html" class="btn btn-primary btn-sm mx-1">بوابة المعلم</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="portal-banner">
+    <div class="container">
+      <h1>مكتبة القصص المصوّرة (30 قصة تفاعلية)</h1>
+      <p class="mb-0">قصص عربية مصوّرة متدرجة عبر المستويات (أ – ب – ج – د) مع القراءة الصوتية وأسئلة الفهم</p>
+    </div>
+  </section>
+
+  <main class="container py-5">
+    <div id="weeklyTasksMount" class="mb-4"></div>
+    <div id="readerView" class="d-none mb-5"></div>
+
+    <div id="catalogView">
+      <div class="row mb-4 align-items-center">
+        <div class="col-md-5 mb-2">
+          <input id="storySearch" type="search" class="form-control" placeholder="ابحث عن قصة...">
+        </div>
+        <div class="col-md-7 text-md-left" id="levelFilters">
+          <button type="button" class="btn btn-primary btn-sm m-1" data-lvl="all">الكل (30)</button>
+          <button type="button" class="btn btn-outline-primary btn-sm m-1" data-lvl="مستوى أ">مستوى أ</button>
+          <button type="button" class="btn btn-outline-primary btn-sm m-1" data-lvl="مستوى ب">مستوى ب</button>
+          <button type="button" class="btn btn-outline-primary btn-sm m-1" data-lvl="مستوى ج">مستوى ج</button>
+          <button type="button" class="btn btn-outline-primary btn-sm m-1" data-lvl="مستوى د">مستوى د</button>
+        </div>
+      </div>
+      <div class="row" id="storiesGrid"></div>
+    </div>
+  </main>
+
+  <script src="../wp-includes/js/jquery/jquery.min.js"></script>
+  <script src="../assets/js/weekly-stories.js"></script>
+  <script>
+    (function ($) {
+      if (window.IREAD_WEEKLY) {
+        window.IREAD_WEEKLY.renderWeeklyWidget('#weeklyTasksMount', '../');
+      }
+      function pickNanoImg(s) {
+        if (['العلوم', 'التقنية', 'المغامرات', 'الجغرافيا', 'التاريخ'].indexOf(s.cat) !== -1) {
+          return '../assets/generated/story-science.jpg';
+        }
+        if (['الطبيعة', 'الحيوان', 'البيئة', 'الصحة'].indexOf(s.cat) !== -1) {
+          return '../assets/generated/story-nature.jpg';
+        }
+        return '../assets/generated/story-school.jpg';
+      }
+
+      function cartoonScene(s, page) {
+        var palettes = {
+          'الطبيعة': { bg: 'linear-gradient(135deg,#bae6fd,#dcfce7)', ground: '#4ade80', hill: '#22c55e' },
+          'الحيوان': { bg: 'linear-gradient(135deg,#fef08a,#bbf7d0)', ground: '#86efac', hill: '#16a34a' },
+          'القيم': { bg: 'linear-gradient(135deg,#fce7f3,#e0e7ff)', ground: '#93c5fd', hill: '#60a5fa' },
+          'المدرسة': { bg: 'linear-gradient(135deg,#dbeafe,#fef3c7)', ground: '#fcd34d', hill: '#f59e0b' },
+          'الصحة': { bg: 'linear-gradient(135deg,#dcfce7,#fef9c3)', ground: '#86efac', hill: '#4ade80' },
+          'الإبداع': { bg: 'linear-gradient(135deg,#fae8ff,#dbeafe)', ground: '#f9a8d4', hill: '#f472b6' },
+          'الأسرة': { bg: 'linear-gradient(135deg,#ffedd5,#fef3c7)', ground: '#fdba74', hill: '#fb923c' },
+          'القراءة': { bg: 'linear-gradient(135deg,#e0e7ff,#fce7f3)', ground: '#c4b5fd', hill: '#a78bfa' },
+          'العلوم': { bg: 'linear-gradient(135deg,#1e1b4b,#312e81)', ground: '#4338ca', hill: '#3730a3', dark: true },
+          'المهن': { bg: 'linear-gradient(135deg,#cffafe,#e0f2fe)', ground: '#67e8f9', hill: '#22d3ee' },
+          'المغامرات': { bg: 'linear-gradient(135deg,#fef3c7,#fed7aa)', ground: '#fbbf24', hill: '#d97706' },
+          'الجغرافيا': { bg: 'linear-gradient(135deg,#fde68a,#fdba74)', ground: '#f59e0b', hill: '#d97706' },
+          'التاريخ': { bg: 'linear-gradient(135deg,#fde68a,#e0e7ff)', ground: '#fcd34d', hill: '#b45309' },
+          'البيئة': { bg: 'linear-gradient(135deg,#bbf7d0,#bae6fd)', ground: '#22c55e', hill: '#15803d' },
+          'التقنية': { bg: 'linear-gradient(135deg,#dbeafe,#e0e7ff)', ground: '#60a5fa', hill: '#3b82f6' },
+          'الأدب': { bg: 'linear-gradient(135deg,#fce7f3,#fef3c7)', ground: '#f9a8d4', hill: '#ec4899' }
+        };
+        var p = palettes[s.cat] || palettes['الطبيعة'];
+        var skyDeco = p.dark
+          ? '<circle cx="52" cy="36" r="14" fill="#fef08a"/><circle cx="110" cy="24" r="2.5" fill="#fff"/><circle cx="260" cy="32" r="3" fill="#fff"/><circle cx="315" cy="52" r="2" fill="#fde047"/>'
+          : '<circle cx="308" cy="38" r="20" fill="#fbbf24" stroke="#f59e0b" stroke-width="3"/><g fill="#fff" opacity="0.9"><ellipse cx="75" cy="38" rx="22" ry="11"/><ellipse cx="92" cy="34" rx="16" ry="10"/><ellipse cx="215" cy="30" rx="18" ry="9"/></g>';
+        var backdrop = '<path d="M0 148 Q90 120 180 144 T360 138 L360 190 L0 190 Z" fill="' + p.hill + '"/>' +
+          '<path d="M0 160 Q110 140 220 160 T360 154 L360 190 L0 190 Z" fill="' + p.ground + '"/>';
+
+        var actor = '';
+        var idx = s.id;
+        if (page === 3) {
+          // Cute cartoon owl / trophy buddy for comprehension quiz
+          actor = '<g class="cartoon-float">' +
+            '<ellipse cx="180" cy="112" rx="44" ry="48" fill="#8b5cf6" stroke="#1e293b" stroke-width="3"/>' +
+            '<ellipse cx="180" cy="126" rx="28" ry="30" fill="#ede9fe"/>' +
+            '<circle cx="163" cy="96" r="13" fill="#fff" stroke="#1e293b" stroke-width="2.5"/><circle cx="197" cy="96" r="13" fill="#fff" stroke="#1e293b" stroke-width="2.5"/>' +
+            '<circle cx="165" cy="96" r="5" fill="#1e293b"/><circle cx="195" cy="96" r="5" fill="#1e293b"/>' +
+            '<polygon points="174,106 186,106 180,116" fill="#f59e0b" stroke="#1e293b" stroke-width="2"/>' +
+            '<polygon points="145,74 158,64 164,78" fill="#7c3aed" stroke="#1e293b" stroke-width="2.5"/>' +
+            '<polygon points="215,74 202,64 196,78" fill="#7c3aed" stroke="#1e293b" stroke-width="2.5"/>' +
+            '<text x="248" y="82" font-size="28" font-weight="bold" fill="#f59e0b">؟</text>' +
+            '</g>';
+        } else if (s.cat === 'الحيوان' || idx === 2 || idx === 4 || idx === 9 || idx === 10 || idx === 16) {
+          // Cute cartoon animal (rabbit/cat/bee/bird/ant)
+          var bodyCol = idx === 4 ? '#ffffff' : (idx === 9 ? '#fbbf24' : (idx === 10 ? '#38bdf8' : '#f472b6'));
+          var xPos = page === 2 ? 215 : 155;
+          actor = '<g class="cartoon-float">' +
+            '<ellipse cx="' + (xPos - 14) + '" cy="72" rx="8" ry="22" fill="' + bodyCol + '" stroke="#1e293b" stroke-width="2.5"/>' +
+            '<ellipse cx="' + (xPos + 14) + '" cy="72" rx="8" ry="22" fill="' + bodyCol + '" stroke="#1e293b" stroke-width="2.5"/>' +
+            '<ellipse cx="' + xPos + '" cy="132" rx="28" ry="24" fill="' + bodyCol + '" stroke="#1e293b" stroke-width="2.5"/>' +
+            '<circle cx="' + xPos + '" cy="98" r="24" fill="' + bodyCol + '" stroke="#1e293b" stroke-width="2.5"/>' +
+            '<circle cx="' + (xPos - 9) + '" cy="94" r="4" fill="#1e293b"/><circle cx="' + (xPos + 9) + '" cy="94" r="4" fill="#1e293b"/>' +
+            '<circle cx="' + (xPos - 8) + '" cy="92.5" r="1.4" fill="#fff"/><circle cx="' + (xPos + 10) + '" cy="92.5" r="1.4" fill="#fff"/>' +
+            '<ellipse cx="' + xPos + '" cy="102" rx="4" ry="3" fill="#fb7185"/>' +
+            '<path d="M' + (xPos - 7) + ' 108 Q' + xPos + ' 115 ' + (xPos + 7) + ' 108" fill="none" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round"/>' +
+            (page === 2 ? '<circle cx="95" cy="110" r="10" fill="#fde047" stroke="#f59e0b" stroke-width="2"/><text x="86" y="88" font-size="22">⭐</text>' : '<circle cx="255" cy="138" r="12" fill="#ef4444" stroke="#1e293b" stroke-width="2"/>') +
+            '</g>';
+        } else if (s.cat === 'العلوم' || s.cat === 'التقنية') {
+          // Cute cartoon space rocket / robot / bulb
+          var ry = page === 2 ? 78 : 102;
+          actor = '<g class="cartoon-float">' +
+            '<path d="M180 ' + (ry - 46) + ' C202 ' + (ry - 18) + ' 204 ' + (ry + 18) + ' 194 ' + (ry + 36) + ' L166 ' + (ry + 36) + ' C156 ' + (ry + 18) + ' 158 ' + (ry - 18) + ' 180 ' + (ry - 46) + ' Z" fill="#f8fafc" stroke="#1e293b" stroke-width="3"/>' +
+            '<path d="M180 ' + (ry - 46) + ' C190 ' + (ry - 32) + ' 193 ' + (ry - 22) + ' 194 ' + (ry - 16) + ' L166 ' + (ry - 16) + ' C167 ' + (ry - 22) + ' 170 ' + (ry - 32) + ' 180 ' + (ry - 46) + ' Z" fill="#ef4444" stroke="#1e293b" stroke-width="2.5"/>' +
+            '<circle cx="180" cy="' + (ry + 4) + '" r="11" fill="#38bdf8" stroke="#1e293b" stroke-width="2.5"/>' +
+            '<polygon points="165,' + (ry + 18) + ' 148,' + (ry + 42) + ' 168,' + (ry + 36) + '" fill="#f97316" stroke="#1e293b" stroke-width="2"/>' +
+            '<polygon points="195,' + (ry + 18) + ' 212,' + (ry + 42) + ' 192,' + (ry + 36) + '" fill="#f97316" stroke="#1e293b" stroke-width="2"/>' +
+            '<polygon points="170,' + (ry + 36) + ' 190,' + (ry + 36) + ' 180,' + (ry + 62) + '" fill="#fbbf24"/>' +
+            '</g>';
+        } else if (s.cat === 'المدرسة' || s.cat === 'القراءة' || s.cat === 'الأدب' || s.cat === 'الإبداع') {
+          // Cute smiling cartoon character + open storybook / backpack
+          var cx = page === 2 ? 200 : 165;
+          actor = '<g class="cartoon-float">' +
+            '<circle cx="' + cx + '" cy="92" r="24" fill="#fde68a" stroke="#1e293b" stroke-width="2.5"/>' +
+            '<path d="M' + (cx - 24) + ' 88 Q' + cx + ' 58 ' + (cx + 24) + ' 88" fill="#1e293b"/>' +
+            '<circle cx="' + (cx - 8) + '" cy="92" r="3.5" fill="#1e293b"/><circle cx="' + (cx + 8) + '" cy="92" r="3.5" fill="#1e293b"/>' +
+            '<path d="M' + (cx - 7) + ' 102 Q' + cx + ' 109 ' + (cx + 7) + ' 102" fill="none" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round"/>' +
+            '<rect x="' + (cx - 22) + '" y="116" width="44" height="36" rx="10" fill="#3b82f6" stroke="#1e293b" stroke-width="2.5"/>' +
+            '<rect x="' + (cx + 26) + '" y="114" width="38" height="28" rx="4" fill="#fff" stroke="#1e293b" stroke-width="2.5"/>' +
+            '<line x1="' + (cx + 45) + '" y1="114" x2="' + (cx + 45) + '" y2="142" stroke="#1e293b" stroke-width="2"/>' +
+            (page === 2 ? '<text x="' + (cx - 60) + '" y="86" font-size="24">✨</text>' : '') +
+            '</g>';
+        } else {
+          // Nature / Adventure / Values / Family / Environment: cheerful cartoon kid in nature with trees/flowers
+          var kx = page === 2 ? 205 : 150;
+          actor = '<g>' +
+            '<rect x="52" y="102" width="12" height="44" rx="4" fill="#92400e" stroke="#1e293b" stroke-width="2"/>' +
+            '<circle cx="58" cy="86" r="24" fill="#22c55e" stroke="#1e293b" stroke-width="2.5"/>' +
+            '<circle cx="295" cy="138" r="8" fill="#f43f5e" stroke="#1e293b" stroke-width="2"/><rect x="293" y="146" width="4" height="16" fill="#15803d"/>' +
+            '<g class="cartoon-float">' +
+              '<circle cx="' + kx + '" cy="92" r="22" fill="#fed7aa" stroke="#1e293b" stroke-width="2.5"/>' +
+              '<path d="M' + (kx - 22) + ' 88 Q' + kx + ' 60 ' + (kx + 22) + ' 88" fill="#78350f"/>' +
+              '<circle cx="' + (kx - 7) + '" cy="92" r="3.5" fill="#1e293b"/><circle cx="' + (kx + 7) + '" cy="92" r="3.5" fill="#1e293b"/>' +
+              '<path d="M' + (kx - 6) + ' 101 Q' + kx + ' 108 ' + (kx + 6) + ' 101" fill="none" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round"/>' +
+              '<rect x="' + (kx - 18) + '" y="114" width="36" height="36" rx="10" fill="' + (page === 2 ? '#10b981' : '#f97316') + '" stroke="#1e293b" stroke-width="2.5"/>' +
+              (page === 2 ? '<circle cx="' + (kx + 45) + '" cy="84" r="7" fill="#fbbf24" stroke="#1e293b" stroke-width="1.5"/><ellipse cx="' + (kx + 53) + '" cy="78" rx="8" ry="5" fill="#ec4899" stroke="#1e293b" stroke-width="1.5"/>' : '') +
+            '</g>' +
+            '</g>';
+        }
+        return {
+          bg: p.bg,
+          svg: '<svg viewBox="0 0 360 190" xmlns="http://www.w3.org/2000/svg">' + skyDeco + backdrop + actor + '</svg>'
+        };
+      }
+
+      var RAW_STORIES = [
+        ['رحلة في الغابة', 'مستوى أ', 'الطبيعة', 'خرجَ سامي في نزهةٍ صباحيةٍ إلى الغابةِ الخضراء.', 'سمعَ زقزقةَ العصافيرِ وشاهدَ فراشةً ملوّنةً على زهرة.', 'ما الذي سمعه سامي في الغابة؟', ['زقزقة العصافير', 'صوت القطار', 'هدير البحر'], 0],
+        ['الأرنب والسلحفاة', 'مستوى أ', 'الحيوان', 'تسابَقَ الأرنبُ السريعُ مع السلحفاةِ الهادئةِ في الحديقة.', 'واصلتْ السلحفاةُ السيرَ بجدٍّ حتى وصلتْ إلى خطِّ النهايةِ أولاً.', 'لماذا فازت السلحفاة؟', ['لأنها نامت', 'لأنها واصلت السير بجد', 'لأنها ركضت بسرعة'], 1],
+        ['قطرة الماء السعيدة', 'مستوى أ', 'الطبيعة', 'نزلتْ قطرةُ الماءِ من السحابةِ البيضاءِ لتسقيَ الأزهار.', 'تفتّحتْ الورودُ وابتسمتْ الحقولُ للمطرِ الجميل.', 'من أين نزلت قطرة الماء؟', ['من السحابة', 'من الجبل', 'من الرمل'], 0],
+        ['القطة المشاكسة', 'مستوى أ', 'الحيوان', 'كانتْ القطةُ البيضاءُ تلعبُ بكرةِ الصوفِ الحمراءِ في البيت.', 'عادتْ القطةُ إلى سلتها الدافئةِ بعد اللعبِ وشربتْ الحليب.', 'بماذا كانت القطة تلعب؟', ['بكرة الصوف', 'بالحجر', 'بالورق'], 0],
+        ['شمس الصباح', 'مستوى أ', 'الطبيعة', 'أشرقتْ الشمسُ الذهبيةُ وملأتْ السماءَ بالنورِ والدفء.', 'استيقظَ الأطفالُ نشيطينَ وذهبوا إلى مدارسهم بسعادة.', 'ماذا ملأت الشمس السماء؟', ['بالظلام', 'بالنور والدفء', 'بالثلج'], 1],
+        ['الحديقة النظيفة', 'مستوى أ', 'القيم', 'تعاونَ أطفالُ الحيِّ على تنظيفِ الحديقةِ وزراعةِ الأشجار.', 'أصبحتْ الحديقةُ مكاناً جميلاً يلعبُ فيه الجميعُ بأمان.', 'ماذا زرع الأطفال في الحديقة؟', ['الأشجار', 'الحجارة', 'الزجاج'], 0],
+        ['أحب مدرستي', 'مستوى أ', 'المدرسة', 'يحملُ كريمٌ حقيبتَهُ الزرقاءَ كلَّ صباحٍ ويتجهُ نحو مدرسته.', 'يتعلمُ كريمٌ القراءةَ والرسمَ مع أصدقائهِ ومعلمه.', 'ماذا يتعلم كريم في المدرسة؟', ['النوم', 'القراءة والرسم', 'الصيد'], 1],
+        ['التفاحة الحمراء', 'مستوى أ', 'الصحة', 'اختارتْ ليلى تفاحةً حمراءَ طازجةً لتأكلها في الفسحة.', 'الفواكه الطازجةُ تمنحُ الجسمَ القوةَ والنشاطَ طوالَ اليوم.', 'ما فائدة الفواكه الطازجة؟', ['تمنح الجسم القوة والنشاط', 'تسبب الكسل', 'لا تفيد'], 0],
+
+        ['سر النحلة النشيطة', 'مستوى ب', 'الحيوان', 'تطيرُ النحلةُ بين الحقولِ منذ الصباحِ لتجمعَ رحيقَ الأزهار.', 'تتعاونُ النحلاتُ داخلَ الخليةِ لتصنعَ عسلاً لذيذاً ومفيداً.', 'ماذا تصنع النحلات من الرحيق؟', ['عسلاً', 'عصيراً', 'خبزاً'], 0],
+        ['العصفور الصغير يتعلم الطيران', 'مستوى ب', 'الحيوان', 'خافَ العصفورُ الصغيرُ من الطيرانِ أولَ مرةٍ فوق العش.', 'شجعتهُ أمُّهُ فحرّكَ جناحيهِ وحلّقَ عالياً في السماءِ بسعادة.', 'من شجّع العصفور على الطيران؟', ['أمه', 'الثعلب', 'السمكة'], 0],
+        ['صندوق الألوان', 'مستوى ب', 'الإبداع', 'رسمتْ سلمى لوحةً جميلةً فيها بحرٌ أزرقُ وسماءٌ صافية.', 'قدّمتْ سلمى اللوحةَ هديةً لوالدتها ففرحتْ بها كثيراً.', 'لمن قدّمت سلمى اللوحة؟', ['لصديقتها', 'لوالدتها', 'لأخيها'], 1],
+        ['حكاية القمح والخبز', 'مستوى ب', 'الطبيعة', 'زرعَ الفلاحُ حبوبَ القمحِ في الأرضِ وسقاها بماءِ النهر.', 'نمتْ السنابلُ الذهبيةُ وصنعَ الخبازُ منها خبزاً طازجاً.', 'ماذا صنع الخباز من القمح؟', ['خبزاً طازجاً', 'زيتاً', 'سكراً'], 0],
+        ['زيارة إلى المزرعة', 'مستوى ب', 'الأسرة', 'زارتْ الأسرةُ مزرعةَ الجدِّ وشاهدتْ الخرافَ والأبقارَ والدجاج.', 'سقى الأولادُ الشتلاتِ الصغيرةَ واستمتعوا بهواءِ الريفِ النقي.', 'أين ذهبت الأسرة في الزيارة؟', ['إلى مزرعة الجد', 'إلى المطار', 'إلى المتحف'], 0],
+        ['الأمانة كنز', 'مستوى ب', 'القيم', 'وجدَ عمرُ محفظةً مفقودةً في ساحةِ المدرسةِ ولم يفتحها.', 'سلّمَ عمرُ المحفظةَ إلى مديرِ المدرسةِ الذي شكرهُ على أمانته.', 'ماذا فعل عمر بالمحفظة؟', ['أخذها لنفسه', 'سلّمها لمدير المدرسة', 'تركها'], 1],
+        ['الكتاب الصديق', 'مستوى ب', 'القراءة', 'يحبُّ طارقٌ زيارةَ المكتبةِ كلَّ أسبوعٍ لاستعارةِ قصةٍ جديدة.', 'اكتشفَ طارقٌ أن الكتابَ صديقٌ مخلصٌ يفتحُ له أبوابَ المعرفة.', 'أين يذهب طارق كل أسبوع؟', ['إلى المكتبة', 'إلى الملعب', 'إلى السوق'], 0],
+        ['النملة والصرصور', 'مستوى ب', 'الحيوان', 'عملتْ النملةُ بجدٍّ طوالَ الصيفِ لجمعِ الطعامِ للشتاء.', 'عندما جاءَ البردُ وجدتْ النملةُ طعاماً يكفيها بفضلِ اجتهادها.', 'متى جمعت النملة طعامها؟', ['في الصيف', 'في الشتاء', 'في الليل فقط'], 0],
+
+        ['رحلة إلى الفضاء', 'مستوى ج', 'العلوم', 'حلمَ رامي بأنه يركبُ مركبةً فضائيةً تنطلقُ نحو الكواكب.', 'شاهدَ القمرَ المضيءَ والنجومَ اللامعةَ وتعلّمَ أسماءَ الكواكبِ الثمانية.', 'ماذا شاهد رامي في رحلته؟', ['القمر والنجوم والكواكب', 'الأشجار والبحار', 'القطارات'], 0],
+        ['مخترع المصباح', 'مستوى ج', 'العلوم', 'لم يستسلمْ العالمُ توماس إديسون رغم محاولاته الكثيرةِ الفاشلة.', 'بالمثابرةِ والتجربةِ نجحَ في إضاءةِ العالمِ بالمصباحِ الكهربائي.', 'بماذا نجح إديسون؟', ['بالمثابرة والتجربة', 'بالحظ فقط', 'بالتوقف عن المحاولة'], 0],
+        ['أسرار أعماق البحار', 'مستوى ج', 'العلوم', 'غاصتْ الغواصةُ العلميةُ في أعماقِ المحيطِ لتصويرِ الشعابِ المرجانية.', 'اكتشفَ العلماءُ أسماكاً مضيئةً وكائناتٍ بحريةً عجيبةً تعيشُ في الظلام.', 'ماذا صورت الغواصة في المحيط؟', ['الشعاب المرجانية والأسماك', 'الصحراء', 'الغيوم'], 0],
+        ['التعاون يصنع المعجزات', 'مستوى ج', 'القيم', 'تعطلتْ حافلةُ الرحلةِ في الطريقِ فاجتمعَ الركابُ لمساعدةِ السائق.', 'بتعاونِ الجميعِ تمَّ إصلاحُ العطلِ البسيطِ ووصلوا إلى وجهتهم بأمان.', 'كيف تم حل مشكلة الحافلة؟', ['بتعاون الجميع', 'بالانتظار فقط', 'بالصراخ'], 0],
+        ['لغز الساعة الرملية', 'مستوى ج', 'العلوم', 'تعلّمَ الطلابُ في حصةِ العلومِ كيف قاسَ القدماءُ الوقتَ بالرمل.', 'صنعوا ساعةً رمليةً صغيرةً من زجاجتينِ وقارنوها بساعةِ الحائط.', 'ماذا استخدم القدماء في هذه الساعة؟', ['الرمل', 'البطارية', 'الكهرباء'], 0],
+        ['الطبيب الصغير', 'مستوى ج', 'المهن', 'تعتني مريمُ بدميتها وتقرأُ كتباً مبسطةً عن جسمِ الإنسان.', 'تطمحُ مريمُ أن تصبحَ طبيبةً ماهرةً لتخففَ آلامَ المرضى.', 'ما حلم مريم في المستقبل؟', ['أن تصبح طبيبة', 'أن تصبح طيارة', 'أن تصبح رسامة'], 0],
+        ['رسالة إلى جدي', 'مستوى ج', 'الأسرة', 'كتبَ مازنٌ رسالةً بخطٍّ جميلٍ ليطمئنَّ على جدهِ في القرية.', 'أعجبَ الجدُّ بأسلوبِ مازنٍ الراقي وحفظَ الرسالةَ في صندوقهِ الخشبي.', 'لمن كتب مازن الرسالة؟', ['لجده في القرية', 'لزميله', 'لمعلمه'], 0],
+
+        ['جزيرة الكنز المعرفي', 'مستوى د', 'المغامرات', 'عثرَ الأصدقاءُ على خريطةٍ قديمةٍ في مكتبةِ المدرسةِ تقودُ إلى كنز.', 'بعد حلِّ ثلاثةِ ألغازٍ لغويةٍ وجدوا صندوقاً مليئاً بالموسوعاتِ النادرة.', 'ماذا كان بداخل الصندوق؟', ['موسوعات نادرة', 'ألعاب فيديو', 'أحجار'], 0],
+        ['الصحراء الذهبية', 'مستوى د', 'الجغرافيا', 'تنطلقُ القافلةُ بين الكثبانِ الرمليةِ الذهبيةِ بحثاً عن الواحةِ الخضراء.', 'أدركَ المسافرونَ قيمةَ الماءِ وأهميةَ النخيلِ في حياةِ أهلِ الصحراء.', 'عن ماذا كانت تبحث القافلة؟', ['عن الواحة الخضراء', 'عن الثلج', 'عن السفينة'], 0],
+        ['ابن بطوطة والترحال', 'مستوى د', 'التاريخ', 'سافرَ الرحالةُ العربيُّ ابنُ بطوطةِ آلافَ الكيلومتراتِ لاستكشافِ البلدان.', 'دوّنَ مشاهداتهِ عن الشعوبِ والعاداتِ في كتابٍ مشهورٍ يقرؤهُ العالمُ اليوم.', 'ما الذي اشتهر به ابن بطوطة؟', ['السفر وتدوين مشاهداته', 'بناء السدود', 'صناعة السفن'], 0],
+        ['حماية كوكبنا الأخضر', 'مستوى د', 'البيئة', 'نظّمتْ المدرسةُ حملةً لإعادةِ التدويرِ وتقليلِ استخدامِ البلاستيك.', 'شاركِ الطلابُ في فرزِ الورقِ والزجاجِ لحمايةِ البيئةِ من التلوث.', 'ما هدف حملة المدرسة؟', ['حماية البيئة من التلوث', 'زيادة النفايات', 'قطع الأشجار'], 0],
+        ['الذكاء الاصطناعي في حياتنا', 'مستوى د', 'التقنية', 'ناقشَ الطلابُ كيف تساعدُ الحواسيبُ الذكيةُ الأطباءَ والمهندسينَ اليوم.', 'استنتجوا أن التقنيةَ أداةٌ مفيدةٌ عندما يستخدمُها الإنسانُ بحكمةٍ ووعي.', 'متى تكون التقنية مفيدة؟', ['عند استخدامها بحكمة ووعي', 'عند إهمال الدراسة', 'عند اللعب الدائم'], 0],
+        ['شاعر القرية', 'مستوى د', 'الأدب', 'كانَ الجدُّ ينشدُ أبياتاً شعريةً جميلةً عن الوطنِ والأرضِ والربيع.', 'تعلّمَ الأحفادُ تذوقَ الشعرِ العربيِّ وحفظَ القصائدِ ذاتِ المعاني الراقية.', 'عن ماذا كان الجد ينشد؟', ['عن الوطن والأرض والربيع', 'عن الرياضة', 'عن التسوق'], 0],
+        ['مهرجان القراءة السنوي', 'مستوى د', 'القراءة', 'اجتمعَ مئاتُ الطلبةِ في القاعةِ الكبرى لعرضِ ملخصاتِ الكتبِ التي قرؤوها.', 'تُوّجَتْ المدرسةُ بجائزةِ التميزِ القرائيِّ بفضلِ شغفِ طلابِها بالمعرفة.', 'بماذا تُوّجت المدرسة؟', ['بجائزة التميز القرائي', 'بكأس السباحة', 'بميدالية الجري'], 0]
+      ];
+
+      var STORIES = RAW_STORIES.map(function (r, idx) {
+        return {
+          id: idx + 1,
+          title: r[0],
+          level: r[1],
+          cat: r[2],
+          p1: r[3],
+          p2: r[4],
+          q: r[5],
+          opts: r[6],
+          ans: r[7]
+        };
+      });
+
+      var sid = localStorage.getItem('iread_selected_student_id') || '4';
+      var readMap = JSON.parse(localStorage.getItem('iread_books_' + sid) || '{}');
+
+      function renderGrid() {
+        var lvl = $('#levelFilters .btn-primary').attr('data-lvl') || 'all';
+        var q = ($('#storySearch').val() || '').trim();
+        var assignIds = window.IREAD_WEEKLY ? window.IREAD_WEEKLY.getAssignments().storyIds : [];
+        var $g = $('#storiesGrid').empty();
+        STORIES.forEach(function (s) {
+          if (lvl !== 'all' && s.level !== lvl) return;
+          if (q && s.title.indexOf(q) === -1 && s.cat.indexOf(q) === -1) return;
+          var isWeekly = assignIds.indexOf(s.id) !== -1;
+          var badge = readMap[s.id]
+            ? '<span class="badge badge-success">مقروءة ✓</span>'
+            : '<span class="badge badge-secondary">' + s.level + '</span>';
+          var weeklyTag = isWeekly ? '<span class="badge badge-warning text-white ml-1">📌 تكليف أسبوعي</span>' : '';
+          var scene = cartoonScene(s, 1);
+          var nanoImg = pickNanoImg(s);
+          $g.append(
+            '<div class="col-sm-6 col-md-4 col-lg-3 mb-4">' +
+              '<div class="book-card" style="' + (isWeekly ? 'border:2px solid #f59e0b;' : '') + '">' +
+                '<div class="book-cover" style="background:' + scene.bg + '"><img class="cover-img" src="' + nanoImg + '" alt="' + s.title + '"></div>' +
+                '<div class="book-body">' +
+                  '<div class="d-flex justify-content-between align-items-center mb-2"><div>' + badge + weeklyTag + '</div><small class="text-muted">' + s.cat + '</small></div>' +
+                  '<h6 class="font-weight-bold mb-3 flex-grow-1">' + s.id + '. ' + s.title + '</h6>' +
+                  '<a href="../القصة-الأسبوعية/index.html?story=' + s.id + '" class="btn btn-warning btn-sm btn-block text-white font-weight-bold mb-2">📖 الكتاب الورقي (11 سؤالاً)</a>' +
+                  '<button type="button" class="btn btn-outline-primary btn-sm btn-block open-book" data-id="' + s.id + '">قراءة سريعة</button>' +
+                '</div>' +
+              '</div>' +
+            '</div>'
+          );
+        });
+      }
+
+      function speak(text) {
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+          var u = new SpeechSynthesisUtterance(text);
+          u.lang = 'ar-SA';
+          u.rate = 0.9;
+          window.speechSynthesis.speak(u);
+        }
+      }
+
+      function openReader(bookId) {
+        var s = STORIES.find(function (x) { return x.id === bookId; });
+        if (!s) return;
+        var page = 1;
+        function drawPage() {
+          var $rv = $('#readerView').removeClass('d-none').empty();
+          var scene = cartoonScene(s, page);
+          var bodyHtml = '';
+          if (page === 1) {
+            bodyHtml = '<div class="story-page-card">' +
+                '<div class="scene-frame" style="background:' + scene.bg + '"><img class="cartoon-img" src="' + pickNanoImg(s) + '" alt="' + s.title + '"><span class="badge badge-light mt-2 px-3 py-1">صفحة 1 من 3</span></div>' +
+                '<div class="story-text">' + s.p1 + '</div>' +
+              '</div>' +
+              '<div class="d-flex justify-content-between"><button class="btn btn-outline-primary btn-sm" id="listenBtn">🔊 استمع</button><button class="btn btn-primary" id="nextPg">الصفحة التالية ←</button></div>';
+          } else if (page === 2) {
+            bodyHtml = '<div class="story-page-card">' +
+                '<div class="scene-frame" style="background:' + scene.bg + '">' + scene.svg + '<span class="badge badge-light mt-2 px-3 py-1">صفحة 2 من 3</span></div>' +
+                '<div class="story-text">' + s.p2 + '</div>' +
+              '</div>' +
+              '<div class="d-flex justify-content-between"><button class="btn btn-outline-secondary" id="prevPg">→ السابقة</button><button class="btn btn-outline-primary btn-sm" id="listenBtn">🔊 استمع</button><button class="btn btn-primary" id="nextPg">سؤال الفهم ←</button></div>';
+          } else {
+            bodyHtml = '<div class="story-page-card">' +
+                '<div class="scene-frame" style="background:' + scene.bg + '">' + scene.svg + '<span class="badge badge-light mt-2 px-3 py-1">سؤال الفهم (صفحة 3 من 3)</span></div>' +
+                '<div class="quiz-panel">' +
+                  '<div class="d-flex justify-content-between align-items-center flex-wrap">' +
+                    '<span class="quiz-badge">🎯 اختبر فهمك للقصة</span>' +
+                    '<button class="btn btn-outline-primary btn-sm" id="listenQBtn">🔊 استمع للسؤال</button>' +
+                  '</div>' +
+                  '<div class="quiz-question">' + s.q + '</div>' +
+                  '<div class="quiz-options" id="qOpts"></div>' +
+                '</div>' +
+              '</div>' +
+              '<div id="qMsg" class="mb-3"></div>' +
+              '<div class="d-flex justify-content-between align-items-center">' +
+                '<button class="btn btn-outline-secondary btn-sm" id="prevPg">→ العودة للقصة</button>' +
+                (s.id < STORIES.length ? '<button class="btn btn-success btn-sm" id="nextStoryBtn">القصة التالية ←</button>' : '') +
+              '</div>';
+          }
+
+          $rv.html(
+            '<div class="reader-box">' +
+              '<div class="d-flex justify-content-between align-items-center mb-3">' +
+                '<h4 class="font-weight-bold mb-0">' + s.title + ' <small class="text-muted">(' + s.level + ')</small></h4>' +
+                '<button class="btn btn-sm btn-outline-danger" id="closeReader">إغلاق القارئ</button>' +
+              '</div>' +
+              bodyHtml +
+            '</div>'
+          );
+
+          if (page === 3) {
+            var letters = ['أ', 'ب', 'ج', 'د'];
+            s.opts.forEach(function (opt, i) {
+              var $ob = $('<button type="button" class="choice-btn"><span class="choice-letter">' + letters[i] + '</span><span>' + opt + '</span></button>');
+              $ob.on('click', function () {
+                if (i === s.ans) {
+                  $ob.addClass('ok');
+                  readMap[s.id] = true;
+                  localStorage.setItem('iread_books_' + sid, JSON.stringify(readMap));
+                  $('#qMsg').html('<div class="quiz-reward ok">🎉 أحسنت! إجابة صحيحة، أتممت قراءة القصة بنجاح ⭐</div>');
+                  var icons = ['⭐', '🎉', '🌟', '✨', '🏆'];
+                  var $box = $('.reader-box');
+                  for (var c = 0; c < 14; c++) {
+                    var $cf = $('<span class="confetti-piece">' + icons[c % icons.length] + '</span>');
+                    $cf.css({ left: (8 + Math.random() * 84) + '%', animationDelay: (Math.random() * 0.3) + 's' });
+                    $box.append($cf);
+                    (function ($el) { setTimeout(function () { $el.remove(); }, 1800); })($cf);
+                  }
+                  renderGrid();
+                } else {
+                  $ob.addClass('bad');
+                  $('#qMsg').html('<div class="quiz-reward bad">💡 قريب جداً! حاول اختيار إجابة أخرى</div>');
+                }
+              });
+              $('#qOpts').append($ob);
+            });
+            $('#listenQBtn').on('click', function () { speak(s.q); });
+            $('#nextStoryBtn').on('click', function () { openReader(s.id + 1); });
+          }
+
+          $('#listenBtn').on('click', function () { speak(page === 1 ? s.p1 : s.p2); });
+          $('#nextPg').on('click', function () { page++; drawPage(); });
+          $('#prevPg').on('click', function () { page--; drawPage(); });
+          $('#closeReader').on('click', function () { $('#readerView').addClass('d-none'); });
+        }
+        drawPage();
+        window.scrollTo({ top: 180, behavior: 'smooth' });
+      }
+
+      $(document).on('click', '.open-book', function () {
+        openReader(parseInt($(this).attr('data-id'), 10));
+      });
+
+      $('#levelFilters button').on('click', function () {
+        $('#levelFilters button').removeClass('btn-primary').addClass('btn-outline-primary');
+        $(this).removeClass('btn-outline-primary').addClass('btn-primary');
+        renderGrid();
+      });
+
+      $('#storySearch').on('input', renderGrid);
+      renderGrid();
+    })(window.jQuery);
+  </script>
+</body>
+</html>
+

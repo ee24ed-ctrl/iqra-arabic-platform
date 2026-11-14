@@ -1,0 +1,85 @@
+/* Mobile-first responsive enhancements for all Arabic reading portals */
+@media (max-width: 768px) {
+  .portal-header .container {
+    flex-direction: column;
+    align-items: center !important;
+    gap: 10px;
+  }
+  .portal-header nav {
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+  }
+  .portal-header nav a {
+    margin: 2px 3px !important;
+    padding: 7px 11px;
+    font-size: 0.85rem;
+  }
+  .portal-banner {
+    padding: 28px 12px !important;
+  }
+  .portal-banner h1 {
+    font-size: 1.45rem !important;
+    line-height: 1.5;
+  }
+  .portal-banner p {
+    font-size: 0.92rem;
+  }
+  .container.py-5 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .portal-card, .act-card, .reader-box, .reward-card, .cert-box {
+    padding: 16px !important;
+    border-radius: 14px !important;
+  }
+  .scene-frame {
+    min-height: 170px !important;
+    padding: 10px !important;
+  }
+  .scene-frame svg, .scene-frame img.cartoon-img {
+    max-height: 180px !important;
+  }
+  .story-text {
+    font-size: 1.08rem !important;
+    line-height: 1.9 !important;
+    padding: 14px !important;
+  }
+  .quiz-options {
+    grid-template-columns: 1fr !important;
+  }
+  .choice-btn {
+    width: 100%;
+    margin: 4px 0 !important;
+    min-height: 48px;
+    font-size: 0.98rem !important;
+  }
+  .input-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .input-group > .form-control,
+  .input-group > .input-group-append,
+  .input-group > .input-group-append > .btn {
+    width: 100%;
+    border-radius: 8px !important;
+  }
+  .d-flex.justify-content-between {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .portal-banner h1 {
+    font-size: 1.25rem !important;
+  }
+  .book-cover {
+    height: 140px !important;
+  }
+  .btn-sm {
+    padding: 6px 10px;
+    font-size: 0.82rem;
+  }
+}
+

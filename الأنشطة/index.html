@@ -1,0 +1,396 @@
+﻿<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الألعاب التفاعلية للمهارات – أقرأ بالعربية</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/awesome5.min.css">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/mobile-responsive.css">
+  <style>
+    body { direction: rtl; text-align: right; background: linear-gradient(180deg, #eff6ff 0%, #f8fafc 100%); font-family: Tahoma, Arial, sans-serif; min-height: 100vh; }
+    .portal-header { background: #fff; box-shadow: 0 4px 18px rgba(0,0,0,0.06); padding: 12px 0; }
+    .portal-header img.logo { max-height: 48px; }
+    .portal-banner {
+      background: linear-gradient(120deg, rgba(28, 90, 166, 0.94), rgba(19, 64, 120, 0.94)),
+        url("../wp-content/uploads/2022/06/bg-page-title-copy.webp") center/cover no-repeat;
+      color: #fff; padding: 34px 0; text-align: center;
+    }
+    .portal-banner h1 { color: #fff; font-weight: 800; margin-bottom: 6px; }
+    .act-card {
+      background: #fff; border-radius: 24px; padding: 28px;
+      box-shadow: 0 16px 38px rgba(28, 90, 166, 0.12); border: 3px solid #93c5fd;
+      position: relative; overflow: hidden; animation: fadeSlideIn 0.35s ease-out;
+    }
+    .game-hud {
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px;
+      background: linear-gradient(135deg, #1e3a8a, #2563eb); color: #fff;
+      padding: 12px 18px; border-radius: 16px; margin-bottom: 16px;
+    }
+    .hud-pill {
+      background: rgba(255,255,255,0.18); border-radius: 50px; padding: 5px 14px;
+      font-weight: 800; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px;
+    }
+    .q-type-pill {
+      display: inline-block; padding: 6px 16px; border-radius: 999px; font-weight: 800; font-size: 0.9rem; color: #fff;
+    }
+    .q-type-mcq { background: linear-gradient(135deg, #4f46e5, #7c3aed); }
+    .q-type-tf { background: linear-gradient(135deg, #0284c7, #0d9488); }
+    .q-type-order { background: linear-gradient(135deg, #ea580c, #f59e0b); }
+    .q-type-match { background: linear-gradient(135deg, #db2777, #9333ea); }
+
+    .opt-btn {
+      display: flex; align-items: center; gap: 12px; width: 100%; text-align: right;
+      padding: 14px 18px; border-radius: 16px; border: 2px solid #cbd5e1; background: #f8fafc;
+      font-size: 1.12rem; font-weight: 800; color: #1e293b; cursor: pointer; margin-bottom: 10px;
+      transition: transform 0.15s, border-color 0.2s, background 0.2s;
+    }
+    .opt-btn:hover:not(:disabled) { transform: translateY(-2px); border-color: #2563eb; background: #eff6ff; }
+    .opt-btn.ok { border-color: #16a34a; background: #dcfce7; color: #166534; }
+    .opt-btn.bad { border-color: #dc2626; background: #fee2e2; color: #991b1b; }
+    .opt-num {
+      width: 34px; height: 34px; border-radius: 50%; background: #e0e7ff; color: #4338ca;
+      display: inline-flex; align-items: center; justify-content: center; font-weight: 800; flex-shrink: 0;
+    }
+    .opt-btn.ok .opt-num { background: #16a34a; color: #fff; }
+    .opt-btn.bad .opt-num { background: #dc2626; color: #fff; }
+
+    /* Word Ordering */
+    .order-dropzone {
+      min-height: 70px; border: 2px dashed #94a3b8; border-radius: 16px; padding: 12px;
+      background: #f8fafc; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 16px;
+    }
+    .order-bank { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 16px; }
+    .word-chip {
+      padding: 10px 16px; border-radius: 12px; font-weight: 800; font-size: 1.05rem;
+      border: 2px solid #f59e0b; background: #fffbeb; color: #92400e; cursor: pointer;
+      box-shadow: 0 3px 0 #d97706;
+    }
+    .word-chip.placed { background: #dbeafe; border-color: #2563eb; color: #1e40af; box-shadow: 0 3px 0 #1d4ed8; }
+    .word-chip.used { opacity: 0.35; pointer-events: none; }
+
+    /* Matching Pairs */
+    .match-item {
+      width: 100%; text-align: center; padding: 13px 14px; border-radius: 14px; font-weight: 800;
+      font-size: 1.05rem; border: 2px solid #cbd5e1; background: #fff; color: #0f172a;
+      cursor: pointer; margin-bottom: 10px; transition: all 0.16s;
+    }
+    .match-item.selected { border-color: #7c3aed; background: #f3e8ff; color: #5b21b6; transform: scale(1.02); }
+    .match-item.matched { border-color: #16a34a; background: #dcfce7; color: #166534; pointer-events: none; }
+    .match-item.wrong { border-color: #dc2626; background: #fee2e2; color: #991b1b; }
+
+    .btn-3d-orange {
+      background: linear-gradient(135deg, #f59e0b, #ea580c); color: #fff !important; border: none;
+      border-radius: 14px; padding: 11px 22px; font-weight: 800; box-shadow: 0 4px 0 #c2410c; cursor: pointer;
+    }
+    .btn-3d-green {
+      background: linear-gradient(135deg, #22c55e, #16a34a); color: #fff !important; border: none;
+      border-radius: 14px; padding: 11px 22px; font-weight: 800; box-shadow: 0 4px 0 #15803d; cursor: pointer;
+    }
+    .confetti-piece { position: absolute; top: 8px; font-size: 22px; pointer-events: none; animation: confettiFall 1.5s ease-out forwards; z-index: 20; }
+    @keyframes fadeSlideIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes confettiFall { 0% { opacity: 1; transform: translateY(0) rotate(0deg); } 100% { opacity: 0; transform: translateY(300px) rotate(320deg); } }
+  </style>
+</head>
+<body>
+  <header class="portal-header">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <a href="../index.html"><img class="logo" src="../_external/en.ireadarabic.com/wp-content/uploads/2022/07/logo.png" alt="أقرأ بالعربية"></a>
+      <nav class="d-flex flex-wrap align-items-center">
+        <a href="../index.html" class="mx-2 font-weight-bold text-dark">الرئيسة</a>
+        <a href="../بوابة-الطالب/index.html" class="btn btn-warning btn-sm text-white mx-1">بوابة الطالب</a>
+        <a href="../بوابة-المعلم/index.html" class="btn btn-primary btn-sm mx-1">تقرير المعلم</a>
+        <a href="../لوحة-الإدارة/index.html" class="btn btn-dark btn-sm mx-1">الإدارة والمشرفين</a>
+        <a href="../المكافآت/index.html" class="btn btn-outline-success btn-sm mx-1">🏆 المكافآت</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="portal-banner">
+    <div class="container">
+      <img src="../assets/generated/arcade-hero.jpg" alt="الألعاب التفاعلية" style="width:96px;height:96px;object-fit:cover;border-radius:50%;border:4px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,0.2);" class="mb-2">
+      <div class="mb-2"><span class="badge badge-warning text-white px-3 py-1" id="assignedBadge">📌 المهارة المكلف بها من المعلم</span></div>
+      <h1 id="actTitle">المهارة التفاعلية</h1>
+      <p id="actMeta" class="mb-0"></p>
+    </div>
+  </section>
+
+  <main class="container py-4">
+    <div class="row">
+      <div class="col-lg-9 mx-auto">
+        <!-- Assigned Skill Intro / Single-Question Game Stage -->
+        <div class="act-card" id="actStage"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../wp-includes/js/jquery/jquery.min.js"></script>
+  <script src="../assets/js/skill-games.js"></script>
+  <script>
+    (function ($) {
+      var S = window.IREAD_SKILLS;
+      var sid = localStorage.getItem('iread_selected_student_id') || '4';
+      var sname = localStorage.getItem('iread_selected_student_name') || 'يوسف طارق';
+
+      var params = new URLSearchParams(window.location.search);
+      var assignedId = S.getGlobalAssignedSkill();
+      var activeId = params.get('id') || assignedId;
+      var skill = S.SKILLS.find(function (x) { return x.id === activeId; }) || S.SKILLS[0];
+      var isTeacherAssigned = (skill.id === assignedId);
+
+      $('#assignedBadge').text(isTeacherAssigned ? '📌 المهارة الواحدة المكلف بها من المعلم' : '🎮 تحدي مهارة تفاعلية');
+      $('#actTitle').text(skill.title);
+      $('#actMeta').text(skill.cat + ' – ' + skill.level + ' | الطالب النشط: ' + sname);
+
+      var quiz = S.getSkillQuiz(skill.id);
+      var qIdx = 0;
+      var score = 0;
+      var streak = 0;
+      var answered = false;
+
+      function speakArabic(text) {
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+          var u = new SpeechSynthesisUtterance(text);
+          u.lang = 'ar-SA';
+          u.rate = 0.9;
+          window.speechSynthesis.speak(u);
+        }
+      }
+
+      function celebrate() {
+        var $stage = $('#actStage');
+        var icons = ['⭐', '🎉', '✨', '🏆'];
+        for (var i = 0; i < 14; i++) {
+          var $p = $('<span class="confetti-piece">' + icons[i % icons.length] + '</span>');
+          $p.css({ left: (5 + Math.random() * 90) + '%', animationDelay: (Math.random() * 0.3) + 's' });
+          $stage.append($p);
+          (function ($el) { setTimeout(function () { $el.remove(); }, 1600); })($p);
+        }
+      }
+
+      function renderQuestion() {
+        answered = false;
+        var q = quiz[qIdx];
+        var pct = Math.round(((qIdx + 1) / quiz.length) * 100);
+        var $s = $('#actStage').empty();
+
+        $s.append(
+          '<div class="game-hud">' +
+            '<span class="hud-pill">🎮 ' + skill.level + '</span>' +
+            '<span class="hud-pill">السؤال ' + (qIdx + 1) + ' من ' + quiz.length + '</span>' +
+            '<span class="hud-pill">⭐ النتيجة: <span id="hudScore">' + score + '</span></span>' +
+            '<span class="hud-pill">🔥 التتابع: <span id="hudStreak">' + streak + '</span></span>' +
+          '</div>' +
+          '<div class="progress mb-3" style="height:10px;border-radius:999px;">' +
+            '<div class="progress-bar bg-success" style="width:' + pct + '%;transition:width 0.3s;"></div>' +
+          '</div>' +
+          '<div class="d-flex justify-content-between align-items-center flex-wrap mb-2" style="gap:8px;">' +
+            '<span class="q-type-pill q-type-' + q.type + '">' + q.typeLabel + '</span>' +
+            '<button type="button" id="speakQBtn" class="btn btn-outline-primary btn-sm font-weight-bold">🔊 استمع للسؤال</button>' +
+          '</div>' +
+          '<h4 class="font-weight-bold text-dark my-3" style="line-height:1.7;">' + q.question + '</h4>' +
+          '<div id="qArea"></div>' +
+          '<div id="qMsg" class="mt-3"></div>' +
+          '<div class="d-flex justify-content-between align-items-center mt-4">' +
+            '<a href="../بوابة-الطالب/index.html" class="btn btn-outline-secondary btn-sm font-weight-bold">العودة لبوابة الطالب</a>' +
+            '<button type="button" id="nextQBtn" class="btn-3d-green d-none">السؤال التالي ←</button>' +
+          '</div>'
+        );
+
+        $('#speakQBtn').on('click', function () { speakArabic(q.question); });
+
+        var $area = $('#qArea');
+
+        if (q.type === 'mcq' || q.type === 'tf') {
+          var letters = q.type === 'tf' ? ['✓', '✗'] : ['أ', 'ب', 'ج', 'د'];
+          q.options.forEach(function (opt, i) {
+            var $btn = $('<button type="button" class="opt-btn"><span class="opt-num">' + letters[i] + '</span><span>' + opt + '</span></button>');
+            $btn.on('click', function () {
+              if (answered) return;
+              answered = true;
+              speakArabic(opt);
+              $area.find('.opt-btn').prop('disabled', true);
+              if (i === q.answer) {
+                score++; streak++;
+                $btn.addClass('ok');
+                celebrate();
+                $('#qMsg').html('<div class="alert alert-success font-weight-bold mb-0">🎉 أحسنت! إجابة صحيحة ⭐</div>');
+              } else {
+                streak = 0;
+                $btn.addClass('bad');
+                $area.find('.opt-btn').eq(q.answer).addClass('ok');
+                $('#qMsg').html('<div class="alert alert-warning font-weight-bold mb-0">💡 إجابة قريبة! الإجابة الصحيحة موضحة باللون الأخضر.</div>');
+              }
+              $('#hudScore').text(score);
+              $('#hudStreak').text(streak);
+              $('#nextQBtn').text(qIdx === quiz.length - 1 ? '🏆 عرض النتيجة والمكافأة ←' : 'السؤال التالي ←').removeClass('d-none');
+            });
+            $area.append($btn);
+          });
+        } else if (q.type === 'order') {
+          var placed = [];
+          var $drop = $('<div class="order-dropzone"><span class="text-muted small">اضغط على الكلمات بالأسفل بالترتيب الصحيح...</span></div>');
+          var $bank = $('<div class="order-bank"></div>');
+          var $btns = $(
+            '<div class="d-flex justify-content-center flex-wrap" style="gap:10px;">' +
+              '<button type="button" id="resetOrderBtn" class="btn btn-outline-secondary btn-sm font-weight-bold">🔄 إعادة الترتيب</button>' +
+              '<button type="button" id="checkOrderBtn" class="btn-3d-orange">✔️ تحقق من الجملة</button>' +
+            '</div>'
+          );
+
+          function syncOrder() {
+            $drop.empty();
+            if (!placed.length) {
+              $drop.html('<span class="text-muted small">اضغط على الكلمات بالأسفل بالترتيب الصحيح...</span>');
+            } else {
+              placed.forEach(function (item, pos) {
+                var $p = $('<button type="button" class="word-chip placed">' + item.text + '</button>');
+                $p.on('click', function () {
+                  if (answered) return;
+                  placed.splice(pos, 1);
+                  syncOrder();
+                });
+                $drop.append($p);
+              });
+            }
+            $bank.find('.word-chip').each(function () {
+              var idx = parseInt($(this).attr('data-idx'), 10);
+              $(this).toggleClass('used', placed.some(function (x) { return x.idx === idx; }));
+            });
+          }
+
+          q.tokens.forEach(function (tok, idx) {
+            var $c = $('<button type="button" class="word-chip" data-idx="' + idx + '">' + tok + '</button>');
+            $c.on('click', function () {
+              if (answered) return;
+              speakArabic(tok);
+              placed.push({ idx: idx, text: tok });
+              syncOrder();
+            });
+            $bank.append($c);
+          });
+
+          $area.append($drop, $bank, $btns);
+          $('#resetOrderBtn').on('click', function () { if (!answered) { placed = []; syncOrder(); } });
+          $('#checkOrderBtn').on('click', function () {
+            if (answered) return;
+            if (placed.length < q.correctTokens.length) {
+              $('#qMsg').html('<div class="alert alert-info font-weight-bold mb-0">يرجى اختيار جميع الكلمات أولاً.</div>');
+              return;
+            }
+            answered = true;
+            var userSent = placed.map(function (x) { return x.text; }).join(' ');
+            var correctSent = q.correctTokens.join(' ');
+            if (userSent === correctSent) {
+              score++; streak++;
+              celebrate();
+              $('#qMsg').html('<div class="alert alert-success font-weight-bold mb-0">🌟 ترتيب ممتاز: «' + correctSent + '»</div>');
+            } else {
+              streak = 0;
+              $('#qMsg').html('<div class="alert alert-warning font-weight-bold mb-0">💡 الترتيب الصحيح: «' + correctSent + '»</div>');
+            }
+            $('#hudScore').text(score);
+            $('#hudStreak').text(streak);
+            $('#nextQBtn').text(qIdx === quiz.length - 1 ? '🏆 عرض النتيجة والمكافأة ←' : 'السؤال التالي ←').removeClass('d-none');
+          });
+        } else if (q.type === 'match') {
+          var leftPick = null;
+          var matchedCount = 0;
+          var pairs = q.pairs;
+          var rightOrder = pairs.map(function (p, i) { return { text: p[1], pairIdx: i }; });
+          // Deterministic shuffle of right column
+          rightOrder.sort(function (a, b) { return a.text.localeCompare(b.text); });
+
+          var $row = $('<div class="row"></div>');
+          var $colL = $('<div class="col-6"><div class="small font-weight-bold text-muted mb-2 text-center">الكلمة</div></div>');
+          var $colR = $('<div class="col-6"><div class="small font-weight-bold text-muted mb-2 text-center">ما يناسبها</div></div>');
+
+          pairs.forEach(function (p, i) {
+            var $lBtn = $('<button type="button" class="match-item left-item" data-pair="' + i + '">' + p[0] + '</button>');
+            $lBtn.on('click', function () {
+              if ($(this).hasClass('matched')) return;
+              $colL.find('.left-item').removeClass('selected');
+              $(this).addClass('selected');
+              leftPick = i;
+              speakArabic(p[0]);
+            });
+            $colL.append($lBtn);
+          });
+
+          rightOrder.forEach(function (r) {
+            var $rBtn = $('<button type="button" class="match-item right-item" data-pair="' + r.pairIdx + '">' + r.text + '</button>');
+            $rBtn.on('click', function () {
+              if (leftPick === null || $(this).hasClass('matched')) return;
+              var targetPair = parseInt($(this).attr('data-pair'), 10);
+              var $lSelected = $colL.find('.left-item[data-pair="' + leftPick + '"]');
+              if (leftPick === targetPair) {
+                $lSelected.removeClass('selected').addClass('matched');
+                $(this).addClass('matched');
+                matchedCount++;
+                leftPick = null;
+                if (matchedCount === pairs.length) {
+                  answered = true;
+                  score++; streak++;
+                  celebrate();
+                  $('#hudScore').text(score);
+                  $('#hudStreak').text(streak);
+                  $('#qMsg').html('<div class="alert alert-success font-weight-bold mb-0">🎯 ممتاز! وصلت جميع الكلمات بشكل صحيح!</div>');
+                  $('#nextQBtn').text('🏆 عرض النتيجة والمكافأة ←').removeClass('d-none');
+                }
+              } else {
+                var $btn = $(this);
+                $btn.addClass('wrong');
+                setTimeout(function () { $btn.removeClass('wrong'); }, 500);
+              }
+            });
+            $colR.append($rBtn);
+          });
+
+          $row.append($colL, $colR);
+          $area.append($row);
+        }
+
+        $('#nextQBtn').on('click', function () {
+          if (qIdx < quiz.length - 1) {
+            qIdx++;
+            renderQuestion();
+          } else {
+            renderCompletion();
+          }
+        });
+      }
+
+      function renderCompletion() {
+        var total = quiz.length;
+        var earnedPoints = 10 + score * 2 + (score === total ? 5 : 0);
+        S.saveSkillCompletion(sid, skill.id, score, total, earnedPoints);
+        celebrate();
+
+        $('#actStage').html(
+          '<div class="text-center py-3">' +
+            '<img src="../assets/generated/quiz-celebration.jpg" alt="مكافأة الإنجاز" style="width:190px;height:140px;object-fit:cover;border-radius:18px;border:3px solid #fbbf24;box-shadow:0 8px 22px rgba(245,158,11,0.25);" class="mb-3">' +
+            '<h2 class="font-weight-bold text-success mb-2">🏆 أحسنت يا ' + sname + '!</h2>' +
+            '<p class="lead mb-3">أتممت جميع أسئلة مهارة <strong>«' + skill.title + '»</strong> (5 اختيار، 2 صح وخطأ، 2 ترتيب كلمات، 1 توصيل)</p>' +
+            '<div class="d-flex justify-content-center flex-wrap mb-4" style="gap:12px;">' +
+              '<div class="p-3 bg-light rounded" style="min-width:140px;border:2px solid #bbf7d0;"><div class="small text-muted">النتيجة</div><strong class="h4 text-success">' + score + ' / ' + total + '</strong></div>' +
+              '<div class="p-3 bg-light rounded" style="min-width:140px;border:2px solid #fde68a;"><div class="small text-muted">نقاط المكافأة</div><strong class="h4 text-warning">+' + earnedPoints + ' نقطة</strong></div>' +
+            '</div>' +
+            '<div class="alert alert-info font-weight-bold mb-4">✅ تم تسجيل إنجازك وإظهاره للمعلم والمشرف التربوي والإدارة المدرسية!</div>' +
+            '<div class="d-flex justify-content-center flex-wrap" style="gap:10px;">' +
+              '<a href="../المكافآت/index.html" class="btn btn-warning text-white font-weight-bold">🏆 سجل المكافآت</a>' +
+              '<a href="../بوابة-المعلم/index.html#skillReportSection" class="btn btn-primary font-weight-bold">📊 تقرير المعلم</a>' +
+              '<a href="../لوحة-الإدارة/index.html" class="btn btn-dark font-weight-bold">🏫 لوحة الإدارة والمشرفين</a>' +
+              '<a href="../بوابة-الطالب/index.html" class="btn btn-outline-secondary font-weight-bold">العودة لبوابة الطالب</a>' +
+            '</div>' +
+          '</div>'
+        );
+      }
+
+      renderQuestion();
+    })(window.jQuery);
+  </script>
+</body>
+</html>

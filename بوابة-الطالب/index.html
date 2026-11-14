@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دخول الطلاب – المكتبة والمهارات – أقرأ بالعربية</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/awesome5.min.css">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/mobile-responsive.css">
+  <style>
+    body { direction: rtl; text-align: right; background: #f8fafc; font-family: Tahoma, Arial, sans-serif; }
+    .portal-header { background: #fff; box-shadow: 0 4px 18px rgba(0,0,0,0.06); padding: 12px 0; }
+    .portal-header img.logo { max-height: 50px; }
+    .portal-banner {
+      background: linear-gradient(120deg, rgba(28, 90, 166, 0.92), rgba(19, 64, 120, 0.92)),
+        url("../wp-content/uploads/2022/06/bg-page-title-copy.webp") center/cover no-repeat;
+      color: #fff; padding: 48px 0; text-align: center;
+    }
+    .portal-banner h1 { color: #fff; font-weight: 800; margin-bottom: 8px; }
+    .portal-card {
+      background: #fff; border-radius: 18px; padding: 0; overflow: hidden;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); border: 2px solid #e2e8f0; height: 100%;
+      display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+    .portal-card:hover { transform: translateY(-5px); box-shadow: 0 14px 30px rgba(37, 99, 235, 0.16); border-color: #60a5fa; }
+    .skill-thumb { position: relative; height: 120px; overflow: hidden; }
+    .skill-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+    .portal-card:hover .skill-thumb img { transform: scale(1.06); }
+    .skill-lvl-pill {
+      position: absolute; top: 10px; right: 10px; padding: 4px 12px; border-radius: 50px;
+      font-size: 0.78rem; font-weight: 800; color: #fff; box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+    .skill-body { padding: 16px; display: flex; flex-direction: column; flex: 1; }
+    .skill-go-btn {
+      border-radius: 12px !important; font-weight: 800 !important; padding: 9px 14px !important;
+      border-bottom: 4px solid #c2410c !important; transition: transform 0.15s;
+    }
+    .skill-go-btn:active { transform: translateY(2px); }
+    .portal-footer { background: #172554; color: #cbd5e1; padding: 28px 0; margin-top: 48px; text-align: center; }
+  </style>
+</head>
+<body>
+  <header class="portal-header">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <a href="../index.html"><img class="logo" src="../_external/en.ireadarabic.com/wp-content/uploads/2022/07/logo.png" alt="أقرأ بالعربية"></a>
+      <nav class="d-flex flex-wrap align-items-center">
+        <a href="../index.html" class="mx-2 font-weight-bold text-dark">الصفحة الرئيسة</a>
+        <a href="../المعلم/index.html" class="mx-2 font-weight-bold text-dark">المعلم</a>
+        <a href="../المدونة/index.html" class="mx-2 font-weight-bold text-dark">المدونة</a>
+        <a href="../بوابة-المعلم/index.html" class="btn btn-primary btn-sm mx-1">دخول المعلم</a>
+        <a href="../التسجيل/index.html" class="btn btn-outline-primary btn-sm mx-1">🔐 التسجيل والدخول</a>
+        <a href="../لوحة-الإدارة/index.html" class="btn btn-dark btn-sm mx-1">الإدارة والمشرفين</a>
+        <a href="../الأنشطة/index.html" class="btn btn-warning btn-sm text-white mx-1">مركز المهارات</a>
+        <a href="../المكتبة/index.html" class="btn btn-success btn-sm mx-1">مكتبة 30 قصة</a>
+        <a href="../المكافآت/index.html" class="btn btn-outline-primary btn-sm mx-1">🏆 المكافآت والتعزيز</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="portal-banner">
+    <div class="container">
+      <h1>بوابة الطالب – جميع المهارات والأنشطة</h1>
+      <p class="mb-0">17 مهارة ونشاطاً تفاعلياً مع النطق الصوتي والأنيميشن – بدون تسجيل</p>
+    </div>
+  </section>
+
+  <main class="container py-5">
+    <div class="alert alert-info d-flex flex-wrap justify-content-between align-items-center mb-4">
+      <div>
+        <strong>الطالب النشط:</strong> <span id="activeStudentName">يوسف طارق</span>
+        (<span id="activeStudentLevel">مستوى د</span>)
+        — <span id="doneCounter" class="badge badge-success">0 مكتمل</span>
+      </div>
+      <a href="../بوابة-المعلم/index.html" class="btn btn-outline-primary btn-sm">تغيير الطالب من بوابة المعلم</a>
+    </div>
+
+    <div id="weeklyTasksMount" class="mb-4"></div>
+
+    <div class="row mb-4">
+      <div class="col-md-4 mb-3">
+        <a href="../المكتبة/index.html" class="text-decoration-none">
+          <div class="portal-card text-center p-0 overflow-hidden" style="border:2px solid #86efac;">
+            <img src="../assets/generated/story-school.jpg" alt="مكتبة القصص" style="width:100%;height:145px;object-fit:cover;">
+            <div class="p-3"><h5 class="font-weight-bold text-success mb-1">📚 مكتبة 30 قصة مصورة</h5><small class="text-muted">اقرأ واستمع وأجب عن أسئلة الفهم</small></div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <a href="../الأنشطة/index.html" class="text-decoration-none">
+          <div class="portal-card text-center p-0 overflow-hidden" style="border:2px solid #93c5fd;">
+            <img src="../assets/generated/arcade-hero.jpg" alt="الألعاب التفاعلية" style="width:100%;height:145px;object-fit:cover;">
+            <div class="p-3"><h5 class="font-weight-bold text-primary mb-1">🎮 الألعاب والمهارات (17)</h5><small class="text-muted">تحديات تفاعلية ونطق صوتي فوري</small></div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <a href="../المكافآت/index.html" class="text-decoration-none">
+          <div class="portal-card text-center p-0 overflow-hidden" style="border:2px solid #fde047;">
+            <img src="../assets/generated/rewards-trophy.jpg" alt="المكافآت والتعزيز" style="width:100%;height:145px;object-fit:cover;">
+            <div class="p-3"><h5 class="font-weight-bold text-warning mb-1">🏆 المكافآت والشهادات</h5><small class="text-muted">شاهد نقاطك وأوسمتك واطبع شهادتك</small></div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="mb-4 text-center" id="catFilters">
+      <button type="button" class="btn btn-primary btn-sm m-1" data-cat="all">الكل (17 مهارة)</button>
+      <button type="button" class="btn btn-outline-primary btn-sm m-1" data-cat="مهارات التأسيس">مهارات التأسيس</button>
+      <button type="button" class="btn btn-outline-primary btn-sm m-1" data-cat="المهارات الإملائية">المهارات الإملائية</button>
+      <button type="button" class="btn btn-outline-primary btn-sm m-1" data-cat="المهارات اللغوية">المهارات اللغوية</button>
+      <button type="button" class="btn btn-outline-primary btn-sm m-1" data-cat="الكتب التفاعلية">الكتب التفاعلية</button>
+      <button type="button" class="btn btn-outline-primary btn-sm m-1" data-cat="الاختبارات">الاختبارات</button>
+    </div>
+
+    <div class="row" id="activitiesGrid"></div>
+  </main>
+
+  <footer class="portal-footer">
+    <div class="container">
+      <p class="mb-0">منصة أقرأ – بوابة الطالب المحلية</p>
+    </div>
+  </footer>
+
+  <script src="../wp-includes/js/jquery/jquery.min.js"></script>
+  <script src="../assets/js/weekly-stories.js"></script>
+  <script>
+    (function ($) {
+      if (window.IREAD_WEEKLY) {
+        window.IREAD_WEEKLY.renderWeeklyWidget('#weeklyTasksMount', '../');
+      }
+      var ALL_ACTIVITIES = [
+        { id: 'short-vowels', title: 'الحركات القصيرة', level: 'مستوى أ', cat: 'مهارات التأسيس', img: '../wp-content/uploads/2022/06/تعلم-عن-طريق-المتعة.webp', desc: 'الفتحة والضمة والكسرة.' },
+        { id: 'sukoon-shadda', title: 'السكون والشدة', level: 'مستوى أ', cat: 'مهارات التأسيس', img: '../wp-content/uploads/2022/06/ألعاب-ممتعة.webp', desc: 'تمييز التضعيف والسكون.' },
+        { id: 'long-vowels', title: 'المدود الثلاثة', level: 'مستوى أ', cat: 'مهارات التأسيس', img: '../wp-content/uploads/2022/06/مقاطع-الفيديو.webp', desc: 'مد الألف والواو والياء.' },
+        { id: 'shams-qamar', title: 'اللام الشمسية والقمرية', level: 'مستوى أ', cat: 'مهارات التأسيس', img: '../wp-content/uploads/2022/06/ألعاب-ممتعة.webp', desc: 'تصنيف اللام القمرية والشمسية.' },
+        { id: 'story-forest', title: 'كتاب: رحلة في الغابة', level: 'مستوى أ', cat: 'الكتب التفاعلية', img: '../wp-content/uploads/2022/06/كتب-تفاعليّة.webp', desc: 'قصة مسموعة مع أسئلة فهم.' },
+        { id: 'tanween', title: 'التنوين بأنواعه', level: 'مستوى ب', cat: 'المهارات الإملائية', img: '../wp-content/uploads/2022/06/تعلم-عن-طريق-المتعة.webp', desc: 'تنوين الفتح والضم والكسر.' },
+        { id: 'hamza-wasl-qat', title: 'همزة الوصل والقطع', level: 'مستوى ب', cat: 'المهارات الإملائية', img: '../wp-content/uploads/2022/06/أكثر-من-٣٠٠٠-مصدر-تعليمي.webp', desc: 'التفريق بين همزتي الوصل والقطع.' },
+        { id: 'singular-dual-plural', title: 'المفرد والمثنى والجمع', level: 'مستوى ب', cat: 'المهارات اللغوية', img: '../wp-content/uploads/2022/06/ألعاب-ممتعة.webp', desc: 'صيغ العدد في العربية.' },
+        { id: 'story-bee', title: 'كتاب: النحلة النشيطة', level: 'مستوى ب', cat: 'الكتب التفاعلية', img: '../wp-content/uploads/2022/06/كتب-تفاعليّة.webp', desc: 'قصة مسموعة عن التعاون.' },
+        { id: 'pronouns', title: 'الضمائر العربية', level: 'مستوى ج', cat: 'المهارات اللغوية', img: '../wp-content/uploads/2022/06/تعلم-عن-طريق-المتعة.webp', desc: 'ضمائر المتكلم والغائب والمخاطب.' },
+        { id: 'demonstratives', title: 'أسماء الإشارة', level: 'مستوى ج', cat: 'المهارات اللغوية', img: '../wp-content/uploads/2022/06/ألعاب-ممتعة.webp', desc: 'استخدام هذا وهذه وهؤلاء.' },
+        { id: 'nominal-verbal', title: 'الجملة الاسمية والفعلية', level: 'مستوى ج', cat: 'المهارات اللغوية', img: '../wp-content/uploads/2022/06/أكثر-من-٣٠٠٠-مصدر-تعليمي.webp', desc: 'التمييز بين نوعي الجملة.' },
+        { id: 'sentence-order', title: 'ترتيب الكلمات', level: 'مستوى ج', cat: 'المهارات اللغوية', img: '../wp-content/uploads/2022/06/أكثر-من-٣٠٠٠-مصدر-تعليمي.webp', desc: 'بناء جملة مفيدة بالترتيب.' },
+        { id: 'synonyms', title: 'المرادفات والأضداد', level: 'مستوى ج', cat: 'المهارات اللغوية', img: '../wp-content/uploads/2022/06/مقاطع-الفيديو.webp', desc: 'تنمية الثروة اللغوية.' },
+        { id: 'taa-marbuta', title: 'التاء المفتوحة والمربوطة', level: 'مستوى د', cat: 'المهارات الإملائية', img: '../wp-content/uploads/2022/06/ألعاب-ممتعة.webp', desc: 'تمييز التاء المربوطة والمفتوحة.' },
+        { id: 'hamza-middle-end', title: 'الهمزة المتوسطة والمتطرفة', level: 'مستوى د', cat: 'المهارات الإملائية', img: '../wp-content/uploads/2022/06/تقارير-الأداء.webp', desc: 'قواعد رسم الهمزة.' },
+        { id: 'fluency-quiz', title: 'اختبار الطلاقة القرائية', level: 'مستوى د', cat: 'الاختبارات', img: '../wp-content/uploads/2022/06/تقارير-الأداء.webp', desc: 'تقييم شامل للمستوى.' }
+      ];
+
+      var sid = localStorage.getItem('iread_selected_student_id') || '4';
+      $('#activeStudentName').text(localStorage.getItem('iread_selected_student_name') || 'يوسف طارق');
+      $('#activeStudentLevel').text(localStorage.getItem('iread_selected_student_level') || 'مستوى د');
+      var doneMap = JSON.parse(localStorage.getItem('iread_done_' + sid) || '{}');
+      $('#doneCounter').text(Object.keys(doneMap).length + ' / ' + ALL_ACTIVITIES.length + ' مكتمل');
+
+      function skillVisual(a) {
+        if (a.cat === 'الكتب التفاعلية') return { img: '../assets/generated/story-nature.jpg', icon: '📖' };
+        if (a.cat === 'الاختبارات') return { img: '../assets/generated/rewards-trophy.jpg', icon: '🏆' };
+        if (a.cat === 'المهارات الإملائية') return { img: '../assets/generated/story-school.jpg', icon: '✍️' };
+        if (a.cat === 'المهارات اللغوية') return { img: '../assets/generated/story-science.jpg', icon: '🧩' };
+        return { img: '../assets/generated/arcade-hero.jpg', icon: '🎮' };
+      }
+
+      function levelColor(lvl) {
+        if (lvl === 'مستوى أ') return '#16a34a';
+        if (lvl === 'مستوى ب') return '#2563eb';
+        if (lvl === 'مستوى ج') return '#7c3aed';
+        return '#ea580c';
+      }
+
+      function renderGrid(cat) {
+        var $g = $('#activitiesGrid').empty();
+        ALL_ACTIVITIES.forEach(function (a) {
+          if (cat !== 'all' && a.cat !== cat) return;
+          var vis = skillVisual(a);
+          var pill = doneMap[a.id]
+            ? '<span class="skill-lvl-pill" style="background:#16a34a;">✓ مكتمل (' + doneMap[a.id] + ')</span>'
+            : '<span class="skill-lvl-pill" style="background:' + levelColor(a.level) + ';">' + a.level + '</span>';
+          $g.append(
+            '<div class="col-sm-6 col-lg-3 mb-4">' +
+              '<div class="portal-card text-center">' +
+                '<div class="skill-thumb">' +
+                  '<img src="' + vis.img + '" alt="' + a.title + '">' +
+                  pill +
+                '</div>' +
+                '<div class="skill-body">' +
+                  '<div class="small text-primary font-weight-bold mb-1">' + vis.icon + ' ' + a.cat + '</div>' +
+                  '<h6 class="font-weight-bold text-dark mb-1">' + a.title + '</h6>' +
+                  '<p class="text-muted small flex-grow-1 mb-3">' + a.desc + '</p>' +
+                  '<a href="../الأنشطة/index.html?id=' + a.id + '" class="btn btn-primary btn-sm btn-block skill-go-btn">🎮 ابدأ المهارة</a>' +
+                '</div>' +
+              '</div>' +
+            '</div>'
+          );
+        });
+      }
+
+      $('#catFilters button').on('click', function () {
+        $('#catFilters button').removeClass('btn-primary').addClass('btn-outline-primary');
+        $(this).removeClass('btn-outline-primary').addClass('btn-primary');
+        renderGrid($(this).attr('data-cat'));
+      });
+
+      renderGrid('all');
+    })(window.jQuery);
+  </script>
+</body>
+</html>

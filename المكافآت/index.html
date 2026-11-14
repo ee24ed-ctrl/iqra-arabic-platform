@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نظام المكافآت والتعزيز – أقرأ بالعربية</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/awesome5.min.css">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/mobile-responsive.css">
+  <style>
+    body { direction: rtl; text-align: right; background: #f8fafc; font-family: Tahoma, Arial, sans-serif; }
+    .portal-header { background: #fff; box-shadow: 0 4px 18px rgba(0,0,0,0.06); padding: 12px 0; }
+    .portal-header img.logo { max-height: 50px; }
+    .portal-banner {
+      background: linear-gradient(120deg, rgba(124, 58, 237, 0.92), rgba(28, 90, 166, 0.92)),
+        url("../wp-content/uploads/2022/06/bg-page-title-copy.webp") center/cover no-repeat;
+      color: #fff; padding: 42px 0; text-align: center;
+    }
+    .portal-banner h1 { color: #fff; font-weight: 800; margin-bottom: 8px; }
+    .reward-card {
+      background: #fff; border-radius: 16px; padding: 22px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); border: 1px solid #e2e8f0; height: 100%;
+    }
+    .badge-item {
+      border-radius: 14px; padding: 16px; text-align: center; border: 2px solid #e2e8f0;
+      background: #f8fafc; opacity: 0.55; transition: transform 0.2s;
+    }
+    .badge-item.unlocked {
+      opacity: 1; background: linear-gradient(135deg, #fefce8, #fef3c7);
+      border-color: #f59e0b; box-shadow: 0 6px 18px rgba(245, 158, 11, 0.18);
+    }
+    .badge-item.unlocked:hover { transform: translateY(-3px); }
+    .badge-icon { font-size: 2.2rem; display: block; margin-bottom: 6px; }
+    .cert-box {
+      background: linear-gradient(135deg, #fffbeb, #ffffff); border: 6px double #d97706;
+      border-radius: 18px; padding: 30px; text-align: center; position: relative;
+    }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: #fff; }
+    }
+  </style>
+</head>
+<body>
+  <header class="portal-header no-print">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <a href="../index.html"><img class="logo" src="../_external/en.ireadarabic.com/wp-content/uploads/2022/07/logo.png" alt="أقرأ بالعربية"></a>
+      <nav class="d-flex flex-wrap align-items-center">
+        <a href="../index.html" class="mx-2 font-weight-bold text-dark">الصفحة الرئيسة</a>
+        <a href="../بوابة-الطالب/index.html" class="btn btn-warning btn-sm text-white mx-1">بوابة الطالب</a>
+        <a href="../الأنشطة/index.html" class="btn btn-outline-primary btn-sm mx-1">المهارات</a>
+        <a href="../المكتبة/index.html" class="btn btn-success btn-sm mx-1">مكتبة 30 قصة</a>
+        <a href="../بوابة-المعلم/index.html" class="btn btn-primary btn-sm mx-1">بوابة المعلم</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="portal-banner no-print">
+    <div class="container">
+      <h1>🏆 نظام المكافآت والتعزيز التحفيزي</h1>
+      <p class="mb-0">اكسب النجوم والأوسمة والشهادات عند إتمام القصص والأنشطة وتلقي تعزيز المعلم</p>
+    </div>
+  </section>
+
+  <main class="container py-5">
+    <div class="row mb-4 no-print">
+      <div class="col-md-4 mb-3">
+        <div class="reward-card text-center">
+          <div class="text-muted small">الطالب النشط</div>
+          <h4 class="font-weight-bold text-primary mt-1" id="stName">يوسف طارق</h4>
+          <span class="badge badge-warning px-3 py-1" id="stLevel">مستوى د</span>
+          <div class="mt-3">
+            <a href="../بوابة-المعلم/index.html" class="btn btn-outline-primary btn-sm">تغيير الطالب / إرسال تعزيز</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="reward-card text-center">
+          <div class="text-muted small">مجموع نقاط التميز</div>
+          <h2 class="font-weight-bold text-success mt-1" id="totalPts">0 نقطة</h2>
+          <div class="font-weight-bold text-dark" id="rankLabel">الرتبة: قارئ واعد 🌱</div>
+          <div class="progress mt-2" style="height:10px;">
+            <div id="rankBar" class="progress-bar bg-success" style="width:0%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="reward-card text-center">
+          <div class="text-muted small">ملخص الإنجازات</div>
+          <div class="mt-2 font-weight-bold">
+            <div>🎯 الأنشطة المكتملة: <span id="actCount" class="text-primary">0</span></div>
+            <div>📚 القصص المقروءة: <span id="bookCount" class="text-success">0</span></div>
+            <div>⭐ نجوم المعلم: <span id="teacherStars" class="text-warning">0</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-card mb-4 no-print">
+      <h4 class="font-weight-bold mb-3">🎖️ أوسمة وشارات التميّز</h4>
+      <div class="row" id="badgesGrid"></div>
+    </div>
+
+    <div class="reward-card mb-4 no-print">
+      <h4 class="font-weight-bold mb-3">💌 رسائل التعزيز والمكافآت من المعلم</h4>
+      <div id="teacherNotes"></div>
+    </div>
+
+    <div class="cert-box">
+      <img src="../assets/generated/rewards-trophy.jpg" alt="كأس التفوق" style="width:120px;height:120px;object-fit:cover;border-radius:50%;border:4px solid #f59e0b;box-shadow:0 6px 18px rgba(245,158,11,0.25);" class="mb-2">
+      <h2 class="font-weight-bold text-dark mt-2">شهادة شكر وتفوّق</h2>
+      <p class="lead mt-2 mb-1">تُمنح هذه الشهادة للطالب المتميّز:</p>
+      <h3 class="font-weight-bold text-primary my-2" id="certName">يوسف طارق</h3>
+      <p class="mb-3">تقديراً لجهوده في القراءة التفاعلية وتحقيقه <strong id="certPts">0</strong> نقطة تميّز في منصة أقرأ.</p>
+      <div class="text-muted small mb-3" id="certDate"></div>
+      <button type="button" class="btn btn-warning font-weight-bold no-print" onclick="window.print()">🖨️ طباعة الشهادة</button>
+    </div>
+  </main>
+
+  <script src="../wp-includes/js/jquery/jquery.min.js"></script>
+  <script>
+    (function ($) {
+      var sid = localStorage.getItem('iread_selected_student_id') || '4';
+      var name = localStorage.getItem('iread_selected_student_name') || 'يوسف طارق';
+      var level = localStorage.getItem('iread_selected_student_level') || 'مستوى د';
+
+      var doneMap = JSON.parse(localStorage.getItem('iread_done_' + sid) || '{}');
+      var booksMap = JSON.parse(localStorage.getItem('iread_books_' + sid) || '{}');
+      var rewards = JSON.parse(localStorage.getItem('iread_rewards_' + sid) || '{"stars":3,"notes":["أداء رائع ومستمر في القراءة!"]}');
+
+      var acts = Object.keys(doneMap).length;
+      var books = Object.keys(booksMap).length;
+      var stars = Number(rewards.stars || 0);
+      var weeklyPts = Number(rewards.weeklyPoints || 0);
+      var pts = (acts * 10) + (books * 15) + (stars * 5) + weeklyPts;
+
+      $('#stName, #certName').text(name);
+      $('#stLevel').text(level);
+      $('#actCount').text(acts);
+      $('#bookCount').text(books);
+      $('#teacherStars').text(stars);
+      $('#totalPts').text(pts + ' نقطة');
+      $('#certPts').text(pts);
+      $('#certDate').text('تاريخ الإصدار: ' + new Date().toLocaleDateString('ar-SA'));
+
+      var rank = 'قارئ واعد 🌱', pct = Math.min(100, Math.round((pts / 150) * 100));
+      if (pts >= 150) rank = 'نجم اللغة العربية 👑';
+      else if (pts >= 80) rank = 'بطل القراءة 🏆';
+      else if (pts >= 30) rank = 'قارئ متألّق 🌟';
+      $('#rankLabel').text('الرتبة: ' + rank);
+      $('#rankBar').css('width', pct + '%');
+
+      var BADGES = [
+        { icon: '🌱', title: 'بداية موفقة', desc: 'إكمال نشاط واحد على الأقل', ok: acts >= 1 },
+        { icon: '📖', title: 'صديق الكتاب', desc: 'قراءة قصة واحدة على الأقل', ok: books >= 1 },
+        { icon: '⭐', title: 'نجم المعلم', desc: 'الحصول على 3 نجوم تعزيز من المعلم', ok: stars >= 3 },
+        { icon: '🎯', title: 'متقن المهارات', desc: 'إكمال 5 أنشطة تفاعلية', ok: acts >= 5 },
+        { icon: '📚', title: 'قارئ نهم', desc: 'قراءة 5 قصص مصورة', ok: books >= 5 },
+        { icon: '👑', title: 'بطل التميز', desc: 'جمع 100 نقطة تميّز أو أكثر', ok: pts >= 100 }
+      ];
+      var $bg = $('#badgesGrid').empty();
+      BADGES.forEach(function (b) {
+        $bg.append(
+          '<div class="col-6 col-md-4 col-lg-2 mb-3">' +
+            '<div class="badge-item ' + (b.ok ? 'unlocked' : '') + '">' +
+              '<span class="badge-icon">' + b.icon + '</span>' +
+              '<div class="font-weight-bold small">' + b.title + '</div>' +
+              '<div class="text-muted" style="font-size:11px;">' + b.desc + '</div>' +
+              (b.ok ? '<span class="badge badge-success mt-2">مفتوح ✓</span>' : '<span class="badge badge-secondary mt-2">مغلق</span>') +
+            '</div>' +
+          '</div>'
+        );
+      });
+
+      var notes = Array.isArray(rewards.notes) ? rewards.notes : [];
+      var $tn = $('#teacherNotes').empty();
+      if (!notes.length) {
+        $tn.html('<p class="text-muted mb-0">لا توجد رسائل تعزيز إضافية حتى الآن.</p>');
+      } else {
+        notes.slice().reverse().forEach(function (n) {
+          $tn.append('<div class="alert alert-success py-2 mb-2">🌟 ' + n + '</div>');
+        });
+      }
+    })(window.jQuery);
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,449 @@
+﻿<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دخول المعلم – اختيار الطلاب – أقرأ بالعربية</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/awesome5.min.css">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/mobile-responsive.css">
+  <style>
+    body { direction: rtl; text-align: right; background: #f8fafc; font-family: Tahoma, Arial, sans-serif; }
+    .portal-header { background: #fff; box-shadow: 0 4px 18px rgba(0,0,0,0.06); padding: 12px 0; }
+    .portal-header img.logo { max-height: 50px; }
+    .portal-banner {
+      background: linear-gradient(120deg, rgba(28, 90, 166, 0.92), rgba(19, 64, 120, 0.92)),
+        url("../wp-content/uploads/2022/06/bg-page-title-copy.webp") center/cover no-repeat;
+      color: #fff; padding: 48px 0; text-align: center;
+    }
+    .portal-banner h1 { color: #fff; font-weight: 800; margin-bottom: 8px; }
+    .portal-card {
+      background: #fff; border-radius: 16px; padding: 24px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); border: 1px solid #e2e8f0; height: 100%;
+    }
+    .student-row { cursor: pointer; transition: background 0.15s; }
+    .student-row:hover { background: #eef5ff; }
+    .student-row.table-primary { background: #dbeafe !important; }
+    .badge-level { background: #ff7a2f; color: #fff; padding: 4px 10px; border-radius: 20px; font-size: 12px; }
+    .portal-footer { background: #172554; color: #cbd5e1; padding: 28px 0; margin-top: 48px; text-align: center; }
+  </style>
+</head>
+<body>
+  <header class="portal-header">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <a href="../index.html"><img class="logo" src="../_external/en.ireadarabic.com/wp-content/uploads/2022/07/logo.png" alt="أقرأ بالعربية"></a>
+      <nav class="d-flex flex-wrap align-items-center">
+        <a href="../index.html" class="mx-2 font-weight-bold text-dark">الصفحة الرئيسة</a>
+        <a href="../المعلم/index.html" class="mx-2 font-weight-bold text-dark">المعلم</a>
+        <a href="../المدونة/index.html" class="mx-2 font-weight-bold text-dark">المدونة</a>
+        <a href="../بوابة-المعلم/index.html" class="btn btn-primary btn-sm mx-1">دخول المعلم</a>
+        <a href="../بوابة-الطالب/index.html" class="btn btn-warning btn-sm text-white mx-1">دخول الطلاب</a>
+        <a href="../لوحة-الإدارة/index.html" class="btn btn-dark btn-sm mx-1">🏫 الإدارة والمشرفين</a>
+        <a href="../التسجيل/index.html" class="btn btn-outline-primary btn-sm mx-1">🔐 التسجيل</a>
+        <a href="../المكافآت/index.html" class="btn btn-outline-success btn-sm mx-1">🏆 المكافآت والتعزيز</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="portal-banner">
+    <div class="container">
+      <img src="../assets/generated/teacher-portal.jpg" alt="بوابة المعلم" style="width:110px;height:110px;object-fit:cover;border-radius:50%;border:4px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,0.2);" class="mb-3">
+      <h1>بوابة المعلم – إدارة واختيار الطلاب</h1>
+      <p class="mb-0">اختر الصف أو الطالب لمتابعة مستوى القراءة وتعيين الأنشطة والكتب التفاعلية</p>
+    </div>
+  </section>
+
+  <main class="container py-5">
+    
+  <div class="row mb-4">
+    <div class="col-md-5 mb-3">
+      <div class="portal-card">
+        <h4 class="font-weight-bold mb-3"><i class="fas fa-chalkboard-teacher text-primary ml-2"></i>تصفية واختيار الطلاب</h4>
+        <div class="form-group">
+          <label for="classFilter">اختر الصف الدراسي</label>
+          <select id="classFilter" class="form-control">
+            <option value="all">جميع الصفوف</option>
+            <option value="الصف الأول">الصف الأول</option>
+            <option value="الصف الثاني">الصف الثاني</option>
+            <option value="الصف الثالث">الصف الثالث</option>
+            <option value="الصف الرابع">الصف الرابع</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="studentSearch">بحث باسم الطالب</label>
+          <input id="studentSearch" type="search" class="form-control" placeholder="اكتب اسم الطالب...">
+        </div>
+        <div class="table-responsive">
+          <table class="table table-bordered table-sm mb-0">
+            <thead class="thead-light">
+              <tr>
+                <th>اختيار</th>
+                <th>الطالب</th>
+                <th>الصف</th>
+                <th>المستوى</th>
+              </tr>
+            </thead>
+            <tbody id="studentsTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-7 mb-3">
+      <div class="portal-card">
+        <h4 class="font-weight-bold mb-3"><i class="fas fa-user-graduate text-success ml-2"></i>ملف الطالب المختار وتعيين الأنشطة</h4>
+        <div id="selectedStudentPanel">
+          <p class="text-muted">اضغط على أي طالب من القائمة لاختياره وعرض تقدّمه وتعيين الكتب والأنشطة له.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Weekly Stories Assignment & Teacher/Admin Completion Report -->
+  <section id="weeklyReportSection" class="mt-4">
+    <div class="portal-card mb-4" style="border:2px solid #f59e0b;background:linear-gradient(135deg,#fffbeb,#ffffff);">
+      <div class="d-flex flex-wrap justify-content-between align-items-center mb-3" style="gap:10px;">
+        <div>
+          <h4 class="font-weight-bold mb-1" style="color:#92400e;">📚 تعيين القصة الأسبوعية (تكليف 1 أو 2 من المعلم)</h4>
+          <small class="text-muted">تظهر القصص المختارة فوراً لجميع الطلاب في بوابة الطالب والصفحة الرئيسة والمكتبة مع قارئ ورقي و11 سؤال فهم قرائي.</small>
+        </div>
+        <a href="../القصة-الأسبوعية/index.html" class="btn btn-warning btn-sm text-white font-weight-bold">📖 معاينة القصة الأسبوعية</a>
+      </div>
+      <div class="row align-items-end">
+        <div class="col-md-5 mb-2">
+          <label class="font-weight-bold small">التكليف الأول لهذا الأسبوع (إلزامي)</label>
+          <select id="weeklyStory1Select" class="form-control"></select>
+        </div>
+        <div class="col-md-5 mb-2">
+          <label class="font-weight-bold small">التكليف الثاني لهذا الأسبوع (اختياري)</label>
+          <select id="weeklyStory2Select" class="form-control"></select>
+        </div>
+        <div class="col-md-2 mb-2">
+          <button id="saveWeeklyBtn" type="button" class="btn btn-primary btn-block font-weight-bold">حفظ التكليف</button>
+        </div>
+      </div>
+      <div id="weeklySaveMsg" class="small text-success font-weight-bold mt-2"></div>
+    </div>
+
+    <div class="portal-card mb-4" id="skillReportSection" style="border:2px solid #2563eb;background:linear-gradient(135deg,#eff6ff,#ffffff);">
+      <div class="d-flex flex-wrap justify-content-between align-items-center mb-3" style="gap:10px;">
+        <div>
+          <h4 class="font-weight-bold mb-1" style="color:#1e3a8a;">🎮 تكليف المهارة التفاعلية الواحدة ومتابعة الإنجاز</h4>
+          <small class="text-muted">تظهر هذه المهارة فقط في صفحة الألعاب التفاعلية للطلاب (5 اختيار، 2 صح وخطأ، 2 ترتيب كلمات، 1 توصيل).</small>
+        </div>
+        <a href="../الأنشطة/index.html" class="btn btn-primary btn-sm font-weight-bold">🎮 معاينة لعبة المهارة</a>
+      </div>
+      <div class="row align-items-end mb-3">
+        <div class="col-md-9 mb-2">
+          <label class="font-weight-bold small">اختر المهارة التفاعلية المكلف بها الطلاب</label>
+          <select id="assignedSkillSelect" class="form-control"></select>
+        </div>
+        <div class="col-md-3 mb-2">
+          <button id="saveSkillAssignBtn" type="button" class="btn btn-primary btn-block font-weight-bold">حفظ تكليف المهارة</button>
+        </div>
+      </div>
+      <div id="skillAssignMsg" class="small text-success font-weight-bold mb-3"></div>
+      <div class="table-responsive">
+        <table class="table table-sm table-bordered mb-0 bg-white">
+          <thead class="thead-light">
+            <tr>
+              <th>الطالب</th>
+              <th>الصف</th>
+              <th>المهارة المكلفة</th>
+              <th>الدرجة</th>
+              <th>النقاط</th>
+              <th>الحالة</th>
+            </tr>
+          </thead>
+          <tbody id="skillReportBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="portal-card">
+      <div class="d-flex flex-wrap justify-content-between align-items-center mb-3" style="gap:10px;">
+        <div>
+          <h4 class="font-weight-bold mb-1"><i class="fas fa-clipboard-check text-success ml-2"></i>تقرير المعلم والإدارة – الطلاب المنتهون من مهام الأسبوع</h4>
+          <small class="text-muted">متابعة حية لإنجاز القصة الأسبوعية الأولى والثانية ونتائج أسئلة الفهم القرائي الـ 11.</small>
+        </div>
+        <div class="d-flex flex-wrap align-items-center" style="gap:8px;">
+          <select id="reportFilter" class="form-control form-control-sm" style="width:auto;">
+            <option value="all">جميع الطلاب</option>
+            <option value="done">المنتهون من جميع المهام ✅</option>
+            <option value="pending">قيد التنفيذ / غير مكتمل ⏳</option>
+          </select>
+          <button type="button" class="btn btn-outline-dark btn-sm font-weight-bold" onclick="window.print()">🖨️ طباعة التقرير</button>
+        </div>
+      </div>
+
+      <div class="row text-center mb-4" id="reportKpis"></div>
+
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover mb-0">
+          <thead class="thead-dark">
+            <tr>
+              <th>الطالب</th>
+              <th>الصف</th>
+              <th>التكليف الأول</th>
+              <th>التكليف الثاني</th>
+              <th>نقاط الأسبوع</th>
+              <th>حالة الإنجاز</th>
+            </tr>
+          </thead>
+          <tbody id="weeklyReportBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  
+  </main>
+
+  <footer class="portal-footer">
+    <div class="container">
+      <p class="mb-0">منصة أقرأ – بوابة الدخول المحلية (تعمل بدون تسجيل خارجي)</p>
+    </div>
+  </footer>
+
+  <script src="../wp-includes/js/jquery/jquery.min.js"></script>
+  <script src="../assets/js/weekly-stories.js"></script>
+  <script src="../assets/js/skill-games.js"></script>
+  
+  <script>
+    (function ($) {
+      var STUDENTS = [
+        { id: 1, name: 'سارة أحمد', grade: 'الصف الأول', level: 'مستوى أ', books: 14, score: '92%', assigned: ['قصة الحروف المرحة'] },
+        { id: 2, name: 'عمر خالد', grade: 'الصف الثاني', level: 'مستوى ب', books: 21, score: '88%', assigned: ['رحلة في الغابة'] },
+        { id: 3, name: 'ليلى محمود', grade: 'الصف الثالث', level: 'مستوى ج', books: 29, score: '95%', assigned: ['أسرار البحار'] },
+        { id: 4, name: 'يوسف طارق', grade: 'الصف الرابع', level: 'مستوى د', books: 36, score: '91%', assigned: ['التاء المفتوحة والتاء المربوطة'] },
+        { id: 5, name: 'نور الهدى', grade: 'الصف الرابع', level: 'مستوى د', books: 40, score: '97%', assigned: ['التاء المفتوحة والتاء المربوطة'] }
+      ];
+
+      var selectedId = parseInt(localStorage.getItem('iread_selected_student_id') || '4', 10);
+
+      function renderTable() {
+        var grade = $('#classFilter').val();
+        var q = ($('#studentSearch').val() || '').trim();
+        var $tb = $('#studentsTableBody').empty();
+        STUDENTS.forEach(function (s) {
+          if (grade !== 'all' && s.grade !== grade) return;
+          if (q && s.name.indexOf(q) === -1) return;
+          var active = s.id === selectedId ? 'table-primary' : '';
+          $tb.append(
+            '<tr class="student-row ' + active + '" data-id="' + s.id + '">' +
+              '<td class="text-center"><input type="radio" name="pickedStudent" ' + (s.id === selectedId ? 'checked' : '') + '></td>' +
+              '<td class="font-weight-bold">' + s.name + '</td>' +
+              '<td>' + s.grade + '</td>' +
+              '<td><span class="badge-level">' + s.level + '</span></td>' +
+            '</tr>'
+          );
+        });
+      }
+
+      function renderDetails() {
+        var s = STUDENTS.find(function (x) { return x.id === selectedId; }) || STUDENTS[0];
+        localStorage.setItem('iread_selected_student_id', String(s.id));
+        localStorage.setItem('iread_selected_student_name', s.name);
+        localStorage.setItem('iread_selected_student_level', s.level);
+
+        var extra = JSON.parse(localStorage.getItem('iread_assigned_' + s.id) || '[]');
+        var allAssigned = s.assigned.concat(extra);
+        var rewards = JSON.parse(localStorage.getItem('iread_rewards_' + s.id) || '{"stars":3,"notes":["أداء رائع ومستمر في القراءة!"]}');
+
+        $('#selectedStudentPanel').html(
+          '<div class="d-flex flex-wrap justify-content-between align-items-center mb-3">' +
+            '<div><h5 class="font-weight-bold mb-1">' + s.name + '</h5><span class="text-muted">' + s.grade + ' – ' + s.level + '</span></div>' +
+            '<div><a href="../المكافآت/index.html" class="btn btn-outline-warning btn-sm mx-1">🏆 سجل المكافآت</a><a href="../بوابة-الطالب/index.html" class="btn btn-success btn-sm">فتح حساب الطالب مباشرة</a></div>' +
+          '</div>' +
+          '<div class="row text-center mb-4">' +
+            '<div class="col-4"><div class="p-3 bg-light rounded"><strong>' + s.books + '</strong><div class="small text-muted">الكتب المقروءة</div></div></div>' +
+            '<div class="col-4"><div class="p-3 bg-light rounded"><strong>' + s.score + '</strong><div class="small text-muted">نسبة الإتقان</div></div></div>' +
+            '<div class="col-4"><div class="p-3 bg-warning text-white rounded"><strong>⭐ ' + (rewards.stars || 0) + '</strong><div class="small">نجوم التعزيز</div></div></div>' +
+          '</div>' +
+          '<h6 class="font-weight-bold">الأنشطة والكتب المعيّنة للطالب:</h6>' +
+          '<ul class="mb-3">' + allAssigned.map(function (a) { return '<li>' + a + '</li>'; }).join('') + '</ul>' +
+          '<div class="input-group">' +
+            '<select id="assignActivitySelect" class="form-control">' +
+              '<option value="الحركات القصيرة (مستوى أ)">الحركات القصيرة (مستوى أ)</option>' +
+              '<option value="السكون والشدة (مستوى أ)">السكون والشدة (مستوى أ)</option>' +
+              '<option value="المدود الثلاثة (مستوى أ)">المدود الثلاثة (مستوى أ)</option>' +
+              '<option value="اللام الشمسية واللام القمرية (مستوى أ)">اللام الشمسية واللام القمرية (مستوى أ)</option>' +
+              '<option value="كتاب تفاعلي: رحلة في الغابة (مستوى أ)">كتاب تفاعلي: رحلة في الغابة (مستوى أ)</option>' +
+              '<option value="التنوين بأنواعه (مستوى ب)">التنوين بأنواعه (مستوى ب)</option>' +
+              '<option value="همزة الوصل والقطع (مستوى ب)">همزة الوصل والقطع (مستوى ب)</option>' +
+              '<option value="المفرد والمثنى والجمع (مستوى ب)">المفرد والمثنى والجمع (مستوى ب)</option>' +
+              '<option value="كتاب تفاعلي: سر النحلة النشيطة (مستوى ب)">كتاب تفاعلي: سر النحلة النشيطة (مستوى ب)</option>' +
+              '<option value="الضمائر العربية (مستوى ج)">الضمائر العربية (مستوى ج)</option>' +
+              '<option value="أسماء الإشارة (مستوى ج)">أسماء الإشارة (مستوى ج)</option>' +
+              '<option value="الجملة الاسمية والفعلية (مستوى ج)">الجملة الاسمية والفعلية (مستوى ج)</option>' +
+              '<option value="ترتيب الكلمات لتكوين جملة (مستوى ج)">ترتيب الكلمات لتكوين جملة (مستوى ج)</option>' +
+              '<option value="المرادفات والأضداد اللغوية (مستوى ج)">المرادفات والأضداد اللغوية (مستوى ج)</option>' +
+              '<option value="التاء المفتوحة والتاء المربوطة (مستوى د)">التاء المفتوحة والتاء المربوطة (مستوى د)</option>' +
+              '<option value="الهمزة المتوسطة والمتطرفة (مستوى د)">الهمزة المتوسطة والمتطرفة (مستوى د)</option>' +
+              '<option value="اختبار الطلاقة القرائية الشامل (مستوى د)">اختبار الطلاقة القرائية الشامل (مستوى د)</option>' +
+            '</select>' +
+            '<div class="input-group-append">' +
+              '<button id="assignBtn" class="btn btn-primary" type="button">تعيين للطالب</button>' +
+            '</div>' +
+          '</div>' +
+          '<div id="assignMsg" class="small text-success mt-2"></div>' +
+          '<hr class="my-3">' +
+          '<h6 class="font-weight-bold">🏆 نظام المكافآت والتعزيز الفوري:</h6>' +
+          '<div class="input-group">' +
+            '<input id="rewardNoteInput" type="text" class="form-control" placeholder="اكتب رسالة تشجيعية (مثلاً: أحسنت يا بطل!)" value="أحسنت على قراءتك الممتازة!">' +
+            '<div class="input-group-append">' +
+              '<button id="awardStarBtn" class="btn btn-warning font-weight-bold" type="button">⭐ منح نجمة تعزيز (+5 نقاط)</button>' +
+            '</div>' +
+          '</div>' +
+          '<div id="rewardMsg" class="small text-success mt-2"></div>'
+        );
+      }
+
+      $(document).on('click', '.student-row', function () {
+        selectedId = parseInt($(this).attr('data-id'), 10);
+        renderTable();
+        renderDetails();
+      });
+
+      $(document).on('click', '#assignBtn', function () {
+        var val = $('#assignActivitySelect').val();
+        var extra = JSON.parse(localStorage.getItem('iread_assigned_' + selectedId) || '[]');
+        extra.push(val);
+        localStorage.setItem('iread_assigned_' + selectedId, JSON.stringify(extra));
+        renderDetails();
+        $('#assignMsg').text('تم تعيين النشاط بنجاح وحفظه لحساب الطالب.');
+      });
+
+      $(document).on('click', '#awardStarBtn', function () {
+        var note = ($('#rewardNoteInput').val() || '').trim() || 'أحسنت! استمر في التميّز.';
+        var rw = JSON.parse(localStorage.getItem('iread_rewards_' + selectedId) || '{"stars":3,"notes":[]}');
+        rw.stars = Number(rw.stars || 0) + 1;
+        rw.notes = Array.isArray(rw.notes) ? rw.notes : [];
+        rw.notes.push(note);
+        localStorage.setItem('iread_rewards_' + selectedId, JSON.stringify(rw));
+        renderDetails();
+        $('#rewardMsg').text('تم منح نجمة تعزيز وإرسال رسالة التشجيع لحساب الطالب ⭐');
+      });
+
+      $('#classFilter, #studentSearch').on('input change', renderTable);
+      renderTable();
+      renderDetails();
+
+      // Weekly Assignments & Report Logic
+      var W = window.IREAD_WEEKLY;
+      function initWeeklyAdmin() {
+        var assign = W.getAssignments();
+        var $s1 = $('#weeklyStory1Select').empty();
+        var $s2 = $('#weeklyStory2Select').empty().append('<option value="0">— بدون تكليف ثانٍ (قصة واحدة فقط) —</option>');
+        W.STORIES.forEach(function (st) {
+          var label = st.id + '. ' + st.title + ' (' + st.level + ' – ' + st.cat + ')';
+          $s1.append('<option value="' + st.id + '">' + label + '</option>');
+          $s2.append('<option value="' + st.id + '">' + label + '</option>');
+        });
+        $s1.val(String(assign.storyIds[0] || 1));
+        $s2.val(String(assign.storyIds[1] || 0));
+        renderWeeklyReport();
+      }
+
+      function renderWeeklyReport() {
+        var assign = W.getAssignments();
+        var rows = W.getWeeklyReport();
+        var filter = $('#reportFilter').val() || 'all';
+        var doneAllCount = rows.filter(function (r) { return r.allDone; }).length;
+        var inProgCount = rows.length - doneAllCount;
+        var avgScore = Math.round(rows.reduce(function (a, r) { return a + r.avgPct; }, 0) / (rows.length || 1));
+
+        $('#reportKpis').html(
+          '<div class="col-6 col-md-3 mb-2"><div class="p-3 bg-light rounded"><strong>' + rows.length + '</strong><div class="small text-muted">إجمالي الطلاب</div></div></div>' +
+          '<div class="col-6 col-md-3 mb-2"><div class="p-3 rounded" style="background:#dcfce7;color:#166534;"><strong>' + doneAllCount + '</strong><div class="small">المنتهون من جميع المهام ✅</div></div></div>' +
+          '<div class="col-6 col-md-3 mb-2"><div class="p-3 rounded" style="background:#fef3c7;color:#92400e;"><strong>' + inProgCount + '</strong><div class="small">قيد التنفيذ ⏳</div></div></div>' +
+          '<div class="col-6 col-md-3 mb-2"><div class="p-3 rounded" style="background:#dbeafe;color:#1e40af;"><strong>' + avgScore + '%</strong><div class="small">متوسط الفهم القرائي</div></div></div>'
+        );
+
+        var st1 = W.STORIES.find(function (x) { return x.id === Number(assign.storyIds[0]); });
+        var st2 = assign.storyIds[1] ? W.STORIES.find(function (x) { return x.id === Number(assign.storyIds[1]); }) : null;
+
+        var $tb = $('#weeklyReportBody').empty();
+        rows.forEach(function (r) {
+          if (filter === 'done' && !r.allDone) return;
+          if (filter === 'pending' && r.allDone) return;
+
+          var t1Html = r.task1 && r.task1.done
+            ? '<span class="badge badge-success">مكتمل (' + r.task1.score + '/' + r.task1.total + ')</span><div class="small text-muted">' + (st1 ? st1.title : '') + '</div>'
+            : '<span class="badge badge-secondary">لم يُنجز بعد</span><div class="small text-muted">' + (st1 ? st1.title : '') + '</div>';
+
+          var t2Html = !st2
+            ? '<span class="text-muted small">غير مقرر</span>'
+            : (r.task2 && r.task2.done
+                ? '<span class="badge badge-success">مكتمل (' + r.task2.score + '/' + r.task2.total + ')</span><div class="small text-muted">' + st2.title + '</div>'
+                : '<span class="badge badge-warning">بانتظار الإنجاز</span><div class="small text-muted">' + st2.title + '</div>');
+
+          var statusHtml = r.allDone
+            ? '<span class="badge badge-success px-3 py-2">مكتمل بالكامل ✅</span>'
+            : (r.doneCount > 0
+                ? '<span class="badge badge-warning px-3 py-2">أتم ' + r.doneCount + ' من ' + r.requiredCount + ' ⏳</span>'
+                : '<span class="badge badge-danger px-3 py-2">لم يبدأ بعد</span>');
+
+          $tb.append(
+            '<tr>' +
+              '<td class="font-weight-bold">' + r.student.name + '</td>' +
+              '<td>' + r.student.grade + '</td>' +
+              '<td>' + t1Html + '</td>' +
+              '<td>' + t2Html + '</td>' +
+              '<td class="font-weight-bold text-primary">' + r.totalPoints + ' نقطة</td>' +
+              '<td>' + statusHtml + '</td>' +
+            '</tr>'
+          );
+        });
+      }
+
+      $('#saveWeeklyBtn').on('click', function () {
+        var id1 = $('#weeklyStory1Select').val();
+        var id2 = $('#weeklyStory2Select').val();
+        W.saveAssignments(id1, id2);
+        renderWeeklyReport();
+        $('#weeklySaveMsg').text('✅ تم حفظ التكليف الأسبوعي وتحديثه في بوابة الطالب وجميع أجزاء الموقع!');
+      });
+      $('#reportFilter').on('change', renderWeeklyReport);
+      initWeeklyAdmin();
+
+      // Skill Assignment & Report Logic
+      var SK = window.IREAD_SKILLS;
+      function initSkillAdmin() {
+        if (!SK) return;
+        var $sel = $('#assignedSkillSelect').empty();
+        SK.SKILLS.forEach(function (sk) {
+          $sel.append('<option value="' + sk.id + '">' + sk.title + ' (' + sk.level + ')</option>');
+        });
+        $sel.val(SK.getGlobalAssignedSkill());
+        renderSkillReport();
+      }
+      function renderSkillReport() {
+        if (!SK) return;
+        var rep = SK.getSkillReport();
+        var $tb = $('#skillReportBody').empty();
+        rep.rows.forEach(function (r) {
+          $tb.append(
+            '<tr>' +
+              '<td class="font-weight-bold">' + r.student.name + '</td>' +
+              '<td>' + r.student.grade + '</td>' +
+              '<td>' + rep.assignedSkill.title + '</td>' +
+              '<td>' + (r.done ? r.record.score + ' / ' + r.record.total : '-') + '</td>' +
+              '<td class="font-weight-bold text-primary">' + (r.done ? r.record.points + ' نقطة' : '0') + '</td>' +
+              '<td>' + (r.done ? '<span class="badge badge-success">مكتمل ✅</span>' : '<span class="badge badge-secondary">لم يُنجز</span>') + '</td>' +
+            '</tr>'
+          );
+        });
+      }
+      $('#saveSkillAssignBtn').on('click', function () {
+        SK.setGlobalAssignedSkill($('#assignedSkillSelect').val());
+        renderSkillReport();
+        $('#skillAssignMsg').text('✅ تم تعيين المهارة التفاعلية للطلاب بنجاح!');
+      });
+      initSkillAdmin();
+    })(window.jQuery);
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نظام التسجيل والدخول الموحّد – أقرأ بالعربية</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/awesome5.min.css">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/mobile-responsive.css">
+  <style>
+    body { direction: rtl; text-align: right; background: linear-gradient(180deg, #eff6ff 0%, #f8fafc 100%); font-family: Tahoma, Arial, sans-serif; min-height: 100vh; }
+    .portal-header { background: #fff; box-shadow: 0 4px 18px rgba(0,0,0,0.06); padding: 12px 0; }
+    .portal-header img.logo { max-height: 48px; }
+    .auth-hero {
+      background: linear-gradient(125deg, #1e3a8a, #2563eb, #7c3aed);
+      color: #fff; padding: 38px 0; text-align: center;
+    }
+    .auth-hero h1 { color: #fff; font-weight: 900; margin-bottom: 8px; }
+    .role-card {
+      background: #fff; border: 2px solid #e2e8f0; border-radius: 18px; padding: 16px 12px;
+      text-align: center; cursor: pointer; transition: all 0.2s ease; height: 100%;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
+    }
+    .role-card:hover { transform: translateY(-3px); border-color: #93c5fd; }
+    .role-card.active {
+      border-color: #2563eb; background: linear-gradient(135deg, #eff6ff, #ffffff);
+      box-shadow: 0 10px 26px rgba(37, 99, 235, 0.18);
+    }
+    .role-icon { font-size: 2.2rem; display: block; margin-bottom: 6px; }
+    .auth-box {
+      background: #fff; border-radius: 22px; padding: 28px;
+      box-shadow: 0 16px 38px rgba(15, 23, 42, 0.08); border: 1px solid #e2e8f0;
+    }
+    .mode-tab {
+      border-radius: 12px; font-weight: 800; padding: 10px 20px; border: 2px solid #e2e8f0;
+      background: #f8fafc; color: #334155; cursor: pointer; flex: 1; text-align: center;
+    }
+    .mode-tab.active { background: #2563eb; border-color: #2563eb; color: #fff; }
+    .demo-pill {
+      display: inline-block; padding: 7px 14px; border-radius: 10px; font-size: 0.88rem;
+      font-weight: 800; border: 1px solid #cbd5e1; background: #f8fafc; color: #0f172a; cursor: pointer;
+    }
+    .demo-pill:hover { background: #e0e7ff; border-color: #6366f1; }
+  </style>
+</head>
+<body>
+  <header class="portal-header">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <a href="../index.html"><img class="logo" src="../_external/en.ireadarabic.com/wp-content/uploads/2022/07/logo.png" alt="أقرأ بالعربية"></a>
+      <nav class="d-flex flex-wrap align-items-center">
+        <a href="../index.html" class="mx-2 font-weight-bold text-dark">الصفحة الرئيسة</a>
+        <a href="../بوابة-الطالب/index.html" class="btn btn-warning btn-sm text-white mx-1">بوابة الطالب</a>
+        <a href="../بوابة-المعلم/index.html" class="btn btn-primary btn-sm mx-1">بوابة المعلم</a>
+        <a href="../لوحة-الإدارة/index.html" class="btn btn-dark btn-sm mx-1">الإدارة والمشرفين</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="auth-hero">
+    <div class="container">
+      <h1>🔐 نظام التسجيل والحسابات الموحّد</h1>
+      <p class="mb-0">بوابة متكاملة لتسجيل ودخول الطلاب والمعلمين والإدارة المدرسية والمشرفين التربويين</p>
+    </div>
+  </section>
+
+  <main class="container py-5">
+    <div id="authBannerMount" class="mb-4"></div>
+
+    <!-- Role Selector -->
+    <div class="row mb-4" id="roleCards">
+      <div class="col-6 col-md-3 mb-3">
+        <div class="role-card active" data-role="student">
+          <span class="role-icon">🎓</span>
+          <h5 class="font-weight-bold mb-1">الطلاب</h5>
+          <small class="text-muted">القراءة، المهارات، القصة الأسبوعية</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <div class="role-card" data-role="teacher">
+          <span class="role-icon">👩‍🏫</span>
+          <h5 class="font-weight-bold mb-1">المعلمون</h5>
+          <small class="text-muted">تكليف القصص، التقييم، المكافآت</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <div class="role-card" data-role="admin">
+          <span class="role-icon">🏫</span>
+          <h5 class="font-weight-bold mb-1">الإدارة المدرسية</h5>
+          <small class="text-muted">إدارة الحسابات والتقارير الشاملة</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <div class="role-card" data-role="supervisor">
+          <span class="role-icon">🧭</span>
+          <h5 class="font-weight-bold mb-1">المشرفون التربويون</h5>
+          <small class="text-muted">المتابعة الإشرافية ومؤشرات الأداء</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="auth-box">
+          <div class="d-flex mb-4" style="gap:10px;">
+            <button type="button" class="mode-tab active" data-mode="register">📝 إنشاء حساب جديد (<span class="selectedRoleName">طالب</span>)</button>
+            <button type="button" class="mode-tab" data-mode="login">🔑 تسجيل الدخول</button>
+          </div>
+
+          <!-- Register Form -->
+          <form id="registerForm">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <label class="font-weight-bold">الاسم الكامل *</label>
+                <input type="text" id="regName" class="form-control" placeholder="مثال: أحمد محمد العتيبي" required>
+              </div>
+              <div class="col-md-6 form-group">
+                <label class="font-weight-bold">اسم المدرسة / الجهة *</label>
+                <input type="text" id="regSchool" class="form-control" value="مدرسة الأمل الابتدائية" required>
+              </div>
+              <div class="col-md-6 form-group">
+                <label class="font-weight-bold">اسم المستخدم *</label>
+                <input type="text" id="regUsername" class="form-control" placeholder="مثال: ahmad2026" required>
+              </div>
+              <div class="col-md-6 form-group">
+                <label class="font-weight-bold">البريد الإلكتروني</label>
+                <input type="email" id="regEmail" class="form-control" placeholder="name@school.edu">
+              </div>
+              <div class="col-md-6 form-group">
+                <label class="font-weight-bold">كلمة المرور *</label>
+                <input type="password" id="regPass" class="form-control" placeholder="4 أحرف أو أكثر" required>
+              </div>
+
+              <!-- Student Fields -->
+              <div class="col-md-3 form-group role-field role-student">
+                <label class="font-weight-bold">الصف الدراسي</label>
+                <select id="regGrade" class="form-control">
+                  <option value="الصف الأول">الصف الأول</option>
+                  <option value="الصف الثاني">الصف الثاني</option>
+                  <option value="الصف الثالث">الصف الثالث</option>
+                  <option value="الصف الرابع">الصف الرابع</option>
+                  <option value="الصف الخامس">الصف الخامس</option>
+                  <option value="الصف السادس">الصف السادس</option>
+                </select>
+              </div>
+              <div class="col-md-3 form-group role-field role-student">
+                <label class="font-weight-bold">مستوى القراءة</label>
+                <select id="regLevel" class="form-control">
+                  <option value="مستوى أ">مستوى أ</option>
+                  <option value="مستوى ب">مستوى ب</option>
+                  <option value="مستوى ج">مستوى ج</option>
+                  <option value="مستوى د">مستوى د</option>
+                </select>
+              </div>
+
+              <!-- Teacher Fields -->
+              <div class="col-md-3 form-group role-field role-teacher d-none">
+                <label class="font-weight-bold">التخصص / المادة</label>
+                <input type="text" id="regSubject" class="form-control" value="اللغة العربية">
+              </div>
+              <div class="col-md-3 form-group role-field role-teacher d-none">
+                <label class="font-weight-bold">الصفوف المسندة</label>
+                <input type="text" id="regClasses" class="form-control" value="الصف الأول – الرابع">
+              </div>
+
+              <!-- Admin Fields -->
+              <div class="col-md-6 form-group role-field role-admin d-none">
+                <label class="font-weight-bold">المسمى الإداري</label>
+                <select id="regJobTitle" class="form-control">
+                  <option value="مدير المدرسة">مدير المدرسة</option>
+                  <option value="وكيل الشؤون التعليمية">وكيل الشؤون التعليمية</option>
+                  <option value="منسق البوابة التعليمية">منسق البوابة التعليمية</option>
+                </select>
+              </div>
+
+              <!-- Supervisor Fields -->
+              <div class="col-md-6 form-group role-field role-supervisor d-none">
+                <label class="font-weight-bold">قطاع / إدارة الإشراف التربوي</label>
+                <input type="text" id="regSector" class="form-control" value="الإشراف التربوي – اللغة العربية">
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block font-weight-bold mt-2">✅ إتمام التسجيل والدخول للوحة</button>
+          </form>
+
+          <!-- Login Form -->
+          <form id="loginForm" class="d-none">
+            <div class="form-group">
+              <label class="font-weight-bold">اسم المستخدم أو البريد الإلكتروني *</label>
+              <input type="text" id="loginIdentifier" class="form-control" placeholder="مثال: yusuf أو teacher1 أو admin1 أو sup1" required>
+            </div>
+            <div class="form-group">
+              <label class="font-weight-bold">كلمة المرور *</label>
+              <input type="password" id="loginPass" class="form-control" placeholder="كلمة المرور (الافتراضية: 1234)" required>
+            </div>
+            <button type="submit" class="btn btn-success btn-lg btn-block font-weight-bold">🔑 تسجيل الدخول (<span class="selectedRoleName">طالب</span>)</button>
+          </form>
+
+          <div id="authMsg" class="mt-3"></div>
+
+          <hr class="my-4">
+          <div class="text-center">
+            <div class="small font-weight-bold text-muted mb-2">⚡ دخول سريع بحسابات تجريبية جاهزة (كلمة المرور الافتراضية: 1234):</div>
+            <div class="d-flex justify-content-center flex-wrap" style="gap:8px;">
+              <button type="button" class="demo-pill quick-demo" data-role="student">🎓 طالب (يوسف طارق)</button>
+              <button type="button" class="demo-pill quick-demo" data-role="teacher">👩‍🏫 معلم (أ. مريم)</button>
+              <button type="button" class="demo-pill quick-demo" data-role="admin">🏫 إدارة (أ. خالد)</button>
+              <button type="button" class="demo-pill quick-demo" data-role="supervisor">🧭 مشرف (د. عبدالله)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../wp-includes/js/jquery/jquery.min.js"></script>
+  <script src="../assets/js/auth-system.js"></script>
+  <script>
+    (function ($) {
+      var A = window.IREAD_AUTH;
+      var currentRole = 'student';
+      var currentMode = 'register';
+
+      A.renderAuthBanner('#authBannerMount', '../');
+
+      function updateRoleUI() {
+        var meta = A.ROLE_META[currentRole];
+        $('.selectedRoleName').text(meta.label);
+        $('.role-field').addClass('d-none');
+        $('.role-' + currentRole).removeClass('d-none');
+      }
+
+      $('.role-card').on('click', function () {
+        $('.role-card').removeClass('active');
+        $(this).addClass('active');
+        currentRole = $(this).attr('data-role');
+        updateRoleUI();
+      });
+
+      $('.mode-tab').on('click', function () {
+        $('.mode-tab').removeClass('active');
+        $(this).addClass('active');
+        currentMode = $(this).attr('data-mode');
+        $('#registerForm').toggleClass('d-none', currentMode !== 'register');
+        $('#loginForm').toggleClass('d-none', currentMode !== 'login');
+        $('#authMsg').empty();
+      });
+
+      function redirectForUser(user) {
+        var meta = A.ROLE_META[user.role] || A.ROLE_META.student;
+        setTimeout(function () {
+          window.location.href = '../' + meta.home;
+        }, 700);
+      }
+
+      $('#registerForm').on('submit', function (e) {
+        e.preventDefault();
+        var res = A.registerUser({
+          role: currentRole,
+          name: $('#regName').val(),
+          school: $('#regSchool').val(),
+          username: $('#regUsername').val(),
+          email: $('#regEmail').val(),
+          pass: $('#regPass').val(),
+          grade: $('#regGrade').val(),
+          level: $('#regLevel').val(),
+          subject: $('#regSubject').val(),
+          classes: $('#regClasses').val(),
+          jobTitle: $('#regJobTitle').val(),
+          sector: $('#regSector').val()
+        });
+        if (!res.ok) {
+          $('#authMsg').html('<div class="alert alert-danger font-weight-bold">' + res.error + '</div>');
+          return;
+        }
+        A.renderAuthBanner('#authBannerMount', '../');
+        $('#authMsg').html('<div class="alert alert-success font-weight-bold">🎉 تم إنشاء الحساب وتفعيله بنجاح! جاري تحويلك إلى لوحتك...</div>');
+        redirectForUser(res.user);
+      });
+
+      $('#loginForm').on('submit', function (e) {
+        e.preventDefault();
+        var res = A.loginUser($('#loginIdentifier').val(), $('#loginPass').val(), currentRole);
+        if (!res.ok) {
+          $('#authMsg').html('<div class="alert alert-danger font-weight-bold">' + res.error + '</div>');
+          return;
+        }
+        A.renderAuthBanner('#authBannerMount', '../');
+        $('#authMsg').html('<div class="alert alert-success font-weight-bold">✅ أهلاً بعودتك يا ' + res.user.name + '! جاري الدخول...</div>');
+        redirectForUser(res.user);
+      });
+
+      $('.quick-demo').on('click', function () {
+        var role = $(this).attr('data-role');
+        var res = A.quickDemoLogin(role);
+        if (res.ok) {
+          A.renderAuthBanner('#authBannerMount', '../');
+          $('#authMsg').html('<div class="alert alert-success font-weight-bold">⚡ تم الدخول السريع بحساب: ' + res.user.name + '</div>');
+          redirectForUser(res.user);
+        }
+      });
+
+      updateRoleUI();
+    })(window.jQuery);
+  </script>
+</body>
+</html>
+
