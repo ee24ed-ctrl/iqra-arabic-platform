@@ -42,10 +42,10 @@
     </div>
   </header>
 
-  <section class="admin-banner no-print">
+  <section class="admin-banner no-print" id="roleHeroBanner">
     <div class="container">
-      <h1>🏫 لوحة الإدارة المدرسية والمشرفين التربويين</h1>
-      <p class="mb-0">إدارة حسابات الطلاب والمعلمين والإداريين والمشرفين، ومتابعة تقارير القصة الأسبوعية والتوصيات الإشرافية</p>
+      <h1 id="roleHeroTitle">🏫 لوحة مدير المدرسة والمشرفين (التربوي والعام)</h1>
+      <p class="mb-0" id="roleHeroSub">إدارة حسابات الطلاب والمعلمين والإدارة والمشرفين، ومتابعة تقارير القصة الأسبوعية والتوصيات الإشرافية</p>
     </div>
   </section>
 
@@ -76,8 +76,9 @@
           <button type="button" class="btn btn-primary btn-sm m-1" data-role="all">الكل</button>
           <button type="button" class="btn btn-outline-primary btn-sm m-1" data-role="student">🎓 الطلاب</button>
           <button type="button" class="btn btn-outline-primary btn-sm m-1" data-role="teacher">👩‍🏫 المعلمون</button>
-          <button type="button" class="btn btn-outline-primary btn-sm m-1" data-role="admin">🏫 الإدارة</button>
-          <button type="button" class="btn btn-outline-primary btn-sm m-1" data-role="supervisor">🧭 المشرفون</button>
+          <button type="button" class="btn btn-outline-primary btn-sm m-1" data-role="admin">🏫 المدير</button>
+          <button type="button" class="btn btn-outline-primary btn-sm m-1" data-role="supervisor">🧭 المشرف التربوي</button>
+          <button type="button" class="btn btn-outline-primary btn-sm m-1" data-role="general_supervisor">🏛️ المشرف العام</button>
         </div>
       </div>
 
@@ -167,6 +168,19 @@
       var activeRoleFilter = 'all';
 
       A.renderAuthBanner('#authBannerMount', '../');
+
+      var curUser = A.getCurrentUser();
+      var urlRole = (new URLSearchParams(window.location.search)).get('role') || (curUser && curUser.role) || 'admin';
+      if (urlRole === 'admin') {
+        $('#roleHeroTitle').text('🏫 صفحة مدير المدرسة – إدارة الحسابات ومتابعة الفصول');
+        $('#roleHeroSub').text('لوحة مدير المدرسة لمتابعة أداء الطلاب والمعلمين وإدارة الحسابات والتكليفات الأسبوعية');
+      } else if (urlRole === 'supervisor') {
+        $('#roleHeroTitle').text('🧭 صفحة المشرف التربوي – المتابعة الإشرافية والتوصيات');
+        $('#roleHeroSub').text('لوحة المشرف التربوي لمتابعة تقدم القراءة والمهارات وتدوين التوصيات الإشرافية للمعلمين');
+      } else if (urlRole === 'general_supervisor') {
+        $('#roleHeroTitle').text('🏛️ صفحة المشرف العام – المؤشرات العامة وإشراف المدارس');
+        $('#roleHeroSub').text('لوحة الإشراف العام لمتابعة مؤشرات الأداء الشاملة عبر جميع الصفوف والمدارس');
+      }
 
       function renderDashboard() {
         var users = A.loadUsers();

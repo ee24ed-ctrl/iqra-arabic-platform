@@ -354,11 +354,11 @@
       transform: translateY(-1px);
     }
 
-    /* Role selector pills inside Register view */
+    /* Role selector pills inside Login & Register views */
     .role-selector-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 6px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 5px;
       margin-bottom: 14px;
     }
 
@@ -367,9 +367,9 @@
       background: #f2f7fd;
       color: #0b356e;
       border-radius: 14px;
-      padding: 8px 4px;
+      padding: 7px 3px;
       font-family: inherit;
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       font-weight: 800;
       cursor: pointer;
       display: flex;
@@ -377,6 +377,8 @@
       align-items: center;
       gap: 2px;
       transition: all 0.15s ease;
+      text-align: center;
+      line-height: 1.2;
     }
 
     .role-pill-btn.active {
@@ -759,6 +761,14 @@
 
           <!-- LOGIN VIEW (Default) -->
           <form id="loginViewForm" autocomplete="on">
+            <div class="role-selector-grid" id="loginRoleGrid">
+              <button type="button" class="role-pill-btn active" data-role="student"><span>🎓</span><span>طالب</span></button>
+              <button type="button" class="role-pill-btn" data-role="teacher"><span>👩‍🏫</span><span>معلم</span></button>
+              <button type="button" class="role-pill-btn" data-role="admin"><span>🏫</span><span>مدير</span></button>
+              <button type="button" class="role-pill-btn" data-role="supervisor"><span>🧭</span><span>مشرف تربوي</span></button>
+              <button type="button" class="role-pill-btn" data-role="general_supervisor"><span>🏛️</span><span>مشرف عام</span></button>
+            </div>
+
             <!-- Username Pill -->
             <div class="pill-input-group">
               <span class="pill-icon-right" aria-hidden="true">
@@ -823,8 +833,9 @@
             <div class="role-selector-grid" id="regRoleGrid">
               <button type="button" class="role-pill-btn active" data-role="student"><span>🎓</span><span>طالب</span></button>
               <button type="button" class="role-pill-btn" data-role="teacher"><span>👩‍🏫</span><span>معلم</span></button>
-              <button type="button" class="role-pill-btn" data-role="admin"><span>🏫</span><span>إدارة</span></button>
-              <button type="button" class="role-pill-btn" data-role="supervisor"><span>🧭</span><span>مشرف</span></button>
+              <button type="button" class="role-pill-btn" data-role="admin"><span>🏫</span><span>مدير</span></button>
+              <button type="button" class="role-pill-btn" data-role="supervisor"><span>🧭</span><span>مشرف تربوي</span></button>
+              <button type="button" class="role-pill-btn" data-role="general_supervisor"><span>🏛️</span><span>مشرف عام</span></button>
             </div>
 
             <div class="reg-grid">
@@ -853,6 +864,7 @@
                 <option value="الصف السادس">الصف السادس</option>
               </select>
               <select id="regLevel" class="reg-select">
+                <option value="المستوى (ز)">المستوى (ز)</option>
                 <option value="مستوى أ">مستوى القراءة: أ</option>
                 <option value="مستوى ب">مستوى القراءة: ب</option>
                 <option value="مستوى ج">مستوى القراءة: ج</option>
@@ -873,12 +885,13 @@
 
           <!-- Quick Demo & Platform Navigation Strip -->
           <div class="quick-access-box">
-            <div class="quick-access-title" id="quickAccessTitle">⚡ دخول تجريبي فوري أو استعراض المنصة:</div>
+            <div class="quick-access-title" id="quickAccessTitle">⚡ دخول مباشر حسب الصفة أو استعراض المنصة:</div>
             <div class="quick-chips">
               <button type="button" class="quick-chip demo-login-chip" data-role="student">🎓 طالب</button>
               <button type="button" class="quick-chip demo-login-chip" data-role="teacher">👩‍🏫 معلم</button>
-              <button type="button" class="quick-chip demo-login-chip" data-role="admin">🏫 إدارة</button>
-              <button type="button" class="quick-chip demo-login-chip" data-role="supervisor">🧭 مشرف</button>
+              <button type="button" class="quick-chip demo-login-chip" data-role="admin">🏫 مدير</button>
+              <button type="button" class="quick-chip demo-login-chip" data-role="supervisor">🧭 مشرف تربوي</button>
+              <button type="button" class="quick-chip demo-login-chip" data-role="general_supervisor">🏛️ مشرف عام</button>
               <a href="./home.html" class="quick-chip">🏠 المنصة الرئيسية</a>
               <button type="button" id="replayFlashBtn" class="quick-chip">🎬 فيديو البداية</button>
             </div>
@@ -1056,12 +1069,21 @@
         });
       }
 
+      var DEFAULT_ROLE_USERS = {
+        student: 'yusuf',
+        teacher: 'teacher1',
+        admin: 'admin1',
+        supervisor: 'sup1',
+        general_supervisor: 'gsup1'
+      };
+
       // Forgot Password Helper
       if (forgotPassBtn) {
         forgotPassBtn.addEventListener('click', function () {
-          loginIdentifier.value = loginIdentifier.value || 'yusuf';
+          var defUser = DEFAULT_ROLE_USERS[selectedRole] || 'yusuf';
+          loginIdentifier.value = defUser;
           loginPass.value = '1234';
-          showFeedback('info', '💡 تم تعبئة بيانات الدخول الافتراضية للتجربة (اسم المستخدم: <b>yusuf</b> | كلمة المرور: <b>1234</b>). يمكنك الضغط على <b>تسجيل الدخول</b> الآن.');
+          showFeedback('info', '💡 تم تعبئة بيانات الدخول الافتراضية (اسم المستخدم: <b>' + defUser + '</b> | كلمة المرور: <b>1234</b>). اضغط على <b>تسجيل الدخول</b> الآن.');
         });
       }
 
@@ -1082,13 +1104,14 @@
         });
       }
 
-      // Role pills in Register form
+      // Role pills in Login & Register forms
       var roleBtns = document.querySelectorAll('.role-pill-btn');
       roleBtns.forEach(function (btn) {
         btn.addEventListener('click', function () {
-          roleBtns.forEach(function (b) { b.classList.remove('active'); });
-          btn.classList.add('active');
           selectedRole = btn.getAttribute('data-role') || 'student';
+          roleBtns.forEach(function (b) {
+            b.classList.toggle('active', b.getAttribute('data-role') === selectedRole);
+          });
         });
       });
 
@@ -1106,12 +1129,17 @@
           e.preventDefault();
           var A = window.IREAD_AUTH;
           if (!A) return;
-          var res = A.loginUser(loginIdentifier.value, loginPass.value);
+          var res = A.loginUser(loginIdentifier.value, loginPass.value, selectedRole);
           if (!res.ok) {
-            showFeedback('error', res.error || 'بيانات الدخول غير صحيحة. جرب: yusuf وكلمة المرور: 1234');
+            // Try without role filter in case username belongs to a specific role directly
+            res = A.loginUser(loginIdentifier.value, loginPass.value);
+          }
+          if (!res.ok) {
+            var defU = DEFAULT_ROLE_USERS[selectedRole] || 'yusuf';
+            showFeedback('error', res.error || ('بيانات الدخول غير صحيحة. جرب: ' + defU + ' وكلمة المرور: 1234'));
             return;
           }
-          showFeedback('success', '✅ أهلاً بك يا ' + res.user.name + '! جاري تحويلك إلى بوابتك...');
+          showFeedback('success', '✅ أهلاً بك يا ' + res.user.name + '! جاري تحويلك إلى صفحتك...');
           redirectUser(res.user);
         });
       }

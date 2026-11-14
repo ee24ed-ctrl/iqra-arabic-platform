@@ -2,210 +2,1483 @@
 <html dir="rtl" lang="ar">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>دخول الطلاب – المكتبة والمهارات – أقرأ بالعربية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>صفحة الطالب – المستوى (ز) – أقرأ بالعربية</title>
   <link rel="icon" href="../favicon.ico">
-  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/awesome5.min.css">
-  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/theme.css">
-  <link rel="stylesheet" href="../assets/mobile-responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800;900&family=Tajawal:wght@500;700;800;900&display=swap" rel="stylesheet">
   <style>
-    body { direction: rtl; text-align: right; background: #f8fafc; font-family: Tahoma, Arial, sans-serif; }
-    .portal-header { background: #fff; box-shadow: 0 4px 18px rgba(0,0,0,0.06); padding: 12px 0; }
-    .portal-header img.logo { max-height: 50px; }
-    .portal-banner {
-      background: linear-gradient(120deg, rgba(28, 90, 166, 0.92), rgba(19, 64, 120, 0.92)),
-        url("../wp-content/uploads/2022/06/bg-page-title-copy.webp") center/cover no-repeat;
-      color: #fff; padding: 48px 0; text-align: center;
+    :root {
+      --indigo-header: #221979;
+      --indigo-dark: #19125c;
+      --mint-card: #dcf8d9;
+      --mint-border: #dcf4d9;
+      --orange-main: #ee4d09;
+      --peach-pill: #f7e3d8;
+      --btn-read-bg: #f6f5d5;
+      --btn-listen-bg: #a3e635;
+      --btn-quiz-bg: #f1ecf8;
+      --text-navy: #221979;
+      --page-bg: #ffffff;
     }
-    .portal-banner h1 { color: #fff; font-weight: 800; margin-bottom: 8px; }
-    .portal-card {
-      background: #fff; border-radius: 18px; padding: 0; overflow: hidden;
-      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08); border: 2px solid #e2e8f0; height: 100%;
-      display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
     }
-    .portal-card:hover { transform: translateY(-5px); box-shadow: 0 14px 30px rgba(37, 99, 235, 0.16); border-color: #60a5fa; }
-    .skill-thumb { position: relative; height: 120px; overflow: hidden; }
-    .skill-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
-    .portal-card:hover .skill-thumb img { transform: scale(1.06); }
-    .skill-lvl-pill {
-      position: absolute; top: 10px; right: 10px; padding: 4px 12px; border-radius: 50px;
-      font-size: 0.78rem; font-weight: 800; color: #fff; box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+
+    html, body {
+      min-height: 100%;
+      font-family: 'Cairo', 'Tajawal', Tahoma, Arial, sans-serif;
+      background: #f4f6fb;
+      color: var(--text-navy);
+      overflow-x: hidden;
+      direction: rtl;
     }
-    .skill-body { padding: 16px; display: flex; flex-direction: column; flex: 1; }
-    .skill-go-btn {
-      border-radius: 12px !important; font-weight: 800 !important; padding: 9px 14px !important;
-      border-bottom: 4px solid #c2410c !important; transition: transform 0.15s;
+
+    /* =====================================================================
+       1. MOBILE-FIRST STUDENT SHELL (أولاً: تصميم الجوال < 640px)
+       ===================================================================== */
+    .student-app-shell {
+      width: 100%;
+      max-width: 480px;
+      min-height: 100vh;
+      margin: 0 auto;
+      background: var(--page-bg);
+      position: relative;
+      box-shadow: 0 0 40px rgba(25, 18, 92, 0.08);
+      padding-bottom: 42px;
     }
-    .skill-go-btn:active { transform: translateY(2px); }
-    .portal-footer { background: #172554; color: #cbd5e1; padding: 28px 0; margin-top: 48px; text-align: center; }
+
+    /* Top Indigo Header with Curved Bottom */
+    .student-top-hero {
+      background: var(--indigo-header);
+      color: #ffffff;
+      padding: 18px 18px 115px;
+      border-bottom-left-radius: 36px;
+      border-bottom-right-radius: 36px;
+      position: relative;
+      overflow: visible;
+      background-image:
+        radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.06) 0%, transparent 45%),
+        radial-gradient(circle at 15% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    }
+
+    /* Watermark Arabic letters in the indigo header */
+    .hero-watermark {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      opacity: 0.08;
+      font-size: 2.6rem;
+      font-weight: 900;
+      color: #ffffff;
+      user-select: none;
+    }
+
+    .hero-watermark span:nth-child(1) { position: absolute; top: 44px; left: 22%; }
+    .hero-watermark span:nth-child(2) { position: absolute; top: 56px; left: 48%; font-size: 2rem; }
+    .hero-watermark span:nth-child(3) { position: absolute; top: 38px; right: 24%; }
+
+    .student-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 30;
+    }
+
+    /* Top-Right Hamburger Menu Icon (في الأعلى اليمين أيقونة القائمة) */
+    .menu-toggle-btn {
+      width: 46px;
+      height: 46px;
+      border: none;
+      background: transparent;
+      color: #ffffff;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border-radius: 12px;
+      padding: 8px;
+      transition: background 0.18s ease, transform 0.18s ease;
+    }
+
+    .menu-toggle-btn:hover,
+    .menu-toggle-btn.is-active {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .menu-bar {
+      width: 28px;
+      height: 3px;
+      background: #ffffff;
+      border-radius: 999px;
+      transition: all 0.22s ease;
+    }
+
+    /* Center Level Title */
+    .level-title-center {
+      font-size: 1.38rem;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: 0.2px;
+      text-align: center;
+    }
+
+    /* Top-Left Star + Orange 100 Badge */
+    .star-score-top {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 54px;
+      height: 46px;
+    }
+
+    .star-outline-svg {
+      width: 34px;
+      height: 34px;
+      color: #ffffff;
+      transform: translateX(-6px);
+    }
+
+    .star-orange-pill {
+      position: absolute;
+      top: 2px;
+      right: 0;
+      background: var(--orange-main);
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 900;
+      padding: 1px 8px;
+      border-radius: 999px;
+      line-height: 1.35;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    /* =====================================================================
+       TOP-RIGHT DROPDOWN MENU (تظهر عند الضغط وتختفي عند الضغط مرة أخرى)
+       ===================================================================== */
+    .student-dropdown-menu {
+      position: absolute;
+      top: 68px;
+      right: 16px;
+      width: 270px;
+      background: #ffffff;
+      border-radius: 22px;
+      box-shadow: 0 20px 50px rgba(20, 14, 78, 0.28), 0 0 0 2px #e0e7ff;
+      padding: 12px;
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(-10px) scale(0.96);
+      transform-origin: top right;
+      transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+    }
+
+    .student-dropdown-menu.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0) scale(1);
+    }
+
+    .menu-student-profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+      background: #f3f6ff;
+      border-radius: 14px;
+      color: var(--text-navy);
+    }
+
+    .menu-student-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--indigo-header);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .menu-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .menu-item-btn {
+      width: 100%;
+      border: none;
+      background: transparent;
+      color: #1e1b4b;
+      font-family: inherit;
+      font-size: 0.96rem;
+      font-weight: 800;
+      padding: 11px 14px;
+      border-radius: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: right;
+      transition: all 0.16s ease;
+    }
+
+    .menu-item-btn:hover {
+      background: #eef2ff;
+      color: var(--indigo-header);
+    }
+
+    .menu-item-btn.active {
+      background: var(--indigo-header);
+      color: #ffffff;
+      box-shadow: 0 6px 16px rgba(34, 25, 121, 0.24);
+    }
+
+    .menu-item-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .menu-num-badge {
+      font-weight: 900;
+      color: var(--orange-main);
+    }
+
+    .menu-item-btn.active .menu-num-badge {
+      color: #fde047;
+    }
+
+    .menu-divider {
+      height: 1px;
+      background: #e2e8f0;
+      margin: 8px 0;
+    }
+
+    .menu-logout-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 9px 12px;
+      border-radius: 12px;
+      background: #fef2f2;
+      color: #dc2626;
+      font-weight: 800;
+      font-size: 0.86rem;
+      text-decoration: none;
+      border: 1px solid #fecaca;
+    }
+
+    /* =====================================================================
+       TWO MINT-GREEN SUMMARY CARDS OVERLAPPING HEADER
+       ===================================================================== */
+    .summary-cards-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      padding: 0 18px;
+      margin-top: -92px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .mint-summary-card {
+      background: var(--mint-card);
+      border-radius: 18px;
+      padding: 16px 14px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      min-height: 205px;
+      box-shadow: 0 8px 20px rgba(25, 18, 92, 0.07);
+    }
+
+    /* Right Mint Card: Arabic Letters & Completed Books Progress */
+    .arabic-letters-emblem {
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--indigo-header);
+      font-size: 2.3rem;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -2px;
+      user-select: none;
+    }
+
+    .mint-card-desc {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: #4b5563;
+      line-height: 1.45;
+      margin: 6px 0;
+    }
+
+    .books-ratio-wrap {
+      width: 100%;
+      margin-top: auto;
+    }
+
+    .books-ratio-num {
+      display: block;
+      text-align: left;
+      font-size: 0.96rem;
+      font-weight: 900;
+      color: var(--indigo-header);
+      margin-bottom: 4px;
+      direction: ltr;
+    }
+
+    .books-progress-track {
+      width: 100%;
+      height: 12px;
+      background: #d1e2d4;
+      border-radius: 999px;
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .books-progress-fill {
+      width: 58%;
+      height: 100%;
+      background: var(--indigo-header);
+      border-radius: 999px;
+      transition: width 0.3s ease;
+    }
+
+    /* Left Mint Card: 100 Stars Circle & هيا نلعب Button */
+    .stars-circle-graphic {
+      position: relative;
+      width: 72px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .stars-circle-core {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #ccead0;
+      color: var(--indigo-header);
+      font-size: 1.25rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .deco-star-filled {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      color: var(--indigo-header);
+      font-size: 1rem;
+    }
+
+    .deco-star-outline {
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      color: var(--indigo-header);
+      font-size: 1.15rem;
+    }
+
+    .btn-lets-play {
+      width: 100%;
+      height: 38px;
+      border: none;
+      border-radius: 999px;
+      background: var(--orange-main);
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 0.96rem;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 5px 14px rgba(238, 77, 9, 0.3);
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .btn-lets-play:hover {
+      background: #d94305;
+      transform: translateY(-1px);
+    }
+
+    /* =====================================================================
+       THREE FILTER PILLS (الكل | المنجزة | الغير منجزة)
+       ===================================================================== */
+    .filter-pills-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 20px 18px 16px;
+    }
+
+    .filter-pill-btn {
+      height: 46px;
+      border-radius: 999px;
+      border: none;
+      background: var(--peach-pill);
+      color: #4b5563;
+      font-family: inherit;
+      font-size: 0.98rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .filter-pill-btn.active {
+      background: var(--orange-main);
+      color: #ffffff;
+      box-shadow: 0 6px 16px rgba(238, 77, 9, 0.26);
+    }
+
+    /* =====================================================================
+       BOOK CARDS (بطاقات القصص مثل: ماذا حصل لأخي رامز؟)
+       ===================================================================== */
+    .books-grid-container {
+      padding: 0 18px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .book-item-card {
+      background: #f5fbf4;
+      border: 2px solid #dcf4d9;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 22px rgba(25, 18, 92, 0.05);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .book-card-header {
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1.5px solid #dcf4d9;
+    }
+
+    .book-card-title {
+      font-size: 1.08rem;
+      font-weight: 900;
+      color: var(--indigo-header);
+    }
+
+    /* Star + 35 Badge on the left of card header */
+    .book-points-badge {
+      display: inline-flex;
+      align-items: stretch;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 34px;
+      direction: ltr;
+    }
+
+    .book-points-star-box {
+      background: var(--indigo-header);
+      color: #ffffff;
+      width: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .book-points-num-box {
+      background: #cdf5c8;
+      color: var(--indigo-header);
+      padding: 0 10px;
+      font-size: 0.95rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* White stage holding the centered book cover */
+    .book-cover-stage {
+      background: #ffffff;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 250px;
+    }
+
+    .book-cover-img {
+      width: 175px;
+      height: 245px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .book-cover-img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Card Footer with 3 Action Buttons: قراءة | استماع | اختبار */
+    .book-card-actions {
+      padding: 12px 14px;
+      background: #f5fbf4;
+      border-top: 1.5px solid #dcf4d9;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .book-action-btn {
+      height: 46px;
+      border-radius: 12px;
+      border: none;
+      font-family: inherit;
+      font-size: 0.94rem;
+      font-weight: 900;
+      color: var(--indigo-header);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .book-action-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .btn-act-read {
+      background: var(--btn-read-bg);
+    }
+
+    .btn-act-listen {
+      background: #eef8d8;
+    }
+
+    .btn-act-listen.is-done {
+      background: var(--btn-listen-bg);
+    }
+
+    .btn-act-quiz {
+      background: var(--btn-quiz-bg);
+    }
+
+    .btn-act-read.is-done,
+    .btn-act-quiz.is-done {
+      background: var(--btn-listen-bg);
+    }
+
+    .check-circle-navy {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--indigo-header);
+      color: #ffffff;
+      font-size: 0.72rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* =====================================================================
+       SUB-SECTIONS FOR MENU ITEMS (٢) تحدي القراءة (٣) المهام (٤) إنجازات (٥) ألعاب
+       ===================================================================== */
+    .student-tab-panel {
+      display: none;
+      padding: 18px;
+    }
+
+    .student-tab-panel.is-active {
+      display: block;
+    }
+
+    #tabPanelHome.is-active {
+      padding: 0;
+    }
+
+    .section-panel-card {
+      background: #ffffff;
+      border: 2px solid #e0e7ff;
+      border-radius: 22px;
+      padding: 20px 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 10px 26px rgba(25, 18, 92, 0.06);
+    }
+
+    .section-panel-title {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--indigo-header);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .badge-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .badge-item-box {
+      background: #f5fbf4;
+      border: 1.5px solid #dcf4d9;
+      border-radius: 16px;
+      padding: 14px 10px;
+      text-align: center;
+    }
+
+    .badge-item-icon {
+      font-size: 2.2rem;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    /* Modal for Story Reading / Listening / Quiz */
+    .story-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(5px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .story-modal-backdrop.is-open {
+      display: flex;
+    }
+
+    .story-modal-box {
+      width: 100%;
+      max-width: 540px;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px 20px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+      border: 2px solid #dcf4d9;
+    }
+
+    .modal-close-btn {
+      border: none;
+      background: #fee2e2;
+      color: #991b1b;
+      font-family: inherit;
+      font-weight: 900;
+      padding: 6px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .quiz-option-btn {
+      width: 100%;
+      text-align: right;
+      padding: 12px 16px;
+      margin-bottom: 8px;
+      border-radius: 14px;
+      border: 1.5px solid #cbd5e1;
+      background: #f8fafc;
+      font-family: inherit;
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: #1e293b;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .quiz-option-btn:hover {
+      border-color: var(--indigo-header);
+      background: #eef2ff;
+    }
+
+    /* =====================================================================
+       2. DESKTOP DESIGN (ثانياً: تصميم الكمبيوتر >= 1025px)
+       ===================================================================== */
+    @media (min-width: 1025px) {
+      .student-app-shell {
+        max-width: 1080px;
+        margin: 24px auto;
+        border-radius: 32px;
+        overflow: hidden;
+        box-shadow: 0 24px 64px rgba(25, 18, 92, 0.14);
+      }
+
+      .student-top-hero {
+        padding: 24px 36px 125px;
+      }
+
+      .summary-cards-row {
+        max-width: 760px;
+        margin: -95px auto 0;
+        gap: 22px;
+      }
+
+      .filter-pills-row {
+        max-width: 640px;
+        margin: 8px auto 4px;
+      }
+
+      .books-grid-container {
+        padding: 10px 32px 24px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+
+      .badge-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .student-tab-panel {
+        padding: 24px 36px;
+      }
+    }
+
+    /* =====================================================================
+       3. TABLET DESIGN (ثالثاً: تصميم التابليت 640px – 1024px)
+       ===================================================================== */
+    @media (min-width: 640px) and (max-width: 1024px) {
+      .student-app-shell {
+        max-width: 740px;
+        margin: 16px auto;
+        border-radius: 28px;
+        overflow: hidden;
+      }
+
+      .summary-cards-row {
+        max-width: 640px;
+        margin: -92px auto 0;
+      }
+
+      .filter-pills-row {
+        max-width: 560px;
+        margin: 6px auto 0;
+      }
+
+      .books-grid-container {
+        padding: 8px 24px 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+
+      .badge-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
   </style>
 </head>
 <body>
-  <header class="portal-header">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center">
-      <a href="../index.html"><img class="logo" src="../_external/en.ireadarabic.com/wp-content/uploads/2022/07/logo.png" alt="أقرأ بالعربية"></a>
-      <nav class="d-flex flex-wrap align-items-center">
-        <a href="../index.html" class="mx-2 font-weight-bold text-dark">الصفحة الرئيسة</a>
-        <a href="../المعلم/index.html" class="mx-2 font-weight-bold text-dark">المعلم</a>
-        <a href="../المدونة/index.html" class="mx-2 font-weight-bold text-dark">المدونة</a>
-        <a href="../بوابة-المعلم/index.html" class="btn btn-primary btn-sm mx-1">دخول المعلم</a>
-        <a href="../التسجيل/index.html" class="btn btn-outline-primary btn-sm mx-1">🔐 التسجيل والدخول</a>
-        <a href="../لوحة-الإدارة/index.html" class="btn btn-dark btn-sm mx-1">الإدارة والمشرفين</a>
-        <a href="../الأنشطة/index.html" class="btn btn-warning btn-sm text-white mx-1">مركز المهارات</a>
-        <a href="../المكتبة/index.html" class="btn btn-success btn-sm mx-1">مكتبة 30 قصة</a>
-        <a href="../المكافآت/index.html" class="btn btn-outline-primary btn-sm mx-1">🏆 المكافآت والتعزيز</a>
+
+  <div class="student-app-shell">
+
+    <!-- ===================================================================
+         TOP INDIGO CURVED HEADER WITH TOP-RIGHT TOGGLE MENU (☰)
+         =================================================================== -->
+    <header class="student-top-hero">
+      <div class="hero-watermark" aria-hidden="true">
+        <span>غ</span>
+        <span>ء</span>
+        <span>ث</span>
+      </div>
+
+      <div class="student-topbar">
+        <!-- Top-Right Hamburger Menu Button (في الأعلى اليمين أيقونة القائمة) -->
+        <button type="button" id="studentMenuBtn" class="menu-toggle-btn" aria-label="قائمة الطالب" aria-expanded="false">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+
+        <!-- Center Level Title -->
+        <h1 class="level-title-center" id="studentLevelHeader">المستوى (ز)</h1>
+
+        <!-- Top-Left Star + 100 Badge -->
+        <div class="star-score-top" title="مجموع النجوم">
+          <span class="star-orange-pill" id="headerStarScore">100</span>
+          <svg class="star-outline-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Top-Right Toggle Dropdown Menu (تظهر عند الضغط عليها وتختفي عند الضغط مرة أخرى) -->
+      <nav id="studentDropdownMenu" class="student-dropdown-menu" aria-label="قائمة أقسام الطالب">
+        <div class="menu-student-profile">
+          <div class="menu-student-avatar">🎓</div>
+          <div>
+            <div style="font-weight:900;font-size:0.95rem;" id="menuStudentName">يوسف طارق</div>
+            <div style="font-size:0.78rem;color:#5b7496;font-weight:700;" id="menuStudentGrade">مدارس الساحل الأهلية – المستوى (ز)</div>
+          </div>
+        </div>
+
+        <ul class="menu-list">
+          <li>
+            <button type="button" class="menu-item-btn active" data-tab="home">
+              <span class="menu-item-right"><span class="menu-num-badge">(١)</span><span>الصفحة الرئيسية</span></span>
+              <span>🏠</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="menu-item-btn" data-tab="challenge">
+              <span class="menu-item-right"><span class="menu-num-badge">(٢)</span><span>تحدي القراءة</span></span>
+              <span>🏁</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="menu-item-btn" data-tab="tasks">
+              <span class="menu-item-right"><span class="menu-num-badge">(٣)</span><span>المهام</span></span>
+              <span>📋</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="menu-item-btn" data-tab="badges">
+              <span class="menu-item-right"><span class="menu-num-badge">(٤)</span><span>إنجازات وإشارات</span></span>
+              <span>🏅</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="menu-item-btn" data-tab="games">
+              <span class="menu-item-right"><span class="menu-num-badge">(٥)</span><span>ألعاب تفاعلية</span></span>
+              <span>🎮</span>
+            </button>
+          </li>
+        </ul>
+
+        <div class="menu-divider"></div>
+        <a href="../index.html?skipIntro=1" class="menu-logout-link">🔄 تبديل الحساب / تسجيل الخروج</a>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <section class="portal-banner">
-    <div class="container">
-      <h1>بوابة الطالب – جميع المهارات والأنشطة</h1>
-      <p class="mb-0">17 مهارة ونشاطاً تفاعلياً مع النطق الصوتي والأنيميشن – بدون تسجيل</p>
-    </div>
-  </section>
-
-  <main class="container py-5">
-    <div class="alert alert-info d-flex flex-wrap justify-content-between align-items-center mb-4">
-      <div>
-        <strong>الطالب النشط:</strong> <span id="activeStudentName">يوسف طارق</span>
-        (<span id="activeStudentLevel">مستوى د</span>)
-        — <span id="doneCounter" class="badge badge-success">0 مكتمل</span>
-      </div>
-      <a href="../بوابة-المعلم/index.html" class="btn btn-outline-primary btn-sm">تغيير الطالب من بوابة المعلم</a>
-    </div>
-
-    <div id="weeklyTasksMount" class="mb-4"></div>
-
-    <div class="row mb-4">
-      <div class="col-md-4 mb-3">
-        <a href="../المكتبة/index.html" class="text-decoration-none">
-          <div class="portal-card text-center p-0 overflow-hidden" style="border:2px solid #86efac;">
-            <img src="../assets/generated/story-school.jpg" alt="مكتبة القصص" style="width:100%;height:145px;object-fit:cover;">
-            <div class="p-3"><h5 class="font-weight-bold text-success mb-1">📚 مكتبة 30 قصة مصورة</h5><small class="text-muted">اقرأ واستمع وأجب عن أسئلة الفهم</small></div>
+    <!-- ===================================================================
+         TWO MINT SUMMARY CARDS OVERLAPPING THE HEADER
+         =================================================================== -->
+    <section class="summary-cards-row" aria-label="ملخص إنجاز الطالب">
+      <!-- Right Card: عدد الكتب المنجزة في المستوى (ز) -->
+      <div class="mint-summary-card">
+        <div class="arabic-letters-emblem" aria-hidden="true">نُ ضَ عْ</div>
+        <p class="mint-card-desc">عدد الكتب المنجزة في<br><strong style="color:var(--indigo-header);">المستوى (ز)</strong></p>
+        <div class="books-ratio-wrap">
+          <span class="books-ratio-num" id="completedBooksRatio">23/11</span>
+          <div class="books-progress-track">
+            <div class="books-progress-fill" id="completedBooksBar" style="width: 55%;"></div>
           </div>
-        </a>
+        </div>
       </div>
-      <div class="col-md-4 mb-3">
-        <a href="../الأنشطة/index.html" class="text-decoration-none">
-          <div class="portal-card text-center p-0 overflow-hidden" style="border:2px solid #93c5fd;">
-            <img src="../assets/generated/arcade-hero.jpg" alt="الألعاب التفاعلية" style="width:100%;height:145px;object-fit:cover;">
-            <div class="p-3"><h5 class="font-weight-bold text-primary mb-1">🎮 الألعاب والمهارات (17)</h5><small class="text-muted">تحديات تفاعلية ونطق صوتي فوري</small></div>
+
+      <!-- Left Card: اجمع النجوم بقراءة الكتب لشراء ألعاب -->
+      <div class="mint-summary-card">
+        <div class="stars-circle-graphic">
+          <span class="deco-star-filled">★</span>
+          <div class="stars-circle-core" id="cardStarScore">100</div>
+          <span class="deco-star-outline">☆</span>
+        </div>
+        <p class="mint-card-desc">اجمع النجوم بقراءة<br>الكتب لشراء ألعاب</p>
+        <button type="button" id="letsPlayBtn" class="btn-lets-play">هيا نلعب</button>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         PANEL (١): الصفحة الرئيسية (الافتراضية)
+         =================================================================== -->
+    <main id="tabPanelHome" class="student-tab-panel is-active">
+      <!-- Filter Pills: الكل | المنجزة | الغير منجزة -->
+      <div class="filter-pills-row" role="tablist" aria-label="تصفية الكتب">
+        <button type="button" class="filter-pill-btn active" data-filter="all">الكل</button>
+        <button type="button" class="filter-pill-btn" data-filter="completed">المنجزة</button>
+        <button type="button" class="filter-pill-btn" data-filter="uncompleted">الغير منجزة</button>
+      </div>
+
+      <!-- Books List / Grid -->
+      <div class="books-grid-container" id="studentBooksGrid"></div>
+    </main>
+
+    <!-- ===================================================================
+         PANEL (٢): تحدي القراءة
+         =================================================================== -->
+    <section id="tabPanelChallenge" class="student-tab-panel">
+      <div class="section-panel-card">
+        <div class="section-panel-title">
+          <span>🏁 (٢) تحدي القراءة – ماراثون المستويات</span>
+          <span style="font-size:0.88rem;color:var(--orange-main);">المستوى الحالي: (ز)</span>
+        </div>
+        <p style="font-size:0.92rem;color:#475569;font-weight:700;margin-bottom:14px;">
+          أكمل قراءة واستماع واختبار 23 كتاباً في المستوى (ز) للحصول على وسام بطل تحدي القراءة والانتقال للمستوى التالي!
+        </p>
+        <div style="background:#f5fbf4;border:1.5px solid #dcf4d9;border-radius:16px;padding:14px;">
+          <div style="display:flex;justify-content:space-between;font-weight:900;margin-bottom:8px;">
+            <span>تقدمك في تحدي المستوى (ز)</span>
+            <span id="challengeRatioText">11 من 23 كتاباً</span>
           </div>
-        </a>
-      </div>
-      <div class="col-md-4 mb-3">
-        <a href="../المكافآت/index.html" class="text-decoration-none">
-          <div class="portal-card text-center p-0 overflow-hidden" style="border:2px solid #fde047;">
-            <img src="../assets/generated/rewards-trophy.jpg" alt="المكافآت والتعزيز" style="width:100%;height:145px;object-fit:cover;">
-            <div class="p-3"><h5 class="font-weight-bold text-warning mb-1">🏆 المكافآت والشهادات</h5><small class="text-muted">شاهد نقاطك وأوسمتك واطبع شهادتك</small></div>
+          <div class="books-progress-track" style="height:16px;">
+            <div class="books-progress-fill" id="challengeProgressBar" style="width:55%;"></div>
           </div>
-        </a>
+        </div>
+        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+          <button type="button" class="btn-lets-play" style="max-width:220px;" onclick="document.querySelector('[data-tab=home]').click()">📖 متابعة قراءة الكتب</button>
+          <a href="../المكتبة/index.html" class="btn-lets-play" style="max-width:220px;background:var(--indigo-header);text-decoration:none;display:inline-flex;align-items:center;justify-content:center;">📚 مكتبة 30 قصة إضافية</a>
+        </div>
       </div>
+    </section>
+
+    <!-- ===================================================================
+         PANEL (٣): المهام
+         =================================================================== -->
+    <section id="tabPanelTasks" class="student-tab-panel">
+      <div class="section-panel-card">
+        <div class="section-panel-title">
+          <span>📋 (٣) المهام الأسبوعية والتكليفات</span>
+          <span style="font-size:0.84rem;background:#dcfce7;color:#166534;padding:3px 10px;border-radius:999px;">مكلف من المعلم</span>
+        </div>
+        <p style="font-size:0.9rem;color:#475569;font-weight:700;margin-bottom:12px;">
+          المهام والقصص المطلوب إنجازها هذا الأسبوع (قراءة + استماع + اختبار الفهم القرائي):
+        </p>
+        <div id="studentAssignedTasksList"></div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         PANEL (٤): إنجازات وإشارات
+         =================================================================== -->
+    <section id="tabPanelBadges" class="student-tab-panel">
+      <div class="section-panel-card">
+        <div class="section-panel-title">
+          <span>🏅 (٤) إنجازات وإشارات الطالب</span>
+          <a href="../المكافآت/index.html" style="font-size:0.85rem;color:var(--orange-main);text-decoration:none;font-weight:900;">🖨️ طباعة الشهادة</a>
+        </div>
+        <div class="badge-grid">
+          <div class="badge-item-box">
+            <span class="badge-item-icon">🌟</span>
+            <strong style="font-size:0.92rem;display:block;">نجم الاستماع</strong>
+            <small style="color:#4b5563;font-weight:700;">استمع إلى 11 قصة بتركيز</small>
+          </div>
+          <div class="badge-item-box">
+            <span class="badge-item-icon">📖</span>
+            <strong style="font-size:0.92rem;display:block;">قارئ المستوى (ز)</strong>
+            <small style="color:#4b5563;font-weight:700;">أتم قراءة القصص المصورة</small>
+          </div>
+          <div class="badge-item-box">
+            <span class="badge-item-icon">🧠</span>
+            <strong style="font-size:0.92rem;display:block;">بطل الاستيعاب</strong>
+            <small style="color:#4b5563;font-weight:700;">اجتاز اختبارات الفهم بتفوق</small>
+          </div>
+          <div class="badge-item-box">
+            <span class="badge-item-icon">🏆</span>
+            <strong style="font-size:0.92rem;display:block;">وسام 100+ نجمة</strong>
+            <small style="color:#4b5563;font-weight:700;">جمع أكثر من 100 نجمة ذهبية</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         PANEL (٥): ألعاب تفاعلية
+         =================================================================== -->
+    <section id="tabPanelGames" class="student-tab-panel">
+      <div class="section-panel-card">
+        <div class="section-panel-title">
+          <span>🎮 (٥) ألعاب تفاعلية ومتجر النجوم</span>
+          <span style="font-size:0.88rem;color:var(--orange-main);">رصيدك: <b id="gamesStarBalance">100</b> ★</span>
+        </div>
+        <p style="font-size:0.9rem;color:#475569;font-weight:700;margin-bottom:14px;">
+          العب وتدرّب على المهارات اللغوية والإملائية باستخدام نجومك:
+        </p>
+        <div class="badge-grid">
+          <a href="../الأنشطة/index.html?id=short-vowels" class="badge-item-box" style="text-decoration:none;color:inherit;">
+            <span class="badge-item-icon">🎯</span>
+            <strong style="font-size:0.92rem;display:block;">لعبة الحركات القصيرة</strong>
+            <small style="color:var(--orange-main);font-weight:900;">ابدأ اللعب الآن ←</small>
+          </a>
+          <a href="../الأنشطة/index.html?id=shams-qamar" class="badge-item-box" style="text-decoration:none;color:inherit;">
+            <span class="badge-item-icon">☀️🌙</span>
+            <strong style="font-size:0.92rem;display:block;">اللام الشمسية والقمرية</strong>
+            <small style="color:var(--orange-main);font-weight:900;">ابدأ اللعب الآن ←</small>
+          </a>
+          <a href="../الأنشطة/index.html?id=sentence-order" class="badge-item-box" style="text-decoration:none;color:inherit;">
+            <span class="badge-item-icon">🧩</span>
+            <strong style="font-size:0.92rem;display:block;">لعبة ترتيب الجمل</strong>
+            <small style="color:var(--orange-main);font-weight:900;">ابدأ اللعب الآن ←</small>
+          </a>
+          <a href="../الأنشطة/index.html?id=synonyms" class="badge-item-box" style="text-decoration:none;color:inherit;">
+            <span class="badge-item-icon">🚀</span>
+            <strong style="font-size:0.92rem;display:block;">المرادفات والأضداد</strong>
+            <small style="color:var(--orange-main);font-weight:900;">ابدأ اللعب الآن ←</small>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ===================================================================
+       INTERACTIVE MODAL FOR READING / LISTENING / QUIZ
+       =================================================================== -->
+  <div id="storyActionModal" class="story-modal-backdrop" role="dialog" aria-modal="true">
+    <div class="story-modal-box">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <h3 id="modalStoryTitle" style="font-size:1.15rem;font-weight:900;color:var(--indigo-header);">ماذا حصل لأخي رامز؟</h3>
+        <button type="button" id="closeStoryModalBtn" class="modal-close-btn">إغلاق ✕</button>
+      </div>
+      <div id="modalStoryBody"></div>
     </div>
+  </div>
 
-    <div class="mb-4 text-center" id="catFilters">
-      <button type="button" class="btn btn-primary btn-sm m-1" data-cat="all">الكل (17 مهارة)</button>
-      <button type="button" class="btn btn-outline-primary btn-sm m-1" data-cat="مهارات التأسيس">مهارات التأسيس</button>
-      <button type="button" class="btn btn-outline-primary btn-sm m-1" data-cat="المهارات الإملائية">المهارات الإملائية</button>
-      <button type="button" class="btn btn-outline-primary btn-sm m-1" data-cat="المهارات اللغوية">المهارات اللغوية</button>
-      <button type="button" class="btn btn-outline-primary btn-sm m-1" data-cat="الكتب التفاعلية">الكتب التفاعلية</button>
-      <button type="button" class="btn btn-outline-primary btn-sm m-1" data-cat="الاختبارات">الاختبارات</button>
-    </div>
-
-    <div class="row" id="activitiesGrid"></div>
-  </main>
-
-  <footer class="portal-footer">
-    <div class="container">
-      <p class="mb-0">منصة أقرأ – بوابة الطالب المحلية</p>
-    </div>
-  </footer>
-
-  <script src="../wp-includes/js/jquery/jquery.min.js"></script>
+  <script src="../assets/js/auth-system.js"></script>
   <script src="../assets/js/weekly-stories.js"></script>
   <script>
-    (function ($) {
-      if (window.IREAD_WEEKLY) {
-        window.IREAD_WEEKLY.renderWeeklyWidget('#weeklyTasksMount', '../');
-      }
-      var ALL_ACTIVITIES = [
-        { id: 'short-vowels', title: 'الحركات القصيرة', level: 'مستوى أ', cat: 'مهارات التأسيس', img: '../wp-content/uploads/2022/06/تعلم-عن-طريق-المتعة.webp', desc: 'الفتحة والضمة والكسرة.' },
-        { id: 'sukoon-shadda', title: 'السكون والشدة', level: 'مستوى أ', cat: 'مهارات التأسيس', img: '../wp-content/uploads/2022/06/ألعاب-ممتعة.webp', desc: 'تمييز التضعيف والسكون.' },
-        { id: 'long-vowels', title: 'المدود الثلاثة', level: 'مستوى أ', cat: 'مهارات التأسيس', img: '../wp-content/uploads/2022/06/مقاطع-الفيديو.webp', desc: 'مد الألف والواو والياء.' },
-        { id: 'shams-qamar', title: 'اللام الشمسية والقمرية', level: 'مستوى أ', cat: 'مهارات التأسيس', img: '../wp-content/uploads/2022/06/ألعاب-ممتعة.webp', desc: 'تصنيف اللام القمرية والشمسية.' },
-        { id: 'story-forest', title: 'كتاب: رحلة في الغابة', level: 'مستوى أ', cat: 'الكتب التفاعلية', img: '../wp-content/uploads/2022/06/كتب-تفاعليّة.webp', desc: 'قصة مسموعة مع أسئلة فهم.' },
-        { id: 'tanween', title: 'التنوين بأنواعه', level: 'مستوى ب', cat: 'المهارات الإملائية', img: '../wp-content/uploads/2022/06/تعلم-عن-طريق-المتعة.webp', desc: 'تنوين الفتح والضم والكسر.' },
-        { id: 'hamza-wasl-qat', title: 'همزة الوصل والقطع', level: 'مستوى ب', cat: 'المهارات الإملائية', img: '../wp-content/uploads/2022/06/أكثر-من-٣٠٠٠-مصدر-تعليمي.webp', desc: 'التفريق بين همزتي الوصل والقطع.' },
-        { id: 'singular-dual-plural', title: 'المفرد والمثنى والجمع', level: 'مستوى ب', cat: 'المهارات اللغوية', img: '../wp-content/uploads/2022/06/ألعاب-ممتعة.webp', desc: 'صيغ العدد في العربية.' },
-        { id: 'story-bee', title: 'كتاب: النحلة النشيطة', level: 'مستوى ب', cat: 'الكتب التفاعلية', img: '../wp-content/uploads/2022/06/كتب-تفاعليّة.webp', desc: 'قصة مسموعة عن التعاون.' },
-        { id: 'pronouns', title: 'الضمائر العربية', level: 'مستوى ج', cat: 'المهارات اللغوية', img: '../wp-content/uploads/2022/06/تعلم-عن-طريق-المتعة.webp', desc: 'ضمائر المتكلم والغائب والمخاطب.' },
-        { id: 'demonstratives', title: 'أسماء الإشارة', level: 'مستوى ج', cat: 'المهارات اللغوية', img: '../wp-content/uploads/2022/06/ألعاب-ممتعة.webp', desc: 'استخدام هذا وهذه وهؤلاء.' },
-        { id: 'nominal-verbal', title: 'الجملة الاسمية والفعلية', level: 'مستوى ج', cat: 'المهارات اللغوية', img: '../wp-content/uploads/2022/06/أكثر-من-٣٠٠٠-مصدر-تعليمي.webp', desc: 'التمييز بين نوعي الجملة.' },
-        { id: 'sentence-order', title: 'ترتيب الكلمات', level: 'مستوى ج', cat: 'المهارات اللغوية', img: '../wp-content/uploads/2022/06/أكثر-من-٣٠٠٠-مصدر-تعليمي.webp', desc: 'بناء جملة مفيدة بالترتيب.' },
-        { id: 'synonyms', title: 'المرادفات والأضداد', level: 'مستوى ج', cat: 'المهارات اللغوية', img: '../wp-content/uploads/2022/06/مقاطع-الفيديو.webp', desc: 'تنمية الثروة اللغوية.' },
-        { id: 'taa-marbuta', title: 'التاء المفتوحة والمربوطة', level: 'مستوى د', cat: 'المهارات الإملائية', img: '../wp-content/uploads/2022/06/ألعاب-ممتعة.webp', desc: 'تمييز التاء المربوطة والمفتوحة.' },
-        { id: 'hamza-middle-end', title: 'الهمزة المتوسطة والمتطرفة', level: 'مستوى د', cat: 'المهارات الإملائية', img: '../wp-content/uploads/2022/06/تقارير-الأداء.webp', desc: 'قواعد رسم الهمزة.' },
-        { id: 'fluency-quiz', title: 'اختبار الطلاقة القرائية', level: 'مستوى د', cat: 'الاختبارات', img: '../wp-content/uploads/2022/06/تقارير-الأداء.webp', desc: 'تقييم شامل للمستوى.' }
+    (function () {
+      'use strict';
+
+      var A = window.IREAD_AUTH;
+      var currentUser = A ? A.getCurrentUser() : null;
+      var studentId = localStorage.getItem('iread_selected_student_id') || (currentUser && currentUser.numericId) || '4';
+      var studentName = (currentUser && currentUser.role === 'student' && currentUser.name) || localStorage.getItem('iread_selected_student_name') || 'يوسف طارق';
+
+      document.getElementById('menuStudentName').textContent = studentName;
+
+      // Books dataset for Level (ز) starting with "ماذا حصل لأخي رامز؟" matching the screenshot
+      var LEVEL_Z_BOOKS = [
+        {
+          id: 'ramiz-brother',
+          title: 'ماذا حصل لأخي رامز؟',
+          stars: 35,
+          cover: '../assets/ramiz-book-cover.jpg',
+          readDone: false,
+          listenDone: true,
+          quizDone: false,
+          storyText: 'فِي يَوْمٍ مِنَ الأَيَّامِ، نَظَرَ الصَّغِيرُ إِلَى أَخِيهِ رَامِزٍ بِدَهْشَةٍ وَقَالَ: «مَاذَا حَصَلَ لِأَخِي رَامِزٍ؟ لَقَدْ أَصْبَحَ طَوِيلاً جِدّاً وَيَقْفِزُ بِخِفَّةٍ كَالْبَهْلَوَانِ!». ضَحِكَتِ الأُمُّ وَقَالَتْ: «إِنَّهُ يَتَدَرَّبُ عَلَى الْمَشْيِ عَلَى الرِّكَامِ الخَشَبِيَّةِ لِعَرْضِ المَدْرَسَةِ الْمَسْرَحِيِّ!». فَرِحَ الصَّغِيرُ وَصَفَّقَ لِأَخِيهِ رَامِزٍ بِحَمَاسٍ كَبِيرٍ.',
+          quiz: {
+            q: 'لماذا بدا الأخ رامز طويلاً جداً في القصة؟',
+            options: [
+              'لأنه كان يتدرب على المشي على الركام الخشبية لعرض المدرسة',
+              'لأنه صعد فوق سطح المنزل',
+              'لأنه كان يركب دراجة هوائية كبيرة'
+            ],
+            correct: 0
+          }
+        },
+        {
+          id: 'space-journey',
+          title: 'رحلة إلى كوكب المعرفة',
+          stars: 35,
+          cover: '../assets/generated/story-science.jpg',
+          readDone: true,
+          listenDone: true,
+          quizDone: true,
+          storyText: 'انْطَلَقَ رَائِدُ الفَضَاءِ الصَّغِيرُ فِي مَرْكَبَتِهِ الفَضَائِيَّةِ لِيَسْتَكْشِفَ الكَوَاكِبَ وَالنُّجُومَ المُلَوَّنَةَ، وَسَجَّلَ فِي دَفْتَرِهِ أَسْمَاءَ الكَوَاكِبِ وَأَحْجَامَهَا بِاللُّغَةِ العَرَبِيَّةِ الفُصْحَى.',
+          quiz: {
+            q: 'ماذا سجّل رائد الفضاء الصغير في دفتره؟',
+            options: [
+              'أسماء الكواكب وأحجامها باللغة العربية',
+              'أسماء البحار والمحيطات فقط',
+              'جدول المباريات الرياضية'
+            ],
+            correct: 0
+          }
+        },
+        {
+          id: 'nature-secret',
+          title: 'سر الحديقة العجيبة',
+          stars: 30,
+          cover: '../assets/generated/story-nature.jpg',
+          readDone: false,
+          listenDone: false,
+          quizDone: false,
+          storyText: 'تَعَاوَنَ الأَصْدِقَاءُ فِي زِرَاعَةِ الأَشْجَارِ وَسِقَايَةِ الأَزْهَارِ فِي حَدِيقَةِ الحَيِّ، فَأَزْهَرَتِ الحَدِيقَةُ وَعَادَتِ الطُّيُورُ تُغَرِّدُ فَوْقَ الأَغْصَانِ كُلَّ صَبَاحٍ.',
+          quiz: {
+            q: 'كيف أزهرت الحديقة وعادت إليها الطيور؟',
+            options: [
+              'بتعاون الأصدقاء في زراعة الأشجار وسقاية الأزهار',
+              'بسبب إغلاق الحديقة طوال العام',
+              'بسبب قطع الأغصان'
+            ],
+            correct: 0
+          }
+        },
+        {
+          id: 'school-champions',
+          title: 'أبطال القراءة في مدرستنا',
+          stars: 40,
+          cover: '../assets/generated/story-school.jpg',
+          readDone: true,
+          listenDone: true,
+          quizDone: true,
+          storyText: 'أَقَامَتْ مَدَارِسُ السَّاحِلِ الأَهْلِيَّةُ مُسَابَقَةً كُبْرَى لِأَبْطَالِ القِرَاءَةِ، وَقَرَأَ كُلُّ طَالِبٍ قِصَّتَهُ المُفَضَّلَةَ أَمَامَ زُمَلَائِهِ بِلُغَةٍ عَرَبِيَّةٍ سَلِيمَةٍ وَصَوْتٍ وَاضِحٍ.',
+          quiz: {
+            q: 'كيف قرأ الطلاب قصصهم في المسابقة؟',
+            options: [
+              'بلغة عربية سليمة وصوت واضح',
+              'بصوت منخفض جداً دون تشكيل',
+              'دون فهم لمعاني الكلمات'
+            ],
+            correct: 0
+          }
+        }
       ];
 
-      var sid = localStorage.getItem('iread_selected_student_id') || '4';
-      $('#activeStudentName').text(localStorage.getItem('iread_selected_student_name') || 'يوسف طارق');
-      $('#activeStudentLevel').text(localStorage.getItem('iread_selected_student_level') || 'مستوى د');
-      var doneMap = JSON.parse(localStorage.getItem('iread_done_' + sid) || '{}');
-      $('#doneCounter').text(Object.keys(doneMap).length + ' / ' + ALL_ACTIVITIES.length + ' مكتمل');
+      var STORAGE_KEY = 'iread_student_lvl_z_' + studentId;
+      var STARS_KEY = 'iread_student_stars_' + studentId;
 
-      function skillVisual(a) {
-        if (a.cat === 'الكتب التفاعلية') return { img: '../assets/generated/story-nature.jpg', icon: '📖' };
-        if (a.cat === 'الاختبارات') return { img: '../assets/generated/rewards-trophy.jpg', icon: '🏆' };
-        if (a.cat === 'المهارات الإملائية') return { img: '../assets/generated/story-school.jpg', icon: '✍️' };
-        if (a.cat === 'المهارات اللغوية') return { img: '../assets/generated/story-science.jpg', icon: '🧩' };
-        return { img: '../assets/generated/arcade-hero.jpg', icon: '🎮' };
+      function loadBookStates() {
+        try {
+          var saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+          LEVEL_Z_BOOKS.forEach(function (b) {
+            if (saved[b.id]) {
+              b.readDone = !!saved[b.id].readDone;
+              b.listenDone = !!saved[b.id].listenDone;
+              b.quizDone = !!saved[b.id].quizDone;
+            }
+          });
+        } catch (e) {}
       }
 
-      function levelColor(lvl) {
-        if (lvl === 'مستوى أ') return '#16a34a';
-        if (lvl === 'مستوى ب') return '#2563eb';
-        if (lvl === 'مستوى ج') return '#7c3aed';
-        return '#ea580c';
+      function saveBookStates() {
+        var map = {};
+        LEVEL_Z_BOOKS.forEach(function (b) {
+          map[b.id] = { readDone: b.readDone, listenDone: b.listenDone, quizDone: b.quizDone };
+        });
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
       }
 
-      function renderGrid(cat) {
-        var $g = $('#activitiesGrid').empty();
-        ALL_ACTIVITIES.forEach(function (a) {
-          if (cat !== 'all' && a.cat !== cat) return;
-          var vis = skillVisual(a);
-          var pill = doneMap[a.id]
-            ? '<span class="skill-lvl-pill" style="background:#16a34a;">✓ مكتمل (' + doneMap[a.id] + ')</span>'
-            : '<span class="skill-lvl-pill" style="background:' + levelColor(a.level) + ';">' + a.level + '</span>';
-          $g.append(
-            '<div class="col-sm-6 col-lg-3 mb-4">' +
-              '<div class="portal-card text-center">' +
-                '<div class="skill-thumb">' +
-                  '<img src="' + vis.img + '" alt="' + a.title + '">' +
-                  pill +
-                '</div>' +
-                '<div class="skill-body">' +
-                  '<div class="small text-primary font-weight-bold mb-1">' + vis.icon + ' ' + a.cat + '</div>' +
-                  '<h6 class="font-weight-bold text-dark mb-1">' + a.title + '</h6>' +
-                  '<p class="text-muted small flex-grow-1 mb-3">' + a.desc + '</p>' +
-                  '<a href="../الأنشطة/index.html?id=' + a.id + '" class="btn btn-primary btn-sm btn-block skill-go-btn">🎮 ابدأ المهارة</a>' +
-                '</div>' +
+      function getStars() {
+        var val = parseInt(localStorage.getItem(STARS_KEY) || '100', 10);
+        return isNaN(val) ? 100 : val;
+      }
+
+      function setStars(val) {
+        localStorage.setItem(STARS_KEY, String(val));
+        document.getElementById('headerStarScore').textContent = val;
+        document.getElementById('cardStarScore').textContent = val;
+        var gBal = document.getElementById('gamesStarBalance');
+        if (gBal) gBal.textContent = val;
+      }
+
+      loadBookStates();
+      setStars(getStars());
+
+      // =================================================================
+      // TOP-RIGHT HAMBURGER MENU TOGGLE (تظهر عند الضغط وتختفي عند الضغط مرة أخرى)
+      // =================================================================
+      var menuBtn = document.getElementById('studentMenuBtn');
+      var dropdownMenu = document.getElementById('studentDropdownMenu');
+
+      function toggleStudentMenu(forceState) {
+        var isOpen = dropdownMenu.classList.contains('is-open');
+        var nextState = typeof forceState === 'boolean' ? forceState : !isOpen;
+        dropdownMenu.classList.toggle('is-open', nextState);
+        menuBtn.classList.toggle('is-active', nextState);
+        menuBtn.setAttribute('aria-expanded', nextState ? 'true' : 'false');
+      }
+
+      menuBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggleStudentMenu();
+      });
+
+      // Close menu if clicking outside
+      document.addEventListener('click', function (e) {
+        if (dropdownMenu.classList.contains('is-open') && !dropdownMenu.contains(e.target) && e.target !== menuBtn) {
+          toggleStudentMenu(false);
+        }
+      });
+
+      // Menu Navigation Items (١) الصفحة الرئيسية (٢) تحدي القراءة (٣) المهام (٤) إنجازات وإشارات (٥) ألعاب تفاعلية
+      var menuItemBtns = document.querySelectorAll('.menu-item-btn');
+      var panelMap = {
+        home: document.getElementById('tabPanelHome'),
+        challenge: document.getElementById('tabPanelChallenge'),
+        tasks: document.getElementById('tabPanelTasks'),
+        badges: document.getElementById('tabPanelBadges'),
+        games: document.getElementById('tabPanelGames')
+      };
+
+      function switchStudentTab(tabKey) {
+        menuItemBtns.forEach(function (b) {
+          b.classList.toggle('active', b.getAttribute('data-tab') === tabKey);
+        });
+        Object.keys(panelMap).forEach(function (k) {
+          if (panelMap[k]) {
+            panelMap[k].classList.toggle('is-active', k === tabKey);
+          }
+        });
+        toggleStudentMenu(false);
+      }
+
+      menuItemBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          switchStudentTab(btn.getAttribute('data-tab'));
+        });
+      });
+
+      document.getElementById('letsPlayBtn').addEventListener('click', function () {
+        switchStudentTab('games');
+      });
+
+      // =================================================================
+      // RENDER BOOKS & FILTER PILLS (الكل | المنجزة | الغير منجزة)
+      // =================================================================
+      var activeFilter = 'all';
+      var booksGrid = document.getElementById('studentBooksGrid');
+
+      function updateSummaryCounters() {
+        var extraCompleted = LEVEL_Z_BOOKS.filter(function (b) {
+          return b.readDone && b.listenDone && b.quizDone;
+        }).length;
+        // Base 11 completed out of 23 matching screenshot "23/11"
+        var completedCount = Math.min(23, 9 + extraCompleted);
+        document.getElementById('completedBooksRatio').textContent = '23/' + completedCount;
+        var pct = Math.min(100, Math.round((completedCount / 23) * 100));
+        document.getElementById('completedBooksBar').style.width = pct + '%';
+
+        var chText = document.getElementById('challengeRatioText');
+        var chBar = document.getElementById('challengeProgressBar');
+        if (chText) chText.textContent = completedCount + ' من 23 كتاباً';
+        if (chBar) chBar.style.width = pct + '%';
+      }
+
+      function renderBooks() {
+        booksGrid.innerHTML = '';
+        var filtered = LEVEL_Z_BOOKS.filter(function (b) {
+          var isCompleted = b.readDone && b.listenDone && b.quizDone;
+          if (activeFilter === 'completed') return isCompleted;
+          if (activeFilter === 'uncompleted') return !isCompleted;
+          return true;
+        });
+
+        filtered.forEach(function (b) {
+          var card = document.createElement('article');
+          card.className = 'book-item-card';
+          card.innerHTML =
+            '<div class="book-card-header">' +
+              '<h2 class="book-card-title">' + b.title + '</h2>' +
+              '<div class="book-points-badge">' +
+                '<span class="book-points-star-box">' +
+                  '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>' +
+                '</span>' +
+                '<span class="book-points-num-box">' + b.stars + '</span>' +
               '</div>' +
-            '</div>'
-          );
+            '</div>' +
+            '<div class="book-cover-stage">' +
+              '<img src="' + b.cover + '" alt="' + b.title + '" class="book-cover-img" data-book-id="' + b.id + '" data-action="read">' +
+            '</div>' +
+            '<div class="book-card-actions">' +
+              '<button type="button" class="book-action-btn btn-act-read ' + (b.readDone ? 'is-done' : '') + '" data-book-id="' + b.id + '" data-action="read">' +
+                '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>' +
+                '<span>قراءة</span>' +
+              '</button>' +
+              '<button type="button" class="book-action-btn btn-act-listen ' + (b.listenDone ? 'is-done' : '') + '" data-book-id="' + b.id + '" data-action="listen">' +
+                (b.listenDone ? '<span class="check-circle-navy">✓</span>' : '<span>🔊</span>') +
+                '<span>استماع</span>' +
+              '</button>' +
+              '<button type="button" class="book-action-btn btn-act-quiz ' + (b.quizDone ? 'is-done' : '') + '" data-book-id="' + b.id + '" data-action="quiz">' +
+                '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>' +
+                '<span>اختبار</span>' +
+              '</button>' +
+            '</div>';
+          booksGrid.appendChild(card);
+        });
+
+        updateSummaryCounters();
+      }
+
+      // Render Tasks tab list
+      function renderTasksTab() {
+        var tasksBox = document.getElementById('studentAssignedTasksList');
+        if (!tasksBox) return;
+        tasksBox.innerHTML = '';
+        LEVEL_Z_BOOKS.forEach(function (b) {
+          var isDone = b.readDone && b.listenDone && b.quizDone;
+          var row = document.createElement('div');
+          row.style.cssText = 'display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:#f5fbf4;border:1.5px solid #dcf4d9;border-radius:14px;margin-bottom:10px;gap:10px;flex-wrap:wrap;';
+          row.innerHTML =
+            '<div>' +
+              '<strong style="color:var(--indigo-header);font-size:0.98rem;">📖 ' + b.title + '</strong>' +
+              '<div style="font-size:0.8rem;color:#475569;font-weight:700;">المكافأة: +' + b.stars + ' نجمة ★</div>' +
+            '</div>' +
+            '<div style="display:flex;align-items:center;gap:8px;">' +
+              (isDone
+                ? '<span style="background:#a3e635;color:var(--indigo-header);padding:4px 12px;border-radius:999px;font-weight:900;font-size:0.82rem;">✓ منجزة</span>'
+                : '<button type="button" class="btn-lets-play" style="height:34px;padding:0 14px;font-size:0.84rem;" data-book-id="' + b.id + '" data-action="read">ابدأ المهمة</button>') +
+            '</div>';
+          tasksBox.appendChild(row);
         });
       }
 
-      $('#catFilters button').on('click', function () {
-        $('#catFilters button').removeClass('btn-primary').addClass('btn-outline-primary');
-        $(this).removeClass('btn-outline-primary').addClass('btn-primary');
-        renderGrid($(this).attr('data-cat'));
+      var filterBtns = document.querySelectorAll('.filter-pill-btn');
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          filterBtns.forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          activeFilter = btn.getAttribute('data-filter');
+          renderBooks();
+        });
       });
 
-      renderGrid('all');
-    })(window.jQuery);
+      // =================================================================
+      // INTERACTIVE STORY READER / LISTENING / QUIZ MODAL
+      // =================================================================
+      var modal = document.getElementById('storyActionModal');
+      var modalTitle = document.getElementById('modalStoryTitle');
+      var modalBody = document.getElementById('modalStoryBody');
+      var closeModalBtn = document.getElementById('closeStoryModalBtn');
+
+      function speakArabic(text) {
+        if (!('speechSynthesis' in window)) return;
+        try {
+          window.speechSynthesis.cancel();
+          var u = new SpeechSynthesisUtterance(text);
+          u.lang = 'ar-SA';
+          u.rate = 0.9;
+          window.speechSynthesis.speak(u);
+        } catch (e) {}
+      }
+
+      function openBookAction(bookId, action) {
+        var book = LEVEL_Z_BOOKS.find(function (b) { return b.id === bookId; });
+        if (!book) return;
+
+        modalTitle.textContent = book.title;
+        modal.classList.add('is-open');
+
+        if (action === 'read') {
+          book.readDone = true;
+          saveBookStates();
+          renderBooks();
+          renderTasksTab();
+          modalBody.innerHTML =
+            '<div style="text-align:center;margin-bottom:14px;">' +
+              '<img src="' + book.cover + '" alt="' + book.title + '" style="width:130px;height:185px;object-fit:cover;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,0.15);">' +
+            '</div>' +
+            '<div style="background:#f5fbf4;border:1.5px solid #dcf4d9;border-radius:16px;padding:16px;font-size:1.15rem;line-height:2;font-weight:800;color:#1e293b;margin-bottom:14px;">' +
+              book.storyText +
+            '</div>' +
+            '<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">' +
+              '<button type="button" id="modalSpeakBtn" class="btn-lets-play" style="max-width:200px;background:var(--indigo-header);">🔊 قراءة صوتية للنص</button>' +
+              '<button type="button" id="modalGoQuizBtn" class="btn-lets-play" style="max-width:200px;">📝 انتقل إلى الاختبار</button>' +
+            '</div>';
+
+          document.getElementById('modalSpeakBtn').addEventListener('click', function () {
+            speakArabic(book.storyText);
+          });
+          document.getElementById('modalGoQuizBtn').addEventListener('click', function () {
+            openBookAction(book.id, 'quiz');
+          });
+        } else if (action === 'listen') {
+          book.listenDone = true;
+          saveBookStates();
+          renderBooks();
+          renderTasksTab();
+          speakArabic(book.storyText);
+          modalBody.innerHTML =
+            '<div style="text-align:center;padding:16px 8px;">' +
+              '<div style="font-size:3rem;margin-bottom:8px;">🎧</div>' +
+              '<h4 style="font-weight:900;color:var(--indigo-header);margin-bottom:8px;">جاري الاستماع إلى القصة...</h4>' +
+              '<p style="background:#f5fbf4;border:1.5px solid #dcf4d9;border-radius:16px;padding:14px;font-size:1.08rem;line-height:1.95;font-weight:800;color:#1e293b;margin-bottom:14px;">' +
+                book.storyText +
+              '</p>' +
+              '<div style="color:#166534;font-weight:900;margin-bottom:12px;">✓ تم احتساب مهارة الاستماع بنجاح!</div>' +
+              '<button type="button" id="modalReplayAudioBtn" class="btn-lets-play" style="max-width:210px;">🔄 إعادة الاستماع</button>' +
+            '</div>';
+          document.getElementById('modalReplayAudioBtn').addEventListener('click', function () {
+            speakArabic(book.storyText);
+          });
+        } else if (action === 'quiz') {
+          var qObj = book.quiz;
+          var optsHtml = qObj.options.map(function (opt, idx) {
+            return '<button type="button" class="quiz-option-btn" data-idx="' + idx + '">' + opt + '</button>';
+          }).join('');
+          modalBody.innerHTML =
+            '<div>' +
+              '<div style="background:#f1ecf8;padding:12px 16px;border-radius:14px;font-weight:900;color:var(--indigo-header);margin-bottom:14px;">' +
+                '❓ ' + qObj.q +
+              '</div>' +
+              '<div id="quizOptionsWrap">' + optsHtml + '</div>' +
+              '<div id="quizResultFeedback" style="margin-top:12px;font-weight:900;text-align:center;"></div>' +
+            '</div>';
+
+          var optBtns = modalBody.querySelectorAll('.quiz-option-btn');
+          optBtns.forEach(function (ob) {
+            ob.addEventListener('click', function () {
+              var picked = parseInt(ob.getAttribute('data-idx'), 10);
+              var fb = document.getElementById('quizResultFeedback');
+              if (picked === qObj.correct) {
+                ob.style.background = '#dcfce7';
+                ob.style.borderColor = '#16a34a';
+                if (!book.quizDone) {
+                  book.quizDone = true;
+                  saveBookStates();
+                  setStars(getStars() + book.stars);
+                  renderBooks();
+                  renderTasksTab();
+                  fb.style.color = '#15803d';
+                  fb.innerHTML = '🎉 إجابة صحيحة! حصلت على +' + book.stars + ' نجمة إضافية!';
+                } else {
+                  fb.style.color = '#15803d';
+                  fb.innerHTML = '✅ أحسنت! إجابة صحيحة.';
+                }
+              } else {
+                ob.style.background = '#fee2e2';
+                ob.style.borderColor = '#dc2626';
+                fb.style.color = '#b91c1c';
+                fb.innerHTML = 'حاول مرة أخرى يا بطل!';
+              }
+            });
+          });
+        }
+      }
+
+      document.addEventListener('click', function (e) {
+        var trigger = e.target.closest('[data-book-id][data-action]');
+        if (trigger) {
+          openBookAction(trigger.getAttribute('data-book-id'), trigger.getAttribute('data-action'));
+        }
+      });
+
+      closeModalBtn.addEventListener('click', function () {
+        modal.classList.remove('is-open');
+        if ('speechSynthesis' in window) {
+          try { window.speechSynthesis.cancel(); } catch (e) {}
+        }
+      });
+
+      renderBooks();
+      renderTasksTab();
+    })();
   </script>
 </body>
 </html>

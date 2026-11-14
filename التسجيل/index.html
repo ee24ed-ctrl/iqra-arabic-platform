@@ -354,11 +354,11 @@
       transform: translateY(-1px);
     }
 
-    /* Role selector pills inside Register view */
+    /* Role selector pills inside Login & Register views */
     .role-selector-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 6px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 5px;
       margin-bottom: 14px;
     }
 
@@ -367,9 +367,9 @@
       background: #f2f7fd;
       color: #0b356e;
       border-radius: 14px;
-      padding: 8px 4px;
+      padding: 7px 3px;
       font-family: inherit;
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       font-weight: 800;
       cursor: pointer;
       display: flex;
@@ -377,6 +377,8 @@
       align-items: center;
       gap: 2px;
       transition: all 0.15s ease;
+      text-align: center;
+      line-height: 1.2;
     }
 
     .role-pill-btn.active {
@@ -759,6 +761,14 @@
 
           <!-- LOGIN VIEW (Default) -->
           <form id="loginViewForm" autocomplete="on">
+            <div class="role-selector-grid" id="loginRoleGrid">
+              <button type="button" class="role-pill-btn active" data-role="student"><span>ًںژ“</span><span>ط·ط§ظ„ط¨</span></button>
+              <button type="button" class="role-pill-btn" data-role="teacher"><span>ًں‘©â€چًںڈ«</span><span>ظ…ط¹ظ„ظ…</span></button>
+              <button type="button" class="role-pill-btn" data-role="admin"><span>ًںڈ«</span><span>ظ…ط¯ظٹط±</span></button>
+              <button type="button" class="role-pill-btn" data-role="supervisor"><span>ًں§­</span><span>ظ…ط´ط±ظپ طھط±ط¨ظˆظٹ</span></button>
+              <button type="button" class="role-pill-btn" data-role="general_supervisor"><span>ًںڈ›ï¸ڈ</span><span>ظ…ط´ط±ظپ ط¹ط§ظ…</span></button>
+            </div>
+
             <!-- Username Pill -->
             <div class="pill-input-group">
               <span class="pill-icon-right" aria-hidden="true">
@@ -823,8 +833,9 @@
             <div class="role-selector-grid" id="regRoleGrid">
               <button type="button" class="role-pill-btn active" data-role="student"><span>ًںژ“</span><span>ط·ط§ظ„ط¨</span></button>
               <button type="button" class="role-pill-btn" data-role="teacher"><span>ًں‘©â€چًںڈ«</span><span>ظ…ط¹ظ„ظ…</span></button>
-              <button type="button" class="role-pill-btn" data-role="admin"><span>ًںڈ«</span><span>ط¥ط¯ط§ط±ط©</span></button>
-              <button type="button" class="role-pill-btn" data-role="supervisor"><span>ًں§­</span><span>ظ…ط´ط±ظپ</span></button>
+              <button type="button" class="role-pill-btn" data-role="admin"><span>ًںڈ«</span><span>ظ…ط¯ظٹط±</span></button>
+              <button type="button" class="role-pill-btn" data-role="supervisor"><span>ًں§­</span><span>ظ…ط´ط±ظپ طھط±ط¨ظˆظٹ</span></button>
+              <button type="button" class="role-pill-btn" data-role="general_supervisor"><span>ًںڈ›ï¸ڈ</span><span>ظ…ط´ط±ظپ ط¹ط§ظ…</span></button>
             </div>
 
             <div class="reg-grid">
@@ -853,6 +864,7 @@
                 <option value="ط§ظ„طµظپ ط§ظ„ط³ط§ط¯ط³">ط§ظ„طµظپ ط§ظ„ط³ط§ط¯ط³</option>
               </select>
               <select id="regLevel" class="reg-select">
+                <option value="ط§ظ„ظ…ط³طھظˆظ‰ (ط²)">ط§ظ„ظ…ط³طھظˆظ‰ (ط²)</option>
                 <option value="ظ…ط³طھظˆظ‰ ط£">ظ…ط³طھظˆظ‰ ط§ظ„ظ‚ط±ط§ط،ط©: ط£</option>
                 <option value="ظ…ط³طھظˆظ‰ ط¨">ظ…ط³طھظˆظ‰ ط§ظ„ظ‚ط±ط§ط،ط©: ط¨</option>
                 <option value="ظ…ط³طھظˆظ‰ ط¬">ظ…ط³طھظˆظ‰ ط§ظ„ظ‚ط±ط§ط،ط©: ط¬</option>
@@ -873,12 +885,13 @@
 
           <!-- Quick Demo & Platform Navigation Strip -->
           <div class="quick-access-box">
-            <div class="quick-access-title" id="quickAccessTitle">âڑ، ط¯ط®ظˆظ„ طھط¬ط±ظٹط¨ظٹ ظپظˆط±ظٹ ط£ظˆ ط§ط³طھط¹ط±ط§ط¶ ط§ظ„ظ…ظ†طµط©:</div>
+            <div class="quick-access-title" id="quickAccessTitle">âڑ، ط¯ط®ظˆظ„ ظ…ط¨ط§ط´ط± ط­ط³ط¨ ط§ظ„طµظپط© ط£ظˆ ط§ط³طھط¹ط±ط§ط¶ ط§ظ„ظ…ظ†طµط©:</div>
             <div class="quick-chips">
               <button type="button" class="quick-chip demo-login-chip" data-role="student">ًںژ“ ط·ط§ظ„ط¨</button>
               <button type="button" class="quick-chip demo-login-chip" data-role="teacher">ًں‘©â€چًںڈ« ظ…ط¹ظ„ظ…</button>
-              <button type="button" class="quick-chip demo-login-chip" data-role="admin">ًںڈ« ط¥ط¯ط§ط±ط©</button>
-              <button type="button" class="quick-chip demo-login-chip" data-role="supervisor">ًں§­ ظ…ط´ط±ظپ</button>
+              <button type="button" class="quick-chip demo-login-chip" data-role="admin">ًںڈ« ظ…ط¯ظٹط±</button>
+              <button type="button" class="quick-chip demo-login-chip" data-role="supervisor">ًں§­ ظ…ط´ط±ظپ طھط±ط¨ظˆظٹ</button>
+              <button type="button" class="quick-chip demo-login-chip" data-role="general_supervisor">ًںڈ›ï¸ڈ ظ…ط´ط±ظپ ط¹ط§ظ…</button>
               <a href="../home.html" class="quick-chip">ًںڈ  ط§ظ„ظ…ظ†طµط© ط§ظ„ط±ط¦ظٹط³ظٹط©</a>
               <button type="button" id="replayFlashBtn" class="quick-chip">ًںژ¬ ظپظٹط¯ظٹظˆ ط§ظ„ط¨ط¯ط§ظٹط©</button>
             </div>
@@ -1056,12 +1069,21 @@
         });
       }
 
+      var DEFAULT_ROLE_USERS = {
+        student: 'yusuf',
+        teacher: 'teacher1',
+        admin: 'admin1',
+        supervisor: 'sup1',
+        general_supervisor: 'gsup1'
+      };
+
       // Forgot Password Helper
       if (forgotPassBtn) {
         forgotPassBtn.addEventListener('click', function () {
-          loginIdentifier.value = loginIdentifier.value || 'yusuf';
+          var defUser = DEFAULT_ROLE_USERS[selectedRole] || 'yusuf';
+          loginIdentifier.value = defUser;
           loginPass.value = '1234';
-          showFeedback('info', 'ًں’، طھظ… طھط¹ط¨ط¦ط© ط¨ظٹط§ظ†ط§طھ ط§ظ„ط¯ط®ظˆظ„ ط§ظ„ط§ظپطھط±ط§ط¶ظٹط© ظ„ظ„طھط¬ط±ط¨ط© (ط§ط³ظ… ط§ظ„ظ…ط³طھط®ط¯ظ…: <b>yusuf</b> | ظƒظ„ظ…ط© ط§ظ„ظ…ط±ظˆط±: <b>1234</b>). ظٹظ…ظƒظ†ظƒ ط§ظ„ط¶ط؛ط· ط¹ظ„ظ‰ <b>طھط³ط¬ظٹظ„ ط§ظ„ط¯ط®ظˆظ„</b> ط§ظ„ط¢ظ†.');
+          showFeedback('info', 'ًں’، طھظ… طھط¹ط¨ط¦ط© ط¨ظٹط§ظ†ط§طھ ط§ظ„ط¯ط®ظˆظ„ ط§ظ„ط§ظپطھط±ط§ط¶ظٹط© (ط§ط³ظ… ط§ظ„ظ…ط³طھط®ط¯ظ…: <b>' + defUser + '</b> | ظƒظ„ظ…ط© ط§ظ„ظ…ط±ظˆط±: <b>1234</b>). ط§ط¶ط؛ط· ط¹ظ„ظ‰ <b>طھط³ط¬ظٹظ„ ط§ظ„ط¯ط®ظˆظ„</b> ط§ظ„ط¢ظ†.');
         });
       }
 
@@ -1082,13 +1104,14 @@
         });
       }
 
-      // Role pills in Register form
+      // Role pills in Login & Register forms
       var roleBtns = document.querySelectorAll('.role-pill-btn');
       roleBtns.forEach(function (btn) {
         btn.addEventListener('click', function () {
-          roleBtns.forEach(function (b) { b.classList.remove('active'); });
-          btn.classList.add('active');
           selectedRole = btn.getAttribute('data-role') || 'student';
+          roleBtns.forEach(function (b) {
+            b.classList.toggle('active', b.getAttribute('data-role') === selectedRole);
+          });
         });
       });
 
@@ -1106,12 +1129,17 @@
           e.preventDefault();
           var A = window.IREAD_AUTH;
           if (!A) return;
-          var res = A.loginUser(loginIdentifier.value, loginPass.value);
+          var res = A.loginUser(loginIdentifier.value, loginPass.value, selectedRole);
           if (!res.ok) {
-            showFeedback('error', res.error || 'ط¨ظٹط§ظ†ط§طھ ط§ظ„ط¯ط®ظˆظ„ ط؛ظٹط± طµط­ظٹط­ط©. ط¬ط±ط¨: yusuf ظˆظƒظ„ظ…ط© ط§ظ„ظ…ط±ظˆط±: 1234');
+            // Try without role filter in case username belongs to a specific role directly
+            res = A.loginUser(loginIdentifier.value, loginPass.value);
+          }
+          if (!res.ok) {
+            var defU = DEFAULT_ROLE_USERS[selectedRole] || 'yusuf';
+            showFeedback('error', res.error || ('ط¨ظٹط§ظ†ط§طھ ط§ظ„ط¯ط®ظˆظ„ ط؛ظٹط± طµط­ظٹط­ط©. ط¬ط±ط¨: ' + defU + ' ظˆظƒظ„ظ…ط© ط§ظ„ظ…ط±ظˆط±: 1234'));
             return;
           }
-          showFeedback('success', 'âœ… ط£ظ‡ظ„ط§ظ‹ ط¨ظƒ ظٹط§ ' + res.user.name + '! ط¬ط§ط±ظٹ طھط­ظˆظٹظ„ظƒ ط¥ظ„ظ‰ ط¨ظˆط§ط¨طھظƒ...');
+          showFeedback('success', 'âœ… ط£ظ‡ظ„ط§ظ‹ ط¨ظƒ ظٹط§ ' + res.user.name + '! ط¬ط§ط±ظٹ طھط­ظˆظٹظ„ظƒ ط¥ظ„ظ‰ طµظپط­طھظƒ...');
           redirectUser(res.user);
         });
       }
