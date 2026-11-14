@@ -83,3 +83,7 @@
   }
 }
 
+
+/* Prevent WordPress Kindori preloader from blocking page view */
+#cms-loadding, .cms-loader { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
+
