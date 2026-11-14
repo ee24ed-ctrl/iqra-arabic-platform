@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
   <meta charset="UTF-8">
@@ -10,16 +10,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800;900&family=Tajawal:wght@500;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --indigo-header: #221979;
-      --indigo-dark: #19125c;
-      --mint-card: #dcf8d9;
-      --mint-border: #dcf4d9;
-      --orange-main: #ee4d09;
-      --peach-pill: #f7e3d8;
-      --btn-read-bg: #f6f5d5;
-      --btn-listen-bg: #a3e635;
-      --btn-quiz-bg: #f1ecf8;
-      --text-navy: #221979;
+      --indigo-header: #082f68;
+      --indigo-dark: #051e45;
+      --mint-card: #e5effb;
+      --mint-border: #c5dbf2;
+      --orange-main: #ee6b1e;
+      --peach-pill: #e3effc;
+      --btn-read-bg: #eef4fb;
+      --btn-listen-bg: #7dd3fc;
+      --btn-quiz-bg: #dbeafe;
+      --text-navy: #082f68;
       --page-bg: #ffffff;
     }
 
@@ -33,7 +33,7 @@
     html, body {
       min-height: 100%;
       font-family: 'Cairo', 'Tajawal', Tahoma, Arial, sans-serif;
-      background: #f4f6fb;
+      background: linear-gradient(180deg, #dcebfa 0%, #f2f7fd 55%, #d7e8fa 100%);
       color: var(--text-navy);
       overflow-x: hidden;
       direction: rtl;
@@ -49,22 +49,19 @@
       margin: 0 auto;
       background: var(--page-bg);
       position: relative;
-      box-shadow: 0 0 40px rgba(25, 18, 92, 0.08);
+      box-shadow: 0 0 40px rgba(8, 45, 102, 0.12);
       padding-bottom: 42px;
     }
 
-    /* Top Indigo Header with Curved Bottom */
+    /* Top Royal Blue Header with Curved Bottom (نظام ألوان صفحة التسجيل) */
     .student-top-hero {
-      background: var(--indigo-header);
+      background: linear-gradient(180deg, #1b65c9 0%, #0d52b8 55%, #082f68 100%);
       color: #ffffff;
       padding: 18px 18px 115px;
       border-bottom-left-radius: 36px;
       border-bottom-right-radius: 36px;
       position: relative;
       overflow: visible;
-      background-image:
-        radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.06) 0%, transparent 45%),
-        radial-gradient(circle at 15% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
     }
 
     /* Watermark Arabic letters in the indigo header */
@@ -469,11 +466,11 @@
     }
 
     .book-item-card {
-      background: #f5fbf4;
-      border: 2px solid #dcf4d9;
+      background: #f2f7fd;
+      border: 2px solid #c5dbf2;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 8px 22px rgba(25, 18, 92, 0.05);
+      box-shadow: 0 8px 22px rgba(8, 45, 102, 0.06);
       display: flex;
       flex-direction: column;
     }
@@ -483,7 +480,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1.5px solid #dcf4d9;
+      border-bottom: 1.5px solid #c5dbf2;
     }
 
     .book-card-title {
@@ -512,7 +509,7 @@
     }
 
     .book-points-num-box {
-      background: #cdf5c8;
+      background: #dbeafe;
       color: var(--indigo-header);
       padding: 0 10px;
       font-size: 0.95rem;
@@ -805,6 +802,8 @@
 </head>
 <body>
 
+  <div id="ireadTopBarMount"></div>
+
   <div class="student-app-shell">
 
     <!-- ===================================================================
@@ -1059,6 +1058,7 @@
   </div>
 
   <script src="../assets/js/auth-system.js"></script>
+  <script src="../assets/js/global-header.js"></script>
   <script src="../assets/js/weekly-stories.js"></script>
   <script>
     (function () {

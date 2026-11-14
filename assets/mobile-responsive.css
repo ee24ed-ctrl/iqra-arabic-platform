@@ -87,3 +87,71 @@
 /* Prevent WordPress Kindori preloader from blocking page view */
 #cms-loadding, .cms-loader { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
 
+
+/* =========================================================================
+   GLOBAL SAHIL REGISTRATION COLOR SYSTEM APPLIED ACROSS ENTIRE WEBSITE
+   ========================================================================= */
+:root {
+  --sahil-navy-900: #06285a;
+  --sahil-navy-800: #082f68;
+  --sahil-blue-700: #0d52b8;
+  --sahil-blue-600: #1668e3;
+  --sahil-sky-100: #e5effb;
+  --sahil-sky-50: #f2f7fd;
+  --sahil-border: #c5dbf2;
+  --sahil-gold: #eab308;
+  --sahil-orange: #ee6b1e;
+}
+
+body {
+  background: linear-gradient(180deg, #dcebfa 0%, #f2f7fd 55%, #e3effc 100%) !important;
+  color: #082f68 !important;
+}
+
+.portal-banner,
+.admin-banner,
+.teacher-banner,
+.library-banner,
+.rewards-banner,
+.weekly-banner,
+#pagetitle.page-title {
+  background: linear-gradient(135deg, #06285a 0%, #0d52b8 55%, #1b65c9 100%) !important;
+  color: #ffffff !important;
+  border-bottom: 3px solid #eab308 !important;
+}
+
+.portal-card,
+.dash-card,
+.story-card,
+.activity-card,
+.card {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border: 1.5px solid #c5dbf2 !important;
+  border-radius: 22px !important;
+  box-shadow: 0 12px 30px rgba(8, 45, 102, 0.08) !important;
+}
+
+.btn-primary,
+.btn-success {
+  background: linear-gradient(180deg, #2789ff 0%, #0d5bd1 52%, #0741a6 100%) !important;
+  border-color: #08439c !important;
+  color: #ffffff !important;
+  border-radius: 999px !important;
+  font-weight: 800 !important;
+}
+
+.btn-outline-primary,
+.btn-outline-dark {
+  border-radius: 999px !important;
+  border: 1.5px solid #0d52b8 !important;
+  color: #082f68 !important;
+  background: #f2f7fd !important;
+  font-weight: 800 !important;
+}
+
+.portal-footer,
+footer.site-footer {
+  background: linear-gradient(180deg, #082f68 0%, #051e45 100%) !important;
+  color: #e5effb !important;
+  border-top: 3px solid #eab308 !important;
+}
