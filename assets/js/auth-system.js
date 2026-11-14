@@ -208,10 +208,9 @@
     if (!u) {
       el.innerHTML =
         '<div style="background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:10px 16px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;direction:rtl;">' +
-          '<span style="font-weight:700;color:#1e3a8a;">🔐 نظام الحسابات الموحّد: سجّل دخولك (طالب / معلم / مدير / مشرف تربوي / مشرف عام)</span>' +
+          '<span style="font-weight:700;color:#1e3a8a;">🔒 الجلسة محمية: يرجى تسجيل الدخول للوصول إلى صفحتك</span>' +
           '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
-            '<a href="' + prefix + 'index.html?skipIntro=1" class="btn btn-primary btn-sm font-weight-bold">التسجيل / تسجيل الدخول</a>' +
-            '<a href="' + prefix + 'لوحة-الإدارة/index.html" class="btn btn-outline-dark btn-sm font-weight-bold">لوحة الإدارة والمشرفين</a>' +
+            '<a href="' + prefix + 'index.html?skipIntro=1" class="btn btn-primary btn-sm font-weight-bold">تسجيل الدخول</a>' +
           '</div>' +
         '</div>';
       return;
@@ -226,8 +225,7 @@
         '</div>' +
         '<div style="display:flex;gap:8px;flex-wrap:wrap;">' +
           '<a href="' + prefix + meta.home + '" class="btn btn-success btn-sm font-weight-bold">صفحتي</a>' +
-          '<a href="' + prefix + 'index.html?skipIntro=1" class="btn btn-outline-primary btn-sm font-weight-bold">تبديل الحساب</a>' +
-          '<button type="button" id="ireadLogoutBtn" class="btn btn-outline-danger btn-sm font-weight-bold">خروج</button>' +
+          '<button type="button" id="ireadLogoutBtn" class="btn btn-outline-danger btn-sm font-weight-bold">تسجيل الخروج</button>' +
         '</div>' +
       '</div>';
     var btn = document.getElementById('ireadLogoutBtn');

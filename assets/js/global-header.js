@@ -86,6 +86,14 @@
     general_supervisor: 'مشرف عام'
   };
 
+  var ROLE_HOMES = {
+    student: 'بوابة-الطالب/index.html',
+    teacher: 'بوابة-المعلم/index.html',
+    admin: 'لوحة-الإدارة/index.html?role=admin',
+    supervisor: 'لوحة-الإدارة/index.html?role=supervisor',
+    general_supervisor: 'لوحة-الإدارة/index.html?role=general_supervisor'
+  };
+
   function detectBasePrefix() {
     var path = decodeURIComponent(window.location.pathname || '');
     var subDirs = [
@@ -111,28 +119,116 @@
         if (raw) u = JSON.parse(raw);
       } catch (e) {}
     }
+    if (u && u.role && ROLE_LABELS[u.role]) {
+      return u;
+    }
+    // If no active login session exists yet, initialize based on current entry portal and lock it
     var path = decodeURIComponent(window.location.pathname || '');
     var qRole = (new URLSearchParams(window.location.search)).get('role');
-    if (qRole && ROLE_LABELS[qRole]) {
-      return {
-        role: qRole,
-        name: qRole === 'admin' ? 'أ. خالد المنصور'
-          : qRole === 'supervisor' ? 'د. عبدالله السالم'
-          : qRole === 'general_supervisor' ? 'د. فهد العتيبي'
-          : (u ? u.name : 'سارة أحمد')
+    var fallback = {
+      role: 'student',
+      name: localStorage.getItem('iread_selected_student_name') || 'سارة أحمد',
+      school: 'مدارس الساحل الأهلية',
+      grade: 'الصف الأول – المستوى (ز)'
+    };
+    if (path.indexOf('بوابة-المعلم') !== -1 || path.indexOf('/المعلم') !== -1) {
+      fallback = { role: 'teacher', name: 'أ. مريم العلي', school: 'مدارس الساحل الأهلية', subject: 'اللغة العربية' };
+    } else if (path.indexOf('لوحة-الإدارة') !== -1) {
+      var r = (qRole === 'supervisor' || qRole === 'general_supervisor') ? qRole : 'admin';
+      fallback = {
+        role: r,
+        name: r === 'supervisor' ? 'د. عبدالله السالم' : (r === 'general_supervisor' ? 'د. فهد العتيبي' : 'أ. خالد المنصور'),
+        school: r === 'admin' ? 'مدارس الساحل الأهلية' : 'إدارة الإشراف التربوي'
       };
     }
-    if (u && u.role) return u;
-    if (path.indexOf('بوابة-المعلم') !== -1 || path.indexOf('/المعلم') !== -1) {
-      return { role: 'teacher', name: 'أ. مريم العلي' };
+    try {
+      localStorage.setItem('iread_current_user_v1', JSON.stringify(fallback));
+    } catch (e) {}
+    return fallback;
+  }
+
+  // =====================================================================
+  // STRICT ROLE-BASED PRIVACY GUARD (تأمين الخصوصية ومنع التنقل بين الأدوار)
+  // =====================================================================
+  function enforceRolePrivacyGuard(user, prefix) {
+    var role = (user && user.role) || 'student';
+    var path = decodeURIComponent(window.location.pathname || '');
+    var qRole = (new URLSearchParams(window.location.search)).get('role');
+
+    var isStudentPortal = path.indexOf('بوابة-الطالب') !== -1;
+    var isTeacherPortal = path.indexOf('بوابة-المعلم') !== -1 || path.indexOf('/المعلم/') !== -1;
+    var isAdminPortal = path.indexOf('لوحة-الإدارة') !== -1;
+
+    var forbidden = false;
+    if (role === 'student' && (isTeacherPortal || isAdminPortal)) {
+      forbidden = true;
+    } else if (role === 'teacher' && (isStudentPortal || isAdminPortal)) {
+      forbidden = true;
+    } else if ((role === 'admin' || role === 'supervisor' || role === 'general_supervisor') && (isStudentPortal || isTeacherPortal)) {
+      forbidden = true;
+    } else if (isAdminPortal && (role === 'admin' || role === 'supervisor' || role === 'general_supervisor')) {
+      // Lock URL query param ?role=... to the authenticated role so admin/supervisor/general_supervisor cannot switch views
+      if (qRole && qRole !== role) {
+        window.location.replace(prefix + (ROLE_HOMES[role] || 'لوحة-الإدارة/index.html?role=' + role));
+        return true;
+      }
     }
-    if (path.indexOf('لوحة-الإدارة') !== -1) {
-      return { role: 'admin', name: 'أ. خالد المنصور' };
+
+    if (forbidden) {
+      window.location.replace(prefix + (ROLE_HOMES[role] || 'بوابة-الطالب/index.html'));
+      return true;
     }
-    return {
-      role: 'student',
-      name: localStorage.getItem('iread_selected_student_name') || 'سارة أحمد'
-    };
+    return false;
+  }
+
+  // Scrub any legacy cross-role buttons inside subpage headers/cards so users never see links to other roles
+  function scrubCrossRoleDomElements(role) {
+    var allLinks = document.querySelectorAll('a[href]');
+    allLinks.forEach(function (a) {
+      if (a.closest('#ireadGlobalTopbar')) return;
+      var href = decodeURIComponent(a.getAttribute('href') || '');
+      if (role === 'student') {
+        if (href.indexOf('بوابة-المعلم') !== -1 || href.indexOf('لوحة-الإدارة') !== -1 || href.indexOf('/المعلم/') !== -1 || href.indexOf('التسجيل') !== -1 || href.indexOf('دخول-مباشر') !== -1) {
+          a.style.display = 'none';
+        }
+      } else if (role === 'teacher') {
+        if (href.indexOf('بوابة-الطالب') !== -1 || href.indexOf('لوحة-الإدارة') !== -1 || href.indexOf('التسجيل') !== -1 || href.indexOf('دخول-مباشر') !== -1) {
+          a.style.display = 'none';
+        }
+      } else if (role === 'admin' || role === 'supervisor' || role === 'general_supervisor') {
+        if (href.indexOf('بوابة-الطالب') !== -1 || href.indexOf('بوابة-المعلم') !== -1 || href.indexOf('التسجيل') !== -1 || href.indexOf('دخول-مباشر') !== -1) {
+          a.style.display = 'none';
+        }
+      }
+    });
+  }
+
+  function buildRoleSpecificMenuItems(role, prefix) {
+    if (role === 'student') {
+      return (
+        '<a href="' + prefix + 'بوابة-الطالب/index.html#home" class="iread-role-opt active" data-student-tab="home"><span style="color:#ee6b1e;font-weight:900;">(١)</span><span>الصفحة الرئيسية</span></a>' +
+        '<a href="' + prefix + 'بوابة-الطالب/index.html#challenge" class="iread-role-opt" data-student-tab="challenge"><span style="color:#ee6b1e;font-weight:900;">(٢)</span><span>تحدي القراءة</span></a>' +
+        '<a href="' + prefix + 'بوابة-الطالب/index.html#tasks" class="iread-role-opt" data-student-tab="tasks"><span style="color:#ee6b1e;font-weight:900;">(٣)</span><span>المهام</span></a>' +
+        '<a href="' + prefix + 'بوابة-الطالب/index.html#badges" class="iread-role-opt" data-student-tab="badges"><span style="color:#ee6b1e;font-weight:900;">(٤)</span><span>إنجازات وإشارات</span></a>' +
+        '<a href="' + prefix + 'بوابة-الطالب/index.html#games" class="iread-role-opt" data-student-tab="games"><span style="color:#ee6b1e;font-weight:900;">(٥)</span><span>ألعاب تفاعلية</span></a>'
+      );
+    }
+    if (role === 'teacher') {
+      return (
+        '<a href="' + prefix + 'بوابة-المعلم/index.html" class="iread-role-opt active"><span style="color:#ee6b1e;font-weight:900;">(١)</span><span>لوحة المعلم واختيار الفصول</span></a>' +
+        '<a href="' + prefix + 'بوابة-المعلم/index.html#weeklyReportSection" class="iread-role-opt"><span style="color:#ee6b1e;font-weight:900;">(٢)</span><span>تعيين القصة الأسبوعية</span></a>' +
+        '<a href="' + prefix + 'بوابة-المعلم/index.html#skillReportSection" class="iread-role-opt"><span style="color:#ee6b1e;font-weight:900;">(٣)</span><span>تكليف المهارة التفاعلية</span></a>' +
+        '<a href="' + prefix + 'المكتبة/index.html" class="iread-role-opt"><span style="color:#ee6b1e;font-weight:900;">(٤)</span><span>مكتبة القصص المصورة</span></a>'
+      );
+    }
+    // admin, supervisor, or general_supervisor: only their own dashboard sections
+    var myHome = prefix + (ROLE_HOMES[role] || 'لوحة-الإدارة/index.html?role=' + role);
+    return (
+      '<a href="' + myHome + '" class="iread-role-opt active"><span style="color:#ee6b1e;font-weight:900;">(١)</span><span>لوحة المتابعة الرئيسية</span></a>' +
+      '<a href="' + myHome + '#adminKpis" class="iread-role-opt"><span style="color:#ee6b1e;font-weight:900;">(٢)</span><span>مؤشرات الأداء والإحصاءات</span></a>' +
+      '<a href="' + myHome + '#usersTableBody" class="iread-role-opt"><span style="color:#ee6b1e;font-weight:900;">(٣)</span><span>سجل الحسابات والمدارس</span></a>' +
+      '<a href="' + myHome + '#supNoteForm" class="iread-role-opt"><span style="color:#ee6b1e;font-weight:900;">(٤)</span><span>التوصيات والتقارير</span></a>'
+    );
   }
 
   function injectHeaderStyles() {
@@ -197,9 +293,9 @@
       '  opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0) scale(1);' +
       '}' +
       '.iread-role-switcher-pop {' +
-      '  position: absolute; top: 54px; left: 0; width: 245px; background: #ffffff;' +
+      '  position: absolute; top: 54px; left: 0; width: 255px; background: #ffffff;' +
       '  border-radius: 20px; border: 1.5px solid #d5e6f8;' +
-      '  box-shadow: 0 18px 44px rgba(8, 45, 102, 0.18); padding: 10px; z-index: 1000;' +
+      '  box-shadow: 0 18px 44px rgba(8, 45, 102, 0.18); padding: 14px; z-index: 1000;' +
       '  display: none; direction: rtl; text-align: right;' +
       '}' +
       '.iread-role-switcher-pop.is-open { display: block; }' +
@@ -209,7 +305,6 @@
       '  font-family: inherit; font-size: 0.9rem; font-weight: 800; color: #082f68; cursor: pointer;' +
       '}' +
       '.iread-role-opt:hover, .iread-role-opt.active { background: #e5effb; color: #0d52b8; }' +
-      /* Mobile adjustments so nothing is ever cut off on narrow phones (320px - 480px) */
       '@media (max-width: 639px) {' +
       '  .iread-unified-topbar { padding: 8px 8px; }' +
       '  .iread-topbar-inner { gap: 5px; }' +
@@ -229,14 +324,18 @@
     if (document.getElementById('loginViewForm') && document.getElementById('flashIntroScreen')) return;
     if (document.getElementById('ireadGlobalTopbar')) return;
 
-    injectHeaderStyles();
-
     var prefix = detectBasePrefix();
     var user = resolveActiveUser();
+    if (enforceRolePrivacyGuard(user, prefix)) return;
+
     var role = user.role || 'student';
+    scrubCrossRoleDomElements(role);
+    injectHeaderStyles();
+
     var avatarSrc = ROLE_AVATARS[role] || ROLE_AVATARS.student;
     var roleLabel = ROLE_LABELS[role] || 'طالب';
     var cleanName = (user.name || 'سارة أحمد').replace(/\s*\(.*?\)\s*/g, '');
+    var schoolName = user.school || 'مدارس الساحل الأهلية';
 
     var header = document.createElement('div');
     header.id = 'ireadGlobalTopbar';
@@ -254,7 +353,6 @@
 
         '<!-- Left Group: Search, Messages (23), Notifications (3), User Pill with Role Avatar, Logout -->' +
         '<div class="iread-left-actions">' +
-          '<!-- Search Button -->' +
           '<button type="button" id="ireadSearchBtn" class="iread-circle-btn" title="بحث سريع" aria-label="بحث">' +
             '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' +
               '<circle cx="11" cy="11" r="7"/>' +
@@ -262,7 +360,6 @@
             '</svg>' +
           '</button>' +
 
-          '<!-- Messages Button with 23 badge -->' +
           '<button type="button" id="ireadMessagesBtn" class="iread-circle-btn" title="الرسائل والمهام" aria-label="الرسائل">' +
             '<span class="iread-badge-orange">23</span>' +
             '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">' +
@@ -272,7 +369,6 @@
             '</svg>' +
           '</button>' +
 
-          '<!-- Notifications Bell with 3 badge -->' +
           '<button type="button" id="ireadNotifBtn" class="iread-circle-btn" title="التنبيهات" aria-label="التنبيهات">' +
             '<span class="iread-badge-orange">3</span>' +
             '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">' +
@@ -281,8 +377,8 @@
             '</svg>' +
           '</button>' +
 
-          '<!-- User Greeting Pill with Role-Specific Avatar -->' +
-          '<div id="ireadUserPill" class="iread-user-pill" role="button" tabindex="0" title="تغيير الصفة (طالب / معلم / مدير / مشرف)">' +
+          '<!-- User Greeting Pill with Role-Specific Avatar (Private Profile Card on click) -->' +
+          '<div id="ireadUserPill" class="iread-user-pill" role="button" tabindex="0" title="بطاقة الحساب الشخصي">' +
             '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" style="flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>' +
             '<span class="iread-user-greeting">أهلاً بك، <b id="ireadTopUserName">' + cleanName + '</b></span>' +
             '<img id="ireadTopUserAvatar" class="iread-user-avatar" src="' + avatarSrc + '" alt="' + roleLabel + '">' +
@@ -298,46 +394,36 @@
           '</a>' +
         '</div>' +
 
-        '<!-- Right Slide-down Menu (تظهر عند الضغط وتختفي عند الضغط مرة أخرى) -->' +
-        '<nav id="ireadGlobalSlideMenu" class="iread-slide-menu" aria-label="قائمة الطالب">' +
+        '<!-- Right Slide-down Menu (خاص بصلاحية المستخدم المسجل فقط دون أي انتقال للأدوار الأخرى) -->' +
+        '<nav id="ireadGlobalSlideMenu" class="iread-slide-menu" aria-label="قائمة الحساب">' +
           '<div style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;margin-bottom:6px;background:#f2f7fd;border-radius:12px;">' +
-            '<span style="font-size:0.86rem;font-weight:900;color:#082f68;">قائمة الطالب السريعة</span>' +
-            '<span style="font-size:0.75rem;font-weight:800;color:#1668e3;">' + roleLabel + '</span>' +
+            '<span style="font-size:0.85rem;font-weight:900;color:#082f68;">القائمة الرئيسية</span>' +
+            '<span style="font-size:0.74rem;font-weight:800;color:#1668e3;">🔒 ' + roleLabel + '</span>' +
           '</div>' +
           '<div style="display:flex;flex-direction:column;gap:4px;">' +
-            '<a href="' + prefix + 'بوابة-الطالب/index.html#home" class="iread-role-opt active" data-student-tab="home"><span style="color:#ee6b1e;font-weight:900;">(١)</span><span>الصفحة الرئيسية</span></a>' +
-            '<a href="' + prefix + 'بوابة-الطالب/index.html#challenge" class="iread-role-opt" data-student-tab="challenge"><span style="color:#ee6b1e;font-weight:900;">(٢)</span><span>تحدي القراءة</span></a>' +
-            '<a href="' + prefix + 'بوابة-الطالب/index.html#tasks" class="iread-role-opt" data-student-tab="tasks"><span style="color:#ee6b1e;font-weight:900;">(٣)</span><span>المهام</span></a>' +
-            '<a href="' + prefix + 'بوابة-الطالب/index.html#badges" class="iread-role-opt" data-student-tab="badges"><span style="color:#ee6b1e;font-weight:900;">(٤)</span><span>إنجازات وإشارات</span></a>' +
-            '<a href="' + prefix + 'بوابة-الطالب/index.html#games" class="iread-role-opt" data-student-tab="games"><span style="color:#ee6b1e;font-weight:900;">(٥)</span><span>ألعاب تفاعلية</span></a>' +
+            buildRoleSpecificMenuItems(role, prefix) +
           '</div>' +
           '<div style="height:1px;background:#dce9f8;margin:8px 0;"></div>' +
-          '<div style="display:flex;flex-direction:column;gap:4px;">' +
-            '<a href="' + prefix + 'بوابة-المعلم/index.html" class="iread-role-opt"><span>👩‍🏫</span><span>بوابة المعلم</span></a>' +
-            '<a href="' + prefix + 'لوحة-الإدارة/index.html?role=admin" class="iread-role-opt"><span>🏫</span><span>صفحة المدير</span></a>' +
-            '<a href="' + prefix + 'لوحة-الإدارة/index.html?role=supervisor" class="iread-role-opt"><span>🧭</span><span>صفحة المشرف التربوي</span></a>' +
-            '<a href="' + prefix + 'لوحة-الإدارة/index.html?role=general_supervisor" class="iread-role-opt"><span>🏛️</span><span>صفحة المشرف العام</span></a>' +
-            '<a href="' + prefix + 'home.html" class="iread-role-opt"><span>🌐</span><span>واجهة المنصة العامة</span></a>' +
-          '</div>' +
+          '<button type="button" id="ireadMenuLogoutAction" class="iread-role-opt" style="color:#dc2626;justify-content:center;">' +
+            '<span>🚪</span><span>تسجيل الخروج الآمن</span>' +
+          '</button>' +
         '</nav>' +
 
-        '<!-- Role & Avatar Switcher Popover -->' +
+        '<!-- Read-only Private Account Card (لا يسمح بتبديل الصفة أو الدخول لصفحات الأدوار الأخرى) -->' +
         '<div id="ireadRoleSwitcherPop" class="iread-role-switcher-pop">' +
-          '<div style="font-size:0.76rem;font-weight:900;color:#5b7496;padding:4px 8px 6px;">تغيير الصفة (تتغير الصورة تلقائياً):</div>' +
-          '<button type="button" class="iread-role-opt" data-switch-role="student" data-switch-name="سارة أحمد">' +
-            '<img src="' + ROLE_AVATARS.student + '" style="width:28px;height:28px;border-radius:50%;"><span>طالب (سارة أحمد)</span>' +
-          '</button>' +
-          '<button type="button" class="iread-role-opt" data-switch-role="teacher" data-switch-name="أ. مريم العلي">' +
-            '<img src="' + ROLE_AVATARS.teacher + '" style="width:28px;height:28px;border-radius:50%;"><span>معلم (أ. مريم العلي)</span>' +
-          '</button>' +
-          '<button type="button" class="iread-role-opt" data-switch-role="admin" data-switch-name="أ. خالد المنصور">' +
-            '<img src="' + ROLE_AVATARS.admin + '" style="width:28px;height:28px;border-radius:50%;"><span>مدير (أ. خالد المنصور)</span>' +
-          '</button>' +
-          '<button type="button" class="iread-role-opt" data-switch-role="supervisor" data-switch-name="د. عبدالله السالم">' +
-            '<img src="' + ROLE_AVATARS.supervisor + '" style="width:28px;height:28px;border-radius:50%;"><span>مشرف تربوي (د. عبدالله)</span>' +
-          '</button>' +
-          '<button type="button" class="iread-role-opt" data-switch-role="general_supervisor" data-switch-name="د. فهد العتيبي">' +
-            '<img src="' + ROLE_AVATARS.general_supervisor + '" style="width:28px;height:28px;border-radius:50%;"><span>مشرف عام (د. فهد)</span>' +
+          '<div style="display:flex;align-items:center;gap:10px;padding-bottom:10px;border-bottom:1px solid #e5effb;margin-bottom:10px;">' +
+            '<img src="' + avatarSrc + '" style="width:44px;height:44px;border-radius:50%;border:2px solid #0d52b8;flex-shrink:0;">' +
+            '<div style="min-width:0;">' +
+              '<div style="font-weight:900;font-size:0.92rem;color:#082f68;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + cleanName + '</div>' +
+              '<div style="font-size:0.76rem;font-weight:800;color:#1668e3;">الصفة: ' + roleLabel + '</div>' +
+              '<div style="font-size:0.72rem;color:#5b7496;font-weight:700;">' + schoolName + '</div>' +
+            '</div>' +
+          '</div>' +
+          '<div style="font-size:0.74rem;color:#0f766e;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:6px 10px;margin-bottom:10px;font-weight:800;">' +
+            '🔒 الجلسة محمية: صلاحياتك مقتصرة على (' + roleLabel + ') فقط.' +
+          '</div>' +
+          '<button type="button" id="ireadCardLogoutAction" class="iread-role-opt" style="background:#fef2f2;color:#dc2626;justify-content:center;font-weight:900;">' +
+            '<span>🚪</span><span>تسجيل الخروج</span>' +
           '</button>' +
         '</div>' +
       '</div>';
@@ -353,6 +439,23 @@
     var slideMenu = document.getElementById('ireadGlobalSlideMenu');
     var userPill = document.getElementById('ireadUserPill');
     var rolePop = document.getElementById('ireadRoleSwitcherPop');
+    var topLogoutBtn = document.getElementById('ireadTopLogoutBtn');
+    var menuLogoutBtn = document.getElementById('ireadMenuLogoutAction');
+    var cardLogoutBtn = document.getElementById('ireadCardLogoutAction');
+
+    function performSecureLogout(e) {
+      if (e) e.preventDefault();
+      if (window.IREAD_AUTH && typeof window.IREAD_AUTH.logout === 'function') {
+        window.IREAD_AUTH.logout();
+      } else {
+        localStorage.removeItem('iread_current_user_v1');
+      }
+      window.location.href = prefix + 'index.html?skipIntro=1';
+    }
+
+    if (topLogoutBtn) topLogoutBtn.addEventListener('click', performSecureLogout);
+    if (menuLogoutBtn) menuLogoutBtn.addEventListener('click', performSecureLogout);
+    if (cardLogoutBtn) cardLogoutBtn.addEventListener('click', performSecureLogout);
 
     menuBtn.addEventListener('click', function (e) {
       e.stopPropagation();
@@ -366,24 +469,6 @@
       e.stopPropagation();
       slideMenu.classList.remove('is-open');
       rolePop.classList.toggle('is-open');
-    });
-
-    // Role switcher items update avatar + name immediately
-    var switchBtns = rolePop.querySelectorAll('[data-switch-role]');
-    switchBtns.forEach(function (btn) {
-      btn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        var newRole = btn.getAttribute('data-switch-role');
-        var newName = btn.getAttribute('data-switch-name');
-        document.getElementById('ireadTopUserName').textContent = newName;
-        document.getElementById('ireadTopUserAvatar').src = ROLE_AVATARS[newRole] || ROLE_AVATARS.student;
-        if (window.IREAD_AUTH && window.IREAD_AUTH.quickDemoLogin) {
-          window.IREAD_AUTH.quickDemoLogin(newRole);
-        } else {
-          localStorage.setItem('iread_current_user_v1', JSON.stringify({ role: newRole, name: newName }));
-        }
-        rolePop.classList.remove('is-open');
-      });
     });
 
     // If on Student Page, clicking (١)..(٥) in the global menu directly switches the active student tab

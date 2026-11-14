@@ -35,13 +35,9 @@
     <div class="container d-flex flex-wrap justify-content-between align-items-center">
       <a href="../index.html"><img class="logo" src="../_external/en.ireadarabic.com/wp-content/uploads/2022/07/logo.png" alt="أقرأ بالعربية"></a>
       <nav class="d-flex flex-wrap align-items-center">
-        <a href="../index.html" class="mx-2 font-weight-bold text-dark">الصفحة الرئيسة</a>
-        <a href="../المعلم/index.html" class="mx-2 font-weight-bold text-dark">المعلم</a>
-        <a href="../المدونة/index.html" class="mx-2 font-weight-bold text-dark">المدونة</a>
-        <a href="../بوابة-المعلم/index.html" class="btn btn-primary btn-sm mx-1">دخول المعلم</a>
-        <a href="../بوابة-الطالب/index.html" class="btn btn-warning btn-sm text-white mx-1">دخول الطلاب</a>
-        <a href="../لوحة-الإدارة/index.html" class="btn btn-dark btn-sm mx-1">🏫 الإدارة والمشرفين</a>
-        <a href="../التسجيل/index.html" class="btn btn-outline-primary btn-sm mx-1">🔐 التسجيل</a>
+        <a href="#weeklyReportSection" class="mx-2 font-weight-bold text-dark">📊 التقرير الأسبوعي</a>
+        <a href="../الأنشطة/index.html" class="mx-2 font-weight-bold text-dark">الألعاب التفاعلية</a>
+        <a href="../المكتبة/index.html" class="mx-2 font-weight-bold text-dark">مكتبة القصص</a>
         <a href="../المكافآت/index.html" class="btn btn-outline-success btn-sm mx-1">🏆 المكافآت والتعزيز</a>
       </nav>
     </div>
@@ -254,7 +250,7 @@
         $('#selectedStudentPanel').html(
           '<div class="d-flex flex-wrap justify-content-between align-items-center mb-3">' +
             '<div><h5 class="font-weight-bold mb-1">' + s.name + '</h5><span class="text-muted">' + s.grade + ' – ' + s.level + '</span></div>' +
-            '<div><a href="../المكافآت/index.html" class="btn btn-outline-warning btn-sm mx-1">🏆 سجل المكافآت</a><a href="../بوابة-الطالب/index.html" class="btn btn-success btn-sm">فتح حساب الطالب مباشرة</a></div>' +
+            '<div><a href="../المكافآت/index.html" class="btn btn-outline-warning btn-sm mx-1">🏆 سجل المكافآت</a></div>' +
           '</div>' +
           '<div class="row text-center mb-4">' +
             '<div class="col-4"><div class="p-3 bg-light rounded"><strong>' + s.books + '</strong><div class="small text-muted">الكتب المقروءة</div></div></div>' +
@@ -445,7 +441,6 @@
     })(window.jQuery);
   </script>
   
-<script src="../assets/js/auth-system.js"></script>
-<script src="../assets/js/global-header.js"></script>
+  <script src="../assets/js/global-header.js"></script>
 </body>
 </html>
