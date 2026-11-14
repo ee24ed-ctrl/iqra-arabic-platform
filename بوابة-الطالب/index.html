@@ -882,7 +882,7 @@
           </div>
         </div>
         <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
-          <button type="button" class="btn-lets-play" style="max-width:220px;" onclick="document.querySelector('[data-tab=home]').click()">📖 متابعة قراءة الكتب</button>
+          <button type="button" class="btn-lets-play" style="max-width:220px;" onclick="if(window.switchStudentTab) window.switchStudentTab('home')">📖 متابعة قراءة الكتب</button>
           <a href="../المكتبة/index.html" class="btn-lets-play" style="max-width:220px;background:var(--indigo-header);text-decoration:none;display:inline-flex;align-items:center;justify-content:center;">📚 مكتبة 30 قصة إضافية</a>
         </div>
       </div>
@@ -1143,6 +1143,10 @@
         menuItemBtns.forEach(function (b) {
           b.classList.toggle('active', b.getAttribute('data-tab') === tabKey);
         });
+        var globalLinks = document.querySelectorAll('[data-student-tab]');
+        globalLinks.forEach(function (l) {
+          l.classList.toggle('active', l.getAttribute('data-student-tab') === tabKey);
+        });
         Object.keys(panelMap).forEach(function (k) {
           if (panelMap[k]) {
             panelMap[k].classList.toggle('is-active', k === tabKey);
@@ -1151,6 +1155,11 @@
       }
 
       window.switchStudentTab = switchStudentTab;
+
+      var initHashTab = (window.location.hash || '').replace(/^#/, '').trim();
+      if (initHashTab && panelMap[initHashTab]) {
+        switchStudentTab(initHashTab);
+      }
 
       menuItemBtns.forEach(function (btn) {
         btn.addEventListener('click', function () {

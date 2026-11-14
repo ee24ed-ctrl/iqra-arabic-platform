@@ -300,12 +300,24 @@
 
         '<!-- Right Slide-down Menu (تظهر عند الضغط وتختفي عند الضغط مرة أخرى) -->' +
         '<nav id="ireadGlobalSlideMenu" class="iread-slide-menu" aria-label="قائمة الطالب">' +
+          '<div style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;margin-bottom:6px;background:#f2f7fd;border-radius:12px;">' +
+            '<span style="font-size:0.86rem;font-weight:900;color:#082f68;">قائمة الطالب السريعة</span>' +
+            '<span style="font-size:0.75rem;font-weight:800;color:#1668e3;">' + roleLabel + '</span>' +
+          '</div>' +
           '<div style="display:flex;flex-direction:column;gap:4px;">' +
             '<a href="' + prefix + 'بوابة-الطالب/index.html#home" class="iread-role-opt active" data-student-tab="home"><span style="color:#ee6b1e;font-weight:900;">(١)</span><span>الصفحة الرئيسية</span></a>' +
             '<a href="' + prefix + 'بوابة-الطالب/index.html#challenge" class="iread-role-opt" data-student-tab="challenge"><span style="color:#ee6b1e;font-weight:900;">(٢)</span><span>تحدي القراءة</span></a>' +
             '<a href="' + prefix + 'بوابة-الطالب/index.html#tasks" class="iread-role-opt" data-student-tab="tasks"><span style="color:#ee6b1e;font-weight:900;">(٣)</span><span>المهام</span></a>' +
             '<a href="' + prefix + 'بوابة-الطالب/index.html#badges" class="iread-role-opt" data-student-tab="badges"><span style="color:#ee6b1e;font-weight:900;">(٤)</span><span>إنجازات وإشارات</span></a>' +
             '<a href="' + prefix + 'بوابة-الطالب/index.html#games" class="iread-role-opt" data-student-tab="games"><span style="color:#ee6b1e;font-weight:900;">(٥)</span><span>ألعاب تفاعلية</span></a>' +
+          '</div>' +
+          '<div style="height:1px;background:#dce9f8;margin:8px 0;"></div>' +
+          '<div style="display:flex;flex-direction:column;gap:4px;">' +
+            '<a href="' + prefix + 'بوابة-المعلم/index.html" class="iread-role-opt"><span>👩‍🏫</span><span>بوابة المعلم</span></a>' +
+            '<a href="' + prefix + 'لوحة-الإدارة/index.html?role=admin" class="iread-role-opt"><span>🏫</span><span>صفحة المدير</span></a>' +
+            '<a href="' + prefix + 'لوحة-الإدارة/index.html?role=supervisor" class="iread-role-opt"><span>🧭</span><span>صفحة المشرف التربوي</span></a>' +
+            '<a href="' + prefix + 'لوحة-الإدارة/index.html?role=general_supervisor" class="iread-role-opt"><span>🏛️</span><span>صفحة المشرف العام</span></a>' +
+            '<a href="' + prefix + 'home.html" class="iread-role-opt"><span>🌐</span><span>واجهة المنصة العامة</span></a>' +
           '</div>' +
         '</nav>' +
 
@@ -376,18 +388,73 @@
 
     // If on Student Page, clicking (١)..(٥) in the global menu directly switches the active student tab
     var studentTabLinks = slideMenu.querySelectorAll('[data-student-tab]');
+
+    function activateStudentTabOnPage(tabKey, shouldScroll) {
+      if (!tabKey) return false;
+      var panelIds = {
+        home: 'tabPanelHome',
+        challenge: 'tabPanelChallenge',
+        tasks: 'tabPanelTasks',
+        badges: 'tabPanelBadges',
+        games: 'tabPanelGames'
+      };
+      var targetId = panelIds[tabKey];
+      var targetPanel = targetId ? document.getElementById(targetId) : null;
+      if (!targetPanel && typeof window.switchStudentTab !== 'function') {
+        return false;
+      }
+
+      studentTabLinks.forEach(function (l) {
+        l.classList.toggle('active', l.getAttribute('data-student-tab') === tabKey);
+      });
+
+      if (typeof window.switchStudentTab === 'function') {
+        window.switchStudentTab(tabKey);
+      } else {
+        Object.keys(panelIds).forEach(function (k) {
+          var p = document.getElementById(panelIds[k]);
+          if (p) p.classList.toggle('is-active', k === tabKey);
+        });
+      }
+
+      try {
+        if (history.replaceState) {
+          history.replaceState(null, '', '#' + tabKey);
+        }
+      } catch (err) {}
+
+      if (shouldScroll && targetPanel) {
+        setTimeout(function () {
+          try {
+            targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          } catch (e) {
+            targetPanel.scrollIntoView();
+          }
+        }, 40);
+      }
+      return true;
+    }
+
     studentTabLinks.forEach(function (link) {
       link.addEventListener('click', function (e) {
         var tabKey = link.getAttribute('data-student-tab');
-        if (typeof window.switchStudentTab === 'function') {
+        if (activateStudentTabOnPage(tabKey, true)) {
           e.preventDefault();
-          studentTabLinks.forEach(function (l) { l.classList.toggle('active', l === link); });
-          window.switchStudentTab(tabKey);
           slideMenu.classList.remove('is-open');
           menuBtn.setAttribute('aria-expanded', 'false');
         }
       });
     });
+
+    window.addEventListener('hashchange', function () {
+      var h = (window.location.hash || '').replace(/^#/, '').trim();
+      if (h) activateStudentTabOnPage(h, true);
+    });
+
+    var initialHash = (window.location.hash || '').replace(/^#/, '').trim();
+    if (initialHash) {
+      setTimeout(function () { activateStudentTabOnPage(initialHash, false); }, 50);
+    }
 
     document.addEventListener('click', function (e) {
       if (!header.contains(e.target)) {
