@@ -119,7 +119,7 @@
         name: qRole === 'admin' ? 'أ. خالد المنصور'
           : qRole === 'supervisor' ? 'د. عبدالله السالم'
           : qRole === 'general_supervisor' ? 'د. فهد العتيبي'
-          : (u ? u.name : 'علي أحمد')
+          : (u ? u.name : 'سارة أحمد')
       };
     }
     if (u && u.role) return u;
@@ -131,7 +131,7 @@
     }
     return {
       role: 'student',
-      name: localStorage.getItem('iread_selected_student_name') || 'علي أحمد'
+      name: localStorage.getItem('iread_selected_student_name') || 'سارة أحمد'
     };
   }
 
@@ -142,54 +142,53 @@
     st.textContent =
       '.iread-unified-topbar {' +
       '  width: 100%; background: #ffffff; border-bottom: 1.5px solid #d5e6f8;' +
-      '  padding: 12px 18px; position: sticky; top: 0; z-index: 950;' +
+      '  padding: 10px 14px; position: sticky; top: 0; z-index: 950;' +
       '  box-shadow: 0 8px 26px rgba(8, 45, 102, 0.08); direction: rtl;' +
-      '  font-family: "Cairo", "Tajawal", Tahoma, sans-serif;' +
+      '  font-family: "Cairo", "Tajawal", Tahoma, sans-serif; box-sizing: border-box;' +
       '}' +
       '.iread-topbar-inner {' +
-      '  max-width: 1140px; margin: 0 auto; display: flex; align-items: center;' +
-      '  justify-content: space-between; gap: 10px; position: relative;' +
+      '  width: 100%; max-width: 1120px; margin: 0 auto; display: flex; align-items: center;' +
+      '  justify-content: space-between; gap: 8px; position: relative;' +
       '}' +
       '.iread-circle-btn {' +
-      '  width: 46px; height: 46px; border-radius: 50%; border: 1px solid #d8e8fa;' +
+      '  width: 42px; height: 42px; border-radius: 50%; border: 1px solid #d8e8fa;' +
       '  background: #f2f7fd; color: #082f68; cursor: pointer; position: relative;' +
       '  display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;' +
-      '  transition: all 0.18s ease; text-decoration: none;' +
+      '  transition: all 0.18s ease; text-decoration: none; padding: 0;' +
       '}' +
       '.iread-circle-btn:hover {' +
       '  background: #e1effd; border-color: #9ec5f8; transform: translateY(-1px);' +
       '}' +
       '.iread-badge-orange {' +
       '  position: absolute; top: -4px; right: -4px; background: #ee6b1e; color: #fff;' +
-      '  font-size: 0.72rem; font-weight: 900; min-width: 21px; height: 21px;' +
-      '  padding: 0 6px; border-radius: 999px; display: inline-flex;' +
+      '  font-size: 0.68rem; font-weight: 900; min-width: 20px; height: 20px;' +
+      '  padding: 0 5px; border-radius: 999px; display: inline-flex;' +
       '  align-items: center; justify-content: center; border: 2px solid #fff;' +
       '  line-height: 1; box-shadow: 0 3px 8px rgba(238, 107, 30, 0.35);' +
       '}' +
       '.iread-left-actions {' +
-      '  display: flex; align-items: center; gap: 10px; flex-wrap: nowrap;' +
+      '  display: flex; align-items: center; justify-content: flex-end; gap: 8px;' +
+      '  flex: 1; min-width: 0;' +
       '}' +
       '.iread-user-pill {' +
-      '  height: 48px; border-radius: 999px; background: #f2f7fd; border: 1.5px solid #d5e6f8;' +
-      '  padding: 4px 14px 4px 6px; display: inline-flex; align-items: center; gap: 10px;' +
+      '  height: 44px; border-radius: 999px; background: #f2f7fd; border: 1.5px solid #d5e6f8;' +
+      '  padding: 3px 12px 3px 4px; display: inline-flex; align-items: center; gap: 8px;' +
       '  cursor: pointer; position: relative; transition: all 0.18s ease; color: #082f68;' +
+      '  min-width: 0; flex-shrink: 1;' +
       '}' +
       '.iread-user-pill:hover { background: #e3effc; border-color: #9ec5f8; }' +
       '.iread-user-greeting {' +
-      '  font-size: 0.92rem; font-weight: 800; color: #082f68; white-space: nowrap;' +
-      '}' +
-      '.iread-user-role-tag {' +
-      '  font-size: 0.7rem; font-weight: 900; color: #1668e3; background: #dbeafe;' +
-      '  padding: 1px 7px; border-radius: 999px; margin-right: 4px;' +
+      '  font-size: 0.88rem; font-weight: 800; color: #082f68; white-space: nowrap;' +
+      '  overflow: hidden; text-overflow: ellipsis;' +
       '}' +
       '.iread-user-avatar {' +
-      '  width: 38px; height: 38px; border-radius: 50%; object-fit: cover;' +
+      '  width: 34px; height: 34px; border-radius: 50%; object-fit: cover;' +
       '  border: 2px solid #ffffff; box-shadow: 0 2px 8px rgba(8, 45, 102, 0.15); flex-shrink: 0;' +
       '}' +
       '.iread-slide-menu {' +
-      '  position: absolute; top: 58px; right: 0; width: 285px; background: #ffffff;' +
+      '  position: absolute; top: 54px; right: 0; width: 270px; background: #ffffff;' +
       '  border-radius: 22px; border: 1.5px solid #d5e6f8;' +
-      '  box-shadow: 0 20px 50px rgba(8, 45, 102, 0.2); padding: 12px; z-index: 1000;' +
+      '  box-shadow: 0 20px 50px rgba(8, 45, 102, 0.22); padding: 12px; z-index: 1000;' +
       '  opacity: 0; visibility: hidden; pointer-events: none;' +
       '  transform: translateY(-8px) scale(0.97); transform-origin: top right;' +
       '  transition: all 0.2s ease;' +
@@ -198,26 +197,29 @@
       '  opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0) scale(1);' +
       '}' +
       '.iread-role-switcher-pop {' +
-      '  position: absolute; top: 58px; left: 48px; width: 250px; background: #ffffff;' +
+      '  position: absolute; top: 54px; left: 0; width: 245px; background: #ffffff;' +
       '  border-radius: 20px; border: 1.5px solid #d5e6f8;' +
       '  box-shadow: 0 18px 44px rgba(8, 45, 102, 0.18); padding: 10px; z-index: 1000;' +
       '  display: none; direction: rtl; text-align: right;' +
       '}' +
       '.iread-role-switcher-pop.is-open { display: block; }' +
       '.iread-role-opt {' +
-      '  width: 100%; border: none; background: transparent; padding: 8px 10px;' +
-      '  border-radius: 12px; display: flex; align-items: center; gap: 10px;' +
-      '  font-family: inherit; font-size: 0.86rem; font-weight: 800; color: #082f68; cursor: pointer;' +
+      '  width: 100%; border: none; background: transparent; padding: 9px 12px;' +
+      '  border-radius: 12px; display: flex; align-items: center; gap: 10px; text-decoration: none;' +
+      '  font-family: inherit; font-size: 0.9rem; font-weight: 800; color: #082f68; cursor: pointer;' +
       '}' +
-      '.iread-role-opt:hover { background: #eef4fb; }' +
+      '.iread-role-opt:hover, .iread-role-opt.active { background: #e5effb; color: #0d52b8; }' +
+      /* Mobile adjustments so nothing is ever cut off on narrow phones (320px - 480px) */
       '@media (max-width: 639px) {' +
-      '  .iread-unified-topbar { padding: 10px 10px; }' +
-      '  .iread-circle-btn { width: 40px; height: 40px; }' +
-      '  .iread-left-actions { gap: 6px; }' +
-      '  .iread-user-pill { height: 42px; padding: 3px 10px 3px 4px; gap: 6px; }' +
-      '  .iread-user-greeting { font-size: 0.8rem; max-width: 125px; overflow: hidden; text-overflow: ellipsis; }' +
-      '  .iread-user-role-tag { display: none; }' +
-      '  .iread-user-avatar { width: 32px; height: 32px; }' +
+      '  .iread-unified-topbar { padding: 8px 8px; }' +
+      '  .iread-topbar-inner { gap: 5px; }' +
+      '  .iread-circle-btn { width: 34px; height: 34px; }' +
+      '  .iread-circle-btn svg { width: 17px; height: 17px; }' +
+      '  .iread-badge-orange { font-size: 0.6rem; min-width: 17px; height: 17px; padding: 0 4px; top: -3px; right: -3px; border-width: 1.5px; }' +
+      '  .iread-left-actions { gap: 5px; }' +
+      '  .iread-user-pill { height: 36px; padding: 2px 8px 2px 3px; gap: 5px; max-width: calc(100vw - 205px); }' +
+      '  .iread-user-greeting { font-size: 0.74rem; }' +
+      '  .iread-user-avatar { width: 28px; height: 28px; border-width: 1.5px; }' +
       '}';
     document.head.appendChild(st);
   }
@@ -234,7 +236,7 @@
     var role = user.role || 'student';
     var avatarSrc = ROLE_AVATARS[role] || ROLE_AVATARS.student;
     var roleLabel = ROLE_LABELS[role] || 'طالب';
-    var cleanName = (user.name || 'علي أحمد').replace(/\s*\(.*?\)\s*/g, '');
+    var cleanName = (user.name || 'سارة أحمد').replace(/\s*\(.*?\)\s*/g, '');
 
     var header = document.createElement('div');
     header.id = 'ireadGlobalTopbar';
@@ -243,18 +245,18 @@
       '<div class="iread-topbar-inner">' +
         '<!-- Right: Hamburger Toggle Button (☰) -->' +
         '<button type="button" id="ireadGlobalMenuBtn" class="iread-circle-btn" aria-label="القائمة الرئيسية" aria-expanded="false" title="القائمة">' +
-          '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round">' +
+          '<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round">' +
             '<line x1="4" y1="7" x2="20" y2="7"/>' +
             '<line x1="4" y1="12" x2="20" y2="12"/>' +
             '<line x1="4" y1="17" x2="20" y2="17"/>' +
           '</svg>' +
         '</button>' +
 
-        '<!-- Left: Search, Messages (23), Notifications (3), User Pill with Role Avatar, Logout -->' +
+        '<!-- Left Group: Search, Messages (23), Notifications (3), User Pill with Role Avatar, Logout -->' +
         '<div class="iread-left-actions">' +
           '<!-- Search Button -->' +
           '<button type="button" id="ireadSearchBtn" class="iread-circle-btn" title="بحث سريع" aria-label="بحث">' +
-            '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' +
+            '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' +
               '<circle cx="11" cy="11" r="7"/>' +
               '<line x1="20" y1="20" x2="16.2" y2="16.2"/>' +
             '</svg>' +
@@ -263,7 +265,7 @@
           '<!-- Messages Button with 23 badge -->' +
           '<button type="button" id="ireadMessagesBtn" class="iread-circle-btn" title="الرسائل والمهام" aria-label="الرسائل">' +
             '<span class="iread-badge-orange">23</span>' +
-            '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">' +
+            '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">' +
               '<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>' +
               '<line x1="9" y1="10" x2="15" y2="10"/>' +
               '<line x1="9" y1="14" x2="13" y2="14"/>' +
@@ -273,23 +275,22 @@
           '<!-- Notifications Bell with 3 badge -->' +
           '<button type="button" id="ireadNotifBtn" class="iread-circle-btn" title="التنبيهات" aria-label="التنبيهات">' +
             '<span class="iread-badge-orange">3</span>' +
-            '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">' +
+            '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">' +
               '<path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>' +
               '<path d="M13.73 21a2 2 0 0 1-3.46 0"/>' +
             '</svg>' +
           '</button>' +
 
           '<!-- User Greeting Pill with Role-Specific Avatar -->' +
-          '<div id="ireadUserPill" class="iread-user-pill" role="button" tabindex="0" title="انقر لتبديل المعاينة بين الطالب والمعلم والمدير والمشرف">' +
-            '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>' +
+          '<div id="ireadUserPill" class="iread-user-pill" role="button" tabindex="0" title="تغيير الصفة (طالب / معلم / مدير / مشرف)">' +
+            '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" style="flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>' +
             '<span class="iread-user-greeting">أهلاً بك، <b id="ireadTopUserName">' + cleanName + '</b></span>' +
-            '<span class="iread-user-role-tag" id="ireadTopRoleTag">' + roleLabel + '</span>' +
             '<img id="ireadTopUserAvatar" class="iread-user-avatar" src="' + avatarSrc + '" alt="' + roleLabel + '">' +
           '</div>' +
 
           '<!-- Far Left: Logout / Exit Door Button -->' +
           '<a href="' + prefix + 'index.html?skipIntro=1" id="ireadTopLogoutBtn" class="iread-circle-btn" title="تسجيل الخروج" aria-label="تسجيل الخروج">' +
-            '<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">' +
+            '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">' +
               '<path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5"/>' +
               '<polyline points="17 16 21 12 17 8"/>' +
               '<line x1="21" y1="12" x2="9" y2="12"/>' +
@@ -298,45 +299,33 @@
         '</div>' +
 
         '<!-- Right Slide-down Menu (تظهر عند الضغط وتختفي عند الضغط مرة أخرى) -->' +
-        '<nav id="ireadGlobalSlideMenu" class="iread-slide-menu" aria-label="قائمة الطالب والمنصة">' +
-          '<div style="padding:8px 10px;margin-bottom:6px;background:#eef4fb;border-radius:12px;font-weight:900;color:#082f68;font-size:0.86rem;display:flex;justify-content:space-between;align-items:center;">' +
-            '<span>قائمة الطالب السريعة</span>' +
-            '<span style="color:#1668e3;" id="ireadMenuRoleBadge">' + roleLabel + '</span>' +
-          '</div>' +
+        '<nav id="ireadGlobalSlideMenu" class="iread-slide-menu" aria-label="قائمة الطالب">' +
           '<div style="display:flex;flex-direction:column;gap:4px;">' +
-            '<a href="' + prefix + 'بوابة-الطالب/index.html#home" class="iread-role-opt" data-student-tab="home"><span style="color:#ee6b1e;font-weight:900;">(١)</span><span>الصفحة الرئيسية</span></a>' +
+            '<a href="' + prefix + 'بوابة-الطالب/index.html#home" class="iread-role-opt active" data-student-tab="home"><span style="color:#ee6b1e;font-weight:900;">(١)</span><span>الصفحة الرئيسية</span></a>' +
             '<a href="' + prefix + 'بوابة-الطالب/index.html#challenge" class="iread-role-opt" data-student-tab="challenge"><span style="color:#ee6b1e;font-weight:900;">(٢)</span><span>تحدي القراءة</span></a>' +
             '<a href="' + prefix + 'بوابة-الطالب/index.html#tasks" class="iread-role-opt" data-student-tab="tasks"><span style="color:#ee6b1e;font-weight:900;">(٣)</span><span>المهام</span></a>' +
             '<a href="' + prefix + 'بوابة-الطالب/index.html#badges" class="iread-role-opt" data-student-tab="badges"><span style="color:#ee6b1e;font-weight:900;">(٤)</span><span>إنجازات وإشارات</span></a>' +
             '<a href="' + prefix + 'بوابة-الطالب/index.html#games" class="iread-role-opt" data-student-tab="games"><span style="color:#ee6b1e;font-weight:900;">(٥)</span><span>ألعاب تفاعلية</span></a>' +
-          '</div>' +
-          '<div style="height:1px;background:#d5e6f8;margin:8px 0;"></div>' +
-          '<div style="display:flex;flex-direction:column;gap:4px;">' +
-            '<a href="' + prefix + 'بوابة-المعلم/index.html" class="iread-role-opt">👩‍🏫 بوابة المعلم</a>' +
-            '<a href="' + prefix + 'لوحة-الإدارة/index.html?role=admin" class="iread-role-opt">🏫 صفحة المدير</a>' +
-            '<a href="' + prefix + 'لوحة-الإدارة/index.html?role=supervisor" class="iread-role-opt">🧭 صفحة المشرف التربوي</a>' +
-            '<a href="' + prefix + 'لوحة-الإدارة/index.html?role=general_supervisor" class="iread-role-opt">🏛️ صفحة المشرف العام</a>' +
-            '<a href="' + prefix + 'home.html" class="iread-role-opt">🌐 واجهة المنصة العامة</a>' +
           '</div>' +
         '</nav>' +
 
         '<!-- Role & Avatar Switcher Popover -->' +
         '<div id="ireadRoleSwitcherPop" class="iread-role-switcher-pop">' +
           '<div style="font-size:0.76rem;font-weight:900;color:#5b7496;padding:4px 8px 6px;">تغيير الصفة (تتغير الصورة تلقائياً):</div>' +
-          '<button type="button" class="iread-role-opt" data-switch-role="student" data-switch-name="علي أحمد">' +
-            '<img src="' + ROLE_AVATARS.student + '" style="width:30px;height:30px;border-radius:50%;"><span>طالب (علي أحمد)</span>' +
+          '<button type="button" class="iread-role-opt" data-switch-role="student" data-switch-name="سارة أحمد">' +
+            '<img src="' + ROLE_AVATARS.student + '" style="width:28px;height:28px;border-radius:50%;"><span>طالب (سارة أحمد)</span>' +
           '</button>' +
           '<button type="button" class="iread-role-opt" data-switch-role="teacher" data-switch-name="أ. مريم العلي">' +
-            '<img src="' + ROLE_AVATARS.teacher + '" style="width:30px;height:30px;border-radius:50%;"><span>معلم (أ. مريم العلي)</span>' +
+            '<img src="' + ROLE_AVATARS.teacher + '" style="width:28px;height:28px;border-radius:50%;"><span>معلم (أ. مريم العلي)</span>' +
           '</button>' +
           '<button type="button" class="iread-role-opt" data-switch-role="admin" data-switch-name="أ. خالد المنصور">' +
-            '<img src="' + ROLE_AVATARS.admin + '" style="width:30px;height:30px;border-radius:50%;"><span>مدير (أ. خالد المنصور)</span>' +
+            '<img src="' + ROLE_AVATARS.admin + '" style="width:28px;height:28px;border-radius:50%;"><span>مدير (أ. خالد المنصور)</span>' +
           '</button>' +
           '<button type="button" class="iread-role-opt" data-switch-role="supervisor" data-switch-name="د. عبدالله السالم">' +
-            '<img src="' + ROLE_AVATARS.supervisor + '" style="width:30px;height:30px;border-radius:50%;"><span>مشرف تربوي (د. عبدالله)</span>' +
+            '<img src="' + ROLE_AVATARS.supervisor + '" style="width:28px;height:28px;border-radius:50%;"><span>مشرف تربوي (د. عبدالله)</span>' +
           '</button>' +
           '<button type="button" class="iread-role-opt" data-switch-role="general_supervisor" data-switch-name="د. فهد العتيبي">' +
-            '<img src="' + ROLE_AVATARS.general_supervisor + '" style="width:30px;height:30px;border-radius:50%;"><span>مشرف عام (د. فهد)</span>' +
+            '<img src="' + ROLE_AVATARS.general_supervisor + '" style="width:28px;height:28px;border-radius:50%;"><span>مشرف عام (د. فهد)</span>' +
           '</button>' +
         '</div>' +
       '</div>';
@@ -367,7 +356,7 @@
       rolePop.classList.toggle('is-open');
     });
 
-    // Role switcher items update avatar + name immediately and can navigate
+    // Role switcher items update avatar + name immediately
     var switchBtns = rolePop.querySelectorAll('[data-switch-role]');
     switchBtns.forEach(function (btn) {
       btn.addEventListener('click', function (e) {
@@ -375,8 +364,6 @@
         var newRole = btn.getAttribute('data-switch-role');
         var newName = btn.getAttribute('data-switch-name');
         document.getElementById('ireadTopUserName').textContent = newName;
-        document.getElementById('ireadTopRoleTag').textContent = ROLE_LABELS[newRole] || 'طالب';
-        document.getElementById('ireadMenuRoleBadge').textContent = ROLE_LABELS[newRole] || 'طالب';
         document.getElementById('ireadTopUserAvatar').src = ROLE_AVATARS[newRole] || ROLE_AVATARS.student;
         if (window.IREAD_AUTH && window.IREAD_AUTH.quickDemoLogin) {
           window.IREAD_AUTH.quickDemoLogin(newRole);
@@ -387,16 +374,17 @@
       });
     });
 
-    // If on Student Page, clicking (١)..(٥) in the global menu also triggers the local student tab switch!
+    // If on Student Page, clicking (١)..(٥) in the global menu directly switches the active student tab
     var studentTabLinks = slideMenu.querySelectorAll('[data-student-tab]');
     studentTabLinks.forEach(function (link) {
       link.addEventListener('click', function (e) {
         var tabKey = link.getAttribute('data-student-tab');
-        var localBtn = document.querySelector('.menu-item-btn[data-tab="' + tabKey + '"]');
-        if (localBtn) {
+        if (typeof window.switchStudentTab === 'function') {
           e.preventDefault();
-          localBtn.click();
+          studentTabLinks.forEach(function (l) { l.classList.toggle('active', l === link); });
+          window.switchStudentTab(tabKey);
           slideMenu.classList.remove('is-open');
+          menuBtn.setAttribute('aria-expanded', 'false');
         }
       });
     });

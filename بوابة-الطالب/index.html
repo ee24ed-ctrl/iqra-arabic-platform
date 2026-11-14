@@ -57,7 +57,7 @@
     .student-top-hero {
       background: linear-gradient(180deg, #1b65c9 0%, #0d52b8 55%, #082f68 100%);
       color: #ffffff;
-      padding: 18px 18px 115px;
+      padding: 14px 18px 104px;
       border-bottom-left-radius: 36px;
       border-bottom-right-radius: 36px;
       position: relative;
@@ -738,7 +738,7 @@
       }
 
       .student-top-hero {
-        padding: 24px 36px 125px;
+        padding: 16px 36px 110px;
       }
 
       .summary-cards-row {
@@ -807,7 +807,7 @@
   <div class="student-app-shell">
 
     <!-- ===================================================================
-         TOP INDIGO CURVED HEADER WITH TOP-RIGHT TOGGLE MENU (☰)
+         TOP ROYAL BLUE CURVED BACKDROP FOR SUMMARY CARDS
          =================================================================== -->
     <header class="student-top-hero">
       <div class="hero-watermark" aria-hidden="true">
@@ -815,73 +815,6 @@
         <span>ء</span>
         <span>ث</span>
       </div>
-
-      <div class="student-topbar">
-        <!-- Top-Right Hamburger Menu Button (في الأعلى اليمين أيقونة القائمة) -->
-        <button type="button" id="studentMenuBtn" class="menu-toggle-btn" aria-label="قائمة الطالب" aria-expanded="false">
-          <span class="menu-bar"></span>
-          <span class="menu-bar"></span>
-          <span class="menu-bar"></span>
-        </button>
-
-        <!-- Center Level Title -->
-        <h1 class="level-title-center" id="studentLevelHeader">المستوى (ز)</h1>
-
-        <!-- Top-Left Star + 100 Badge -->
-        <div class="star-score-top" title="مجموع النجوم">
-          <span class="star-orange-pill" id="headerStarScore">100</span>
-          <svg class="star-outline-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-          </svg>
-        </div>
-      </div>
-
-      <!-- Top-Right Toggle Dropdown Menu (تظهر عند الضغط عليها وتختفي عند الضغط مرة أخرى) -->
-      <nav id="studentDropdownMenu" class="student-dropdown-menu" aria-label="قائمة أقسام الطالب">
-        <div class="menu-student-profile">
-          <div class="menu-student-avatar">🎓</div>
-          <div>
-            <div style="font-weight:900;font-size:0.95rem;" id="menuStudentName">يوسف طارق</div>
-            <div style="font-size:0.78rem;color:#5b7496;font-weight:700;" id="menuStudentGrade">مدارس الساحل الأهلية – المستوى (ز)</div>
-          </div>
-        </div>
-
-        <ul class="menu-list">
-          <li>
-            <button type="button" class="menu-item-btn active" data-tab="home">
-              <span class="menu-item-right"><span class="menu-num-badge">(١)</span><span>الصفحة الرئيسية</span></span>
-              <span>🏠</span>
-            </button>
-          </li>
-          <li>
-            <button type="button" class="menu-item-btn" data-tab="challenge">
-              <span class="menu-item-right"><span class="menu-num-badge">(٢)</span><span>تحدي القراءة</span></span>
-              <span>🏁</span>
-            </button>
-          </li>
-          <li>
-            <button type="button" class="menu-item-btn" data-tab="tasks">
-              <span class="menu-item-right"><span class="menu-num-badge">(٣)</span><span>المهام</span></span>
-              <span>📋</span>
-            </button>
-          </li>
-          <li>
-            <button type="button" class="menu-item-btn" data-tab="badges">
-              <span class="menu-item-right"><span class="menu-num-badge">(٤)</span><span>إنجازات وإشارات</span></span>
-              <span>🏅</span>
-            </button>
-          </li>
-          <li>
-            <button type="button" class="menu-item-btn" data-tab="games">
-              <span class="menu-item-right"><span class="menu-num-badge">(٥)</span><span>ألعاب تفاعلية</span></span>
-              <span>🎮</span>
-            </button>
-          </li>
-        </ul>
-
-        <div class="menu-divider"></div>
-        <a href="../index.html?skipIntro=1" class="menu-logout-link">🔄 تبديل الحساب / تسجيل الخروج</a>
-      </nav>
     </header>
 
     <!-- ===================================================================
@@ -1069,7 +1002,8 @@
       var studentId = localStorage.getItem('iread_selected_student_id') || (currentUser && currentUser.numericId) || '4';
       var studentName = (currentUser && currentUser.role === 'student' && currentUser.name) || localStorage.getItem('iread_selected_student_name') || 'يوسف طارق';
 
-      document.getElementById('menuStudentName').textContent = studentName;
+      var menuNameEl = document.getElementById('menuStudentName');
+      if (menuNameEl) menuNameEl.textContent = studentName;
 
       // Books dataset for Level (ز) starting with "ماذا حصل لأخي رامز؟" matching the screenshot
       var LEVEL_Z_BOOKS = [
@@ -1182,8 +1116,10 @@
 
       function setStars(val) {
         localStorage.setItem(STARS_KEY, String(val));
-        document.getElementById('headerStarScore').textContent = val;
-        document.getElementById('cardStarScore').textContent = val;
+        var headerStarEl = document.getElementById('headerStarScore');
+        if (headerStarEl) headerStarEl.textContent = val;
+        var cardStarEl = document.getElementById('cardStarScore');
+        if (cardStarEl) cardStarEl.textContent = val;
         var gBal = document.getElementById('gamesStarBalance');
         if (gBal) gBal.textContent = val;
       }
@@ -1192,32 +1128,8 @@
       setStars(getStars());
 
       // =================================================================
-      // TOP-RIGHT HAMBURGER MENU TOGGLE (تظهر عند الضغط وتختفي عند الضغط مرة أخرى)
+      // MENU NAVIGATION ITEMS (١) الصفحة الرئيسية (٢) تحدي القراءة (٣) المهام (٤) إنجازات وإشارات (٥) ألعاب تفاعلية
       // =================================================================
-      var menuBtn = document.getElementById('studentMenuBtn');
-      var dropdownMenu = document.getElementById('studentDropdownMenu');
-
-      function toggleStudentMenu(forceState) {
-        var isOpen = dropdownMenu.classList.contains('is-open');
-        var nextState = typeof forceState === 'boolean' ? forceState : !isOpen;
-        dropdownMenu.classList.toggle('is-open', nextState);
-        menuBtn.classList.toggle('is-active', nextState);
-        menuBtn.setAttribute('aria-expanded', nextState ? 'true' : 'false');
-      }
-
-      menuBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        toggleStudentMenu();
-      });
-
-      // Close menu if clicking outside
-      document.addEventListener('click', function (e) {
-        if (dropdownMenu.classList.contains('is-open') && !dropdownMenu.contains(e.target) && e.target !== menuBtn) {
-          toggleStudentMenu(false);
-        }
-      });
-
-      // Menu Navigation Items (١) الصفحة الرئيسية (٢) تحدي القراءة (٣) المهام (٤) إنجازات وإشارات (٥) ألعاب تفاعلية
       var menuItemBtns = document.querySelectorAll('.menu-item-btn');
       var panelMap = {
         home: document.getElementById('tabPanelHome'),
@@ -1236,8 +1148,9 @@
             panelMap[k].classList.toggle('is-active', k === tabKey);
           }
         });
-        toggleStudentMenu(false);
       }
+
+      window.switchStudentTab = switchStudentTab;
 
       menuItemBtns.forEach(function (btn) {
         btn.addEventListener('click', function () {
