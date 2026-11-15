@@ -248,6 +248,71 @@
       border-color: #e5effb;
     }
 
+    /* Principal Full Permissions Controls */
+    .principal-role-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: 6px !important;
+      margin-bottom: 10px;
+    }
+
+    .principal-role-btn {
+      width: 100% !important;
+      height: 36px !important;
+      border: 1.5px solid var(--sky-border) !important;
+      background: var(--sky-soft) !important;
+      color: var(--navy-deep) !important;
+      border-radius: 10px !important;
+      font-size: 0.71rem !important;
+      font-weight: 800 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 4px !important;
+      cursor: pointer;
+      padding: 0 4px !important;
+      transition: all 0.15s ease;
+    }
+
+    .principal-role-btn.active {
+      background: linear-gradient(180deg, #217ef8 0%, #0b51bc 100%) !important;
+      color: #ffffff !important;
+      border-color: #08439c !important;
+    }
+
+    .principal-feedback {
+      display: none;
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      margin-top: 8px;
+    }
+
+    .principal-feedback.is-success {
+      display: block;
+      background: #f0fdf4;
+      color: #166534;
+      border: 1px solid #bbf7d0;
+    }
+
+    .principal-feedback.is-error {
+      display: block;
+      background: #fef2f2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
+    }
+
+    @media (min-width: 768px) {
+      .principal-role-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+      }
+      .principal-role-btn {
+        height: 38px !important;
+        font-size: 0.78rem !important;
+      }
+    }
+
     /* Tablet & Desktop scaling (>= 768px) */
     @media (min-width: 768px) {
       body { font-size: 0.9rem; }
@@ -292,6 +357,132 @@
 
     <!-- KPI Row -->
     <div class="row mb-3" id="adminKpis"></div>
+
+    <!-- Principal Full Permissions Section (صلاحيات المدير الكاملة: إضافة الحسابات + إسناد الطلاب للمعلمين) -->
+    <div id="principalFullPowerSection" style="display:none;">
+      <!-- 1. إضافة المعلمين والطلاب والمشرفين والمشرف العام -->
+      <div class="dash-card mb-3" id="principalCreateUserCard">
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2" style="gap:6px;">
+          <div>
+            <h4 class="mb-0">➕ صلاحيات المدير: إضافة حساب جديد</h4>
+            <small class="text-muted">إضافة المعلمين والطلاب والمشرفين التربويين والمشرف العام وتفعيلهم مباشرة.</small>
+          </div>
+          <span class="badge badge-primary p-1 px-2" style="font-size:0.68rem;">👑 صلاحية مدير كاملة</span>
+        </div>
+
+        <div class="principal-role-grid" id="principalAddRoleGrid">
+          <button type="button" class="principal-role-btn active" data-add-role="student">🎓 طالب</button>
+          <button type="button" class="principal-role-btn" data-add-role="teacher">👩‍🏫 معلم</button>
+          <button type="button" class="principal-role-btn" data-add-role="supervisor">🧭 مشرف تربوي</button>
+          <button type="button" class="principal-role-btn" data-add-role="general_supervisor">🏛️ مشرف عام</button>
+          <button type="button" class="principal-role-btn" data-add-role="admin">🏫 مدير مدرسة</button>
+        </div>
+
+        <form id="principalAddUserForm">
+          <div class="row">
+            <div class="col-6 col-md-4 mb-2">
+              <label class="font-weight-bold mb-1" style="font-size:0.74rem;">الاسم الكامل</label>
+              <input type="text" id="pAddName" class="form-control" placeholder="مثال: أ. أحمد السالم" required>
+            </div>
+            <div class="col-6 col-md-4 mb-2">
+              <label class="font-weight-bold mb-1" style="font-size:0.74rem;">اسم المستخدم (للدخول)</label>
+              <input type="text" id="pAddUsername" class="form-control" placeholder="مثال: ahmad1" required>
+            </div>
+            <div class="col-6 col-md-4 mb-2">
+              <label class="font-weight-bold mb-1" style="font-size:0.74rem;">كلمة المرور</label>
+              <input type="text" id="pAddPass" class="form-control" value="1234" required>
+            </div>
+            <div class="col-6 col-md-4 mb-2">
+              <label class="font-weight-bold mb-1" style="font-size:0.74rem;">المدرسة / الجهة</label>
+              <input type="text" id="pAddSchool" class="form-control" value="مدارس الساحل الأهلية" required>
+            </div>
+
+            <!-- Student-specific fields -->
+            <div class="col-6 col-md-4 mb-2 p-role-field p-field-student">
+              <label class="font-weight-bold mb-1" style="font-size:0.74rem;">الصف الدراسي</label>
+              <select id="pAddGrade" class="form-control">
+                <option value="الصف الأول">الصف الأول</option>
+                <option value="الصف الثاني">الصف الثاني</option>
+                <option value="الصف الثالث">الصف الثالث</option>
+                <option value="الصف الرابع">الصف الرابع</option>
+              </select>
+            </div>
+            <div class="col-6 col-md-4 mb-2 p-role-field p-field-student">
+              <label class="font-weight-bold mb-1" style="font-size:0.74rem;">إسناد إلى المعلم</label>
+              <select id="pAddStudentTeacher" class="form-control"></select>
+            </div>
+
+            <!-- Teacher-specific fields -->
+            <div class="col-6 col-md-4 mb-2 p-role-field p-field-teacher" style="display:none;">
+              <label class="font-weight-bold mb-1" style="font-size:0.74rem;">التخصص</label>
+              <input type="text" id="pAddSubject" class="form-control" value="اللغة العربية">
+            </div>
+            <div class="col-6 col-md-4 mb-2 p-role-field p-field-teacher" style="display:none;">
+              <label class="font-weight-bold mb-1" style="font-size:0.74rem;">الفصول المسندة</label>
+              <input type="text" id="pAddClasses" class="form-control" value="الصف الأول – الرابع">
+            </div>
+
+            <!-- Supervisor / General Supervisor fields -->
+            <div class="col-12 col-md-8 mb-2 p-role-field p-field-supervisor p-field-general_supervisor" style="display:none;">
+              <label class="font-weight-bold mb-1" style="font-size:0.74rem;">القطاع / النطاق الإشرافي</label>
+              <input type="text" id="pAddSector" class="form-control" value="الإشراف التربوي – اللغة العربية">
+            </div>
+
+            <!-- Admin field -->
+            <div class="col-12 col-md-8 mb-2 p-role-field p-field-admin" style="display:none;">
+              <label class="font-weight-bold mb-1" style="font-size:0.74rem;">المسمى الوظيفي</label>
+              <input type="text" id="pAddJobTitle" class="form-control" value="مدير المدرسة">
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-end mt-1">
+            <button type="submit" id="pAddSubmitBtn" class="btn btn-primary btn-sm font-weight-bold">➕ إضافة الحساب وتفعيله الآن</button>
+          </div>
+          <div id="pAddFeedback" class="principal-feedback"></div>
+        </form>
+      </div>
+
+      <!-- 2. إسناد الطلاب إلى المعلمين -->
+      <div class="dash-card mb-3" id="principalAssignStudentsCard">
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2" style="gap:6px;">
+          <div>
+            <h4 class="mb-0">🔗 إسناد الطلاب إلى المعلمين</h4>
+            <small class="text-muted">توزيع الطلاب على المعلمين وتحديث قائمة طلاب كل معلم تلقائياً.</small>
+          </div>
+        </div>
+
+        <div id="teacherLoadBadges" class="d-flex flex-wrap mb-2" style="gap:6px;"></div>
+
+        <div class="row mb-2 align-items-end">
+          <div class="col-5 col-md-4 mb-2">
+            <label class="font-weight-bold mb-1" style="font-size:0.74rem;">اختر الطالب</label>
+            <select id="assignStudentSelect" class="form-control"></select>
+          </div>
+          <div class="col-5 col-md-4 mb-2">
+            <label class="font-weight-bold mb-1" style="font-size:0.74rem;">اختر المعلم</label>
+            <select id="assignTeacherSelect" class="form-control"></select>
+          </div>
+          <div class="col-12 col-md-4 mb-2">
+            <button type="button" id="quickAssignStudentBtn" class="btn btn-primary btn-sm w-100 font-weight-bold">🔗 إسناد الطالب للمعلم</button>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover admin-data-table">
+            <thead>
+              <tr>
+                <th>الطالب</th>
+                <th>الصف والمستوى</th>
+                <th>المعلم المسؤول حالياً</th>
+                <th class="no-print">تغيير المعلم</th>
+              </tr>
+            </thead>
+            <tbody id="studentTeacherAssignBody"></tbody>
+          </table>
+        </div>
+        <div id="pAssignFeedback" class="principal-feedback"></div>
+      </div>
+    </div>
 
     <!-- Users Management -->
     <div class="dash-card mb-3">
@@ -406,6 +597,13 @@
 
       var curUser = A.getCurrentUser();
       var urlRole = (new URLSearchParams(window.location.search)).get('role') || (curUser && curUser.role) || 'admin';
+      var isPrincipal = (urlRole === 'admin');
+      var selectedAddRole = 'student';
+
+      if (isPrincipal) {
+        $('#principalFullPowerSection').show();
+      }
+
       if (urlRole === 'admin') {
         $('#roleHeroTitle').text('🏫 لوحة مدير المدرسة – إدارة الحسابات ومتابعة الفصول');
         $('#roleHeroSub').text('متابعة أداء الطلاب والمعلمين وإدارة الحسابات والتكليفات الأسبوعية');
@@ -441,7 +639,8 @@
           if (q && hay.indexOf(q) === -1) return;
 
           var meta = A.ROLE_META[u.role] || A.ROLE_META.student;
-          var detail = u.role === 'student' ? ((u.grade || '') + ' – ' + (u.level || ''))
+          var teacherInfo = u.assignedTeacherName ? (' • المعلم: ' + u.assignedTeacherName) : '';
+          var detail = u.role === 'student' ? ((u.grade || '') + ' – ' + (u.level || '') + teacherInfo)
             : u.role === 'teacher' ? ((u.subject || '') + ' (' + (u.classes || '') + ')')
             : u.role === 'admin' ? (u.jobTitle || 'إداري')
             : (u.sector || 'مشرف تربوي');
@@ -495,6 +694,164 @@
             );
           });
         }
+
+        if (isPrincipal) {
+          renderPrincipalAssignmentTools(users);
+        }
+      }
+
+      function showPrincipalFeedback($el, msg, isOk) {
+        $el.removeClass('is-success is-error')
+           .addClass(isOk ? 'is-success' : 'is-error')
+           .text(msg)
+           .show();
+      }
+
+      function renderPrincipalAssignmentTools(users) {
+        var teachers = users.filter(function (u) { return u.role === 'teacher' && u.active !== false; });
+        var students = users.filter(function (u) { return u.role === 'student'; });
+
+        var $pAddTeacher = $('#pAddStudentTeacher').empty();
+        var $assignTeacher = $('#assignTeacherSelect').empty();
+        if (!teachers.length) {
+          $pAddTeacher.append('<option value="">لا يوجد معلمون نشطون</option>');
+          $assignTeacher.append('<option value="">لا يوجد معلمون نشطون</option>');
+        } else {
+          teachers.forEach(function (t) {
+            $pAddTeacher.append('<option value="' + t.id + '">' + t.name + '</option>');
+            $assignTeacher.append('<option value="' + t.id + '">' + t.name + '</option>');
+          });
+        }
+
+        var $assignStudent = $('#assignStudentSelect').empty();
+        if (!students.length) {
+          $assignStudent.append('<option value="">لا يوجد طلاب مسجلون</option>');
+        } else {
+          students.forEach(function (s) {
+            var curT = s.assignedTeacherName ? (' — ' + s.assignedTeacherName) : ' — غير مسند';
+            $assignStudent.append('<option value="' + s.id + '">' + s.name + ' (' + (s.grade || 'طالب') + ')' + curT + '</option>');
+          });
+        }
+
+        var $badges = $('#teacherLoadBadges').empty();
+        teachers.forEach(function (t) {
+          var cnt = students.filter(function (s) { return s.assignedTeacherId === t.id; }).length;
+          $badges.append(
+            '<span class="badge badge-light border text-primary p-1 px-2" style="font-size:0.7rem;">👩‍🏫 ' +
+            t.name + ': <strong>' + cnt + '</strong> طالب</span>'
+          );
+        });
+
+        var $tbody = $('#studentTeacherAssignBody').empty();
+        if (!students.length) {
+          $tbody.append('<tr><td colspan="4" class="text-center text-muted py-2">لا يوجد طلاب مسجلون بعد.</td></tr>');
+          return;
+        }
+        students.forEach(function (s) {
+          var opts = teachers.map(function (t) {
+            var sel = (s.assignedTeacherId === t.id) ? ' selected' : '';
+            return '<option value="' + t.id + '"' + sel + '>' + t.name + '</option>';
+          }).join('');
+          $tbody.append(
+            '<tr>' +
+              '<td class="font-weight-bold">' + s.name + '</td>' +
+              '<td>' + (s.grade || '-') + (s.level ? ' (' + s.level + ')' : '') + '</td>' +
+              '<td>' + (s.assignedTeacherName ? '<span class="badge badge-info">' + s.assignedTeacherName + '</span>' : '<span class="badge badge-secondary">غير مسند</span>') + '</td>' +
+              '<td class="no-print">' +
+                '<div class="d-flex align-items-center" style="gap:4px;">' +
+                  '<select class="form-control form-control-sm inline-teacher-select" data-student-id="' + s.id + '" style="min-width:110px;height:28px;font-size:0.7rem;padding:2px 6px;">' + opts + '</select>' +
+                  '<button type="button" class="btn btn-primary btn-sm save-inline-assign" data-student-id="' + s.id + '">حفظ</button>' +
+                '</div>' +
+              '</td>' +
+            '</tr>'
+          );
+        });
+      }
+
+      if (isPrincipal) {
+        $('#principalAddRoleGrid').on('click', '.principal-role-btn', function () {
+          selectedAddRole = $(this).attr('data-add-role');
+          $('#principalAddRoleGrid .principal-role-btn').removeClass('active');
+          $(this).addClass('active');
+          $('.p-role-field').hide();
+          $('.p-field-' + selectedAddRole).show();
+          $('#pAddFeedback').hide();
+        });
+
+        $('#principalAddUserForm').on('submit', function (e) {
+          e.preventDefault();
+          var name = ($('#pAddName').val() || '').trim();
+          var username = ($('#pAddUsername').val() || '').trim();
+          var pass = ($('#pAddPass').val() || '').trim() || '1234';
+          var school = ($('#pAddSchool').val() || '').trim() || 'مدارس الساحل الأهلية';
+          if (!name || !username) {
+            showPrincipalFeedback($('#pAddFeedback'), 'يرجى إدخال الاسم الكامل واسم المستخدم.', false);
+            return;
+          }
+          var payload = {
+            role: selectedAddRole,
+            name: name,
+            username: username,
+            pass: pass,
+            school: school,
+            skipAutoLogin: true
+          };
+          if (selectedAddRole === 'student') {
+            payload.grade = $('#pAddGrade').val() || 'الصف الأول';
+            payload.level = 'مستوى أ';
+            var tid = $('#pAddStudentTeacher').val();
+            var tname = tid ? $('#pAddStudentTeacher option:selected').text() : '';
+            if (tid) {
+              payload.assignedTeacherId = tid;
+              payload.assignedTeacherName = tname;
+            }
+          } else if (selectedAddRole === 'teacher') {
+            payload.subject = ($('#pAddSubject').val() || '').trim() || 'اللغة العربية';
+            payload.classes = ($('#pAddClasses').val() || '').trim() || 'الصف الأول – الرابع';
+          } else if (selectedAddRole === 'supervisor' || selectedAddRole === 'general_supervisor') {
+            payload.sector = ($('#pAddSector').val() || '').trim() || 'الإشراف التربوي';
+          } else if (selectedAddRole === 'admin') {
+            payload.jobTitle = ($('#pAddJobTitle').val() || '').trim() || 'مدير المدرسة';
+          }
+
+          var res = A.registerUser(payload);
+          if (!res || !res.ok) {
+            showPrincipalFeedback($('#pAddFeedback'), (res && res.error) ? res.error : 'تعذر إضافة الحساب.', false);
+            return;
+          }
+          var roleTxt = (A.ROLE_META[selectedAddRole] && A.ROLE_META[selectedAddRole].label) ? A.ROLE_META[selectedAddRole].label : selectedAddRole;
+          showPrincipalFeedback($('#pAddFeedback'), 'تمت إضافة حساب (' + roleTxt + '): ' + res.user.name + ' وتفعيله بنجاح.', true);
+          $('#pAddName').val('');
+          $('#pAddUsername').val('');
+          renderDashboard();
+        });
+
+        $('#quickAssignStudentBtn').on('click', function () {
+          var sid = $('#assignStudentSelect').val();
+          var tid = $('#assignTeacherSelect').val();
+          if (!sid || !tid) {
+            showPrincipalFeedback($('#pAssignFeedback'), 'يرجى اختيار الطالب والمعلم أولاً.', false);
+            return;
+          }
+          var res = A.assignStudentToTeacher(sid, tid);
+          if (!res || !res.ok) {
+            showPrincipalFeedback($('#pAssignFeedback'), (res && res.error) ? res.error : 'تعذر إسناد الطالب للمعلم.', false);
+            return;
+          }
+          showPrincipalFeedback($('#pAssignFeedback'), 'تم إسناد الطالب ' + res.student.name + ' إلى المعلم ' + res.teacher.name + ' بنجاح.', true);
+          renderDashboard();
+        });
+
+        $(document).on('click', '.save-inline-assign', function () {
+          var sid = $(this).attr('data-student-id');
+          var tid = $('.inline-teacher-select[data-student-id="' + sid + '"]').val();
+          if (!sid || !tid) return;
+          var res = A.assignStudentToTeacher(sid, tid);
+          if (res && res.ok) {
+            showPrincipalFeedback($('#pAssignFeedback'), 'تم تحديث إسناد الطالب ' + res.student.name + ' إلى ' + res.teacher.name + '.', true);
+            renderDashboard();
+          }
+        });
       }
 
       function renderNotes() {

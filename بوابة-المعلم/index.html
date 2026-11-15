@@ -1550,15 +1550,51 @@
 
       // 2. Load & Save Students
       function loadStudents() {
+        var list = null;
         try {
           var raw = localStorage.getItem(TEACHER_STUDENTS_KEY);
           if (raw) {
-            var list = JSON.parse(raw);
-            if (Array.isArray(list) && list.length > 0) return list;
+            var parsed = JSON.parse(raw);
+            if (Array.isArray(parsed) && parsed.length > 0) list = parsed;
           }
         } catch (e) {}
-        localStorage.setItem(TEACHER_STUDENTS_KEY, JSON.stringify(DEFAULT_STUDENTS));
-        return JSON.parse(JSON.stringify(DEFAULT_STUDENTS));
+        if (!list) {
+          list = JSON.parse(JSON.stringify(DEFAULT_STUDENTS));
+        }
+        try {
+          if (window.IREAD_AUTH && typeof window.IREAD_AUTH.loadUsers === 'function') {
+            var cu = window.IREAD_AUTH.getCurrentUser();
+            var users = window.IREAD_AUTH.loadUsers();
+            var teacherStudents = users.filter(function (u) {
+              if (u.role !== 'student' || u.active === false) return false;
+              if (cu && cu.role === 'teacher' && u.assignedTeacherId) {
+                return u.assignedTeacherId === cu.id;
+              }
+              return true;
+            });
+            teacherStudents.forEach(function (u) {
+              var exists = list.some(function (s) {
+                return s.authId === u.id || s.name === u.name;
+              });
+              if (!exists) {
+                list.push({
+                  id: u.id,
+                  authId: u.id,
+                  name: u.name,
+                  grade: u.grade || 'الصف الأول',
+                  level: u.level || 'مستوى أ',
+                  points: 0,
+                  books: 0,
+                  participation: 50,
+                  skills: [],
+                  badges: []
+                });
+              }
+            });
+          }
+        } catch (e) {}
+        localStorage.setItem(TEACHER_STUDENTS_KEY, JSON.stringify(list));
+        return list;
       }
 
       function saveStudents(list) {

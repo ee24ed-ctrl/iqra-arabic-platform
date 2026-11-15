@@ -15,11 +15,11 @@
   };
 
   var DEFAULT_USERS = [
-    { id: 'stu_1', numericId: 1, role: 'student', name: 'سارة أحمد', username: 'sara', email: 'sara@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الأول', level: 'المستوى (ز)', active: true, createdAt: '2026-10-01' },
-    { id: 'stu_2', numericId: 2, role: 'student', name: 'عمر خالد', username: 'omar', email: 'omar@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الثاني', level: 'المستوى (ز)', active: true, createdAt: '2026-10-01' },
-    { id: 'stu_3', numericId: 3, role: 'student', name: 'ليلى محمود', username: 'layla', email: 'layla@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الثالث', level: 'المستوى (ز)', active: true, createdAt: '2026-10-01' },
-    { id: 'stu_4', numericId: 4, role: 'student', name: 'يوسف طارق', username: 'yusuf', email: 'yusuf@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الرابع', level: 'المستوى (ز)', active: true, createdAt: '2026-10-01' },
-    { id: 'stu_5', numericId: 5, role: 'student', name: 'نور الهدى', username: 'noor', email: 'noor@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الرابع', level: 'المستوى (ز)', active: true, createdAt: '2026-10-01' },
+    { id: 'stu_1', numericId: 1, role: 'student', name: 'سارة أحمد', username: 'sara', email: 'sara@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الأول', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
+    { id: 'stu_2', numericId: 2, role: 'student', name: 'عمر خالد', username: 'omar', email: 'omar@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الثاني', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
+    { id: 'stu_3', numericId: 3, role: 'student', name: 'ليلى محمود', username: 'layla', email: 'layla@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الثالث', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
+    { id: 'stu_4', numericId: 4, role: 'student', name: 'يوسف طارق', username: 'yusuf', email: 'yusuf@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الرابع', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
+    { id: 'stu_5', numericId: 5, role: 'student', name: 'نور الهدى', username: 'noor', email: 'noor@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الرابع', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
     { id: 'tch_1', role: 'teacher', name: 'أ. مريم العلي', username: 'teacher1', email: 'mariam@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', subject: 'اللغة العربية', classes: 'الصف الأول – الرابع', active: true, createdAt: '2026-10-01' },
     { id: 'adm_1', role: 'admin', name: 'أ. خالد المنصور (مدير المدرسة)', username: 'admin1', email: 'principal@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', jobTitle: 'مدير المدرسة', active: true, createdAt: '2026-10-01' },
     { id: 'sup_1', role: 'supervisor', name: 'د. عبدالله السالم (مشرف تربوي)', username: 'sup1', email: 'supervisor@edu.gov', pass: '1234', school: 'إدارة التعليم – مكتب الإشراف', sector: 'الإشراف التربوي – اللغة العربية', active: true, createdAt: '2026-10-01' },
@@ -115,6 +115,8 @@
       classes: payload.classes || 'جميع الصفوف',
       jobTitle: payload.jobTitle || 'مدير المدرسة',
       sector: payload.sector || 'الإشراف التربوي',
+      assignedTeacherId: payload.assignedTeacherId || '',
+      assignedTeacherName: payload.assignedTeacherName || '',
       active: true,
       createdAt: new Date().toLocaleDateString('ar-SA')
     };
@@ -177,6 +179,25 @@
     var users = loadUsers().filter(function (u) { return u.id !== userId; });
     saveUsers(users);
     return users;
+  }
+
+  function assignStudentToTeacher(studentId, teacherId) {
+    var users = loadUsers();
+    var teacher = users.find(function (u) { return u.id === teacherId && u.role === 'teacher'; });
+    var updatedStudent = null;
+    users = users.map(function (u) {
+      if (u.id === studentId && u.role === 'student') {
+        u.assignedTeacherId = teacher ? teacher.id : '';
+        u.assignedTeacherName = teacher ? teacher.name : '';
+        updatedStudent = u;
+      }
+      return u;
+    });
+    if (!updatedStudent || !teacher) {
+      return { ok: false, error: 'تعذر العثور على الطالب أو المعلم المحدد.' };
+    }
+    saveUsers(users);
+    return { ok: true, student: updatedStudent, teacher: teacher };
   }
 
   function getSupervisorNotes() {
@@ -247,6 +268,7 @@
     getCurrentUser: getCurrentUser,
     toggleUserStatus: toggleUserStatus,
     deleteUser: deleteUser,
+    assignStudentToTeacher: assignStudentToTeacher,
     getSupervisorNotes: getSupervisorNotes,
     addSupervisorNote: addSupervisorNote,
     renderAuthBanner: renderAuthBanner
