@@ -155,3 +155,25 @@ footer.site-footer {
   color: #e5effb !important;
   border-top: 3px solid #eab308 !important;
 }
+
+/* Mobile Typography & Table Sizing Across All Pages (< 640px) */
+@media (max-width: 639px) {
+  body {
+    font-family: 'Cairo', 'Tajawal', Tahoma, Arial, sans-serif !important;
+    font-size: 0.82rem !important;
+  }
+  h1 { font-size: 1.15rem !important; }
+  h2 { font-size: 1.02rem !important; }
+  h3 { font-size: 0.94rem !important; }
+  h4, h5 { font-size: 0.88rem !important; }
+  h6 { font-size: 0.82rem !important; }
+  p, li, label, .form-control, .btn {
+    font-size: 0.78rem !important;
+  }
+  .table,
+  .table th,
+  .table td {
+    font-size: 0.71rem !important;
+    padding: 6px 6px !important;
+  }
+}
