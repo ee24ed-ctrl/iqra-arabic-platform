@@ -492,6 +492,90 @@
         </div>
         <div id="pAssignFeedback" class="principal-feedback"></div>
       </div>
+
+      <!-- 3. إدارة المهارات المكلفة وتوزيعها على المعلمين -->
+      <div class="dash-card mb-3" id="principalSkillsManageCard">
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-2" style="gap:6px;">
+          <div>
+            <h4 class="mb-0">📚 حصر المهارات التأسيسية والفهم القرائي وتوزيعها للمعلمين</h4>
+            <small class="text-muted">إضافة مهارات اللغة العربية التأسيسية والقرائية، وتوزيع المهارات المكلفة على المعلمين مباشرة.</small>
+          </div>
+          <span class="badge badge-info p-1 px-2" id="totalSkillsBadge" style="font-size:0.68rem;">27 مهارة شاملة</span>
+        </div>
+
+        <!-- إضافة مهارة جديدة مخصصة -->
+        <div class="row mb-2 align-items-end" style="background:#f8fbff;border:1px solid #dbeafe;border-radius:12px;padding:8px 4px;margin-left:0;margin-right:0;">
+          <div class="col-12 col-md-5 mb-2">
+            <label class="font-weight-bold mb-1" style="font-size:0.72rem;">➕ إضافة مهارة جديدة مكلفة</label>
+            <input type="text" id="pAddSkillTitle" class="form-control" placeholder="مثال: استنتاج المغزى الأخلاقي من القصة">
+          </div>
+          <div class="col-6 col-md-2 mb-2">
+            <label class="font-weight-bold mb-1" style="font-size:0.72rem;">المستوى</label>
+            <select id="pAddSkillLevel" class="form-control">
+              <option value="مستوى أ">مستوى أ</option>
+              <option value="مستوى ب">مستوى ب</option>
+              <option value="مستوى ج">مستوى ج</option>
+              <option value="مستوى د">مستوى د</option>
+            </select>
+          </div>
+          <div class="col-6 col-md-3 mb-2">
+            <label class="font-weight-bold mb-1" style="font-size:0.72rem;">التصنيف</label>
+            <select id="pAddSkillCat" class="form-control">
+              <option value="مهارات التأسيس">مهارات التأسيس</option>
+              <option value="مهارات الفهم القرائي">مهارات الفهم القرائي</option>
+              <option value="المهارات الإملائية">المهارات الإملائية</option>
+              <option value="المهارات اللغوية">المهارات اللغوية</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-2 mb-2">
+            <button type="button" id="pAddSkillBtn" class="btn btn-outline-primary btn-sm w-100 font-weight-bold">➕ إضافة</button>
+          </div>
+        </div>
+
+        <!-- اختيار المعلم وتحديد المهارات للتوزيع -->
+        <div class="row mb-2 align-items-end">
+          <div class="col-6 col-md-4 mb-2">
+            <label class="font-weight-bold mb-1" style="font-size:0.72rem;">اختر المعلم المستهدف</label>
+            <select id="distSkillTeacherSelect" class="form-control"></select>
+          </div>
+          <div class="col-6 col-md-4 mb-2">
+            <label class="font-weight-bold mb-1" style="font-size:0.72rem;">تصفية حسب التصنيف</label>
+            <select id="pSkillCatFilter" class="form-control">
+              <option value="all">جميع المهارات (التأسيس + الفهم القرائي)</option>
+              <option value="مهارات التأسيس">مهارات التأسيس الصوتي والقرائي</option>
+              <option value="مهارات الفهم القرائي">مهارات الفهم القرائي</option>
+              <option value="المهارات الإملائية">المهارات الإملائية</option>
+              <option value="المهارات اللغوية">المهارات اللغوية</option>
+              <option value="الكتب التفاعلية">الكتب التفاعلية</option>
+              <option value="الاختبارات">الاختبارات</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-4 mb-2 d-flex" style="gap:6px;">
+            <button type="button" id="selectAllSkillsBtn" class="btn btn-outline-primary btn-sm flex-fill font-weight-bold">☑ تحديد الكل</button>
+            <button type="button" id="clearAllSkillsBtn" class="btn btn-outline-secondary btn-sm flex-fill font-weight-bold">إلغاء</button>
+          </div>
+        </div>
+
+        <div id="principalSkillsChecklist" style="max-height:220px;overflow-y:auto;border:1px solid #dbeafe;border-radius:12px;padding:8px;background:#ffffff;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:6px;"></div>
+
+        <div class="d-flex justify-content-end mt-2">
+          <button type="button" id="distributeSkillsBtn" class="btn btn-primary btn-sm font-weight-bold">📤 توزيع المهارات المحددة للمعلم</button>
+        </div>
+        <div id="pSkillFeedback" class="principal-feedback"></div>
+
+        <div class="table-responsive mt-3">
+          <table class="table table-bordered table-hover admin-data-table">
+            <thead>
+              <tr>
+                <th>المعلم</th>
+                <th>عدد المهارات المكلفة</th>
+                <th>المهارات المسندة للتنفيذ</th>
+              </tr>
+            </thead>
+            <tbody id="teacherSkillsDistBody"></tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
     <!-- Users Management -->
@@ -778,6 +862,67 @@
             '</tr>'
           );
         });
+
+        renderPrincipalSkillsTools(teachers);
+      }
+
+      function renderPrincipalSkillsTools(teachers) {
+        if (!window.IREAD_SKILLS || typeof window.IREAD_SKILLS.getAllSkills !== 'function') return;
+        var allSkills = window.IREAD_SKILLS.getAllSkills();
+        $('#totalSkillsBadge').text(allSkills.length + ' مهارة شاملة');
+
+        var $tSel = $('#distSkillTeacherSelect');
+        var prevVal = $tSel.val();
+        $tSel.empty().append('<option value="all">جميع المعلمين (' + teachers.length + ')</option>');
+        teachers.forEach(function (t) {
+          $tSel.append('<option value="' + t.id + '">' + t.name + '</option>');
+        });
+        if (prevVal && $tSel.find('option[value="' + prevVal + '"]').length) {
+          $tSel.val(prevVal);
+        }
+
+        var cat = $('#pSkillCatFilter').val() || 'all';
+        var filtered = allSkills.filter(function (sk) {
+          return cat === 'all' || sk.cat === cat;
+        });
+
+        var distMap = window.IREAD_SKILLS.getAllTeacherSkillDistributions();
+        var selectedTeacher = $tSel.val();
+        var preChecked = (selectedTeacher && selectedTeacher !== 'all' && Array.isArray(distMap[selectedTeacher]))
+          ? distMap[selectedTeacher]
+          : [];
+
+        var $list = $('#principalSkillsChecklist').empty();
+        filtered.forEach(function (sk) {
+          var chk = preChecked.indexOf(sk.id) !== -1 ? ' checked' : '';
+          $list.append(
+            '<label style="display:flex;align-items:flex-start;gap:6px;padding:6px 8px;border:1px solid #e2ecf8;border-radius:10px;background:#f8fbff;cursor:pointer;margin:0;font-size:0.72rem;font-weight:700;color:#0a254d;">' +
+              '<input type="checkbox" class="p-skill-chk mt-1" value="' + sk.id + '"' + chk + '>' +
+              '<span>' + sk.title + ' <small class="text-primary d-block" style="font-size:0.64rem;">' + sk.cat + ' • ' + sk.level + '</small></span>' +
+            '</label>'
+          );
+        });
+
+        var $distBody = $('#teacherSkillsDistBody').empty();
+        if (!teachers.length) {
+          $distBody.append('<tr><td colspan="3" class="text-center text-muted">لا يوجد معلمون نشطون.</td></tr>');
+          return;
+        }
+        teachers.forEach(function (t) {
+          var assigned = window.IREAD_SKILLS.getTeacherAssignedSkills(t.id);
+          var namesHtml = assigned.length
+            ? assigned.slice(0, 6).map(function (s) {
+                return '<span class="badge badge-light border text-primary m-1" style="font-size:0.64rem;">' + s.title + '</span>';
+              }).join('') + (assigned.length > 6 ? ' <span class="badge badge-info">+' + (assigned.length - 6) + ' أخرى</span>' : '')
+            : '<span class="text-muted">لم تُوزّع مهارات بعد</span>';
+          $distBody.append(
+            '<tr>' +
+              '<td class="font-weight-bold">' + t.name + '</td>' +
+              '<td><span class="badge badge-primary">' + assigned.length + ' مهارة</span></td>' +
+              '<td>' + namesHtml + '</td>' +
+            '</tr>'
+          );
+        });
       }
 
       if (isPrincipal) {
@@ -864,6 +1009,52 @@
             showPrincipalFeedback($('#pAssignFeedback'), 'تم تحديث إسناد الطالب ' + res.student.name + ' إلى ' + res.teacher.name + '.', true);
             renderDashboard();
           }
+        });
+
+        $('#pSkillCatFilter, #distSkillTeacherSelect').on('change', function () {
+          var users = A.loadUsers();
+          var teachers = users.filter(function (u) { return u.role === 'teacher' && u.active !== false; });
+          renderPrincipalSkillsTools(teachers);
+        });
+
+        $('#selectAllSkillsBtn').on('click', function () {
+          $('#principalSkillsChecklist .p-skill-chk').prop('checked', true);
+        });
+
+        $('#clearAllSkillsBtn').on('click', function () {
+          $('#principalSkillsChecklist .p-skill-chk').prop('checked', false);
+        });
+
+        $('#pAddSkillBtn').on('click', function () {
+          if (!window.IREAD_SKILLS) return;
+          var title = ($('#pAddSkillTitle').val() || '').trim();
+          var level = $('#pAddSkillLevel').val() || 'مستوى أ';
+          var cat = $('#pAddSkillCat').val() || 'مهارات التأسيس';
+          var res = window.IREAD_SKILLS.addCustomSkill(title, level, cat);
+          if (!res || !res.ok) {
+            showPrincipalFeedback($('#pSkillFeedback'), (res && res.error) ? res.error : 'تعذر إضافة المهارة.', false);
+            return;
+          }
+          $('#pAddSkillTitle').val('');
+          showPrincipalFeedback($('#pSkillFeedback'), 'تمت إضافة المهارة بنجاح: ' + res.skill.title, true);
+          renderDashboard();
+        });
+
+        $('#distributeSkillsBtn').on('click', function () {
+          if (!window.IREAD_SKILLS) return;
+          var target = $('#distSkillTeacherSelect').val() || 'all';
+          var skillIds = $('#principalSkillsChecklist .p-skill-chk:checked').map(function () {
+            return $(this).val();
+          }).get();
+          var users = A.loadUsers();
+          var teacherIds = users.filter(function (u) { return u.role === 'teacher' && u.active !== false; }).map(function (t) { return t.id; });
+          var res = window.IREAD_SKILLS.distributeSkillsToTeacher(target, skillIds, teacherIds);
+          if (!res || !res.ok) {
+            showPrincipalFeedback($('#pSkillFeedback'), (res && res.error) ? res.error : 'تعذر توزيع المهارات.', false);
+            return;
+          }
+          showPrincipalFeedback($('#pSkillFeedback'), 'تم توزيع (' + res.count + ') مهارة مكلفة إلى (' + res.targets.length + ') معلم بنجاح.', true);
+          renderDashboard();
         });
       }
 

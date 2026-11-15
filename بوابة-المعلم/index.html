@@ -1099,6 +1099,9 @@
           </div>
         </div>
 
+        <!-- المهارات المكلفة من إدارة المدرسة -->
+        <div id="principalAssignedSkillsBox" style="display:none;background:#eff6ff;border:1.5px solid #bfdbfe;border-radius:16px;padding:12px 14px;margin-bottom:14px;"></div>
+
         <!-- بطاقات الطلاب لإسناد المهارات الأساسية وتحدي القراءة لكل طالب -->
         <div class="students-cards-grid" id="studentsManagementGrid"></div>
       </div>
@@ -1322,6 +1325,7 @@
 
   <!-- Global Auth & Unified Header Scripts -->
   <script src="../assets/js/auth-system.js"></script>
+  <script src="../assets/js/skill-games.js"></script>
   <script src="../assets/js/global-header.js"></script>
 
   <script>
@@ -1721,8 +1725,55 @@
         });
       }
 
+      function getSkillOptionsHtml() {
+        var allSkills = (window.IREAD_SKILLS && typeof window.IREAD_SKILLS.getAllSkills === 'function')
+          ? window.IREAD_SKILLS.getAllSkills()
+          : [];
+        if (!allSkills.length) {
+          return (
+            '<option value="مهارة الحركات القصيرة والمدود (المستوى أ)">📘 مهارة الحركات القصيرة والمدود (المستوى أ)</option>' +
+            '<option value="مهارة التنوين والشدة واللام الشمسية (المستوى ب)">📘 مهارة التنوين والشدة واللام الشمسية (المستوى ب)</option>' +
+            '<option value="مهارة تحليل الكلمات والجمل الفعلية (المستوى ج)">📘 مهارة تحليل الكلمات والجمل الفعلية (المستوى ج)</option>' +
+            '<option value="مهارة الاستيعاب القرائي واستنتاج الفكرة الرئيسة (المستوى ز)">📘 مهارة الاستيعاب القرائي واستنتاج الفكرة الرئيسة (المستوى ز)</option>'
+          );
+        }
+        var cu = window.IREAD_AUTH && window.IREAD_AUTH.getCurrentUser ? window.IREAD_AUTH.getCurrentUser() : null;
+        var tid = (cu && cu.role === 'teacher') ? cu.id : 'tch_1';
+        var assigned = window.IREAD_SKILLS.getTeacherAssignedSkills(tid);
+        var assignedIds = assigned.map(function (s) { return s.id; });
+
+        var box = document.getElementById('principalAssignedSkillsBox');
+        if (box) {
+          if (assigned.length) {
+            box.style.display = 'block';
+            box.innerHTML =
+              '<div style="font-size:0.84rem;font-weight:900;color:#0a254d;margin-bottom:6px;">📋 المهارات المكلفة من إدارة المدرسة (' + assigned.length + ' مهارة):</div>' +
+              '<div style="display:flex;flex-wrap:wrap;gap:6px;">' +
+              assigned.map(function (s) {
+                return '<span style="background:#ffffff;border:1px solid #93c5fd;color:#1d4ed8;border-radius:999px;padding:3px 10px;font-size:0.74rem;font-weight:800;">⭐ ' + s.title + '</span>';
+              }).join('') +
+              '</div>';
+          } else {
+            box.style.display = 'none';
+          }
+        }
+
+        return allSkills.map(function (sk) {
+          var isAssigned = assignedIds.indexOf(sk.id) !== -1;
+          var label = (isAssigned ? '⭐ [مكلفة] ' : '📘 ') + sk.title + ' (' + sk.level + ')';
+          return '<option value="' + sk.title + '">' + label + '</option>';
+        }).join('');
+      }
+
       function renderStudentsManagement() {
         var grid = document.getElementById('studentsManagementGrid');
+        var skillOpts = getSkillOptionsHtml();
+        var bulkSel = document.getElementById('bulkSkillSelect');
+        if (bulkSel && skillOpts) {
+          var prevBulk = bulkSel.value;
+          bulkSel.innerHTML = skillOpts;
+          if (prevBulk) bulkSel.value = prevBulk;
+        }
         var filtered = getFilteredStudents();
 
         if (filtered.length === 0) {
@@ -1774,11 +1825,7 @@
               '<div class="assign-controls-box">' +
                 '<div class="assign-row">' +
                   '<select class="field-select stu-skill-select" data-stu-id="' + s.id + '" style="padding:7px 10px;font-size:0.8rem;">' +
-                    '<option value="مهارة الحركات القصيرة والمدود (المستوى أ)">📘 مهارة الحركات القصيرة والمدود (المستوى أ)</option>' +
-                    '<option value="مهارة التنوين والشدة واللام الشمسية (المستوى ب)">📘 مهارة التنوين والشدة واللام الشمسية (المستوى ب)</option>' +
-                    '<option value="مهارة تحليل الكلمات والجمل الفعلية (المستوى ج)">📘 مهارة تحليل الكلمات والجمل الفعلية (المستوى ج)</option>' +
-                    '<option value="مهارة الاستيعاب القرائي واستنتاج الفكرة الرئيسة (المستوى ز)">📘 مهارة الاستيعاب القرائي واستنتاج الفكرة الرئيسة (المستوى ز)</option>' +
-                    '<option value="مهارة الطلاقة القرائية والتعبير الصوتي">📘 مهارة الطلاقة القرائية والتعبير الصوتي</option>' +
+                    skillOpts +
                   '</select>' +
                   '<button type="button" class="btn-primary-blue stu-assign-skill-btn" data-stu-id="' + s.id + '" style="padding:7px 12px;font-size:0.78rem;white-space:nowrap;">+ إسناد مهارة</button>' +
                 '</div>' +
