@@ -108,19 +108,27 @@
     .opt-btn {
       display: flex;
       align-items: center;
+      justify-content: flex-start;
       gap: 10px;
       width: 100%;
-      text-align: right;
-      padding: 12px 14px;
-      border-radius: 16px;
+      text-align: right !important;
+      padding: 11px 14px;
+      border-radius: 15px;
       border: 2px solid #cbd5e1;
       background: #f8fafc;
-      font-size: 1rem;
-      font-weight: 800;
+      font-size: 0.94rem;
+      line-height: 1.55 !important;
+      font-weight: 700;
       color: #1e293b;
       cursor: pointer;
-      margin-bottom: 10px;
+      margin-bottom: 9px;
       transition: transform 0.15s, border-color 0.2s, background 0.2s;
+    }
+
+    .opt-btn > span:last-child {
+      flex: 1;
+      text-align: right;
+      line-height: 1.55;
     }
 
     .opt-btn:hover:not(:disabled) {
@@ -170,10 +178,11 @@
     }
 
     .word-chip {
-      padding: 8px 14px;
+      padding: 7px 12px;
       border-radius: 12px;
       font-weight: 800;
-      font-size: 0.96rem;
+      font-size: 0.9rem;
+      line-height: 1.4 !important;
       border: 2px solid #f59e0b;
       background: #fffbeb;
       color: #92400e;
@@ -232,6 +241,24 @@
     @keyframes confettiFall {
       0% { opacity: 1; transform: translateY(0) rotate(0deg); }
       100% { opacity: 0; transform: translateY(280px) rotate(320deg); }
+    }
+
+    @media (max-width: 640px) {
+      .portal-banner { padding: 14px 0; }
+      .portal-banner h1 { font-size: 1.05rem; }
+      #quizStoryMeta { font-size: 0.76rem !important; }
+      #quizCoverImg { width: 54px !important; height: 54px !important; }
+      .act-card { padding: 14px; border-radius: 18px; border-width: 2px; }
+      .game-hud { padding: 8px 10px; gap: 6px; border-radius: 13px; margin-bottom: 10px; }
+      .hud-pill { font-size: 0.73rem; padding: 3px 9px; gap: 4px; }
+      .q-progress-track { height: 6px; margin-bottom: 10px; }
+      .q-type-pill { font-size: 0.74rem; padding: 4px 10px; margin-bottom: 8px; }
+      .q-question-title { font-size: 0.92rem; line-height: 1.55; margin-bottom: 10px; }
+      .opt-btn { font-size: 0.82rem; line-height: 1.48 !important; padding: 9px 11px; gap: 8px; border-radius: 13px; margin-bottom: 8px; }
+      .opt-btn > span:last-child { line-height: 1.48; }
+      .opt-num { width: 25px; height: 25px; font-size: 0.76rem; }
+      .word-chip { font-size: 0.8rem; padding: 6px 10px; }
+      .btn-3d-orange, .btn-3d-green { font-size: 0.82rem; padding: 8px 14px; line-height: 1.4 !important; }
     }
   </style>
 </head>
