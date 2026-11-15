@@ -398,16 +398,26 @@
             </div>
 
             <!-- Student-specific fields -->
-            <div class="col-6 col-md-4 mb-2 p-role-field p-field-student">
+            <div class="col-6 col-md-3 mb-2 p-role-field p-field-student">
               <label class="font-weight-bold mb-1" style="font-size:0.74rem;">الصف الدراسي</label>
               <select id="pAddGrade" class="form-control">
                 <option value="الصف الأول">الصف الأول</option>
                 <option value="الصف الثاني">الصف الثاني</option>
                 <option value="الصف الثالث">الصف الثالث</option>
                 <option value="الصف الرابع">الصف الرابع</option>
+                <option value="الصف الخامس">الصف الخامس</option>
+                <option value="الصف السادس">الصف السادس</option>
               </select>
             </div>
-            <div class="col-6 col-md-4 mb-2 p-role-field p-field-student">
+            <div class="col-6 col-md-2 mb-2 p-role-field p-field-student">
+              <label class="font-weight-bold mb-1" style="font-size:0.74rem;">الفصل</label>
+              <select id="pAddSection" class="form-control">
+                <option value="أ">فصل أ</option>
+                <option value="ب">فصل ب</option>
+                <option value="ج">فصل ج</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-3 mb-2 p-role-field p-field-student">
               <label class="font-weight-bold mb-1" style="font-size:0.74rem;">إسناد إلى المعلم</label>
               <select id="pAddStudentTeacher" class="form-control"></select>
             </div>
@@ -419,7 +429,7 @@
             </div>
             <div class="col-6 col-md-4 mb-2 p-role-field p-field-teacher" style="display:none;">
               <label class="font-weight-bold mb-1" style="font-size:0.74rem;">الفصول المسندة</label>
-              <input type="text" id="pAddClasses" class="form-control" value="الصف الأول – الرابع">
+              <input type="text" id="pAddClasses" class="form-control" value="الصف الأول – السادس (أ، ب، ج)">
             </div>
 
             <!-- Supervisor / General Supervisor fields -->
@@ -639,8 +649,9 @@
           if (q && hay.indexOf(q) === -1) return;
 
           var meta = A.ROLE_META[u.role] || A.ROLE_META.student;
+          var secTxt = u.section ? (' – فصل ' + u.section) : '';
           var teacherInfo = u.assignedTeacherName ? (' • المعلم: ' + u.assignedTeacherName) : '';
-          var detail = u.role === 'student' ? ((u.grade || '') + ' – ' + (u.level || '') + teacherInfo)
+          var detail = u.role === 'student' ? ((u.grade || '') + secTxt + ' – ' + (u.level || '') + teacherInfo)
             : u.role === 'teacher' ? ((u.subject || '') + ' (' + (u.classes || '') + ')')
             : u.role === 'admin' ? (u.jobTitle || 'إداري')
             : (u.sector || 'مشرف تربوي');
@@ -729,7 +740,8 @@
         } else {
           students.forEach(function (s) {
             var curT = s.assignedTeacherName ? (' — ' + s.assignedTeacherName) : ' — غير مسند';
-            $assignStudent.append('<option value="' + s.id + '">' + s.name + ' (' + (s.grade || 'طالب') + ')' + curT + '</option>');
+            var secLabel = s.section ? (' - فصل ' + s.section) : '';
+            $assignStudent.append('<option value="' + s.id + '">' + s.name + ' (' + (s.grade || 'طالب') + secLabel + ')' + curT + '</option>');
           });
         }
 
@@ -755,7 +767,7 @@
           $tbody.append(
             '<tr>' +
               '<td class="font-weight-bold">' + s.name + '</td>' +
-              '<td>' + (s.grade || '-') + (s.level ? ' (' + s.level + ')' : '') + '</td>' +
+              '<td>' + (s.grade || '-') + (s.section ? ' (فصل ' + s.section + ')' : '') + (s.level ? ' • ' + s.level : '') + '</td>' +
               '<td>' + (s.assignedTeacherName ? '<span class="badge badge-info">' + s.assignedTeacherName + '</span>' : '<span class="badge badge-secondary">غير مسند</span>') + '</td>' +
               '<td class="no-print">' +
                 '<div class="d-flex align-items-center" style="gap:4px;">' +
@@ -798,6 +810,7 @@
           };
           if (selectedAddRole === 'student') {
             payload.grade = $('#pAddGrade').val() || 'الصف الأول';
+            payload.section = $('#pAddSection').val() || 'أ';
             payload.level = 'مستوى أ';
             var tid = $('#pAddStudentTeacher').val();
             var tname = tid ? $('#pAddStudentTeacher option:selected').text() : '';
@@ -807,7 +820,7 @@
             }
           } else if (selectedAddRole === 'teacher') {
             payload.subject = ($('#pAddSubject').val() || '').trim() || 'اللغة العربية';
-            payload.classes = ($('#pAddClasses').val() || '').trim() || 'الصف الأول – الرابع';
+            payload.classes = ($('#pAddClasses').val() || '').trim() || 'الصف الأول – السادس (أ، ب، ج)';
           } else if (selectedAddRole === 'supervisor' || selectedAddRole === 'general_supervisor') {
             payload.sector = ($('#pAddSector').val() || '').trim() || 'الإشراف التربوي';
           } else if (selectedAddRole === 'admin') {

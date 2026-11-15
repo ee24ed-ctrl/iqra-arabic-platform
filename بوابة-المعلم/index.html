@@ -1059,11 +1059,20 @@
             <label for="studentSearchInput">🔍 البحث عن طالب أو التصفية حسب الصف</label>
             <div class="assign-row">
               <input type="search" id="studentSearchInput" class="field-input" placeholder="ابحث باسم الطالب...">
-              <select id="studentGradeFilter" class="field-select" style="max-width:155px;">
+              <select id="studentGradeFilter" class="field-select" style="max-width:130px;">
                 <option value="all">جميع الصفوف</option>
                 <option value="الصف الأول">الصف الأول</option>
                 <option value="الصف الثاني">الصف الثاني</option>
                 <option value="الصف الثالث">الصف الثالث</option>
+                <option value="الصف الرابع">الصف الرابع</option>
+                <option value="الصف الخامس">الصف الخامس</option>
+                <option value="الصف السادس">الصف السادس</option>
+              </select>
+              <select id="studentSectionFilter" class="field-select" style="max-width:95px;">
+                <option value="all">كل الفصول</option>
+                <option value="أ">فصل أ</option>
+                <option value="ب">فصل ب</option>
+                <option value="ج">فصل ج</option>
               </select>
             </div>
           </div>
@@ -1072,10 +1081,18 @@
             <label for="newStudentNameInput">➕ تسجيل طالب جديد في قائمة المعلم</label>
             <div class="assign-row">
               <input type="text" id="newStudentNameInput" class="field-input" placeholder="اسم الطالب الثلاثي...">
-              <select id="newStudentGradeSelect" class="field-select" style="max-width:130px;">
+              <select id="newStudentGradeSelect" class="field-select" style="max-width:120px;">
                 <option value="الصف الأول">الصف الأول</option>
                 <option value="الصف الثاني">الصف الثاني</option>
                 <option value="الصف الثالث">الصف الثالث</option>
+                <option value="الصف الرابع">الصف الرابع</option>
+                <option value="الصف الخامس">الصف الخامس</option>
+                <option value="الصف السادس">الصف السادس</option>
+              </select>
+              <select id="newStudentSectionSelect" class="field-select" style="max-width:90px;">
+                <option value="أ">فصل أ</option>
+                <option value="ب">فصل ب</option>
+                <option value="ج">فصل ج</option>
               </select>
               <button type="button" id="addNewStudentBtn" class="btn-primary-blue" style="white-space:nowrap;padding:10px 14px;font-size:0.82rem;">إضافة</button>
             </div>
@@ -1111,10 +1128,13 @@
             <div class="field-group">
               <label for="weeklyTargetScope">تحديد الطلاب المستهدفين بالقصة</label>
               <select id="weeklyTargetScope" class="field-select">
-                <option value="all">جميع طلاب الفصول (٦ طلاب)</option>
+                <option value="all">جميع طلاب الفصول</option>
                 <option value="الصف الأول">طلاب الصف الأول فقط</option>
                 <option value="الصف الثاني">طلاب الصف الثاني فقط</option>
                 <option value="الصف الثالث">طلاب الصف الثالث فقط</option>
+                <option value="الصف الرابع">طلاب الصف الرابع فقط</option>
+                <option value="الصف الخامس">طلاب الصف الخامس فقط</option>
+                <option value="الصف السادس">طلاب الصف السادس فقط</option>
               </select>
             </div>
 
@@ -1193,6 +1213,15 @@
               <option value="الصف الأول">الصف الأول</option>
               <option value="الصف الثاني">الصف الثاني</option>
               <option value="الصف الثالث">الصف الثالث</option>
+              <option value="الصف الرابع">الصف الرابع</option>
+              <option value="الصف الخامس">الصف الخامس</option>
+              <option value="الصف السادس">الصف السادس</option>
+            </select>
+            <select id="reportSectionFilter" class="field-select" style="width:auto;padding:6px 10px;font-size:0.82rem;">
+              <option value="all">كل الفصول</option>
+              <option value="أ">فصل أ</option>
+              <option value="ب">فصل ب</option>
+              <option value="ج">فصل ج</option>
             </select>
             <select id="reportSortSelect" class="field-select" style="width:auto;padding:6px 12px;font-size:0.82rem;">
               <option value="desc">الأعلى نسبة مشاركة</option>
@@ -1582,6 +1611,7 @@
                   authId: u.id,
                   name: u.name,
                   grade: u.grade || 'الصف الأول',
+                  section: u.section || 'أ',
                   level: u.level || 'مستوى أ',
                   points: 0,
                   books: 0,
@@ -1682,10 +1712,12 @@
       function getFilteredStudents() {
         var q = (document.getElementById('studentSearchInput').value || '').trim().toLowerCase();
         var g = document.getElementById('studentGradeFilter').value || 'all';
+        var sec = document.getElementById('studentSectionFilter') ? (document.getElementById('studentSectionFilter').value || 'all') : 'all';
         return studentsList.filter(function (s) {
-          var matchName = !q || s.name.toLowerCase().indexOf(q) !== -1 || s.level.toLowerCase().indexOf(q) !== -1;
+          var matchName = !q || s.name.toLowerCase().indexOf(q) !== -1 || (s.level || '').toLowerCase().indexOf(q) !== -1;
           var matchGrade = g === 'all' || s.grade === g;
-          return matchName && matchGrade;
+          var matchSec = sec === 'all' || (s.section || 'أ') === sec;
+          return matchName && matchGrade && matchSec;
         });
       }
 
@@ -1725,7 +1757,7 @@
                   '<div class="student-avatar-circle">' + initials + '</div>' +
                   '<div>' +
                     '<div style="font-weight:900;font-size:1rem;color:var(--navy-deep);">' + s.name + '</div>' +
-                    '<div style="font-size:0.78rem;color:#476288;font-weight:800;">' + s.grade + ' • ' + s.level + ' • قرأ ' + s.booksRead + ' كتاباً</div>' +
+                    '<div style="font-size:0.78rem;color:#476288;font-weight:800;">' + s.grade + (s.section ? ' (فصل ' + s.section + ')' : '') + ' • ' + s.level + ' • قرأ ' + s.booksRead + ' كتاباً</div>' +
                   '</div>' +
                 '</div>' +
                 '<span class="badge-pill orange">⭐ ' + (s.stars || 100) + '</span>' +
@@ -1891,10 +1923,13 @@
       // ===================================================================
       function renderParticipationReport() {
         var gradeFilter = document.getElementById('reportGradeFilter').value || 'all';
+        var secFilter = document.getElementById('reportSectionFilter') ? (document.getElementById('reportSectionFilter').value || 'all') : 'all';
         var sortOrder = document.getElementById('reportSortSelect').value || 'desc';
 
         var rows = studentsList.filter(function (s) {
-          return gradeFilter === 'all' || s.grade === gradeFilter;
+          var matchG = gradeFilter === 'all' || s.grade === gradeFilter;
+          var matchS = secFilter === 'all' || (s.section || 'أ') === secFilter;
+          return matchG && matchS;
         }).slice();
 
         rows.sort(function (a, b) {
@@ -1929,7 +1964,7 @@
           return (
             '<tr>' +
               '<td><strong>' + s.name + '</strong></td>' +
-              '<td>' + s.grade + ' – ' + s.level + '</td>' +
+              '<td>' + s.grade + (s.section ? ' (فصل ' + s.section + ')' : '') + ' – ' + s.level + '</td>' +
               '<td>' + s.booksRead + ' / ' + (s.totalBooksGoal || 23) + ' كتاباً</td>' +
               '<td>' + totalTasks + ' مهام وتحديات</td>' +
               '<td>' + (s.quizAvg || 90) + '%</td>' +
@@ -2168,20 +2203,25 @@
       // 4. Filter & Add New Student
       document.getElementById('studentSearchInput').addEventListener('input', renderStudentsManagement);
       document.getElementById('studentGradeFilter').addEventListener('change', renderStudentsManagement);
+      if (document.getElementById('studentSectionFilter')) {
+        document.getElementById('studentSectionFilter').addEventListener('change', renderStudentsManagement);
+      }
 
       document.getElementById('addNewStudentBtn').addEventListener('click', function () {
         var nameEl = document.getElementById('newStudentNameInput');
         var name = (nameEl.value || '').trim();
         var grade = document.getElementById('newStudentGradeSelect').value || 'الصف الأول';
+        var section = document.getElementById('newStudentSectionSelect') ? (document.getElementById('newStudentSectionSelect').value || 'أ') : 'أ';
         if (!name) {
           showToast('⚠️ يرجى كتابة اسم الطالب أولاً');
           return;
         }
-        var nextId = studentsList.reduce(function (m, x) { return Math.max(m, x.id); }, 0) + 1;
+        var nextId = studentsList.reduce(function (m, x) { return Math.max(m, Number(x.id) || 0); }, 0) + 1;
         studentsList.push({
           id: nextId,
           name: name,
           grade: grade,
+          section: section,
           level: 'المستوى (ز)',
           booksRead: 1,
           totalBooksGoal: 23,
@@ -2237,6 +2277,9 @@
 
       // 6. Participation Report Filters
       document.getElementById('reportGradeFilter').addEventListener('change', renderParticipationReport);
+      if (document.getElementById('reportSectionFilter')) {
+        document.getElementById('reportSectionFilter').addEventListener('change', renderParticipationReport);
+      }
       document.getElementById('reportSortSelect').addEventListener('change', renderParticipationReport);
 
       // 7. Grant Badge & Achievement to Student(s)

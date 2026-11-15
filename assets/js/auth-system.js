@@ -14,13 +14,16 @@
     general_supervisor: { label: 'مشرف عام', icon: '🏛️', color: '#0f766e', home: 'لوحة-الإدارة/index.html?role=general_supervisor' }
   };
 
+  var CLASS_GRADES = ['الصف الأول', 'الصف الثاني', 'الصف الثالث', 'الصف الرابع', 'الصف الخامس', 'الصف السادس'];
+  var CLASS_SECTIONS = ['أ', 'ب', 'ج'];
+
   var DEFAULT_USERS = [
-    { id: 'stu_1', numericId: 1, role: 'student', name: 'سارة أحمد', username: 'sara', email: 'sara@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الأول', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
-    { id: 'stu_2', numericId: 2, role: 'student', name: 'عمر خالد', username: 'omar', email: 'omar@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الثاني', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
-    { id: 'stu_3', numericId: 3, role: 'student', name: 'ليلى محمود', username: 'layla', email: 'layla@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الثالث', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
-    { id: 'stu_4', numericId: 4, role: 'student', name: 'يوسف طارق', username: 'yusuf', email: 'yusuf@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الرابع', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
-    { id: 'stu_5', numericId: 5, role: 'student', name: 'نور الهدى', username: 'noor', email: 'noor@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الرابع', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
-    { id: 'tch_1', role: 'teacher', name: 'أ. مريم العلي', username: 'teacher1', email: 'mariam@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', subject: 'اللغة العربية', classes: 'الصف الأول – الرابع', active: true, createdAt: '2026-10-01' },
+    { id: 'stu_1', numericId: 1, role: 'student', name: 'سارة أحمد', username: 'sara', email: 'sara@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الأول', section: 'أ', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
+    { id: 'stu_2', numericId: 2, role: 'student', name: 'عمر خالد', username: 'omar', email: 'omar@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الثاني', section: 'ب', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
+    { id: 'stu_3', numericId: 3, role: 'student', name: 'ليلى محمود', username: 'layla', email: 'layla@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الثالث', section: 'ج', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
+    { id: 'stu_4', numericId: 4, role: 'student', name: 'يوسف طارق', username: 'yusuf', email: 'yusuf@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الرابع', section: 'أ', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
+    { id: 'stu_5', numericId: 5, role: 'student', name: 'نور الهدى', username: 'noor', email: 'noor@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الخامس', section: 'ب', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
+    { id: 'tch_1', role: 'teacher', name: 'أ. مريم العلي', username: 'teacher1', email: 'mariam@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', subject: 'اللغة العربية', classes: 'الصف الأول – السادس (أ، ب، ج)', active: true, createdAt: '2026-10-01' },
     { id: 'adm_1', role: 'admin', name: 'أ. خالد المنصور (مدير المدرسة)', username: 'admin1', email: 'principal@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', jobTitle: 'مدير المدرسة', active: true, createdAt: '2026-10-01' },
     { id: 'sup_1', role: 'supervisor', name: 'د. عبدالله السالم (مشرف تربوي)', username: 'sup1', email: 'supervisor@edu.gov', pass: '1234', school: 'إدارة التعليم – مكتب الإشراف', sector: 'الإشراف التربوي – اللغة العربية', active: true, createdAt: '2026-10-01' },
     { id: 'gsup_1', role: 'general_supervisor', name: 'د. فهد العتيبي (المشرف العام)', username: 'gsup1', email: 'general@edu.gov', pass: '1234', school: 'الإدارة العامة للتعليم', sector: 'الإشراف العام على المنصة والمدارس', active: true, createdAt: '2026-10-01' }
@@ -110,6 +113,7 @@
       pass: payload.pass,
       school: (payload.school || 'مدارس الساحل الأهلية').trim(),
       grade: payload.grade || 'الصف الأول',
+      section: payload.section || 'أ',
       level: payload.level || 'المستوى (ز)',
       subject: payload.subject || 'اللغة العربية',
       classes: payload.classes || 'جميع الصفوف',
@@ -260,6 +264,8 @@
 
   window.IREAD_AUTH = {
     ROLE_META: ROLE_META,
+    CLASS_GRADES: CLASS_GRADES,
+    CLASS_SECTIONS: CLASS_SECTIONS,
     loadUsers: loadUsers,
     registerUser: registerUser,
     loginUser: loginUser,

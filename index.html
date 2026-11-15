@@ -878,6 +878,11 @@
                 <option value="الصف الخامس">الصف الخامس</option>
                 <option value="الصف السادس">الصف السادس</option>
               </select>
+              <select id="regSection" class="reg-select">
+                <option value="أ">فصل أ</option>
+                <option value="ب">فصل ب</option>
+                <option value="ج">فصل ج</option>
+              </select>
               <select id="regLevel" class="reg-select">
                 <option value="المستوى (ز)">المستوى (ز)</option>
                 <option value="مستوى أ">مستوى القراءة: أ</option>
@@ -1172,6 +1177,7 @@
             pass: document.getElementById('regPassword').value,
             school: document.getElementById('regSchool').value,
             grade: document.getElementById('regGrade').value,
+            section: document.getElementById('regSection') ? document.getElementById('regSection').value : 'أ',
             level: document.getElementById('regLevel').value
           });
           if (!res.ok) {
