@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اختبار الفهم القرائي التفاعلي – أقرأ بالعربية</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/awesome5.min.css">
+  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/mobile-responsive.css">
+  <style>
+    body {
+      direction: rtl;
+      text-align: right;
+      background: linear-gradient(180deg, #eff6ff 0%, #f8fafc 100%);
+      font-family: Tahoma, Arial, sans-serif;
+      min-height: 100vh;
+    }
+
+    .portal-banner {
+      background: linear-gradient(120deg, rgba(28, 90, 166, 0.94), rgba(19, 64, 120, 0.94)),
+        url("../wp-content/uploads/2022/06/bg-page-title-copy.webp") center/cover no-repeat;
+      color: #fff;
+      padding: 24px 0;
+      text-align: center;
+    }
+
+    .portal-banner h1 {
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.45rem;
+      margin-bottom: 4px;
+    }
+
+    .act-card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: 0 16px 38px rgba(28, 90, 166, 0.12);
+      border: 3px solid #93c5fd;
+      position: relative;
+      overflow: hidden;
+      animation: fadeSlideIn 0.3s ease-out;
+    }
+
+    .game-hud {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 16px;
+      margin-bottom: 14px;
+    }
+
+    .hud-pill {
+      background: rgba(255, 255, 255, 0.18);
+      border-radius: 50px;
+      padding: 4px 12px;
+      font-weight: 800;
+      font-size: 0.84rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .q-progress-track {
+      width: 100%;
+      height: 8px;
+      background: #e2e8f0;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+
+    .q-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #2563eb, #f59e0b);
+      transition: width 0.25s ease;
+    }
+
+    .q-type-pill {
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.84rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .q-type-mcq { background: linear-gradient(135deg, #4f46e5, #7c3aed); }
+    .q-type-vocab { background: linear-gradient(135deg, #0284c7, #0d9488); }
+    .q-type-order { background: linear-gradient(135deg, #ea580c, #f59e0b); }
+
+    .q-question-title {
+      font-size: 1.12rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 14px;
+      line-height: 1.7;
+    }
+
+    .opt-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      text-align: right;
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 2px solid #cbd5e1;
+      background: #f8fafc;
+      font-size: 1rem;
+      font-weight: 800;
+      color: #1e293b;
+      cursor: pointer;
+      margin-bottom: 10px;
+      transition: transform 0.15s, border-color 0.2s, background 0.2s;
+    }
+
+    .opt-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      border-color: #2563eb;
+      background: #eff6ff;
+    }
+
+    .opt-btn.ok { border-color: #16a34a; background: #dcfce7; color: #166534; }
+    .opt-btn.bad { border-color: #dc2626; background: #fee2e2; color: #991b1b; }
+
+    .opt-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #e0e7ff;
+      color: #4338ca;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .opt-btn.ok .opt-num { background: #16a34a; color: #fff; }
+    .opt-btn.bad .opt-num { background: #dc2626; color: #fff; }
+
+    .order-dropzone {
+      min-height: 64px;
+      border: 2px dashed #94a3b8;
+      border-radius: 16px;
+      padding: 10px;
+      background: #f8fafc;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .order-bank {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+
+    .word-chip {
+      padding: 8px 14px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 0.96rem;
+      border: 2px solid #f59e0b;
+      background: #fffbeb;
+      color: #92400e;
+      cursor: pointer;
+      box-shadow: 0 3px 0 #d97706;
+    }
+
+    .word-chip.placed {
+      background: #dbeafe;
+      border-color: #2563eb;
+      color: #1e40af;
+      box-shadow: 0 3px 0 #1d4ed8;
+    }
+
+    .word-chip.used {
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    .btn-3d-orange {
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
+      color: #fff !important;
+      border: none;
+      border-radius: 14px;
+      padding: 10px 20px;
+      font-weight: 800;
+      box-shadow: 0 4px 0 #c2410c;
+      cursor: pointer;
+    }
+
+    .btn-3d-green {
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #fff !important;
+      border: none;
+      border-radius: 14px;
+      padding: 10px 20px;
+      font-weight: 800;
+      box-shadow: 0 4px 0 #15803d;
+      cursor: pointer;
+    }
+
+    .confetti-piece {
+      position: absolute;
+      top: 8px;
+      font-size: 22px;
+      pointer-events: none;
+      animation: confettiFall 1.4s ease-out forwards;
+      z-index: 20;
+    }
+
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes confettiFall {
+      0% { opacity: 1; transform: translateY(0) rotate(0deg); }
+      100% { opacity: 0; transform: translateY(280px) rotate(320deg); }
+    }
+  </style>
+</head>
+<body>
+  <div id="ireadTopBarMount"></div>
+
+  <section class="portal-banner">
+    <div class="container">
+      <img id="quizCoverImg" src="../assets/generated/paper-book-frame.jpg" alt="غلاف القصة" style="width:74px;height:74px;object-fit:cover;border-radius:16px;border:3px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,0.22);" class="mb-2" onerror="this.onerror=null;this.src='../assets/generated/paper-book-frame.jpg';">
+      <div class="mb-1"><span class="badge badge-warning text-white px-3 py-1">📝 اختبار الفهم القرائي الشامل (٣٠ سؤالاً)</span></div>
+      <h1 id="quizStoryTitle">اختبار القصة</h1>
+      <p id="quizStoryMeta" class="mb-0" style="font-size:0.88rem;opacity:0.92;">سؤال تلو الآخر: ١٠ اختيار من متعدد • ١٠ معاني كلمات • ١٠ ترتيب</p>
+    </div>
+  </section>
+
+  <main class="container py-4">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="act-card" id="quizStage"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/js/auth-system.js"></script>
+  <script src="../assets/js/global-header.js"></script>
+  <script src="../assets/js/kidzz-stories-8-12.js"></script>
+  <script src="../assets/js/story-quiz-engine.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      var params = new URLSearchParams(window.location.search);
+      var bookId = params.get('bookId') || 'kidzz_8_12_1';
+
+      var builtInBooks = [
+        {
+          id: 'ramiz-brother',
+          title: 'ماذا حصل لأخي رامز؟',
+          stars: 35,
+          cover: '../assets/ramiz-book-cover.jpg',
+          storyText: 'في يوم من الأيام نظر الصغير إلى أخيه رامز بدهشة وقال: ماذا حصل لأخي رامز؟ لقد أصبح طويلاً جداً ويقفز بخفة كالبهلوان! ضحكت الأم وقالت: إنه يتدرب على المشي على الركام الخشبية لعرض المدرسة المسرحي!'
+        },
+        {
+          id: 'space-journey',
+          title: 'رحلة إلى كوكب المعرفة',
+          stars: 35,
+          cover: '../assets/generated/story-science.jpg',
+          storyText: 'انطلق رائد الفضاء الصغير في مركبته الفضائية ليستكشف الكواكب والنجوم الملونة، وسجل في دفتره أسماء الكواكب وأحجامها باللغة العربية الفصحى.'
+        },
+        {
+          id: 'nature-secret',
+          title: 'سر الحديقة العجيبة',
+          stars: 30,
+          cover: '../assets/generated/story-nature.jpg',
+          storyText: 'تعاون الأصدقاء في زراعة الأشجار وسقاية الأزهار في حديقة الحي، فأزهرت الحديقة وعادت الطيور تغرد فوق الأغصان كل صباح.'
+        },
+        {
+          id: 'school-champions',
+          title: 'أبطال القراءة في مدرستنا',
+          stars: 40,
+          cover: '../assets/generated/story-school.jpg',
+          storyText: 'أقامت مدارس الساحل الأهلية مسابقة كبرى لأبطال القراءة، وقرأ كل طالب قصته المفضلة أمام زملائه بلغة عربية سليمة وصوت واضح.'
+        }
+      ];
+
+      var allBooks = builtInBooks.concat(Array.isArray(window.KIDZZ_STORIES_8_12) ? window.KIDZZ_STORIES_8_12 : []);
+      var book = allBooks.find(function (b) { return b.id === bookId; }) || allBooks[0];
+
+      document.getElementById('quizStoryTitle').textContent = book.title;
+      document.getElementById('quizCoverImg').src = book.cover || '../assets/generated/paper-book-frame.jpg';
+
+      var quizObj = window.IREAD_STORY_QUIZ.build30Quiz(book);
+      var queue = [];
+      quizObj.mcqs.forEach(function (q) {
+        queue.push({ kind: 'mcq', label: '🟣 اختيار من متعدد', pillClass: 'q-type-mcq', data: q });
+      });
+      quizObj.vocab.forEach(function (q) {
+        queue.push({ kind: 'vocab', label: '🔵 معاني الكلمات', pillClass: 'q-type-vocab', data: q });
+      });
+      quizObj.orders.forEach(function (q) {
+        queue.push({ kind: 'order', label: '🟠 ترتيب الكلمات', pillClass: 'q-type-order', data: q });
+      });
+
+      var idx = 0;
+      var scores = { mcq: 0, vocab: 0, order: 0 };
+      var stage = document.getElementById('quizStage');
+
+      function spawnConfetti() {
+        var icons = ['🌟', '🎉', '✨', '🏆'];
+        for (var i = 0; i < 6; i++) {
+          var el = document.createElement('span');
+          el.className = 'confetti-piece';
+          el.textContent = icons[i % icons.length];
+          el.style.right = (12 + Math.random() * 76) + '%';
+          stage.appendChild(el);
+          (function (node) {
+            setTimeout(function () { if (node.parentNode) node.parentNode.removeChild(node); }, 1400);
+          })(el);
+        }
+      }
+
+      function renderHud() {
+        var totalScore = scores.mcq + scores.vocab + scores.order;
+        var pct = Math.round(((idx + 1) / queue.length) * 100);
+        return (
+          '<div class="game-hud">' +
+            '<span class="hud-pill">السؤال ' + (idx + 1) + ' من ' + queue.length + '</span>' +
+            '<span class="hud-pill">⭐ النقاط: ' + totalScore + ' / 30</span>' +
+          '</div>' +
+          '<div class="q-progress-track"><div class="q-progress-fill" style="width:' + pct + '%;"></div></div>'
+        );
+      }
+
+      function advanceNext() {
+        idx++;
+        if (idx >= queue.length) {
+          renderFinalResult();
+        } else {
+          renderQuestion();
+        }
+      }
+
+      function renderQuestion() {
+        var item = queue[idx];
+        var q = item.data;
+
+        if (item.kind === 'mcq' || item.kind === 'vocab') {
+          var optsHtml = q.options.map(function (opt, oi) {
+            return '<button type="button" class="opt-btn" data-oi="' + oi + '"><span class="opt-num">' + (oi + 1) + '</span><span>' + opt + '</span></button>';
+          }).join('');
+
+          stage.innerHTML =
+            renderHud() +
+            '<span class="q-type-pill ' + item.pillClass + '">' + item.label + '</span>' +
+            '<div class="q-question-title">' + q.q + '</div>' +
+            '<div id="optWrap">' + optsHtml + '</div>' +
+            '<div id="qFeedback" style="font-weight:900;text-align:center;min-height:24px;"></div>';
+
+          var locked = false;
+          stage.querySelectorAll('.opt-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              if (locked) return;
+              locked = true;
+              var picked = parseInt(btn.getAttribute('data-oi'), 10);
+              var allBtns = stage.querySelectorAll('.opt-btn');
+              allBtns.forEach(function (b) { b.disabled = true; });
+              var fb = document.getElementById('qFeedback');
+              if (picked === q.correct) {
+                btn.classList.add('ok');
+                scores[item.kind]++;
+                spawnConfetti();
+                fb.style.color = '#15803d';
+                fb.textContent = '🎉 أحسنت! إجابة صحيحة — جاري الانتقال للسؤال التالي...';
+              } else {
+                btn.classList.add('bad');
+                if (allBtns[q.correct]) allBtns[q.correct].classList.add('ok');
+                fb.style.color = '#b91c1c';
+                fb.textContent = '💡 الإجابة الصحيحة موضحة باللون الأخضر — جاري الانتقال...';
+              }
+              setTimeout(advanceNext, 850);
+            });
+          });
+        } else {
+          var chosenIdx = [];
+          function drawOrder() {
+            var chosenWords = chosenIdx.map(function (wi) { return q.shuffled[wi]; });
+            var dropHtml = chosenWords.length
+              ? chosenWords.map(function (w) { return '<span class="word-chip placed">' + w + '</span>'; }).join('')
+              : '<span style="color:#64748b;font-weight:700;font-size:0.9rem;">اضغط على الكلمات بالترتيب الصحيح لتكوين الجملة...</span>';
+
+            var bankHtml = q.shuffled.map(function (w, wi) {
+              var used = chosenIdx.indexOf(wi) !== -1 ? 'used' : '';
+              return '<button type="button" class="word-chip ' + used + '" data-wi="' + wi + '">' + w + '</button>';
+            }).join('');
+
+            stage.innerHTML =
+              renderHud() +
+              '<span class="q-type-pill ' + item.pillClass + '">' + item.label + '</span>' +
+              '<div class="q-question-title">' + q.q + '</div>' +
+              '<div class="order-dropzone">' + dropHtml + '</div>' +
+              '<div class="order-bank">' + bankHtml + '</div>' +
+              '<div class="d-flex justify-content-center flex-wrap" style="gap:10px;">' +
+                '<button type="button" id="orderResetBtn" class="btn btn-outline-secondary font-weight-bold" style="border-radius:14px;">↺ مسح</button>' +
+                '<button type="button" id="orderSubmitBtn" class="btn-3d-orange">✓ تسليم الإجابة</button>' +
+              '</div>' +
+              '<div id="qFeedback" style="font-weight:900;text-align:center;margin-top:10px;min-height:24px;"></div>';
+
+            stage.querySelectorAll('.order-bank .word-chip').forEach(function (chip) {
+              chip.addEventListener('click', function () {
+                var wi = parseInt(chip.getAttribute('data-wi'), 10);
+                if (chosenIdx.indexOf(wi) === -1) {
+                  chosenIdx.push(wi);
+                  drawOrder();
+                }
+              });
+            });
+            document.getElementById('orderResetBtn').addEventListener('click', function () {
+              chosenIdx = [];
+              drawOrder();
+            });
+            document.getElementById('orderSubmitBtn').addEventListener('click', function () {
+              var ans = chosenIdx.map(function (wi) { return q.shuffled[wi]; }).join(' ');
+              var fb = document.getElementById('qFeedback');
+              if (!chosenIdx.length) {
+                fb.style.color = '#b45309';
+                fb.textContent = '⚠️ اختر الكلمات أولاً قبل التسليم!';
+                return;
+              }
+              this.disabled = true;
+              if (ans === q.answer) {
+                scores.order++;
+                spawnConfetti();
+                fb.style.color = '#15803d';
+                fb.textContent = '🎉 ترتيب ممتاز! جاري الانتقال للسؤال التالي...';
+              } else {
+                fb.style.color = '#b91c1c';
+                fb.textContent = '💡 الترتيب الصحيح: ' + q.answer;
+              }
+              setTimeout(advanceNext, 1000);
+            });
+          }
+          drawOrder();
+        }
+      }
+
+      function renderFinalResult() {
+        var totalScore = scores.mcq + scores.vocab + scores.order;
+        var starsReward = Number(book.stars || 35);
+
+        try {
+          var A = window.IREAD_AUTH;
+          var cu = A ? A.getCurrentUser() : null;
+          var sid = localStorage.getItem('iread_selected_student_id') || (cu && cu.numericId) || '4';
+          var bKey = 'iread_books_v1_' + sid;
+          var sKey = 'iread_stars_' + sid;
+          var map = JSON.parse(localStorage.getItem(bKey) || '{}');
+          if (!map[book.id] || !map[book.id].quizDone) {
+            var curStars = parseInt(localStorage.getItem(sKey) || '100', 10) || 100;
+            localStorage.setItem(sKey, String(curStars + starsReward));
+          }
+          map[book.id] = Object.assign({}, map[book.id] || {}, { readDone: true, quizDone: true });
+          localStorage.setItem(bKey, JSON.stringify(map));
+        } catch (e) {}
+
+        spawnConfetti();
+        stage.innerHTML =
+          '<div class="text-center py-2">' +
+            '<div style="font-size:3.2rem;">🏆</div>' +
+            '<h3 class="font-weight-bold text-primary mb-2">أحسنت يا بطل! أنهيت اختبار القصة</h3>' +
+            '<div style="font-size:1.5rem;font-weight:900;color:#15803d;margin-bottom:12px;">النتيجة النهائية: ' + totalScore + ' / 30</div>' +
+            '<div class="row text-center mb-3">' +
+              '<div class="col-4"><div class="p-2 rounded bg-light border"><strong class="d-block text-primary">' + scores.mcq + ' / 10</strong><small>اختيار من متعدد</small></div></div>' +
+              '<div class="col-4"><div class="p-2 rounded bg-light border"><strong class="d-block text-info">' + scores.vocab + ' / 10</strong><small>معاني الكلمات</small></div></div>' +
+              '<div class="col-4"><div class="p-2 rounded bg-light border"><strong class="d-block text-warning">' + scores.order + ' / 10</strong><small>الترتيب</small></div></div>' +
+            '</div>' +
+            '<div class="mb-3" style="font-weight:800;color:#b45309;">⭐ تمت إضافة +' + starsReward + ' نجمة إلى رصيدك!</div>' +
+            '<div class="d-flex justify-content-center flex-wrap" style="gap:10px;">' +
+              '<a href="../بوابة-الطالب/index.html" class="btn-3d-green" style="text-decoration:none;">← العودة إلى بوابة الطالب</a>' +
+              '<button type="button" id="retryQuizBtn" class="btn-3d-orange">🔄 إعادة الاختبار</button>' +
+            '</div>' +
+          '</div>';
+
+        document.getElementById('retryQuizBtn').addEventListener('click', function () {
+          idx = 0;
+          scores = { mcq: 0, vocab: 0, order: 0 };
+          renderQuestion();
+        });
+      }
+
+      renderQuestion();
+    })();
+  </script>
+</body>
+</html>

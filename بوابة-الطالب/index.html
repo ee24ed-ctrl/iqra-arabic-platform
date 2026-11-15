@@ -903,7 +903,7 @@
     }
 
     #storyActionModal.is-fullscreen .flipbook-page-img {
-      max-height: calc(100vh - 285px);
+      max-height: calc(100vh - 145px);
       height: 100%;
     }
 
@@ -1278,9 +1278,13 @@
        =================================================================== -->
   <div id="storyActionModal" class="story-modal-backdrop" role="dialog" aria-modal="true">
     <div class="story-modal-box">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-        <h3 id="modalStoryTitle" style="font-size:1.15rem;font-weight:900;color:var(--indigo-header);">ماذا حصل لأخي رامز؟</h3>
-        <button type="button" id="closeStoryModalBtn" class="modal-close-btn">إغلاق ✕</button>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:8px;">
+        <h3 id="modalStoryTitle" style="font-size:1.05rem;font-weight:900;color:var(--indigo-header);margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">ماذا حصل لأخي رامز؟</h3>
+        <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;">
+          <span id="headerPageBadge" style="display:none;background:#eff6ff;border:1px solid #bfdbfe;color:#1e3a8a;border-radius:999px;padding:3px 9px;font-size:0.78rem;font-weight:900;"></span>
+          <button type="button" id="headerSpeakToggleBtn" title="تشغيل/إيقاف القراءة الصوتية المتزامنة" style="display:none;border:1px solid #cbd5e1;background:#f8fafc;border-radius:999px;width:34px;height:34px;font-size:1rem;cursor:pointer;align-items:center;justify-content:center;">🔊</button>
+          <button type="button" id="closeStoryModalBtn" class="modal-close-btn">إغلاق ✕</button>
+        </div>
       </div>
       <div id="modalStoryBody"></div>
     </div>
@@ -1731,24 +1735,38 @@
           return '<span class="sync-word" data-wi="' + wi + '">' + w + '</span>';
         }).join(' ');
 
+        var quizPageUrl = '../اختبار-القصة/index.html?bookId=' + encodeURIComponent(book.id);
+
+        var pageBadgeEl = document.getElementById('headerPageBadge');
+        if (pageBadgeEl) {
+          pageBadgeEl.style.display = 'inline-block';
+          pageBadgeEl.textContent = (idx + 1) + ' / ' + total;
+        }
+        var hdrSpeakBtn = document.getElementById('headerSpeakToggleBtn');
+        if (hdrSpeakBtn) {
+          hdrSpeakBtn.style.display = 'inline-flex';
+          hdrSpeakBtn.style.background = isAudioSyncActive ? '#16a34a' : '#f8fafc';
+          hdrSpeakBtn.style.color = isAudioSyncActive ? '#fff' : '#0f172a';
+          hdrSpeakBtn.onclick = function () {
+            isAudioSyncActive = !isAudioSyncActive;
+            hdrSpeakBtn.style.background = isAudioSyncActive ? '#16a34a' : '#f8fafc';
+            hdrSpeakBtn.style.color = isAudioSyncActive ? '#fff' : '#0f172a';
+            if (isAudioSyncActive) {
+              speakSynchronizedPage(pageWords);
+            } else {
+              stopAudioSync();
+            }
+          };
+        }
+
         modalBody.innerHTML =
           '<div class="flipbook-wrap">' +
-            '<div class="flipbook-meta-bar">' +
-              '<span>📖 ' + book.title + '</span>' +
-              '<span>صفحة ' + (idx + 1) + ' من ' + total + ' • 👆 اسحب للتقليب</span>' +
-            '</div>' +
             '<div class="flipbook-progress-track"><div class="flipbook-progress-fill" style="width:' + pct + '%;"></div></div>' +
             '<div class="flipbook-page-stage" id="flipbookSwipeStage">' + stageContent + '</div>' +
-            '<div class="flip-sync-words-bar" id="flipSyncedWordsBox">' + syncWordsHtml + '</div>' +
-            '<div class="flipbook-nav-row">' +
-              '<button type="button" id="flipPrevBtn" class="flipbook-nav-btn prev"' + (idx === 0 ? ' disabled' : '') + '>▶ الصفحة السابقة</button>' +
-              (isLast
-                ? '<button type="button" id="flipFinishQuizBtn" class="flipbook-nav-btn finish">🏁 أنهيت القصة — ابدأ الاختبار (٣٠ سؤالاً) 📝</button>'
-                : '<button type="button" id="flipNextBtn" class="flipbook-nav-btn next">الصفحة التالية ◀</button>') +
-            '</div>' +
-            '<div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">' +
-              '<button type="button" id="modalSpeakBtn" class="quiz30-tab-btn" style="padding:6px 12px;' + (isAudioSyncActive ? 'background:#16a34a;color:#fff;border-color:#15803d;' : '') + '">' + (isAudioSyncActive ? '🔊 الصوت متزامن (نشط) — إيقاف' : '🔊 تشغيل الصوت المتزامن مع الصفحات') + '</button>' +
-              '<button type="button" id="modalGoQuizBtn" class="quiz30-tab-btn" style="padding:6px 12px;">📝 اختبار الفهم القرائي (٣٠ سؤالاً)</button>' +
+            '<div style="display:flex;justify-content:center;padding-top:4px;">' +
+              '<a href="' + quizPageUrl + '" id="modalGoQuizBtn" class="flipbook-nav-btn ' + (isLast ? 'finish' : 'next') + '" style="text-decoration:none;max-width:340px;width:100%;height:42px;">' +
+                (isLast ? '🏁 أنهيت القصة — ابدأ الاختبار (٣٠ سؤالاً) 📝' : '📝 اختبار الفهم القرائي (٣٠ سؤالاً)') +
+              '</a>' +
             '</div>' +
           '</div>';
 
@@ -1802,42 +1820,6 @@
             }
           });
         }
-
-        var prevBtn = document.getElementById('flipPrevBtn');
-        if (prevBtn) {
-          prevBtn.addEventListener('click', function () { goToPage(idx - 1); });
-        }
-        var nextBtn = document.getElementById('flipNextBtn');
-        if (nextBtn) {
-          nextBtn.addEventListener('click', function () { goToPage(idx + 1); });
-        }
-        var finishBtn = document.getElementById('flipFinishQuizBtn');
-        if (finishBtn) {
-          finishBtn.addEventListener('click', function () {
-            isAudioSyncActive = false;
-            stopAudioSync();
-            renderStoryQuiz30(book);
-          });
-        }
-        document.getElementById('modalSpeakBtn').addEventListener('click', function () {
-          isAudioSyncActive = !isAudioSyncActive;
-          if (isAudioSyncActive) {
-            this.textContent = '🔊 الصوت متزامن (نشط) — إيقاف';
-            this.style.background = '#16a34a';
-            this.style.color = '#fff';
-            speakSynchronizedPage(pageWords);
-          } else {
-            this.textContent = '🔊 تشغيل الصوت المتزامن مع الصفحات';
-            this.style.background = '';
-            this.style.color = '';
-            stopAudioSync();
-          }
-        });
-        document.getElementById('modalGoQuizBtn').addEventListener('click', function () {
-          isAudioSyncActive = false;
-          stopAudioSync();
-          renderStoryQuiz30(book);
-        });
       }
 
       function renderStoryQuiz30(book) {
@@ -2019,7 +2001,9 @@
             speakArabic(book.storyText);
           });
         } else if (action === 'quiz') {
-          renderStoryQuiz30(book);
+          isAudioSyncActive = false;
+          stopAudioSync();
+          window.location.href = '../اختبار-القصة/index.html?bookId=' + encodeURIComponent(book.id);
         }
       }
 
@@ -2033,6 +2017,10 @@
       closeModalBtn.addEventListener('click', function () {
         isAudioSyncActive = false;
         stopAudioSync();
+        var pb = document.getElementById('headerPageBadge');
+        var hs = document.getElementById('headerSpeakToggleBtn');
+        if (pb) pb.style.display = 'none';
+        if (hs) hs.style.display = 'none';
         modal.classList.remove('is-open', 'is-fullscreen');
       });
 
