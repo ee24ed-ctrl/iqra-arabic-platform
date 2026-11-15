@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800;900&family=Tajawal:wght@500;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/awesome5.min.css">
-  <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/theme.css">
   <link rel="stylesheet" href="../assets/mobile-responsive.css">
   <style>
     :root {
@@ -126,29 +125,31 @@
     }
 
     #roleFilterBtns {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 6px;
-      align-items: stretch;
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: 6px !important;
+      align-items: stretch !important;
+      width: 100% !important;
     }
 
     #roleFilterBtns .btn {
       width: 100% !important;
-      height: 36px !important;
-      min-height: 36px !important;
-      padding: 0 6px !important;
+      height: 34px !important;
+      min-height: 34px !important;
+      padding: 0 4px !important;
       margin: 0 !important;
-      line-height: 1.1 !important;
-      border-radius: 12px !important;
-      font-size: 0.7rem !important;
+      line-height: 1 !important;
+      border-radius: 10px !important;
+      font-size: 0.69rem !important;
       font-weight: 800 !important;
-      display: inline-flex !important;
+      display: flex !important;
       align-items: center !important;
       justify-content: center !important;
-      gap: 4px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      gap: 3px !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      box-shadow: none !important;
     }
 
     .dash-card .btn-sm {
@@ -156,13 +157,13 @@
       min-height: 34px !important;
       padding: 0 12px !important;
       line-height: 1 !important;
-      border-radius: 12px !important;
+      border-radius: 10px !important;
       font-size: 0.72rem !important;
       font-weight: 800 !important;
       display: inline-flex !important;
       align-items: center !important;
       justify-content: center !important;
-      gap: 5px;
+      gap: 5px !important;
     }
 
     /* Responsive Compact Tables for Mobile (جداول متناسقة لشاشة الجوال) */
@@ -206,15 +207,31 @@
     }
 
     .admin-data-table tbody td .btn-sm {
+      width: 48px !important;
       height: 26px !important;
       min-height: 26px !important;
       font-size: 0.66rem !important;
-      padding: 0 8px !important;
+      font-weight: 800 !important;
+      padding: 0 6px !important;
+      margin: 0 2px !important;
       line-height: 1 !important;
       border-radius: 8px !important;
       display: inline-flex !important;
       align-items: center !important;
       justify-content: center !important;
+      box-shadow: none !important;
+    }
+
+    .admin-data-table tbody td .toggle-user {
+      background: #fffbeb !important;
+      color: #b45309 !important;
+      border: 1px solid #f59e0b !important;
+    }
+
+    .admin-data-table tbody td .del-user {
+      background: #fef2f2 !important;
+      color: #dc2626 !important;
+      border: 1px solid #fca5a5 !important;
     }
 
     .admin-data-table code {
