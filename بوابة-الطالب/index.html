@@ -843,10 +843,22 @@
       background: #fdfbf7;
       border: 2px solid #cbd5e1;
       border-radius: 18px;
-      padding: 12px;
+      padding: 10px;
       box-shadow: 0 10px 26px rgba(15, 23, 42, 0.12), inset -6px 0 14px rgba(148, 163, 184, 0.14);
       animation: pageFlipIn 0.28s ease;
       text-align: center;
+      touch-action: pan-y;
+      user-select: none;
+      cursor: grab;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 0;
+    }
+
+    .flipbook-page-stage:active {
+      cursor: grabbing;
     }
 
     .flipbook-page-img {
@@ -855,6 +867,71 @@
       object-fit: contain;
       border-radius: 10px;
       background: #fff;
+      pointer-events: none;
+    }
+
+    /* Fullscreen Story Reader Mode */
+    #storyActionModal.is-fullscreen {
+      padding: 0 !important;
+      align-items: stretch !important;
+      justify-content: stretch !important;
+    }
+
+    #storyActionModal.is-fullscreen .story-modal-box {
+      width: 100vw !important;
+      height: 100vh !important;
+      max-width: 100vw !important;
+      max-height: 100vh !important;
+      border-radius: 0 !important;
+      padding: 10px 12px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      overflow: hidden !important;
+    }
+
+    #storyActionModal.is-fullscreen #modalStoryBody {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    #storyActionModal.is-fullscreen .flipbook-wrap {
+      flex: 1;
+      min-height: 0;
+    }
+
+    #storyActionModal.is-fullscreen .flipbook-page-img {
+      max-height: calc(100vh - 285px);
+      height: 100%;
+    }
+
+    .flip-sync-words-bar {
+      background: #f5fbf4;
+      border: 1.5px solid #bbf7d0;
+      border-radius: 12px;
+      padding: 8px 10px;
+      font-size: 0.86rem;
+      line-height: 1.85;
+      font-weight: 800;
+      color: #1e293b;
+      max-height: 82px;
+      overflow-y: auto;
+      text-align: right;
+    }
+
+    .sync-word {
+      display: inline-block;
+      padding: 0 3px;
+      border-radius: 6px;
+      transition: background 0.12s ease, color 0.12s ease;
+    }
+
+    .sync-word.is-speaking {
+      background: #fde047;
+      color: #0f172a;
+      box-shadow: 0 1px 4px rgba(234, 179, 8, 0.45);
     }
 
     .flipbook-text-box {
@@ -1534,6 +1611,84 @@
         } catch (e) {}
       }
 
+      var isAudioSyncActive = false;
+      var syncWordTimer = null;
+
+      function stopAudioSync() {
+        if (syncWordTimer) {
+          clearInterval(syncWordTimer);
+          syncWordTimer = null;
+        }
+        if ('speechSynthesis' in window) {
+          try { window.speechSynthesis.cancel(); } catch (e) {}
+        }
+      }
+
+      function getPageNarrationSlice(book, pageIndex, totalPages) {
+        var full = (book.storyText || book.title || '').replace(/\s+/g, ' ').trim();
+        var words = full.split(/\s+/).filter(Boolean);
+        if (!words.length) return [book.title || 'القصة'];
+        if (totalPages <= 1) return words;
+        var chunkSize = Math.max(8, Math.ceil(words.length / totalPages));
+        var start = Math.min(pageIndex * chunkSize, Math.max(0, words.length - chunkSize));
+        if (pageIndex === 0) start = 0;
+        var end = Math.min(words.length, start + chunkSize);
+        if (pageIndex === totalPages - 1) end = words.length;
+        return words.slice(start, end);
+      }
+
+      function highlightWordAt(idx) {
+        var spans = document.querySelectorAll('#flipSyncedWordsBox .sync-word');
+        spans.forEach(function (sp, i) {
+          sp.classList.toggle('is-speaking', i === idx);
+        });
+        var activeEl = spans[idx];
+        if (activeEl && activeEl.scrollIntoView) {
+          try { activeEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e) {}
+        }
+      }
+
+      function speakSynchronizedPage(words) {
+        stopAudioSync();
+        if (!words || !words.length) return;
+        var text = words.join(' ');
+        var wi = 0;
+        highlightWordAt(0);
+
+        var startedBoundary = false;
+        if ('speechSynthesis' in window) {
+          try {
+            var u = new SpeechSynthesisUtterance(text);
+            u.lang = 'ar-SA';
+            u.rate = 0.92;
+            u.onboundary = function (ev) {
+              if (ev.name === 'word' || typeof ev.charIndex === 'number') {
+                startedBoundary = true;
+                var prefix = text.slice(0, ev.charIndex).trim();
+                var curWordIdx = prefix ? prefix.split(/\s+/).length : 0;
+                highlightWordAt(Math.min(curWordIdx, words.length - 1));
+              }
+            };
+            u.onend = function () {
+              if (syncWordTimer) { clearInterval(syncWordTimer); syncWordTimer = null; }
+            };
+            window.speechSynthesis.speak(u);
+          } catch (e) {}
+        }
+
+        // Fallback/assistive word pacing for browsers where Arabic onboundary doesn't fire
+        syncWordTimer = setInterval(function () {
+          if (startedBoundary) return;
+          wi++;
+          if (wi >= words.length) {
+            clearInterval(syncWordTimer);
+            syncWordTimer = null;
+            return;
+          }
+          highlightWordAt(wi);
+        }, 420);
+      }
+
       function buildBookPages(book) {
         if (Array.isArray(book.pageImages) && book.pageImages.length > 0) {
           return book.pageImages.map(function (imgUrl, idx) {
@@ -1557,28 +1712,34 @@
       }
 
       function renderFlipbookReader(book, pageIndex) {
+        modal.classList.add('is-fullscreen');
         var pages = buildBookPages(book);
         var total = pages.length;
         var idx = Math.max(0, Math.min(pageIndex, total - 1));
         var cur = pages[idx];
         var pct = Math.round(((idx + 1) / total) * 100);
         var isLast = idx === total - 1;
+        var pageWords = cur.type === 'text'
+          ? cur.text.split(/\s+/).filter(Boolean)
+          : getPageNarrationSlice(book, idx, total);
 
         var stageContent = cur.type === 'image'
           ? '<img src="' + cur.img + '" alt="' + book.title + ' - صفحة ' + (idx + 1) + '" class="flipbook-page-img" onerror="this.onerror=null;this.src=\'../assets/illustrations/paper-book-frame.jpg\';">'
           : '<div class="flipbook-text-box">' + cur.text + '</div>';
 
+        var syncWordsHtml = pageWords.map(function (w, wi) {
+          return '<span class="sync-word" data-wi="' + wi + '">' + w + '</span>';
+        }).join(' ');
+
         modalBody.innerHTML =
           '<div class="flipbook-wrap">' +
             '<div class="flipbook-meta-bar">' +
               '<span>📖 ' + book.title + '</span>' +
-              '<span>صفحة ' + (idx + 1) + ' من ' + total + '</span>' +
+              '<span>صفحة ' + (idx + 1) + ' من ' + total + ' • 👆 اسحب للتقليب</span>' +
             '</div>' +
             '<div class="flipbook-progress-track"><div class="flipbook-progress-fill" style="width:' + pct + '%;"></div></div>' +
-            '<div class="flipbook-page-stage">' + stageContent + '</div>' +
-            '<div id="flipSummaryBox" style="display:none;background:#f5fbf4;border:1.5px solid #bbf7d0;border-radius:12px;padding:10px 12px;font-size:0.86rem;line-height:1.85;font-weight:700;color:#1e293b;max-height:140px;overflow-y:auto;">' +
-              (book.storyText || '') +
-            '</div>' +
+            '<div class="flipbook-page-stage" id="flipbookSwipeStage">' + stageContent + '</div>' +
+            '<div class="flip-sync-words-bar" id="flipSyncedWordsBox">' + syncWordsHtml + '</div>' +
             '<div class="flipbook-nav-row">' +
               '<button type="button" id="flipPrevBtn" class="flipbook-nav-btn prev"' + (idx === 0 ? ' disabled' : '') + '>▶ الصفحة السابقة</button>' +
               (isLast
@@ -1586,8 +1747,7 @@
                 : '<button type="button" id="flipNextBtn" class="flipbook-nav-btn next">الصفحة التالية ◀</button>') +
             '</div>' +
             '<div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">' +
-              '<button type="button" id="flipToggleTextBtn" class="quiz30-tab-btn" style="padding:6px 12px;">📄 عرض/إخفاء ملخص القصة</button>' +
-              '<button type="button" id="modalSpeakBtn" class="quiz30-tab-btn" style="padding:6px 12px;">🔊 قراءة صوتية</button>' +
+              '<button type="button" id="modalSpeakBtn" class="quiz30-tab-btn" style="padding:6px 12px;' + (isAudioSyncActive ? 'background:#16a34a;color:#fff;border-color:#15803d;' : '') + '">' + (isAudioSyncActive ? '🔊 الصوت متزامن (نشط) — إيقاف' : '🔊 تشغيل الصوت المتزامن مع الصفحات') + '</button>' +
               '<button type="button" id="modalGoQuizBtn" class="quiz30-tab-btn" style="padding:6px 12px;">📝 اختبار الفهم القرائي (٣٠ سؤالاً)</button>' +
             '</div>' +
           '</div>';
@@ -1599,32 +1759,83 @@
           renderTasksTab();
         }
 
+        // Recognize page turn and immediately start synchronized audio from the opened page
+        if (isAudioSyncActive) {
+          speakSynchronizedPage(pageWords);
+        } else {
+          stopAudioSync();
+        }
+
+        function goToPage(nextIdx) {
+          if (nextIdx >= 0 && nextIdx < total && nextIdx !== idx) {
+            renderFlipbookReader(book, nextIdx);
+          }
+        }
+
+        // Touch & Pointer Swipe Left/Right to flip pages
+        var stageEl = document.getElementById('flipbookSwipeStage');
+        if (stageEl) {
+          var startX = null;
+          stageEl.addEventListener('touchstart', function (ev) {
+            if (ev.touches && ev.touches.length) startX = ev.touches[0].clientX;
+          }, { passive: true });
+          stageEl.addEventListener('touchend', function (ev) {
+            if (startX === null || !ev.changedTouches || !ev.changedTouches.length) return;
+            var dx = ev.changedTouches[0].clientX - startX;
+            startX = null;
+            if (Math.abs(dx) > 40) {
+              if (dx > 0) goToPage(idx + 1);
+              else goToPage(idx - 1);
+            }
+          }, { passive: true });
+
+          stageEl.addEventListener('pointerdown', function (ev) {
+            startX = ev.clientX;
+          });
+          stageEl.addEventListener('pointerup', function (ev) {
+            if (startX === null) return;
+            var dx = ev.clientX - startX;
+            startX = null;
+            if (Math.abs(dx) > 45) {
+              if (dx > 0) goToPage(idx + 1);
+              else goToPage(idx - 1);
+            }
+          });
+        }
+
         var prevBtn = document.getElementById('flipPrevBtn');
         if (prevBtn) {
-          prevBtn.addEventListener('click', function () {
-            if (idx > 0) renderFlipbookReader(book, idx - 1);
-          });
+          prevBtn.addEventListener('click', function () { goToPage(idx - 1); });
         }
         var nextBtn = document.getElementById('flipNextBtn');
         if (nextBtn) {
-          nextBtn.addEventListener('click', function () {
-            if (idx < total - 1) renderFlipbookReader(book, idx + 1);
-          });
+          nextBtn.addEventListener('click', function () { goToPage(idx + 1); });
         }
         var finishBtn = document.getElementById('flipFinishQuizBtn');
         if (finishBtn) {
           finishBtn.addEventListener('click', function () {
+            isAudioSyncActive = false;
+            stopAudioSync();
             renderStoryQuiz30(book);
           });
         }
-        document.getElementById('flipToggleTextBtn').addEventListener('click', function () {
-          var box = document.getElementById('flipSummaryBox');
-          box.style.display = box.style.display === 'none' ? 'block' : 'none';
-        });
         document.getElementById('modalSpeakBtn').addEventListener('click', function () {
-          speakArabic(cur.type === 'text' ? cur.text : book.storyText);
+          isAudioSyncActive = !isAudioSyncActive;
+          if (isAudioSyncActive) {
+            this.textContent = '🔊 الصوت متزامن (نشط) — إيقاف';
+            this.style.background = '#16a34a';
+            this.style.color = '#fff';
+            speakSynchronizedPage(pageWords);
+          } else {
+            this.textContent = '🔊 تشغيل الصوت المتزامن مع الصفحات';
+            this.style.background = '';
+            this.style.color = '';
+            stopAudioSync();
+          }
         });
         document.getElementById('modalGoQuizBtn').addEventListener('click', function () {
+          isAudioSyncActive = false;
+          stopAudioSync();
           renderStoryQuiz30(book);
         });
       }
@@ -1820,10 +2031,9 @@
       });
 
       closeModalBtn.addEventListener('click', function () {
-        modal.classList.remove('is-open');
-        if ('speechSynthesis' in window) {
-          try { window.speechSynthesis.cancel(); } catch (e) {}
-        }
+        isAudioSyncActive = false;
+        stopAudioSync();
+        modal.classList.remove('is-open', 'is-fullscreen');
       });
 
       renderBooks();
