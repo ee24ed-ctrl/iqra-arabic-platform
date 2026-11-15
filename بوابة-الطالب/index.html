@@ -852,6 +852,7 @@
       <!-- Filter Pills: الكل | المنجزة | الغير منجزة -->
       <div class="filter-pills-row" role="tablist" aria-label="تصفية الكتب">
         <button type="button" class="filter-pill-btn active" data-filter="all">الكل</button>
+        <button type="button" class="filter-pill-btn" data-filter="kids_8_12">قصص الابتدائية (٨-١٢)</button>
         <button type="button" class="filter-pill-btn" data-filter="completed">المنجزة</button>
         <button type="button" class="filter-pill-btn" data-filter="uncompleted">الغير منجزة</button>
       </div>
@@ -993,6 +994,7 @@
   <script src="../assets/js/auth-system.js"></script>
   <script src="../assets/js/global-header.js"></script>
   <script src="../assets/js/weekly-stories.js"></script>
+  <script src="../assets/js/kidzz-stories-8-12.js"></script>
   <script>
     (function () {
       'use strict';
@@ -1125,6 +1127,26 @@
       }
 
       loadBookStates();
+      if (Array.isArray(window.KIDZZ_STORIES_8_12)) {
+        window.KIDZZ_STORIES_8_12.forEach(function (st) {
+          if (!LEVEL_Z_BOOKS.some(function (b) { return b.id === st.id; })) {
+            LEVEL_Z_BOOKS.push({
+              id: st.id,
+              title: st.title,
+              ageGroup: st.ageGroup || '8-12',
+              stars: st.stars || 35,
+              cover: st.cover || '../assets/illustrations/paper-book-frame.jpg',
+              sourceUrl: st.sourceUrl || '',
+              readDone: false,
+              listenDone: false,
+              quizDone: false,
+              storyText: st.storyText,
+              quiz: st.quiz
+            });
+          }
+        });
+        loadBookStates();
+      }
       setStars(getStars());
 
       // =================================================================
@@ -1197,6 +1219,7 @@
         booksGrid.innerHTML = '';
         var filtered = LEVEL_Z_BOOKS.filter(function (b) {
           var isCompleted = b.readDone && b.listenDone && b.quizDone;
+          if (activeFilter === 'kids_8_12') return b.ageGroup === '8-12';
           if (activeFilter === 'completed') return isCompleted;
           if (activeFilter === 'uncompleted') return !isCompleted;
           return true;
@@ -1216,7 +1239,7 @@
               '</div>' +
             '</div>' +
             '<div class="book-cover-stage">' +
-              '<img src="' + b.cover + '" alt="' + b.title + '" class="book-cover-img" data-book-id="' + b.id + '" data-action="read">' +
+              '<img src="' + b.cover + '" alt="' + b.title + '" class="book-cover-img" data-book-id="' + b.id + '" data-action="read" onerror="this.onerror=null;this.src=\'../assets/illustrations/paper-book-frame.jpg\';">' +
             '</div>' +
             '<div class="book-card-actions">' +
               '<button type="button" class="book-action-btn btn-act-read ' + (b.readDone ? 'is-done' : '') + '" data-book-id="' + b.id + '" data-action="read">' +
@@ -1304,7 +1327,7 @@
           renderTasksTab();
           modalBody.innerHTML =
             '<div style="text-align:center;margin-bottom:14px;">' +
-              '<img src="' + book.cover + '" alt="' + book.title + '" style="width:130px;height:185px;object-fit:cover;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,0.15);">' +
+              '<img src="' + book.cover + '" alt="' + book.title + '" style="width:130px;height:185px;object-fit:cover;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,0.15);" onerror="this.onerror=null;this.src=\'../assets/illustrations/paper-book-frame.jpg\';">' +
             '</div>' +
             '<div style="background:#f5fbf4;border:1.5px solid #dcf4d9;border-radius:16px;padding:16px;font-size:1.15rem;line-height:2;font-weight:800;color:#1e293b;margin-bottom:14px;">' +
               book.storyText +
@@ -1312,6 +1335,7 @@
             '<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">' +
               '<button type="button" id="modalSpeakBtn" class="btn-lets-play" style="max-width:200px;background:var(--indigo-header);">🔊 قراءة صوتية للنص</button>' +
               '<button type="button" id="modalGoQuizBtn" class="btn-lets-play" style="max-width:200px;">📝 انتقل إلى الاختبار</button>' +
+              (book.sourceUrl ? '<a href="' + book.sourceUrl + '" target="_blank" rel="noopener noreferrer" class="btn-lets-play" style="max-width:210px;background:#0f766e;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;">📖 اقرأ القصة كاملة</a>' : '') +
             '</div>';
 
           document.getElementById('modalSpeakBtn').addEventListener('click', function () {

@@ -1326,6 +1326,7 @@
   <!-- Global Auth & Unified Header Scripts -->
   <script src="../assets/js/auth-system.js"></script>
   <script src="../assets/js/skill-games.js"></script>
+  <script src="../assets/js/kidzz-stories-8-12.js"></script>
   <script src="../assets/js/global-header.js"></script>
 
   <script>
@@ -1425,6 +1426,14 @@
           cover: '../assets/illustrations/quiz-celebration.jpg'
         }
       ];
+
+      if (Array.isArray(window.KIDZZ_STORIES_8_12)) {
+        window.KIDZZ_STORIES_8_12.forEach(function (st) {
+          if (!STORIES_LIBRARY.some(function (x) { return x.id === st.id; })) {
+            STORIES_LIBRARY.push(st);
+          }
+        });
+      }
 
       var BADGES_CATALOG = [
         { id: 'b1', icon: '👑', title: 'وسام بطل تحدي القراءة', stars: 50, desc: 'لإتمام قصص التحدي الأسبوعي بامتياز' },
@@ -1914,7 +1923,7 @@
           var isSel = st.id === selectedStoryId ? 'selected' : '';
           return (
             '<div class="story-pick-card ' + isSel + '" data-story-id="' + st.id + '">' +
-              '<img class="story-pick-cover" src="' + st.cover + '" alt="' + st.title + '">' +
+              '<img class="story-pick-cover" src="' + st.cover + '" alt="' + st.title + '" onerror="this.onerror=null;this.src=\'../assets/illustrations/paper-book-frame.jpg\';">' +
               '<div class="story-pick-title">' + st.title + '</div>' +
               '<div style="font-size:0.75rem;color:#476288;font-weight:800;">' + st.level + ' • ⭐ ' + st.stars + ' نجمة</div>' +
             '</div>'
