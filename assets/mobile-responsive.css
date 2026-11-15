@@ -136,17 +136,34 @@ body {
   background: linear-gradient(180deg, #2789ff 0%, #0d5bd1 52%, #0741a6 100%) !important;
   border-color: #08439c !important;
   color: #ffffff !important;
-  border-radius: 999px !important;
+  border-radius: 12px !important;
   font-weight: 800 !important;
+  line-height: 1.2 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 5px;
 }
 
 .btn-outline-primary,
 .btn-outline-dark {
-  border-radius: 999px !important;
+  border-radius: 12px !important;
   border: 1.5px solid #0d52b8 !important;
   color: #082f68 !important;
   background: #f2f7fd !important;
   font-weight: 800 !important;
+  line-height: 1.2 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 5px;
+}
+
+.btn-sm {
+  height: 34px !important;
+  min-height: 34px !important;
+  padding: 0 12px !important;
+  line-height: 1 !important;
 }
 
 .portal-footer,

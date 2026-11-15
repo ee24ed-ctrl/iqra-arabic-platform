@@ -125,12 +125,44 @@
       height: auto;
     }
 
-    #roleFilterBtns .btn,
+    #roleFilterBtns {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      align-items: stretch;
+    }
+
+    #roleFilterBtns .btn {
+      width: 100% !important;
+      height: 36px !important;
+      min-height: 36px !important;
+      padding: 0 6px !important;
+      margin: 0 !important;
+      line-height: 1.1 !important;
+      border-radius: 12px !important;
+      font-size: 0.7rem !important;
+      font-weight: 800 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     .dash-card .btn-sm {
-      font-size: 0.7rem;
-      padding: 4px 9px;
-      border-radius: 999px;
-      font-weight: 800;
+      height: 34px !important;
+      min-height: 34px !important;
+      padding: 0 12px !important;
+      line-height: 1 !important;
+      border-radius: 12px !important;
+      font-size: 0.72rem !important;
+      font-weight: 800 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 5px;
     }
 
     /* Responsive Compact Tables for Mobile (جداول متناسقة لشاشة الجوال) */
@@ -174,8 +206,15 @@
     }
 
     .admin-data-table tbody td .btn-sm {
-      font-size: 0.65rem;
-      padding: 2px 7px;
+      height: 26px !important;
+      min-height: 26px !important;
+      font-size: 0.66rem !important;
+      padding: 0 8px !important;
+      line-height: 1 !important;
+      border-radius: 8px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
     }
 
     .admin-data-table code {
@@ -208,9 +247,13 @@
         font-size: 0.82rem;
         padding: 9px 10px;
       }
+      #roleFilterBtns {
+        grid-template-columns: repeat(6, 1fr);
+      }
       #roleFilterBtns .btn, .dash-card .btn-sm {
-        font-size: 0.8rem;
-        padding: 5px 12px;
+        font-size: 0.78rem !important;
+        height: 38px !important;
+        min-height: 38px !important;
       }
     }
 
