@@ -11,7 +11,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%b7%d8%a7%d8%a6%d8%b1-%d8%a7%d9%84%d8%b0%d9%87%d8%a8%d9%8a/",
-    "storyText": "قصة الطائر الذهبي تحكي مغامرة ثلاثة إخوة ينطلقون في رحلة للبحث عن طائر مفقود وسط الغابة السوداء، ويواجهون مواقف شجاعة ومفاجآت مدهشة.",
+    "storyText": "تدور أحداث قصة الطائر الذهبي في إطار شيق وممتع للأطفال، حيث تبدأ القصة بعلاقة صداقة قوية بين ملك جزر الزمرد وملك جزر الكناري، اللذان كانا يتبادلان الهدايا بشكل دائم. في يوم من الأيام، يرسل ملك جزر الكناري إلى صديقه هدية مميزة، وهي طائر ذهبي نادر وجميل. أحب ملك الزمرد الطائر كثيرًا، وأوصى أسرته بالاعتناء به جيدًا أثناء غيابه. لكن الأحداث تتعقد عندما تتدخل الخالة الشريرة، التي كانت تكره أبناء الملك، فتترك الطائر يهرب إلى الغابة السوداء. يغضب الملك عند عودته ويأمر بنفي أبنائه الثلاثة حتى يعيدوا الطائر. تنطلق رحلة الإخوة الثلاثة في مغامرات مشوقة، يواجهون فيها الصعاب ويظهرون شجاعتهم. كل واحد منهم يلتقي بأميرة في مأزق، فيساعدها ويعود بها إلى قصر الملك مع الطائر الذهبي.\n\nتتوالى الأحداث وسط أجواء من التشويق والمفاجآت التي تجذب الأطفال، وتعلمهم قيم الشجاعة، التعاون، والوفاء. قصص الأطفال مثل قصة الطائر الذهبي تلهم الخيال وتنمي حب المغامرة، مع خاتمة سعيدة تحمل دروسًا مهمة في الحياة.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الطائر الذهبي»؟",
       "options": [
@@ -20,7 +20,32 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الطائر-الذهبي-21.jpg"
+    ],
+    "pageCount": 22
   },
   {
     "id": "kidzz_8_12_2",
@@ -32,7 +57,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/البلبل-والإمبراطور_1.jpg",
     "sourceUrl": "https://kidzzstory.com/story/emperor-and-nightingale-story-pdf/",
-    "storyText": "تعلم قصة البلبل والإمبراطور طفلك قيمة التسامح من خلال عودة البلبل الحقيقي لإنقاذ حياة الإمبراطور المريض رغم أنه طرده سابقاً.",
+    "storyText": "تُعد قصة البلبل والإمبراطور واحدة من أروع الحكايات العالمية المستوحاة من الكاتب هانس كريستيان أندرسن، والتي تأخذ الأطفال في رحلة ساحرة إلى قصر إمبراطور صيني. تدور الأحداث حول بلبل صغير يمتلك صوتاً يخطف القلوب، لدرجة أن غناءه أبكى الإمبراطور نفسه. لكن الأمور تتغير عندما يظهر عصفور آلي مرصع بالجواهر، مما يجعل الإمبراطور يفضل اللمعان المزيف على الصوت الطبيعي الصادق، ويقوم بطرد البلبل الحقيقي. فماذا سيحدث عندما تتعطل الآلة ويمرض الإمبراطور؟ وهل سيعود البلبل الصغير لإنقاذه؟\n\nمن خلال قصة البلبل والإمبراطور، سيتعلم طفلك قيمة التسامح والعفو عند المقدرة، وذلك عندما يقرر البلبل الحقيقي العودة للغناء وإنقاذ حياة الإمبراطور المريض رغم أنه طرده في الماضي. كما توضح القصة بأسلوب ممتع أن الجمال الحقيقي يكمن في الطبيعة والجوهر الصادق، وليس في الأشياء المصطنعة أو المظاهر البراقة المليئة بالجواهر، مما يعزز لدى الطفل تقدير الأشياء الأصيلة والقيم النبيلة.\n\nتحكي قصة البلبل والإمبراطور عن إمبراطور صيني اكتشف بلبلاً حقيقياً يغرد بصوت ساحر في حديقته، فأحضره لقصره وبكى من شدة تأثره بغنائه. لكن عندما تلقى الإمبراطور بلبلاً آلياً مرصعاً بالجواهر، فُتن بمظهره وتكراره لنفس الألحان، فطرد البلبل الحقيقي. بعد عام، تعطل البلبل الآلي وصدئ، ومرت سنوات مرض بعدها الإمبراطور وأشرف على الموت، تاركاً إياه وحيداً وخائفاً. في لحظاته الأخيرة، عاد البلبل الحقيقي ليغرد له من النافذة، فشفاه صوته العذب وأعاد له الحياة. اعتذر الإمبراطور للبلبل، فسامحه العصفور ووعده بالغناء له دائماً وإخباره بأحوال مملكته، لتنتهي القصة باستعادة الإمبراطور لصحته ومفاجأته للجميع.\n\nتحميل PDF تحميل الصور لا تنسي فك الضغط عند تحميل الصور.. أو استمتع بتحميل القصة PDF &times; قراءة قصة البلبل والإمبراطور مكتوبةكان يا ما كان في قديم الزمان إمبراطور صيني يعيش في أجمل قصر في الدنيا، وكانت حديقته تحتوي على أجمل الزهور وأغربها. وعلى أحد أغصان شجرة كبيرة مزهرة في هذه الحديقة أقام بلبل عشه. وكان لهذا البلبل تغريد عذب، لدرجة أن كل من كان يسمعه في الجوار يتوقف عن العمل لينصت لشدوه.\n\nكان الزوار يتوافدون على مدينة الإمبراطور من كل الأقطار، ويقفون منبهرين أمام القصر والحديقة. لكنهم عندما يسمعون البلبل يغرد كانوا يصيحون جميعاً: &#8220;هذا لعجيب!&#8221;.\n\nوكانوا يتكلمون وهم مفتونون بتغريد العصفور حتى وصلت الإشاعة إلى مسامع الإمبراطور فتملكه الغضب.\n\nقال الملك العجوز: &#8220;ما هذا البلبل؟ إنني لا أعرفه، أهو موجود في إمبراطوريتي وحديقتي ولم أسمع عنه قط؟ ائتوني به!&#8221;.\n\nتمت تحضيرات غير عادية في القصر لاستقبال المطرب الشهير. لمعت جدران ومربعات الخزف الصيني بأشعة مائة ألف مصباح ذهبي. وفي القاعة الكبرى حيث كان يجلس الملك، وضع مجثم من ذهب لاستقبال البلبل.\n\nتعلقت الأبصار كلها بالعصفور الرمادي الصغير الذي كان يغرد بطريقة عذبة وساحرة حتى نزلت الدموع من عيني الإمبراطور.\n\nنعم سالت الدموع على خدي الرجل العجوز والبلبل يغرد أعذب فأعذب. كان شدوه يصل أعماق القلوب، ونال نجاحاً منقطع النظير. وأصبحت المدينة كلها تتكلم عن العصفور العجيب الذي صار لؤلؤة المملكة.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «البلبل والإمبراطور»؟",
       "options": [
@@ -41,7 +66,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/البلبل-والإمبراطور_1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/البلبل-والإمبراطور-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/البلبل-والإمبراطور-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/البلبل-والإمبراطور-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/البلبل-والإمبراطور-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/البلبل-والإمبراطور-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/البلبل-والإمبراطور-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/البلبل-والإمبراطور-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/البلبل-والإمبراطور-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/البلبل-والإمبراطور-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/البلبل-والإمبراطور-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/البلبل-والإمبراطور-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/البلبل-والإمبراطور-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/البلبل-والإمبراطور-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/البلبل-والإمبراطور-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/البلبل-والإمبراطور-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/البلبل-والإمبراطور-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/البلبل-والإمبراطور-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_3",
@@ -53,7 +99,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%b2%d8%b1-%d8%a7%d9%84%d9%85%d8%b3%d8%ad%d9%88%d8%b1/",
-    "storyText": "قصة الزر المسحور تحكي عن بوسطجي يجد زرًا غريبًا يتحول لاحقًا إلى خنفساء سحرية. تتبع القصة رحلة البحث عن صاحب الزر وحل لغزه.",
+    "storyText": "في عالم قصص الأطفال، تُعد قصة الزر المسحور من القصص التي تجمع بين السحر والمغامرة. تحكي القصة عن بوسطجي يُدعى شفيق، يعيش وحيدًا في بيت صغير، ويقضي يومه في توزيع الرسائل على أهل قريته. في أحد الأيام العادية، يجد شفيق زرًا أحمر غامضًا في حقيبته، لا يعرف من أين جاء أو لمن ينتمي. بعد أن يحاول جاهدًا إعادة الزر إلى صاحبه، يفشل في إيجاد أي شخص يبحث عنه. وفي الليل، يبدأ الزر بالتحدث إليه، طالبًا منه أن يعيده إلى مكانه الحقيقي.\n\nتبدأ مغامرة شفيق في محاولة فك لغز الزر المسحور. يقوده البحث إلى قرية بعيدة، حيث يجد زهرة حمراء تُعرف بـ&#8221;زهرة البرقوق&#8221;. عندما يضع الزر على الزهرة، يحدث تحول سحري، ويكتشف شفيق أن الزر كان في الأصل خنفساء مسحورة. تُختتم القصة بلمسة من الحظ السعيد لشفيق، الذي يجد خاتمًا سحريًا يكافئه على جهوده. تُعتبر قصة الزر المسحور قصة شيقة ومثيرة للأطفال، تحمل بين طياتها مغزى عن الأمانة والمغامرة، مما يجعلها واحدة من أمتع القصص للأطفال.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الزر المسحور»؟",
       "options": [
@@ -62,7 +108,32 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الزر-المسحور-21.jpg"
+    ],
+    "pageCount": 22
   },
   {
     "id": "kidzz_8_12_4",
@@ -74,7 +145,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%ac%d9%88%d8%a7%d9%87%d8%b1-%d8%a7%d9%84%d8%ae%d8%a7%d9%84%d8%af%d8%a9/",
-    "storyText": "تدور قصة الجواهر الخالدة حول شقيقين في روما القديمة، حيث تكشف لنا الحكاية أن عائلتنا الصغيرة والقناعة هما أعظم الكنوز وليس المال.",
+    "storyText": "في عالم قصص الأطفال، تبرز &#8220;قصة الجواهر الخالدة&#8221; كحكاية مليئة بالعبر والدروس. تدور أحداث القصة في مدينة روما القديمة، حيث عاش شقيقان يختلفان في شخصياتهما وتوجهاتهما. أنطونيو، الأخ الأكبر، كان مهووسًا بجمع الثروات والتباهي بها، فاشترى القصور واقتنى الجياد ليُظهر للناس مدى غناه. ولكنه كان بخيلًا لا يساعد الفقراء ولا يعرف معنى الكرم. في المقابل، كان ألبرتو، الأخ الأصغر، مختلفًا تمامًا؛ فقد أحب العلم والمعرفة ولم يهتم بجمع المال، بل فضّل القراءة وتثقيف نفسه.\n\nتتعقد القصة عندما يقع ألبرتو في حب فتاة بسيطة تدعى كورنيليا. لم تكن كورنيليا ثرية أو متألقة بالجمال، لكنها كانت ذكية، قنوعة، ومفعمة بالأخلاق الحميدة. رفض أنطونيو فكرة زواج أخيه منها، حيث كان يرى أن الزواج المثالي يكون من فتاة ثرية تزيد من ثروتهما. إلا أن ألبرتو لم يلتفت لنصيحة أخيه، وتزوج كورنيليا. عاش الزوجان في سعادة بسيطة، ورزقا بخمسة أطفال، بينما كان أنطونيو يعاني في حياته الزوجية مع زوجته أوفيديا التي أنفقت ثروتهما على المظاهر البراقة. وهكذا، تعكس القصة دروسًا قيمة عن أهمية القناعة والسعادة الحقيقية، والتي تكمن في الحب والأسرة وليس في المال والمجوهرات الباهظة. قصة &#8220;الجواهر الخالدة&#8221; هي بالفعل قصة للأطفال مليئة بالحكمة وتعلمنا أن أغلى الكنوز هي تلك التي لا تُقدر بثمن.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الجواهر الخالدة»؟",
       "options": [
@@ -83,7 +154,35 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الجواهر-الخالدة-24.jpg"
+    ],
+    "pageCount": 25
   },
   {
     "id": "kidzz_8_12_5",
@@ -95,7 +194,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d9%82%d9%84%d8%a8-%d9%85%d9%86-%d8%b0%d9%87%d8%a8/",
-    "storyText": "تدور قصة قلب من ذهب حول الطبيب شارل وايت الذي كرس حياته لمساعدة الفقراء، وعالج مريضًا بطريقة غير تقليدية ليعيد الأمل لعائلته.",
+    "storyText": "في عالم قصص الأطفال الذي يزخر بالقيم والفضائل، تأتي قصة &#8220;قلب من ذهب&#8221; لتكون نموذجًا رائعًا للأخلاق والإنسانية. تحكي القصة عن الشاب شارل وايت، الذي ينتمي إلى الهنود الحمر، وكان يحمل قلبًا مليئًا بالطيبة والحب للآخرين. على الرغم من التمييز والظروف القاسية التي واجهها، اختار شارل أن يصبح طبيبًا ليكرس حياته لمساعدة الفقراء، بغض النظر عن لونهم أو أصلهم. لقد ذاع صيته كطبيب الرحمة، حتى أطلق عليه الناس لقب &#8220;أبي الفقراء&#8221; بسبب تعاطفه ومساعدته الدائمة للضعفاء. كانت قصته تبدأ عندما زارته سيدة عجوز طلبت مساعدته لعلاج زوجها المريض. لم يكن مرض الرجل جسديًا بل نفسيًا، ناتج عن خسارة كبيرة في التجارة. بدلًا من تقديم الدواء التقليدي، قرر شارل تقديم المساعدة المالية للرجل ليعيد بناء حياته. وكذلك دعم تعليم ابنته دورا التي كانت تحلم بأن تصبح طبيبة.\n\nمن خلال هذه القصة الملهمة، يتعلم الأطفال أن الإنسانية لا تُقاس بالمادة أو المظهر الخارجي، بل بالعطاء الصادق من القلب. تُعد قصة &#8220;قلب من ذهب&#8221; رسالة عن الحب، التضحية، والتغلب على الصعاب، حيث يُظهر شارل أن القلب النقي قادر على تغيير حياة من حوله.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «قلب من ذهب»؟",
       "options": [
@@ -104,7 +203,37 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-25.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/قلب-من-ذهب-26.jpg"
+    ],
+    "pageCount": 27
   },
   {
     "id": "kidzz_8_12_6",
@@ -116,7 +245,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية_1.jpg",
     "sourceUrl": "https://kidzzstory.com/story/juha-shoes-story-pdf/",
-    "storyText": "تعلم قصة جحا والأحذية مهارة التفكير النقدي وسرعة البديهة خلال مغامرة مضحكة لردع ضيوف محتالين فقام ببيع أحذيتهم لكي يطعمهم بها.",
+    "storyText": "هل سبق أن حاول أحدهم استغلال طيبتك أو نسيانك لبعض الأمور؟ في قصة جحا والأحذية، نعيش مغامرة طريفة ومليئة بالدروس الممتعة، حيث يظن مجموعة من الأشخاص أن بإمكانهم خداع جحا لتناول أشهى المأكولات التي تطبخها زوجته راوية، مستغلين في ذلك طيبة قلبه ونسيانه المتكرر. تبدأ أحداث القصة عندما يطرق هؤلاء الضيوف غير المدعوين باب جحا، مدعين أنه قام بدعوتهم مسبقاً إلى العشاء.\n\nورغم حيرة جحا وارتباكه في البداية، إلا أنه يستقبلهم بكرمه المعتاد ويطلب منهم خلع أحذيتهم قبل الدخول. وهنا تبدأ الحبكة الشيقة! فبدلاً من الاستسلام لهذه الخدعة الماكرة، يقرر جحا أن يلقنهم درساً لن ينسوه أبداً باستخدام سلاح الذكاء وسرعة البديهة. يخطط لحيلة عبقرية ومضحكة في نفس الوقت، حيث يخرج إلى السوق لتدبير طعام العشاء بطريقة لن تخطر على بال أحد من ضيوفه الطامعين.\n\nتعلم قصة جحا والأحذية طفلك مهارات التفكير النقدي وحل المشكلات بطريقة إبداعية من خلال تتبع خطة جحا الذكية للرد على من حاولوا استغلاله. سيكتشف طفلك كيف أن الاحتيال والطمع يؤديان دائماً إلى عواقب وخيمة، وذلك من خلال النهاية المضحكة والصادمة للضيوف عندما يدركون أين اختفت أحذيتهم التي تركوها عند الباب! إنها حكاية مسلية تجمع بين الفكاهة والحكمة، وتترك في ذهن الطفل أثراً إيجابياً حول أهمية التفكير السليم وحماية النفس.\n\nفي يوم من الأيام، قرر أربعة أشخاص استغلال نسيان جحا الدائم لتناول أشهى المأكولات التي تعدها زوجته. ذهبوا إلى منزله وتظاهروا بأنه قد دعاهم مسبقاً لعشاء فاخر. ورغم حيرة جحا، منعه أدبه من طردهم، فرحب بهم وطلب منهم خلع أحذيتهم عند باب الدخول.\n\nعندما أخبر زوجته، أدركا معاً أن هؤلاء الضيوف مجرد محتالين طامعين، خاصة وأنه لم يكن لديهم طعام يكفي في المنزل. هنا، ابتكر جحا خطة في غاية الذكاء ليلقنهم درساً. طلب منهم الانتظار بحجة الذهاب لشراء الأرز، لكنه في الحقيقة أخذ أحذيتهم التي تركوها بالخارج وتوجه إلى السوق لبيعها.\n\nاشترى جحا بثمن الأحذية طعاماً لذيذاً وقدمه لضيوفه الذين أكلوا بشراهة. وعندما أرادوا المغادرة وبحثوا عن أحذيتهم، فاجأهم جحا بالحقيقة المضحكة: لقد باع أحذيتهم ليشتري لهم العشاء، وبذلك تكون أحذيتهم قد استقرت في بطونهم!\n\nتحميل PDF تحميل الصور لا تنسي فك الضغط عند تحميل الصور.. أو استمتع بتحميل القصة PDF &times; قراءة قصة جحا والأحذية مكتوبةحسن: انظروا، هذا منزل جحا. ليلى: من هو جحا؟ زهرة: أوه، إنه شخص لطيف، وكريم جدا. نجيب: لكنه كثير النسيان! زهرة: وزوجته راوية طباخة ماهرة. حسن: فطائر دجاجها مشهورة! نجيب: وكذلك حلوى الرز بالحليب. ليلى: كفى، معدتي صارت تقرقر! زهرة: أنا جائعة أيضا. والوقت وقت عشاء. حسن: لم لا نحتال على جحا؟ تعالوا نتظاهر أنه دعانا إلى العشاء. ليلى: فكرة عظيمة! إذا كان كثير النسيان، يمكن أن يصدقنا. نجيب: وهو مهذب، يمنعه أدبه من أن يردنا.\n\nجحا: مرحبا يا طيبون. ماذا أستطيع أن أفعل لكم؟ حسن: ألا تذكر؟ ليلى: دعوتنا إلى العشاء. جحا: صحيح؟ زهرة: نعم. قلت لنا إن راوية ستعد فطيرة دجاج وحلوى الرز بالحليب! نجيب: هل فعلا قلت ذلك؟ جحا: إذن اخلعوا أحذيتكم وتفضلوا. سأعود بعد لحظة.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «جحا والأحذية»؟",
       "options": [
@@ -125,7 +254,35 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية_1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جحا-والأحذية-24.jpg"
+    ],
+    "pageCount": 25
   },
   {
     "id": "kidzz_8_12_7",
@@ -137,7 +294,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a3%d9%86%d8%af%d8%b1%d9%88-%d9%83%d9%84%d8%a7%d8%b3-%d9%88%d8%a7%d9%84%d8%a3%d8%b3%d8%af/",
-    "storyText": "قصة أندرو كلاس والأسد تحكي عن عبد هارب يجد صديقًا غير متوقع في أسد. يعترف الأسد بجميله عندما يلتقيان في الساحة الرومانية.",
+    "storyText": "من بين القصص الجميلة التي تحمل في طياتها معاني الوفاء والصداقة تأتي قصة أندرو كلاس والأسد، وهي واحدة من قصص الأطفال التي تروي مغامرات مليئة بالعبر والدروس. تدور أحداث القصة في زمن الإمبراطورية الرومانية، حيث كان الرق منتشرًا، وكانت حياة العبيد مليئة بالظلم والقسوة. في هذه الظروف الصعبة، نجد أندرو كلاس، وهو عبد يعيش حياة مليئة بالعذاب على يد سيده الروماني القاسي. لم يعد أندرو كلاس يحتمل الألم، فقرر الهروب ليجد نفسه في غابة كثيفة مظلمة. وبينما هو مختبئ في أحد الكهوف، يلتقي بأسد ضخم مصاب بألم في قدمه. ورغم خوفه الشديد، شعر أندرو بالشفقة على الأسد وأخذ يساعده في إزالة الشوكة العالقة في مخلبه. ومن هنا بدأت الصداقة بين الإنسان والحيوان، حيث بدأ الأسد يحمي أندرو ويشاركه الطعام والمأوى.\n\nتستمر قصة أندرو كلاس والأسد عندما يُقبض على أندرو ويحكم عليه بالإعدام. يتم إدخاله إلى الساحة حيث ينتظره الأسد ليفترسه أمام الجمهور. ولكن المفاجأة كانت في رد فعل الأسد الذي تذكر جميل أندرو ورفض إيذاءه. هذه القصة تعلم الأطفال قيمًا هامة مثل الوفاء، والاعتراف بالجميل، وكم يمكن للحيوانات أن تكون أوفى من البشر في بعض الأحيان. إنها قصة رائعة مناسبة للأطفال، مليئة بالدروس الإنسانية.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «أندرو كلاس والأسد»؟",
       "options": [
@@ -146,7 +303,37 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-25.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/أندرو-كلاس-والأسد-26.jpg"
+    ],
+    "pageCount": 27
   },
   {
     "id": "kidzz_8_12_8",
@@ -158,7 +345,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d9%8a%d8%aa%d9%8a%d9%85%d8%a7%d8%aa-%d8%a7%d9%84%d8%ab%d9%84%d8%a7%d8%ab%d8%a9/",
-    "storyText": "قصة اليتيمات الثلاثة تروي حكاية ثلاث أخوات يواجهن الحياة بعد وفاة والديهن. بمساعدة خاتم سحري، تتغير حياتهن للأفضل مع التمسك بالفضيلة.",
+    "storyText": "في عالم مليء بالقصص الجميلة للأطفال، تأتي قصة اليتيمات الثلاثة لتروي حكاية مؤثرة وملهمة عن ثلاثة أخوات يواجهن تحديات الحياة بعد وفاة والديهن. في دمشق القديمة، كانت العائلة تعيش في سعادة بفضل والدهم الطيب الحاج حسن الذي كرّس حياته لمساعدة الفقراء بكرم شديد. ولكن بعد رحيله، تُركت البنات الثلاث: رباح، صباح، ونجاح، بمفردهن دون مال أو حماية. ومع ذلك، لم تقف الحياة عند هذا الحد. بفضل شجاعة وذكاء الأخت الصغرى نجاح، قررن العمل بغزل الصوف وبيعه لكسب رزقهن، وهو ما ساعدهن على الصمود في وجه التحديات.\n\nالأحداث تتطور عندما تقرر نجاح إنقاذ غلام صغير يتعرض للظلم وتفتح له بابًا جديدًا للحياة الكريمة. في لحظة غير متوقعة، يعثر الغلام على خاتم سحري داخل سمكة، ليكشف عن قدرات سحرية تمكن البنات من تحقيق أحلامهن وتغيير حياتهن إلى الأبد. لكن مع كل ما يكتسبنه من ثروة ورفاهية، يبقى الخير والكرم في قلوبهن، مستمرات في مساعدة الفقراء كما كان يفعل والديهن. قصة اليتيمات الثلاثة تعلم الأطفال أهمية الصبر والعمل الجاد، وتظهر لهم كيف أن النية الطيبة والكرم يجلبان النجاح والسعادة في نهاية المطاف. هذه القصة مليئة بالمفاجآت واللحظات الإنسانية المؤثرة، مما يجعلها واحدة من أفضل قصص الأطفال.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «اليتيمات الثلاثة»؟",
       "options": [
@@ -167,7 +354,43 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-25.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-26.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-27.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-28.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-29.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-30.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-31.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/اليتيمات-الثلاث-32.jpg"
+    ],
+    "pageCount": 33
   },
   {
     "id": "kidzz_8_12_9",
@@ -179,7 +402,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d9%86%d8%a7%d8%b1-%d9%81%d8%a7%d9%83%d9%87%d8%a9-%d8%a7%d9%84%d8%b4%d8%aa%d8%a7%d8%a1/",
-    "storyText": "قصة النار فاكهة الشتاء تحكي عن اكتشاف الإنسان للنار وكيف غيرت حياته، من التدفئة إلى طهي الطعام وحمايته من الحيوانات المفترسة.",
+    "storyText": "تبدأ قصة &#8220;النار فاكهة الشتاء&#8221; بإحدى الأمسيات الباردة، حيث كانت فاكهة الشتاء تُزين الموائد وتُغمر المنازل بالدفء، جلس ماجد مع أطفاله الثلاثة، سامح، منير، وسميرة. كعادته، بدأ ماجد يسرد عليهم إحدى قصص الأطفال المشوقة، وهذه الليلة كانت عن شيء لا غنى للإنسان عنه: &#8220;النار&#8221;. بدأ ماجد حديثه بسؤال بسيط: &#8220;أتعرفون قصة النار؟&#8221;، ليأخذ أطفاله في رحلة إلى الماضي البعيد. حيث عاش رجل يُدعى &#8220;كابد&#8221; في كهف مع عائلته. عاش الناس في زمن &#8220;كابد&#8221; دون بيوت أو مواقد، يأكلون طعامهم نيئًا، لا يعرفون كيف يشعلون النار. لكن حياتهم تغيرت عندما اكتشف أحد أصدقاء &#8220;كابد&#8221; كيف يشعل النار بحجرين. لم تكن النار مجرد وسيلة للتدفئة فقط، بل أصبحت مصدرًا للإضاءة وطهي الطعام، بل وحتى لحماية الإنسان من الحيوانات المفترسة. وفي لحظة مفصلية، اكتشف كابد طعم اللحم المشوي بعدما سقطت قطعة منه في النار.\n\nمن خلال قصة &#8220;النار فاكهة الشتاء&#8221;، يستمع الأطفال إلى كيف غيرت النار مجرى حياة البشر. وكيف استخدمها الإنسان لإشعال مصابيح الزيت في العصور القديمة. ومع الوقت، تطورت الحضارة إلى أن تم اختراع المصباح الكهربائي. مما جعل النار مصدرًا حيويًا، تمامًا كما تُعد فاكهة الشتاء دفئًا مريحًا في الليالي الباردة. القصة تقدم للأطفال فهمًا عميقًا لأهمية الاكتشافات البشرية في تطور الحضارة.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «النار فاكهة الشتاء»؟",
       "options": [
@@ -188,7 +411,29 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-فاكهة-الشتاء-18.jpg"
+    ],
+    "pageCount": 19
   },
   {
     "id": "kidzz_8_12_10",
@@ -200,7 +445,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%ba%d8%b1%d9%88%d8%b1-%d8%b7%d8%b1%d9%8a%d9%82-%d8%a7%d9%84%d9%83%d8%b3%d9%84/",
-    "storyText": "قصة الغرور طريق الكسل تروي مغامرة فتاة مجتهدة تغتر بنفسها وتبتعد عن دراستها، لتتعلم في النهاية أن الغرور يقود إلى الفشل.",
+    "storyText": "في قصة الغرور طريق الكسل نزور إحدي القرى الهادئة، حيث كان يعيش المعلم خليل، رجل حكيم يؤمن بأن العلم هو مفتاح النجاح والسعادة. وقد غرس هذه القيم في ابنته الجميلة، جميلة، التي كانت متفوقة ومحبوبة من الجميع بفضل اجتهادها وتواضعها. بعد أن أنهت دراستها الابتدائية في قريتها، انتقلت جميلة إلى المدينة لتتابع دراستها الثانوية، حيث سكنت مع عمها الذي كان يعتني بها. تأثرت جميلة بمحيطها الجديد، وخصوصًا بعد انتقال خالتها سلمى إلى العاصمة. سلمى كانت امرأة مغرورة وفاشلة في حياتها، وقد بدأ غرورها يؤثر على جميلة تدريجيًا. كانت جميلة تفضل قضاء الوقت مع خالتها في الأحاديث السطحية عن الموضة والأزياء، مهملة دروسها وواجباتها المدرسية. كانت هذه التحولات مصدر قلق كبير لوالديها، خاصة أن والدها، المعلم خليل، لطالما حذرها من أن الغرور هو طريق الكسل، وأن الكسل يقود إلى الفشل.\n\nمع اقتراب الامتحانات النهائية، ازداد التوتر في بيت جميلة. عاد والدها إلى قريته بعد زيارة مديرة الكلية، التي أخبرته بتراجع مستوى ابنته الدراسي. على الرغم من محاولات جميلة طمأنة عائلتها، كانت الحقيقة قاسية عندما أظهرت نتائج الامتحانات رسوبها. قصة الغرور طريق الكسل هي قصة للأطفال تحمل في طياتها درسًا عظيمًا. تعلمنا أن الاجتهاد والمثابرة هما الطريق الصحيح لتحقيق النجاح، وأن الغرور لا يؤدي إلا إلى الفشل وخيبة الأمل. من خلال هذه القصة، سيتعلم الأطفال أن الاتكال على الحظ أو الانغماس في الترف دون العمل بجد يمكن أن يقود إلى نتائج غير مرغوبة.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الغرور طريق الكسل»؟",
       "options": [
@@ -209,7 +454,44 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-25.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-26.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-27.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-28.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-29.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-30.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-31.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-32.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الغرور-طريق-الكسل-33.jpg"
+    ],
+    "pageCount": 34
   },
   {
     "id": "kidzz_8_12_11",
@@ -221,7 +503,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%a7%d8%a8%d9%86-%d8%a7%d9%84%d8%a8%d8%a7%d8%b1-%d9%88%d8%b4%d9%8a%d8%ae-%d8%a7%d9%84%d8%a8%d8%ad%d8%b1/",
-    "storyText": "قصة الابن البار وشيخ البحر تحكي عن رحلة سليم الشجاعة للبحث عن علاج لأمه، وتجربته في جزيرة مقدسة مع شيخ البحر.",
+    "storyText": "في عالم قصص الأطفال الساحر، تأتي &#8220;قصة الابن البار وشيخ البحر&#8221; لتروي لنا حكاية عن الوفاء، الحب، والشجاعة. في قرية صغيرة على شاطئ لبنان الهادئ، يعيش الصياد يوسف مع عائلته المحبة: زوجته ليلى وأولاده سليم ونبيل وسعاد. سليم، الابن البار، كان يستمع بشغف إلى قصص والده عن البحر وأسراره، خاصة تلك الحكاية المثيرة عن &#8220;شيخ البحر&#8221; الطيب الذي يجوب الأمواج لمساعدة الضالين وإنقاذ الغرقى. لكن سرعان ما تتحول القصص إلى حقيقة عندما تواجه الأسرة تحديًا صعبًا، حيث تصاب الأم بمرض شديد لا يجد له الأطباء علاجًا.\n\nحينما يشعر سليم بالحزن العميق لأمه المريضة، يتخذ قرارًا شجاعًا: أن يذهب إلى الشاطئ للبحث عن &#8220;شيخ البحر&#8221; الأسطوري، على أمل أن يساعده في إيجاد علاج ينقذ أمه. في لحظة غفلة على الشاطئ، يجد نفسه في قارب شيخ البحر في طريقه إلى الجزيرة المقدسة، حيث يتعرف على عالم مليء بالسحر والخير، لكنه لا يستطيع نسيان أهله وحبه العميق لهم. هكذا تبدأ مغامرة سليم وهي قصة مليئة بالدروس المستفادة حول الإخلاص والشجاعة والصبر. هل سيجد سليم طريقة للعودة إلى عائلته؟ وهل ستنجح محاولاته في إنقاذ والدته؟ تابعوا معنا أحداث هذه القصة الشيقة لاكتشاف كيف استطاع الابن البار تحويل الحلم إلى واقع وإعادة البهجة إلى منزله.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الابن البار وشيخ البحر»؟",
       "options": [
@@ -230,7 +512,45 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-25.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-26.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-27.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-28.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-29.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-30.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-31.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-32.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-33.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الابن-البار-وشيخ-البحر-34.jpg"
+    ],
+    "pageCount": 35
   },
   {
     "id": "kidzz_8_12_12",
@@ -242,7 +562,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%b5%d8%b1%d8%a7%d8%b9-%d8%a7%d9%84%d9%88%d8%ad%d9%88%d8%b4/",
-    "storyText": "سامي يكتشف عالم الديناصورات ووحيد القرن في قصة صراع الوحوش، حيث يتعلم عن انقراض الحيوانات والصيد عبر العصور في مغامرة تعليمية مشوقة.",
+    "storyText": "في قصة صراع الوحوش المثيرة والمليئة بالتشويق، يخوض سامي مغامرة فكرية في عالم الحيوانات المنقرضة والوحوش الضخمة. عندما يجد صورة لحيوان ضخم وغريب في مجلة، يثير فضوله لمعرفة المزيد. في حوار ممتع مع والده، يكتشف سامي عالمًا غامضًا مليئًا بالكائنات التي اختفت منذ زمن بعيد، مثل الديناصورات ووحيد القرن. تتعرض القصة لمواضيع مهمة مثل انقراض الحيوانات وأسباب صيد البشر لها. سامي يتعلم عن الصراع القائم بين الإنسان والحيوانات عبر العصور. الديناصورات، تلك الوحوش المرعبة، لم تكن الوحيدة التي واجهت خطر الانقراض، فوحيد القرن والأفيال مهددة أيضاً بسبب الصيد الجائر.\n\nالوالد يوضح لسامي كيف أن البشر يستخدمون عقولهم للتغلب على الحيوانات القوية، لكن ذلك أدى إلى تدمير البيئة وانقراض العديد من الأنواع. القصة تجمع بين المعرفة والمغامرة، حيث يتعلم الأطفال أهمية الحفاظ على الحياة البرية، وكيف أن الصراع بين الإنسان والحيوانات قد يؤدي إلى عواقب وخيمة. في النهاية، يتبنى سامي فكرة أن القوة الحقيقية ليست في الصراع الجسدي، بل في استخدام العقل والتفكير لحل المشاكل. هذه القصة التعليمية والمسلية تقدم للأطفال مغامرة مشوقة عن صراع الوحوش والإنسان، وتعلمهم قيمة الحياة البرية والاحترام المتبادل بين الكائنات.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «صراع الوحوش»؟",
       "options": [
@@ -251,7 +571,29 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/صراع-الوحوش-18.jpg"
+    ],
+    "pageCount": 19
   },
   {
     "id": "kidzz_8_12_13",
@@ -263,7 +605,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%b3%d8%b9%d8%a7%d8%af-%d9%84%d9%88%d9%84%d9%88-%d9%88%d8%a7%d9%84%d8%b3%d9%86%d9%88%d9%86%d9%88/",
-    "storyText": "قصة سعاد لولو والسنونو تحكي عن مغامرة شيقة في المخزن، حيث يلاحق لولو القط السنونوة، لكن الكلب بارود ينقذها ويعيد السلام.",
+    "storyText": "في قصة سعاد لولو والسنونو حيث عالم قصص الأطفال الساحر، نلتقي بسعاد، الفتاة الصغيرة التي تحب اللعب على الأرجوحة واستكشاف الطبيعة من حولها. في أحد الأيام، بينما كانت سعاد تتأرجح، لاحظت السنونوة الطائرة في المخزن القريب. بحماسة، توجهت إلى شوقي، صديقها الوفي، الذي شاركها الفضول لمعرفة ما تفعله السنونوة. انطلقا معًا في رحلة استكشاف، حيث اكتشفا أن الطائر الصغير كان يبني عشًا لصغاره. لكن المفاجآت لم تتوقف عند هذا الحد، إذ ظهر القط لولو، الذي بدا أنه يشتهي الإمساك بالسنونوة وصغارها. مع تعاقب الأحداث، تحولت الأمور إلى مطاردة مثيرة بين القط لولو والكلب بارود، رفيقهم الذي تدخل لإنقاذ الطائر. أظهرت القصة لحظات مشوقة، مليئة بالتحديات والتوتر، لكنها انتهت بعودة السنونوة بسلام إلى عشها.\n\nهذه الحكاية، المليئة بالمغامرات البريئة والمواقف المثيرة، تعد من أجمل قصص الأطفال التي تقدم رسالة عن الشجاعة والصداقة، وتعلم الأطفال أهمية حماية الكائنات الصغيرة. قصة سعاد، لولو، والسنونو تجسد بساطة الحياة الطبيعية وكيف يمكن للأطفال أن يتعلموا من مراقبة الحيوانات والطيور من حولهم. تنقل القصة في طياتها شعوراً بالسعادة والسلام بعد التغلب على التحديات، لتكون مثالًا جميلًا على التعاون بين الأصدقاء في مواجهة الصعاب.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «سعاد لولو والسنونو»؟",
       "options": [
@@ -272,7 +614,44 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-25.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-26.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-27.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-28.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-29.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-30.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-31.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-32.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سعاد-لولو-والسنونو-33.jpg"
+    ],
+    "pageCount": 34
   },
   {
     "id": "kidzz_8_12_14",
@@ -284,7 +663,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%aa%d9%85%d8%ab%d8%a7%d9%84-%d9%85%d9%86-%d8%a7%d9%84%d8%b2%d8%a8%d8%af%d8%a9/",
-    "storyText": "قصة تمثال من الزبدة تحكي عن الطفل أنطونيو الذي أنقذ حفلة الكونت بصنع تمثال بديل من الزبدة، مما فتح له أبواب الشهرة والإبداع.",
+    "storyText": "تأخذنا هذه القصة المدهشة إلى عالم مليء بالإبداع والمثابرة، حيث يظهر الصبي الصغير أنطونيو كانوفا موهبة فنية استثنائية. في قصة للأطفال بعنوان &#8220;تمثال من الزبدة&#8221;، نتعرف على أنطونيو الذي كان يهوى نحت التماثيل منذ صغره. رغم أن والده كان يعمل في قطع الرخام، إلا أنه لم يتعلم فن النحت، لكن موهبة أنطونيو جعلته يلفت الأنظار. بدأت القصة عندما تحطم تمثال مهم في قصر الكونت بيانكو، وكان الوقت ضيقًا لتحضير الحفلة الفخمة.\n\nحينها قرر أنطونيو أن يقدم حلاً جريئًا ويصنع تمثالًا بديلًا من الزبدة المتجمدة، مظهرًا بذلك قدرته الفائقة على الإبداع حتى في أصعب المواقف. صنع أنطونيو التمثال بسرعة وبمهارة لافتة، مدهشًا الجميع، بمن فيهم المثالون الكبار. هذا العمل المدهش فتح له أبواب المجد، حيث عرض الكونت عليه تعليمه في القصر على نفقة الكونت الخاصة. وهكذا، أصبحت هذه &#8220;قصة تمثال من الزبدة&#8221; واحدة من أجمل قصص الأطفال التي تحكي عن الموهبة، والإبداع، والتفاني في تحقيق الحلم.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «تمثال من الزبدة»؟",
       "options": [
@@ -293,7 +672,37 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-25.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/تمثال-من-الزبدة-26.jpg"
+    ],
+    "pageCount": 27
   },
   {
     "id": "kidzz_8_12_15",
@@ -305,7 +714,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة_1.jpg",
     "sourceUrl": "https://kidzzstory.com/story/to-the-top-story-pdf/",
-    "storyText": "تعلم قصة إلى القمة أهمية المثابرة والعمل الجماعي من خلال رحلة نورغاي و إنقاذ زميله من السقوط في الصدع الجليدي للوصول لقمة إفرست.",
+    "storyText": "هل تساءلتم يوماً عن شكل العالم من أعلى نقطة على وجه الأرض؟ مرحباً بكم في رحلة تحبس الأنفاس بين السحاب والجبال الجليدية، حيث نقدم لكم قصة إلي القمة. في هذه المغامرة البطولية المقتبسة من أحداث حقيقية، سيسافر أطفالكم مع بطلين شجاعين، &#8220;إدموند هيلاري&#8221; و&#8221;تينزينغ نورغاي&#8221;، في تحدٍ أسطوري لتسلق جبل إفرست، الجبل الذي طالما اعتبره الناس مستحيلاً ولا يمكن قهره.\n\nوسط العواصف الثلجية القاسية، والانهيارات الجليدية المرعبة، ونقص الأكسجين الخانق، سيعيش طفلك تفاصيل رحلة ملحمية مليئة بالتشويق والمخاطر. وهنا تكمن القيمة التربوية العظيمة، فمن خلال قصة إلي القمة، لن يكتفي طفلك بالاستمتاع بالمغامرة، بل سيتعلم دروساً لا تقدر بثمن. حين يتابع طفلك كيف أنقذ نورغاي حياة هيلاري بشجاعة عندما سقط في صدع جليدي مميت، وكيف تكاتف البطلان لتجاوز الجدار الصخري المستحيل رغم الإرهاق والصقيع، سيدرك أن النجاح العظيم لا يتحقق بالعمل الفردي، بل هو ثمرة للتعاون الصادق والعمل الجماعي. سيتعلم طفلك كيف أن مساعدة الأصدقاء والثقة بهم هي الحبل المتين الذي ينجينا من السقوط في أوقات الشدائد، وأن الإرادة القوية قادرة على اختراق أي حاجز.\n\nهل سينجح البطلان في الوصول إلى قمة العالم ورفع الأعلام؟ وكيف سيكون شعورهما وهما يقفان فوق السحاب؟ استعدوا لرحلة مذهلة ستلهم أطفالكم وتغرس فيهم الشجاعة وقيمة الصداقة والمثابرة. نتمنى لكم قراءة ممتعة مليئة بالتحدي والانتصار.\n\nفي عام 1953، انطلق متسلقان شجاعان، النيوزيلندي &#8220;إدموند هيلاري&#8221; والمرشد &#8220;تينزينغ نورغاي&#8221; من قبيلة الشيربا، في مغامرة تاريخية محفوفة بالمخاطر لقهر جبل إفرست، أعلى قمة وأكثر الأماكن برودة على وجه الأرض. انضم البطلان إلى حملة بريطانية ضخمة بعد أن فشلت عشر محاولات سابقة ولقي العديد من المتسلقين حتفهم. بدأت الرحلة الشاقة بمسير لمسافة ثلاثمائة كيلومتر عبر الأدغال الحارة والخطرة للوصول إلى سفح الجبل فقط. وما إن بدأ التسلق، حتى واجها تحديات قاسية اختبرت قوة تحملهما؛ فإفرست لم يكن مجرد جبل، بل وحشا يرسل عواصفه العاتية، وصقيعه الذي يصل إلى أربعين درجة تحت الصفر، وانهياراته الثلجية المفاجئة، فضلا عن نقص الأكسجين الخانق في منطقة الموت.\n\nرغم هذه الأهوال، تسلح هيلاري ونورغاي بالشجاعة والعمل الجماعي المذهل الذي شكل الفارق بين الحياة والموت. ففي إحدى المرات، سقط هيلاري في صدع جليدي عميق ومميت، لكن نورغاي أنقذ حياته بفضل سرعة بديهته وتثبيته للحبل. وفي موقف آخر، تجمد أنبوب الأكسجين الخاص بنورغاي وكاد يختنق، فتدخل هيلاري فورا وأنقذ حياته. وعندما تراجع زملاؤهما بسبب الإرهاق الشديد، حمل البطلان العبء الأكبر، وواصلا الصعود المتعب.\n\nتجلت ذروة التحدي قرب القمة حين اعترضهما جدار صخري أملس ومرعب يبلغ ارتفاعه اثني عشر مترا، لكن هيلاري بذكائه تمكن من اختراقه عبر حشر نفسه في صدع ضيق. وفي صباح التاسع والعشرين من مايو، تكللت جهودهما بالنجاح المطلق، ووصلا أخيرا إلى ذروة العالم ليقفا معانقين السحاب. تبادلا التهاني الحارة، ورفعا الأعلام، ودونا اسميهما في التاريخ كأول إنسانين يقهران إفرست، ليعودا كبطلين عالميين يثبتان للأجيال القادمة أن الإرادة القوية والتعاون الصادق يحولان المستحيل إلى واقع ملموس.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «إلي القمة»؟",
       "options": [
@@ -314,7 +723,61 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة_1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-25.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-26.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-27.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-28.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-29.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-30.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-31.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-32.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-33.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-34.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-35.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-36.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-37.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-38.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-39.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-40.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-41.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-42.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-43.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-44.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-45.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-46.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-47.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-48.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-49.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/إلي-القمة-50.jpg"
+    ],
+    "pageCount": 51
   },
   {
     "id": "kidzz_8_12_16",
@@ -326,7 +789,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d9%86%d8%a7%d8%b1-%d8%a7%d9%84%d8%ac%d8%a7%d8%a6%d8%b9%d8%a9/",
-    "storyText": "تروي قصة النار الجائعة مغامرة شيقة عن نار لا تشبع وحطب يحاول النجاة بمساعدة قضيب الحديد، تقدم للأطفال درسًا عن الأمل والصداقة.",
+    "storyText": "في عالم قصص الأطفال الساحرة، تأتي قصة النار الجائعة لتروي لنا مغامرة فريدة في مطبخ صغير حيث تقبع نار لا تشبع أبدًا. كلما وضع الخادم توفيق الحطب في الموقد، اشتعلت النار بسرعة وطلبت المزيد، مما يسبب لتوفيق القلق والتعب. كانت هذه النار غريبة؛ فهي لا تعرف الشبع، وتظل تُلح في طلب المزيد من الوقود. في أحد الأيام، لم يتبقَّ في الصندوق سوى قطعة فحم وحطب وغصن شجرة واحد. شعرت هذه القطع بالخطر وبدأت تفكر في مصيرها الحتمي، فتوسلت إلى قضيب الحديد، الذي يحرك به توفيق النار، لكي ينقذها من هذا المصير المحتوم. ومع مرور الوقت، تتطور القصة ليجد قضيب الحديد نفسه في صراع بين إنقاذ هذه القطع والتخلص من النار التي تستهلك كل شيء بلا رحمة.\n\nالقصة تمزج بين المغامرة والحكمة، حيث تدور حول الصداقة بين الأشياء العادية في المطبخ، وكيف يمكن للعزيمة أن تساعد في النجاة من شرور لا تُقاوم. قصة النار الجائعة تحمل رسالة عميقة للأطفال عن التعاون والأمل، وكل ذلك في إطار ممتع ومشوق يجعل الأطفال يتعلمون بطريقة مسلية.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «النار الجائعة»؟",
       "options": [
@@ -335,7 +798,29 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/النار-الجائعة-18.jpg"
+    ],
+    "pageCount": 19
   },
   {
     "id": "kidzz_8_12_17",
@@ -347,7 +832,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d9%85%d9%84%d9%83-%d9%88%d8%a7%d9%84%d8%b4%d8%ad%d8%a7%d8%b0/",
-    "storyText": "قصة الملك والشحاذ تحكي عن شجاعة الملك ألفرد وتضحيته، وكيف ساعد شحاذ غريب الملك في التغلب على الأعداء عبر رؤيا سحرية قادته للنصر.",
+    "storyText": "من بين قصص الأطفال المشوقة التي تتناول موضوع الشجاعة والعدل، تأتي قصة الملك والشحاذ كواحدة من أبرز الحكايات التي تزرع في نفوس الصغار قيم العطاء والحكمة. تحكي القصة عن الملك ألفرد، الذي واجه تحديات كبيرة حينما تعرضت مملكته لغزوات من قبائل الدانيين. كان الملك شجاعًا وعادلاً، إذ لم يستسلم أمام تلك الغزوات المتكررة. في إحدى المعارك، بعد أن ضربت عاصفة عنيفة جيشه وتفرق جنوده، وجد الملك نفسه مع أحد ضباطه في جزيرة نائية. كانا بلا طعام تقريبًا، وواجهتهما صعوبات شديدة في النجاة.\n\nفي تلك اللحظات الحرجة، طرق باب كوخ بسيط رجل فقير يطلب الطعام. ورغم الظروف القاسية، أعطى الملك الفقير نصيبه من الخبز والنبيذ المتبقي. ولكن، المفاجأة كانت أن هذا الفقير كان أكثر من مجرد متسول؛ فقد ظهر للملك في رؤيا ليمنحه أداة سحرية، نفير يستطيع من خلاله استدعاء جنوده من جديد. تلك اللحظة الحاسمة غيرت مجرى الأحداث، حيث قاد الملك ألفرد شعبه إلى الانتصار، ليثبت أن الشجاعة والإيمان بالله والعمل من أجل الخير دائمًا ما تجلب النجاح. قصة الملك والشحاذ ليست فقط مغامرة مشوقة، بل درس قيم للأطفال في التضحية والتفاني من أجل الوطن.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الملك والشحاذ»؟",
       "options": [
@@ -356,7 +841,43 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-25.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-26.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-27.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-28.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-29.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-30.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-31.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الملك-والشحاذ-32.jpg"
+    ],
+    "pageCount": 33
   },
   {
     "id": "kidzz_8_12_18",
@@ -368,7 +889,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%b7%d9%8a%d9%88%d8%b1-%d9%84%d8%a7-%d8%aa%d8%b7%d9%8a%d8%b1/",
-    "storyText": "قصة طيور لا تطير تدور حول حوار مشوق بين أب وابنه، يكتشفان معًا حقائق مدهشة عن النعامة والبطريق وكيفية دفاعهما عن أنفسهما.",
+    "storyText": "في عالم قصص الأطفال المليء بالعبر والمغامرات، تبرز &#8220;قصة طيور لا تطير&#8221; كواحدة من القصص التعليمية التي تجمع بين المتعة والمعرفة. تدور أحداث القصة حول الأب المثقف فريد وابنه الفضولي نبيل، اللذين يعيشان لحظات مليئة بالأسئلة والاستكشافات حول عالم الطيور. في إحدى الليالي، وبعد أن انتهى نبيل من فروضه المدرسية، طلب من والده أن يروي له قصة جديدة عن الطيور. يبدأ الأب بسرد معلومات شيقة عن طيور لا تستطيع الطيران مثل النعامة، التي تُعد من أكبر الطيور في العالم، لكنها لا تستطيع الطيران وتستخدم سرعتها الهائلة في الجري للهروب من الأعداء أو الدفاع عن نفسها.\n\nيتعلم نبيل من خلال القصة أن النعامة تستطيع أن تدافع عن صغارها بقوة رفساتها التي قد تقتل أعداءها، لكنها أحياناً تقوم بسلوك مضحك وهو دفن رأسها في الرمال عند شعورها بالخطر، معتقدة أن العدو لا يراها إذا لم تره. يستمر الحوار الممتع بين الأب والابن ليتطرق إلى طائر آخر لا يطير، وهو البطريق، الذي يعيش في المناطق القطبية الباردة ويتميز بطريقة مشيه الفريدة على قدميه كالإنسان. تُظهر &#8220;قصة طيور لا تطير&#8221; للأطفال معلومات مفيدة حول الطيور وسلوكياتها، وتبرز كيف يمكن لكل طائر أن يمتلك قدرات فريدة يستخدمها للدفاع عن نفسه. من خلال الحوار الشيّق بين نبيل ووالده، يتعلم الأطفال أن العالم مليء بالمخلوقات المثيرة التي يجب علينا فهمها واحترامها. إنها قصة تجمع بين التعليم والمتعة، وتفتح المجال للتفكير في عجائب الطبيعة والحكمة في خلق الله.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «طيور لا تطير»؟",
       "options": [
@@ -377,7 +898,42 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-25.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-26.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-27.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-28.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-29.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-30.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/طيور-لا-تطير-31.jpg"
+    ],
+    "pageCount": 32
   },
   {
     "id": "kidzz_8_12_19",
@@ -389,7 +945,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل_1.jpg",
     "sourceUrl": "https://kidzzstory.com/story/honey-bee-story-pdf/",
-    "storyText": "تعلم قصة النحل أهمية التعاون والعمل الجماعي بانتظام من خلال رحلة العاملات المدهشة لجمع الرحيق وبناء الخلية لحماية القفير ورعاية اليرقات.",
+    "storyText": "مرحباً بكم في رحلة علمية شيقة إلى عالم مليء بالنشاط والعمل المستمر، حيث نقدم لكم قصة النحل. في هذه الحكاية الوثائقية الممتعة، سيسافر أطفالكم إلى الحقول المزهرة وداخل خلايا الشمع السداسية ليكتشفوا أسرار مجتمع الحشرات الأكثر تنظيماً وفائدة على كوكب الأرض. تبدأ المغامرة عندما نراقب النحلة العاملة وهي تتنقل بجد ونشاط بين مئات الأزهار لتمتص الرحيق بلسانها الطويل، وتعود به إلى القفير لتبدأ عملية سحرية تحوله إلى عسل حلو المذاق.\n\nإن قراءة قصة النحل ليست مجرد استعراض لمعلومات علمية جافة، بل هي أداة تربوية فعالة لتنمية سلوكيات إيجابية لدى طفلك. حين يتابع طفلك كيف تقسم النحلات أدوارها بدقة متناهية؛ فمنها الحاضنات اللاتي يعتنين باليرقات، ومنها العاملات اللاتي يبنين الخلايا بالشمع، ومنها الحارسات اللاتي يدافعن عن القفير حتى الموت، سيتعلم درساً عملياً عن أهمية التعاون، تحمل المسؤولية، والعمل الجماعي المنظم. سيرى كيف أن الكائنات الصغيرة جداً تستطيع تحقيق إنجازات ضخمة عندما تتحد وتعمل بجد من أجل هدف واحد.\n\nهل سأل طفلك يوماً كيف يصل اللقاح من زهرة لأخرى لإنتاج الثمار؟ وكيف يتعامل مربي النحل مع هذا الجيش الطنان دون أن يتعرض للأذى؟ وكيف تتوج ملكة جديدة لتقود السرب المهاجر؟ دعوا أطفالكم يكتشفون إجابات هذه التساؤلات من خلال أحداث هذه القصة العلمية المبسطة التي ستغرس في قلوبهم احترام الطبيعة وتقدير قيمة العمل. نتمنى لكم قراءة ممتعة ومفيدة.\n\nتأخذنا هذه القصة العلمية الممتعة في رحلة استكشافية شاملة للتعرف على عالم النحل السري والمدهش. تبدأ الأحداث بتتبع النحلة العاملة أثناء طيرانها بين الحدائق، حيث تمتص رحيق الأزهار بلسانها الطويل وتعود به إلى الخلية. وهناك، نتعرف على كيفية تحويل هذا الرحيق السائل إلى عسل حلو ولزج عبر رفرفة الأجنحة السريعة وتخزينه في خلايا شمعية سداسية الأضلاع تبنيها العاملات بأنفسهن.\n\nتغوص القصة في تفاصيل مجتمع القفير المنظم بدقة، والذي يتسع لعشرات الآلاف من النحلات. نكتشف أدوار هذا المجتمع المتكامل؛ فالملكة الضخمة تتفرغ لوضع آلاف البيوض يومياً، والذكور للتزاوج فقط، بينما تتولى النحلات العاملات المهام الشاقة، بدءاً من جمع مسحوق اللقاح في سلال أرجلها، مروراً بتغذية اليرقات الصغيرة والعناية بها، وصولاً إلى حراسة الخلية والتضحية بحياتها بشجاعة لدفع أي خطر أو هجوم خارجي.\n\nكما تسلط الأحداث الضوء على دور مربي النحل الذين يرتدون ملابس واقية ويستخدمون الدخان لجمع العسل بأمان، وتشرح ظاهرة هجرة الملكة العجوز مع سرب ضخم لتأسيس خلية جديدة. وتختتم القصة بالتأكيد على الدور الأهم للنحل في الطبيعة، وهو تلقيح الأزهار لتكوين البذور واستمرار دورة الحياة.\n\nتحميل PDF تحميل الصور لا تنسي فك الضغط عند تحميل الصور.. أو استمتع بتحميل القصة PDF &times; قراءة قصة النحل مكتوبةحيثما تجد الزهور غالبا ما ترى النحل. في أواخر الربيع تمتلئ الحدائق بالنحل. هناك أنواع أخرى من النحل إضافة إلى نحل العسل. بعضها يقطع الأوراق والأزهار وبعضها طنان كبير الحجم. النحل من فصيلة الحشرات، مثل الذباب والنمل والفراش. وهي مثل الحشرات لديها ستة أرجل، وجسمها يتكون من ثلاثة أجزاء.\n\nمعظم أنواع النحل البري تعيش منفردة. وتضع كل أنثى بيوضها في وكر خاص بها. لكن نحل العسل يعيش في مجموعات تدعى مستعمرة النحل. نحل العسل البري يبني وكره في شجرة أو جذع شجرة مجوف في الغابة، ويدعى قفيرا أو خلية النحل.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «النحل»؟",
       "options": [
@@ -398,7 +954,57 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل_1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-25.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-26.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-27.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-28.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-29.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-30.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-31.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-32.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-33.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-34.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-35.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-36.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-37.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-38.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-39.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-40.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-41.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-42.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-43.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-44.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-45.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/النحل-46.jpg"
+    ],
+    "pageCount": 47
   },
   {
     "id": "kidzz_8_12_20",
@@ -410,7 +1016,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%b9%d8%af%d9%88-%d8%a7%d9%84%d9%81%d8%a6%d8%b1%d8%a7%d9%86/",
-    "storyText": "قصة عدو الفئران تروي مغامرة سميرة ونبيل في التخلص من الفئران بمساعدة قطتين صغيرتين، وتعلم الأطفال دروساً عن المسؤولية والرعاية.",
+    "storyText": "في عالم &#8220;قصص للأطفال&#8221; المليء بالمغامرات والدروس القيمة، تأتي &#8220;قصة عدو الفئران&#8221; لتأخذنا في رحلة شيقة إلى بيت سميرة وأخيها نبيل. كان الأخوان يستمتعان بوقتهما مع والدتهما، التي حرصت دائمًا على تقديم الأطعمة الصحية والمفيدة مثل الفواكه اللذيذة. لكن في يوم من الأيام، وبينما كانا يهمان بتناول الفاكهة، فوجئت سميرة بفأر يتسلل ليأكل من الفاكهة، ما أثار خوفها وهلعها. سرعان ما علم نبيل بالأمر وقررا معًا أن الفئران القذرة لا مكان لها في بيتهما، خاصة وأنها تسببت في تلوث الطعام وإتلاف الملابس.\n\nقررت العائلة التفكير في حلول ذكية للتخلص من الفئران المزعجة. وجاءت صديقة الأم، سلمى، بفكرة مبتكرة؛ وهي تربية القطط في المنزل لأنها &#8220;عدو الفئران&#8221; اللدود. انضمت قطة صغيرة سوداء إلى سميرة وأخرى شقراء إلى نبيل، وسرعان ما بدأت القطتان تلعبان وتطاردان الفئران، مما جعل الفئران تختفي شيئًا فشيئًا. تعلم الأطفال من هذه التجربة قيمة المسؤولية في العناية بالحيوانات وأهمية التصرف الذكي في مواجهة التحديات. تبرز &#8220;قصة عدو الفئران&#8221; بشكل مشوق كيف يمكن للحب والرعاية أن يحققا حلولاً غير متوقعة، مما يجعلها واحدة من أفضل &#8220;قصص للأطفال&#8221; التي تعلم الدروس الحياتية بطريقة مرحة وممتعة.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «عدو الفئران»؟",
       "options": [
@@ -419,7 +1025,35 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/عدو-الفئران-24.jpg"
+    ],
+    "pageCount": 25
   },
   {
     "id": "kidzz_8_12_21",
@@ -431,7 +1065,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة_1.jpg",
     "sourceUrl": "https://kidzzstory.com/story/lost-mummy-story-pdf/",
-    "storyText": "تعلم قصة المومياء الضائعة الإصرار والمثابرة وعدم الاستسلام من خلال متابعة رحلة عالم الآثار هوارد كارتر وبحثه في الصحراء حتى اكتشف كنز الملك.",
+    "storyText": "مرحباً بكم في رحلة مثيرة عبر الزمن تأخذنا إلى قلب الحضارة المصرية القديمة، حيث نقدم لكم قصة المومياء الضائعة. في هذه المغامرة التاريخية المشوقة، سيسافر أطفالكم إلى وادي الملوك ليكتشفوا أسرار الفراعنة، ويتعرفوا على طقوس دفن الملك الشاب توت عنخ آمون وكنوزه الذهبية المخبأة في قبر سري تحت الأرض لحمايتها من اللصوص.\n\nتأخذنا الأحداث عبر آلاف السنين، لنشهد كيف نُسي هذا القبر تماماً، حتى جاء عالم الآثار العنيد &#8220;هوارد كارتر&#8221;. ورغم سخرية ويأس الجميع من حوله، واصل كارتر الحفر والبحث في رمال الصحراء القاسية لسنوات طويلة. وهنا تكمن الروعة؛ حيث تربط قصة المومياء الضائعة بين المتعة والتعلم بأسلوب سلس. فمن خلال متابعة طفلك لمحاولات كارتر المتكررة وعدم استسلامه حتى عندما طُلب منه التوقف، سيتعلم قيمة الإصرار والمثابرة على تحقيق الأهداف مهما بدت مستحيلة. سيكتشف طفلك كيف أن النجاح العظيم والاكتشافات المذهلة تأتي دائماً بعد محاولات عديدة من الفشل، وأن الإيمان بالفكرة هو مفتاح تحقيقها.\n\nهل سينجح كارتر في إقناع صديقه بمنحه فرصة أخيرة للبحث؟ وما هي الكنوز المذهلة التي ستنتظره خلف الباب السري المحفور في الصخر؟ وهل هناك حقاً ما يسمى بـ &#8220;لعنة الفراعنة&#8221;؟ دعوا أطفالكم يغوصون في هذه التفاصيل التاريخية الساحرة التي ستوقظ بداخلهم شغف الاستكشاف وحب التاريخ. نتمنى لكم قراءة ممتعة مليئة بالمعرفة والمغامرة.\n\nتبدأ أحداث القصة في مصر القديمة بوفاة الملك الشاب &#8220;توت عنخ آمون&#8221; وهو في الثامنة عشرة من عمره. وحسب معتقدات المصريين القدماء في الحياة الأبدية بعد الموت، قام الكهنة بتحنيط جثمانه ليتحول إلى مومياء محفوظة بعناية تامة. ولحماية الملك وكنوزه العظيمة من أيدي اللصوص الذين دأبوا على سرقة الأهرامات، أقاموا له جنازة مهيبة وعبروا نهر النيل لدفنه في مقبرة سرية محفورة في صخور &#8220;وادي الملوك&#8221; القاحلة، ووضعوا معه كل ما قد يحتاجه في العالم الآخر من طعام وثياب ومجوهرات وألعاب، ثم أخفوا معالم القبر تماماً.\n\nمرت آلاف السنين، وتغيرت الحياة، ونُسي اسم الملك ومكان مقبرته. ومع توافد علماء الآثار في العصر الحديث للبحث والتنقيب، اكتشفوا العديد من المقابر، لكنها كانت فارغة ومنهوبة. أصيب الجميع باليأس وتوقفوا عن البحث، ظناً منهم أن الوادي لم يعد يخفي شيئاً، باستثناء عالم آثار بريطاني عنيد يُدعى &#8220;هوارد كارتر&#8221;. كان كارتر واثقاً من وجود مقبرة الملك توت، وبفضل تمويل صديقه &#8220;اللورد كارنارفون&#8221;، واصل رجاله الحفر في رمال الصحراء القاسية وتحت أشعة الشمس الحارقة لخمس سنوات كاملة دون جدوى. وحين نفد صبر صديقه وقرر إيقاف التمويل، ترجاه كارتر لمنحه فرصة أخيرة في بقعة لم يبحث فيها أحد.\n\nفي تلك المحاولة الأخيرة، ابتسم له الحظ أخيراً، واكتشف العمال درجات سلم حجرية قادتهم إلى باب سري يحمل ختم الملك &#8220;توت عنخ آمون&#8221;. وبعد انتظار وصول صديقه، أحدث كارتر ثقباً في الباب ليُذهل برؤية كنوز ذهبية لامعة لا تقدر بثمن. وتوج هذا الاكتشاف العظيم بالعثور على المومياء الملكية مغطاة بقناع ذهبي ساحر داخل توابيت متداخلة. ورغم انتشار شائعات مخيفة حول &#8220;لعنة الفراعنة&#8221; إثر وفاة اللورد كارنارفون لاحقاً، أثبت كارتر زيفها بسلامته، لتُنقل هذه الكنوز المذهلة إلى المتاحف العالمية، بينما تُركت المومياء لترقد بسلام في قبرها الملكي الذي صمد لآلاف السنين.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «المومياء الضائعة»؟",
       "options": [
@@ -440,7 +1074,62 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة_1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-25.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-26.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-27.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-28.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-29.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-30.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-31.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-32.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-33.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-34.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-35.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-36.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-37.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-38.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-39.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-40.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-41.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-42.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-43.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-44.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-45.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-46.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-47.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-48.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-49.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-50.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/المومياء-الضائعة-51.jpg"
+    ],
+    "pageCount": 52
   },
   {
     "id": "kidzz_8_12_22",
@@ -452,7 +1141,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%b3%d8%b1-%d8%a7%d9%84%d8%b3%d9%87%d9%85-%d8%a7%d9%84%d8%ab%d8%a7%d9%86%d9%8a/",
-    "storyText": "قصة سر السهم الثاني تروي شجاعة وليم تل في مواجهة الملك الظالم جرسلر، ورميه السهم لإنقاذ ابنه وقلب الأحداث بشكل غير متوقع.",
+    "storyText": "في عالم قصص الأطفال المليء بالمغامرات والعبر، تأتي &#8220;قصة سر السهم الثاني&#8221; لتحكي لنا عن شجاعة رجل يُدعى وليم تل، وكيف واجه ظلم ملك متسلط يُدعى جرسلر في سويسرا القديمة. وليم تل لم يكن رجلاً عادياً، بل كان أمهر رماة السهام في بلاده، يعيش بسلام مع ابنه الشجاع شارل في قرية جبلية هادئة. لكن الأحداث تأخذ منعطفاً خطيراً عندما يرفض وليم تل الانحناء لقبعة الملك، التي وضعت على عمودٍ كرمزٍ للسلطة والطغيان. تصاعدت الأحداث عندما غضب الملك جرسلر من وليم وأمره بتنفيذ تحدٍ مستحيل؛ أن يصوب سهمه نحو تفاحة موضوعة على رأس ابنه الصغير، ما وضعه في موقف لا يُحسد عليه.\n\nكانت لحظة الرماية مليئة بالتوتر والخوف، إلا أن الثقة والشجاعة كانتا حاضرتين. بعد نجاحه في إصابة التفاحة دون أن يمس ابنه بأذى، يظهر &#8220;سر السهم الثاني&#8221; الذي أخفاه وليم تل من أجل انتقام محتمل من الملك لو تعرض ابنه لأي أذى. بهذه الحركة الجريئة، استطاع وليم تل أن يغير مجرى الأحداث ويقود ثورة ضد الظلم، محولاً قصته إلى أسطورة خالدة تعلمنا الشجاعة والوقوف في وجه الطغيان. تعد &#8220;قصة سر السهم الثاني&#8221; واحدة من أروع القصص للأطفال، حيث تجمع بين المغامرة والدرس الأخلاقي، وتبقى عالقة في الأذهان كرمز للمقاومة والحرية.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «سر السهم الثاني»؟",
       "options": [
@@ -461,7 +1150,36 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/سر-السهم-الثاني-25.jpg"
+    ],
+    "pageCount": 26
   },
   {
     "id": "kidzz_8_12_23",
@@ -473,7 +1191,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%ac%d9%88%d9%87%d8%b1%d8%a9-%d8%b9%d8%a8%d8%af%d8%a7%d9%84%d9%84%d9%87-%d8%a8%d9%86-%d8%a7%d9%84%d9%85%d9%82%d9%81%d8%b9/",
-    "storyText": "قصة جوهرة عبدالله بن المقفع تحكي عن الفيلسوف بيدبا الذي واجه الملك الظالم دبشليم بشجاعة ونصحه بالعدل، فتمخضت عن تأليف &#8220;كليلة ودمنة&#8221;.",
+    "storyText": "تعد قصة &#8220;جوهرة عبدالله بن المقفع&#8221; من أجمل قصص الأطفال التي تنقل الحكمة والمعرفة من خلال أحداثها المشوقة وشخصياتها الفريدة. القصة تحكي عن الفيلسوف الحكيم &#8220;بيدبا&#8221; الذي عاش في الهند تحت حكم الملك القاسي &#8220;دبشليم&#8221;. بيدبا كان معروفًا بحكمته واهتمامه بخير الناس، ولم يكن يخاف من مواجهة الظلم. وعندما رأى أن الملك ظلم شعبه واستبد بالحكم، قرر بيدبا أن يذهب إليه لينصحه بأن يكون حاكمًا عادلًا ويعيد الخير إلى بلاده. على الرغم من تحذير تلاميذه من عواقب التحدث إلى الملك القاسي، إلا أن بيدبا لم يتردد في الذهاب إلى القصر. في البداية، غضب الملك من كلامه وأمر بحبسه، لكن حلمًا مزعجًا في إحدى الليالي جعله يفكر في تصرفاته. استدعى الملك كاهنًا لتفسير حلمه، فأخبره أن بيدبا هو رجل صالح يريد الخير له ولشعبه. عندها أدرك الملك خطأه وقرر الاستماع إلى نصائح بيدبا وتكريمه، فعينه وزيرًا ومنحه السلطة لإدارة شؤون المملكة.\n\nطلب الملك من بيدبا تأليف كتاب يجمع فيه حكمته وتجربته في الحياة بطريقة مبسطة وسهلة الفهم. ومن هنا وُلد كتاب &#8220;كليلة ودمنة&#8221;، الذي يعتبر &#8220;جوهرة عبدالله بن المقفع&#8221;، حيث يحمل بين طياته قصص الحيوانات التي تعكس قيم الصدق والشجاعة والعدل. الكتاب ليس مجرد قصة للأطفال، بل هو كنز من الحكمة والفلسفة، يستمر في إلهام القراء من جميع الأعمار.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «جوهرة عبدالله بن المقفع»؟",
       "options": [
@@ -482,7 +1200,45 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-25.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-26.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-27.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-28.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-29.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-30.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-31.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-32.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-33.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/جوهرة-عبدالله-بن-المقفع-34.jpg"
+    ],
+    "pageCount": 35
   },
   {
     "id": "kidzz_8_12_24",
@@ -494,7 +1250,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d9%82%d8%b1%d8%b5%d8%a7%d9%86-%d9%88%d8%b5%d8%ae%d8%b1%d8%a9-%d8%a7%d9%84%d9%85%d9%88%d8%aa/",
-    "storyText": "قصة القرصان وصخرة الموت تروي مغامرة مشوقة عن قرصان شرير يسرق جرس التحذير، فيواجه مصيره الغرق بجانب صخرة الموت الخطيرة.",
+    "storyText": "في عالم مليء بالمغامرات والتحديات، تأتي قصة مشوقة من قصص الأطفال تحمل عنوان &#8220;قصة القرصان وصخرة الموت&#8221;. في هذه الحكاية المثيرة، ننتقل إلى قرية هادئة تقع على شواطئ بحر الشمال. حيث كان يعيش رجل دين طيب يُدعى الأب آبر بروثوك. كان الأب آبر محبًا للخير ويسعى دائمًا لمساعدة الناس. خاصة البحارة الذين كانوا يواجهون خطر &#8220;صخرة الموت&#8221;، وهي صخرة خطيرة تختفي تحت المياه عند ارتفاع الأمواج. كانت هذه الصخرة تُشكل تهديدًا حقيقيًا للسفن الشراعية التي تمر بالقرب منها، إذ غالبًا ما ترتطم بها وتغرق، مما يُسبب الكثير من المآسي.\n\nللتصدي لهذا الخطر، فكر الأب آبر في حيلة ذكية لحماية السفن من الغرق. قرر وضع جرس نحاسي ضخم على طوافة قريبة من الصخرة. بحيث يدق الجرس بصوت عالٍ عندما تهب الرياح وتتحرك الأمواج، فيُحذر السفن من اقترابها من الصخرة. وبالفعل، ساهمت هذه الفكرة في تقليل الحوادث وجعلت البحارة ممتنين للأب آبر. لكن، لم يدم هذا الهدوء طويلاً، حيث قرر قرصان شرير يُدعى رالف روفر، بخبثه وجشعه، أن يسرق الجرس ويبيعه، غير مكترث بالعواقب الوخيمة التي قد يواجهها البحارة. مع عودة حوادث الغرق بسبب غياب الجرس، يتغير مصير القرصان عندما يواجه المصير ذاته الذي تسبب فيه للآخرين. تتعلم الشخصيات في هذه القصة درسًا قيمًا عن العواقب والعدالة. مما يجعل &#8220;قصة القرصان وصخرة الموت&#8221; إحدى القصص التي تجمع بين المغامرة والتوجيه الأخلاقي للأطفال.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «القرصان وصخرة الموت»؟",
       "options": [
@@ -503,7 +1259,37 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-25.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/القرصان-وصخرة-الموت-26.jpg"
+    ],
+    "pageCount": 27
   },
   {
     "id": "kidzz_8_12_25",
@@ -515,7 +1301,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d9%81%d8%a7%d9%86%d9%88%d8%b3-%d8%a7%d9%84%d8%b3%d8%ad%d8%b1%d9%8a/",
-    "storyText": "قصة الفانوس السحري تروي مغامرة الطفل هشام الذي يلتقي بمارد الفانوس، ويستخدم أمنيته الوحيدة لإنقاذ والديه من المرض والفقر.",
+    "storyText": "في عالم القصص للأطفال، تظهر لنا &#8220;قصة الفانوس السحري&#8221; كواحدة من تلك الحكايات التي تجمع بين الحكمة والمغامرة. تروي القصة حكاية هشام، الطفل الصغير الذي يعيش في كوخ متواضع مع والديه، سليمان وزينب. رغم الفقر والضيق، كان والد هشام يعمل بجد في الميناء ليؤمن لقمة العيش لعائلته. لكن عندما يتعرض لحادث يؤذي ساقه، تتغير حياتهم بالكامل ويصبح الوضع أكثر صعوبة.\n\nفي ظل هذه الظروف القاسية، يظهر دور هشام كالبطل الصغير. بعد نفاد الطعام، يقرر هشام بيع بعض الملابس القديمة لتأمين القوت لعائلته. وأثناء رحلته إلى السوق، يلتقي برجل عجوز يسقط منه رزمة من النقود. هنا يظهر لنا درس قيم عن الأمانة والشرف، حيث يقرر هشام إعادة المال للرجل بدلاً من الاحتفاظ به. ولدهشته، يكافئه الرجل العجوز بمنحه الفانوس السحري، الذي يتحول ليكون &#8220;فانوس علاء الدين&#8221;. بفضل شجاعته وصدقه، يظهر مارد الفانوس السحري أمام هشام ويمنحه فرصة لتحقيق أمنيته الوحيدة: شفاء والديه. يختفي المارد بعد تحقيق أمنيته، ويعود هشام إلى منزله ليكتشف أن والديه تعافيا بفضل الفانوس السحري. من خلال هذه القصة، نتعلم عن أهمية الأمانة، الشجاعة، والدعاء في مواجهة تحديات الحياة، مما يجعل &#8220;قصة الفانوس السحري&#8221; واحدة من أروع قصص للأطفال التي تلهم القراء من كل الأعمار.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الفانوس السحري»؟",
       "options": [
@@ -524,7 +1310,33 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/09/الفانوس-السحري-22.jpg"
+    ],
+    "pageCount": 23
   },
   {
     "id": "kidzz_8_12_26",
@@ -536,7 +1348,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة_1.jpg",
     "sourceUrl": "https://kidzzstory.com/story/mountain-loved-bird-story-pdf/",
-    "storyText": "تعلم قصة الجبل الذي أحب العصفورة قيمة الوفاء والمثابرة العظيمة من خلال أحداث تحويل جبل قاحل وحزين إلى جنة خضراء بفضل بذور صديقته.",
+    "storyText": "مرحباً بكم في رحلة ساحرة إلى عالم الطبيعة والوفاء، حيث نقدم لكم قصة الجبل الذي أحب العصفورة. في هذه الحكاية المليئة بالمشاعر الرقيقة، سيسافر أطفالكم إلى صحراء بعيدة ليتعرفوا على جبل حجري ضخم يعاني من الوحدة القاسية، لا يزوره أحد ولا تنبت عليه شجرة. لكن حياته تنقلب رأساً على عقب عندما تحط عليه عصفورة صغيرة تبحث عن الراحة.\n\nتبدأ هنا أروع حكاية عن الصداقة والعهد، فرغم أن العصفورة لا تستطيع العيش في مكان جاف، إلا أنها تقطع وعداً بالعودة كل عام. من خلال ترقب الجبل لعودة صديقته جيلاً بعد جيل، وبكائه الذي فجر ينابيع المياه من صخوره الصلبة، سيكتشف طفلك كيف أن الحب والاهتمام يمكنهما تغيير أقسى الأشياء. إن قصة الجبل الذي أحب العصفورة ليست مجرد حكاية خيالية، بل هي رسالة تربوية عميقة. حين يرى طفلك كيف جلبت العصفورة البذور الصغيرة وزرعتها بجانب جداول دموع الجبل ليتحول تدريجياً إلى غابة خضراء تنبض بالحياة، سيتعلم قيمة الصبر والمثابرة، وكيف أن الأفعال الصغيرة والمتراكمة تصنع تغييراً هائلاً في حياة الآخرين وتجعل العالم مكاناً أفضل.\n\nراقبوا ملامح أطفالكم وهم يتابعون هذا التحول المدهش للجبل الأجرد، وكيف كوفئ على حبه وصبره في النهاية ببقاء صديقته إلى جانبه للأبد. نتمنى لكم قراءة ممتعة وملهمة.\n\nفي قلب صحراء واسعة ومقفرة، حيث لا ينبت زرع ولا يعيش أي كائن حي، وقف جبل أجرد وحيد لقرون طويلة. لم يعرف هذا الجبل الصخري القاسي سوى حرارة الشمس اللافحة وبرودة الرياح القارسة، وكان يقضي أيامه ولياليه في مراقبة حركة الغيوم والشمس والقمر والنجوم بصمت وحزن، متمنياً لو أن لديه رفيقاً يؤنس وحدته.\n\nتغير كل شيء ذات يوم ربيعي مشرق، عندما حطت عصفورة صغيرة ورقيقة تدعى &#8220;فرح&#8221; لتستريح على إحدى حوافه. ولأول مرة في حياته الطويلة، شعر الجبل بالدفء والسعادة. توسل الجبل إلى العصفورة أن تبقى معه، لكنها اعتذرت بلطف، موضحة أن الطيور تحتاج إلى الماء والغذاء لتعيش، وهما غير متوفرين في هذا المكان القاحل. ورغم ذلك، وعدته &#8220;فرح&#8221; بأنها ستزوره كل ربيع، وأنها ستسمي بناتها باسمها ليعودوا لزيارته جيلاً بعد جيل.\n\nمرت مئة عام على هذا العهد، وفي كل ربيع كانت &#8220;فرح&#8221; تأتي لتغرد ثم ترحل. وفي العام المئة، ولشدة تعلقه بها وخوفه من الفراق، انفطر قلب الجبل الصلب عندما غادرت، وبكى بحرقة شديدة حتى تحولت دموعه الحزينة إلى جداول ماء عذبة تنساب على جوانبه.\n\nفي الربيع التالي، لاحظت العصفورة الجداول، فبدأت تجلب معها بذرة صغيرة في كل زيارة وتضعها بعناية في شقوق الصخر بالقرب من الماء. وبفضل دموع الجبل الحنونة والمستمرة، بدأت البذور تنمو وتمد جذورها العميقة، لتحول الصخر القاسي بمرور السنوات إلى غابة خضراء ساحرة تفيض بالحياة وتجذب مختلف الحيوانات.\n\nأخيراً، تبدلت دموع حزن الجبل إلى دموع فرح عارمة. وفي الربيع المنتظر، عادت &#8220;فرح&#8221; لا تحمل بذرة هذه المرة، بل قشة صغيرة لتبني بها عشها على أعلى شجرة، معلنة بقاءها الدائم إلى جانب الجبل الذي أحبها بصدق.\n\nتحميل PDF تحميل الصور لا تنسي فك الضغط عند تحميل الصور.. أو استمتع بتحميل القصة PDF &times; قراءة قصة الجبل الذي أحب العصفورة مكتوبةكان هناك جبل من الحجر الأجرد يقف وحيدا وسط أرض صحراوية. لم ينم أي نبات على منحدرات الجبل القاسية ولم يستطع أي حيوان أو طير أو حشرة العيش عليه.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الجبل الذي أحب العصفورة»؟",
       "options": [
@@ -545,7 +1357,45 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة_1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-25.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-26.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-27.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-28.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-29.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-30.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-31.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-32.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-33.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/الجبل-الذي-أحب-العصفورة-34.jpg"
+    ],
+    "pageCount": 35
   },
   {
     "id": "kidzz_8_12_27",
@@ -557,7 +1407,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/تلة-البلور.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%aa%d9%84%d8%a9-%d8%a7%d9%84%d8%a8%d9%84%d9%88%d8%b1/",
-    "storyText": "قصة تلة البلور تحكي مغامرة إيغور الشجاع الذي يكتشف سر الجياد السحرية وينقذ المملكة، ويصبح الفارس الغامض الذي يفوز بقلب الأميرة.",
+    "storyText": "في عالم مليء بالمغامرات والسحر، تأتي قصة تلة البلور لتأخذ الأطفال في رحلة شيقة إلى مزرعة بعيدة يعيش فيها مزارع عجوز مع أبنائه الثلاثة. هؤلاء الأبناء يختلفون في طباعهم. فبينما كان الابنان الأكبر والأوسط كسولين، كان إيغور، الابن الأصغر، يعمل بجد ويساعد والده في جميع أعمال المزرعة. ولكن في أحد المواسم، يحدث أمر غامض عندما يختفي العلف الذي جمعوه بصعوبة، ويتركهم في حيرة من أمرهم. هذه القصة المثيرة تأخذ منعطفًا غير متوقع عندما يكتشف إيغور سر اللص الذي كان يسرق العلف كل ليلة، والذي ليس سوى مجموعة من الجياد الأسطورية. تتصاعد الأحداث عندما يعلن الملك عن مسابقة للفوز بيد الأميرة. حيث يجب على الفرسان تسلق تلة البلور الشديدة الانحدار والحصول على ثلاث تفاحات ذهبية من يدها. يأتي الفرسان من كل أنحاء المملكة، بمن فيهم أخوا إيغور، لكنهم جميعًا يفشلون في المهمة. ولكن في كل يوم من أيام المسابقة، يظهر فارس غامض يمتطي أحد الجياد التي اكتشفها إيغور، ويصعد التلة بسهولة مدهشة.\n\nهذه القصة ليست مجرد مغامرة، بل هي درس عن الشجاعة والتفاني والعمل الجاد. مما يجعلها من أروع قصص الأطفال التي تنقل القيم النبيلة بطريقة ممتعة ومثيرة. إذا كنت تبحث عن قصص للأطفال تجمع بين السحر والمغامرة والقيم الأخلاقية، فإن قصة تلة البلور هي الخيار المثالي لقراءتها والاستمتاع بها.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «تلة البلور»؟",
       "options": [
@@ -566,7 +1416,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/تلة-البلور.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/تلة-البلور-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/تلة-البلور-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/تلة-البلور-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/تلة-البلور-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/تلة-البلور-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/تلة-البلور-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/تلة-البلور-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/تلة-البلور-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/تلة-البلور-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/تلة-البلور-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/تلة-البلور-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/تلة-البلور-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/تلة-البلور-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/تلة-البلور-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/تلة-البلور-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/تلة-البلور-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/تلة-البلور-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_28",
@@ -578,7 +1449,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/بساط-الريح.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a8%d8%b3%d8%a7%d8%b7-%d8%a7%d9%84%d8%b1%d9%8a%d8%ad/",
-    "storyText": "قصة بساط الريح تحكي مغامرات نعمان البغدادي الذي يسعى للفوز بقلب الأميرة قمر الزمان عبر اجتياز تحديات سحرية بمساعدة بساط طائر.",
+    "storyText": "في عالم القصص للأطفال، تأتي &#8220;قصة بساط الريح&#8221; لتحمل الصغار في رحلة مشوقة مليئة بالمغامرات والتحديات. تحكي هذه القصة عن نعمان، الشاب البغدادي الذي عاش حياة مترفة، لكنه أضاع ثروته في اللهو والعبث. بعد أن فقد كل شيء، يجد نفسه وحيدًا في شوارع بغداد يحمل بساطًا قديمًا. في ليلة مظلمة، يكتشف أن بساطه ليس عاديًا، بل هو بساط سحري قادر على الطيران. ومن هنا تبدأ مغامرة نعمان التي تقوده إلى قصر الملك حيث يقع في حب الأميرة قمر الزمان. ليتمكن من الفوز بقلبها، يتعين عليه اجتياز ثلاثة اختبارات صعبة وضعها الملك. باستخدام بساطه السحري وذكائه، يتغلب نعمان على كل العقبات التي تعترض طريقه. القصة تجمع بين الخيال والتحدي، وتعليم الأطفال قيمة العمل الجاد والمثابرة. إنها حكاية مشوقة تأخذنا في رحلة عبر الزمان والمكان، حيث تتداخل السحر مع الواقع، لتخلق تجربة ممتعة ومليئة بالعبر.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «بساط الريح»؟",
       "options": [
@@ -587,7 +1458,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/بساط-الريح.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/بساط-الريح-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/بساط-الريح-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/بساط-الريح-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/بساط-الريح-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/بساط-الريح-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/بساط-الريح-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/بساط-الريح-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/بساط-الريح-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/بساط-الريح-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/بساط-الريح-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/بساط-الريح-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/بساط-الريح-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/بساط-الريح-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/بساط-الريح-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/بساط-الريح-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/بساط-الريح-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/بساط-الريح-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_29",
@@ -599,7 +1491,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الماجد-أبو-لحية.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d9%85%d8%a7%d8%ac%d8%af-%d8%a3%d8%a8%d9%88-%d9%84%d8%ad%d9%8a%d8%a9/",
-    "storyText": "قصة الماجد أبو لحية هي قصة للأطفال تدور حول صداقة متغيرة، خطوبة غير متوقعة، وسر يكشف عن هوية حقيقية لصاحب النفوذ والكرم.",
+    "storyText": "في مدينة مزدهرة خلال عهد الخليفة هارون الرشيد، تبدأ أحداث قصة الماجد أبو لحية، وهي إحدى القصص المميزة التي تُروى للأطفال. تدور القصة حول الصداقة التي جمعت بين عبد الله وإبراهيم منذ صغرهما، والتي تغيرت مع مرور الزمن. عبد الله، الذي أصبح تاجرًا غنيًا وناجحًا، بدأ يتجاهل صديقه إبراهيم الذي بقي فقيرًا وعاش حياة متواضعة. ورغم هذا التباعد، بقيت الحياة تحمل الكثير من المفاجآت لكلا الصديقين. في هذا الجو من التغيرات، تقدم عبد الله لخطبة صافيناز، ابنة إبراهيم، لابنه حامد، ولكن الأقدار لم تكن تسير كما خُطط لها. بعد رفض الخطبة، ظهر في حياتهم رجل غامض يُدعى السيد أبو لحية، والذي أثار فضول الجميع بهداياه الكريمة وسحر شخصيته. تقدم السيد أبو لحية لخطبة صافيناز. ومع مرور الوقت، بدأت الأنباء تنتشر حول هذا الرجل الغامض الذي غير حياة عائلة إبراهيم بالكامل.\n\nتتأزم الأحداث عندما يقرر عبد الله رفع شكواه إلى السلطان، متهمًا السيد أبو لحية بأنه ساحر. ولكن المفاجأة الكبرى تكشف عندما يتضح أن هذا الرجل الغامض ليس سوى السلطان نفسه، الذي أراد الزواج من صافيناز. تتناول القصة موضوعات مثل الصداقة، الغنى، الفقر، التسامح، والقيم الإنسانية من خلال سرد ممتع يجذب انتباه الأطفال ويعلمهم دروسًا قيمة عن الحياة.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الماجد أبو لحية»؟",
       "options": [
@@ -608,7 +1500,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الماجد-أبو-لحية.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الماجد-أبو-لحية-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الماجد-أبو-لحية-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الماجد-أبو-لحية-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الماجد-أبو-لحية-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الماجد-أبو-لحية-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الماجد-أبو-لحية-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الماجد-أبو-لحية-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الماجد-أبو-لحية-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الماجد-أبو-لحية-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الماجد-أبو-لحية-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الماجد-أبو-لحية-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الماجد-أبو-لحية-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الماجد-أبو-لحية-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الماجد-أبو-لحية-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الماجد-أبو-لحية-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الماجد-أبو-لحية-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الماجد-أبو-لحية-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_30",
@@ -620,7 +1533,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الكشتبان-الذهبي.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d9%83%d8%b4%d8%aa%d8%a8%d8%a7%d9%86-%d8%a7%d9%84%d8%b0%d9%87%d8%a8%d9%8a/",
-    "storyText": "قصة الكشتبان الذهبي تدور حول ناديا الفتاة الفقيرة التي تبحث عن كشتبان سحري، وتكتشف قوتها الحقيقية وتصبح أميرة المملكة.",
+    "storyText": "تُعد &#8220;قصص للأطفال&#8221; من أهم الوسائل التي تنمي الخيال والإبداع لدى الصغار، ومن بين هذه القصص المميزة تأتي &#8220;قصة الكشتبان الذهبي&#8221;، وهي حكاية رائعة عن الشجاعة والإصرار والمغامرة. تدور أحداث القصة في مملكة بعيدة، حيث تعيش فتاة صغيرة تدعى ناديا مع والديها في منزل متواضع. ناديا فتاة موهوبة في الخياطة، وتكسب قوت يومها من عملها الجاد، مستخدمة كشتبانًا نحاسيًا لمساعدتها. ذات ليلة، وبينما كانت تعمل بجد واجتهاد، سمعت صوتًا غامضًا يدعوها للبحث عن &#8220;الكشتبان الذهبي الذي يشغل الإبرة وحده&#8221;. تثير هذه العبارة فضول ناديا، فتنطلق في رحلة مليئة بالمغامرات بحثًا عن هذا الكشتبان السحري الذي سيغير حياتها للأبد.\n\nتلتقي ناديا خلال رحلتها بجارتها، والمعلمة أمهر خياطة في المملكة، وخياط الملك، الذين بدورهم يبدون اهتمامهم بالكشتبان الذهبي، ولكن دون معرفة مكانه. وفي خضم الأحداث، يظهر الكشتبان في قصر الملكة، التي تجرب استخدامه مع ابنتيها، ولكن دون جدوى. أخيرًا، تأتي ناديا لتجرب الكشتبان بنفسها، وتنجح بمهارتها في الخياطة، مما يجعل الجميع يعترفون بموهبتها الاستثنائية. وبعد سلسلة من المفارقات والمفاجآت، يقع الأمير في حب ناديا ويتزوجها، وتصبح أميرة &#8220;الكشتبان الذهبي&#8221; الذي أصبح رمزًا للأمل والشجاعة والمثابرة. في هذه القصة، يتعلم الأطفال قيمة الإصرار والإيمان بقدراتهم، وكيف أن المغامرات الجميلة قد تقودهم إلى مصير لا يُنسى.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الكشتبان الذهبي»؟",
       "options": [
@@ -629,7 +1542,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الكشتبان-الذهبي.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الكشتبان-الذهبي-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الكشتبان-الذهبي-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الكشتبان-الذهبي-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الكشتبان-الذهبي-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الكشتبان-الذهبي-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الكشتبان-الذهبي-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الكشتبان-الذهبي-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الكشتبان-الذهبي-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الكشتبان-الذهبي-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الكشتبان-الذهبي-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الكشتبان-الذهبي-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الكشتبان-الذهبي-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الكشتبان-الذهبي-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الكشتبان-الذهبي-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الكشتبان-الذهبي-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الكشتبان-الذهبي-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الكشتبان-الذهبي-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_31",
@@ -641,7 +1575,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما_1.jpg",
     "sourceUrl": "https://kidzzstory.com/story/afraid-essam-story-pdf/",
-    "storyText": "قصة من يخاف عصاما تعلم الأطفال مواجهة المتنمرين بثبات، من خلال أحداث مشوقة لرفض كريم الاستسلام لفتى ضخم يحاول أخذ كلبه بالقوة.",
+    "storyText": "يعتبر التنمر من أكثر المشكلات التي تواجه الأطفال وتؤثر على ثقتهم بأنفسهم، وهنا تبرز أهمية قصة من يخاف عصاما لتسليط الضوء على كيفية مواجهة هذا التحدي بشجاعة. تدور أحداث القصة حول الطفل كريم الذي يعيش في رعب دائم من عصام، الفتى الضخم الذي يرهب جميع أطفال الحي ويسلبهم ألعابهم وحلوىهم. يحاول كريم بكل الطرق الهروب من طريقه، حتى أنه يلتحق بنادي الكاراتيه ويقتني كلباً صغيراً أسماه &#8220;عملاق&#8221; لحمايته، لكن الخوف يظل مسيطراً على قلبه في كل مرة يرى فيها عصام. تتصاعد الأحداث المليئة بالتشويق عندما يتقاطع طريق كريم مع عصام في الملعب، ويحاول الأخير أخذ كلبه الصغير بالقوة والتهديد.\n\nمن خلال أحداث قصة من يخاف عصاما، سيتعلم طفلك بطريقة غير مباشرة ومؤثرة أن الشجاعة لا تعني امتلاك القوة البدنية أو العضلات، بل هي قرار داخلي بالوقوف بحزم وقول &#8220;لا&#8221; في وجه المعتدي. فحين يقرر كريم التغلب على رعبه وجذب كلبه بقوة رافضاً الخضوع لأوامر عصام، يكتشف أن هذا الموقف الحازم كان كافياً لكسر هيبة المتنمر. ليس هذا فحسب، بل إن هذه اللحظة الحاسمة في القصة توضح للطفل كيف أن الشجاعة معدية؛ فبمجرد أن رأى الأطفال صمود كريم، تشجعوا جميعاً ورفضوا تسليم ألعابهم لعصام، مما أجبره على التراجع والانصراف خائباً. إنها رحلة أدبية ممتعة ستلهم طفلك لبناء شخصية قوية قادرة على حماية نفسها ورفض الاستسلام للخوف مهما بدا الخصم كبيراً.\n\nيعاني أطفال الحي من تنمر فتى ضخم يُدعى عصام، يثير الرعب في قلوبهم ويجبرهم على إعطائه ما يملكون. كان كريم الأكثر خوفاً، حيث يسلك طرقاً طويلة جداً لتجنب شارعه. ورغم محاولات كريم المستمرة لاكتساب الشجاعة من خلال تعلم الكاراتيه، واقتناء كلب صغير أسماه &#8220;عملاق&#8221; ليحتمي به، ظل الرعب يسيطر عليه تماماً ويدفعه للهرب بمجرد رؤية المتنمر.\n\nتصل الأحداث لذروتها عندما يذهب كريم بكلبه إلى الملعب، ليتفاجأ بظهور عصام. يمارس عصام تسلطه المعتاد فيأخذ كرة أحد الأطفال، ثم يلتفت نحو كريم ويحاول أخذ كلبه بالقوة. في تلك اللحظة الحاسمة، يقرر كريم ألا يستسلم لخوفه، فيأخذ نفساً عميقاً ويجذب رسن كلبه بقوة، رافضاً طلب عصام بحزم. لم تكسر هذه اللحظة حاجز الخوف لدى كريم فحسب، بل ألهمت بشجاعتها بقية الأطفال، فرفضوا الخضوع لأوامر عصام وتجاهلوه تماماً. انسحب عصام خائباً وحزيناً، لتنتهي أسطورته للأبد، ولم يعد يبدو ضخماً أو مخيفاً في عيونهم بعد ذلك الموقف.\n\nتحميل PDF تحميل الصور لا تنسي فك الضغط عند تحميل الصور.. أو استمتع بتحميل القصة PDF &times; قراءة قصة من يخاف عصاما مكتوبةكان عصام ضخما ومزعجا. وكان الجميع يخافه.\n\nأجل، فجميع الصبيان الصغار كانوا يخافون عصاما. وجميع البنات الصغيرات كن يخفنه. حتى إن بعض الصبيان الكبار كانوا يخافونه، لأنه كان أكبر حجما من أي منهم.\n\nوقف الأولاد جميعهم في ثوان معدودة!\n\nوإذا قال: «هاتوا الحلوى التي معكم»\n\nسارع الأولاد كلهم إلى تسليمه ما لديهم من حلوى. أجل، الكل يخاف عصاما الضخم المؤذي الشرير. لكن كريما كان أكثرهم خوفا.\n\nقضى كريم الكثير من وقته وهو يحاول تجنب عصام. كان يختار طريقا طويلا للوصول إلى المدرسة، وطريقا طويلا للعودة إلى المنزل. وكان يتجنب دوما المرور في شارع بيروت حيث يقيم عصام. لكنه على الرغم من ذلك كله كان يجد عصاما أمامه فجأة أينما ذهب.\n\nوقف عصام مرة خلف شجرة حديقة منزل كريم وتوعده وهو يصيح: «سوف أنال منك!»",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «من يخاف عصاما»؟",
       "options": [
@@ -650,7 +1584,62 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما_1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-25.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-26.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-27.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-28.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-29.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-30.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-31.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-32.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-33.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-34.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-35.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-36.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-37.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-38.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-39.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-40.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-41.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-42.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-43.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-44.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-45.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-46.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-47.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-48.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-49.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-50.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/من-يخاف-عصاما-51.jpg"
+    ],
+    "pageCount": 52
   },
   {
     "id": "kidzz_8_12_32",
@@ -662,7 +1651,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أميرة-اللؤلؤ.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a3%d9%85%d9%8a%d8%b1%d8%a9-%d8%a7%d9%84%d9%84%d8%a4%d9%84%d8%a4/",
-    "storyText": "قصة أميرة اللؤلؤ تروي مغامرات عباس، الفتى الشجاع الذي يكتشف لؤلؤة سحرية تقوده إلى أميرة غامضة في البحر، حيث تبدأ حكاية ساحرة.",
+    "storyText": "في عالمٍ ساحرٍ مليءٍ بالبحار والأمواج المتلألئة، يعيش فتى شجاع يُدعى عباس في قرية صغيرة تُعرف بصيد اللؤلؤ. كانت حياة البحر جزءاً لا يتجزأ من طفولته، حيث اعتاد مراقبة مراكب الصيد وهي تعود محملة باللآلئ البراقة التي تثير في قلبه الشغف والحلم. منذ نعومة أظافره، كان عباس يحلم بأن يجد يومًا ما لؤلؤة نادرة، تفوق في جمالها وبريقها كل ما رآه من قبل. عندما كبر عباس، أصبح غواصًا ماهرًا، يقضي أيامه في البحث عن تلك الجوهرة المفقودة في أعماق البحر. لم يكن يعلم أن حلمه سيقوده إلى لقاء مع شخصية أسطورية تثير الدهشة والرهبة في آن واحد. خلال إحدى مغامراته تحت الماء، يعثر على صدفة عملاقة تحتوي على لؤلؤة وردية فريدة. لم تكن تلك اللؤلؤة مجرد حجر كريم، بل كانت ملاذًا لأميرة اللؤلؤ، جنية جميلة تظهر له في الليالي المقمرة.\n\nتبدأ بين عباس وأميرة اللؤلؤ قصة صداقة ومحبة، تتحول فيها الليالي إلى حكايات ساحرة ترويها الأميرة عن أسرار البحر وعجائبه. لكن تلك العلاقة تواجه تحديات كبيرة عندما تهدد قوى الشر حياة عباس. في لحظة تضحية نبيلة، تحاول أميرة اللؤلؤ إنقاذه، لتتحول بعدها إلى ضباب وردي يترك أثره في قلب عباس وفي أمواج البحر التي تحيط به. هذه قصة أميرة اللؤلؤ، إحدى أجمل قصص للأطفال، تحمل في طياتها معاني الحب، التضحية، والإخلاص، وتغمر القراء بعالم مليء بالسحر والجمال.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «أميرة اللؤلؤ»؟",
       "options": [
@@ -671,7 +1660,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أميرة-اللؤلؤ.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أميرة-اللؤلؤ-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أميرة-اللؤلؤ-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أميرة-اللؤلؤ-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أميرة-اللؤلؤ-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أميرة-اللؤلؤ-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أميرة-اللؤلؤ-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أميرة-اللؤلؤ-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أميرة-اللؤلؤ-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أميرة-اللؤلؤ-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أميرة-اللؤلؤ-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أميرة-اللؤلؤ-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أميرة-اللؤلؤ-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أميرة-اللؤلؤ-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أميرة-اللؤلؤ-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أميرة-اللؤلؤ-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أميرة-اللؤلؤ-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أميرة-اللؤلؤ-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_33",
@@ -683,7 +1693,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القصر-المهجور.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d9%82%d8%b5%d8%b1-%d8%a7%d9%84%d9%85%d9%87%d8%ac%d9%88%d8%b1/",
-    "storyText": "تحكي قصة القصر المهجور عن مغامرة ملك شاب معروف بشجاعته وحبه للفورسية، يتحول إلى حصان بسبب خداع مشعوذ شرير، وتنتهي بانتصار الخير علي الشر.",
+    "storyText": "في عالم قصص الأطفال المليء بالمغامرات والعجائب، تأتي قصة القصر المهجور لتأسر خيال الصغار والكبار على حد سواء. تحكي القصة عن ملك شاب يُدعى شانفور، عُرف بشجاعته وحبه للفروسية. يعيش هذا الملك في مملكة بعيدة هادئة، حتى ينقلب عالمه رأسًا على عقب عندما يقع ضحية لمؤامرة شريرة دبرها مشعوذ خطير يُدعى هرار بالتعاون مع الأمير الطامع جريان. في ظل هذه المؤامرة، يتعرض الملك لعملية خداع حيث يُباع له عين بلورية سحرية تظهر له صورة فتاة جميلة تدعى رمانة. بدافع الفضول والبحث عن هذه الفتاة، ينجرف الملك لاستخدام مسحوق سحري يحوله هو ووزيره إلى حصانين، مما يجعلهما يواجهان الكثير من التحديات. في وسط مغامراتهما، يلجآن إلى قصر مهجور في أعماق غابة كثيفة، حيث يكتشفان وجود بومة ضخمة تبكي بحرقة. لكن هذه البومة ليست كما تبدو، فهي في الواقع الأميرة رمانة التي حولها المشعوذ هرار إلى هذا الشكل عقابًا لها.\n\nومع مرور الأحداث، تتشابك قصص الشخصيات في هذا القصر المهجور، حيث يسعى الجميع للتخلص من اللعنة والعودة إلى حياتهم الطبيعية. القصة تقدم دروسًا في الشجاعة والصداقة والتضحية، وهي مثال رائع لكيفية انتصار الخير على الشر في النهاية. قصة القصر المهجور ليست مجرد حكاية مسلية للأطفال، بل هي رحلة مليئة بالمفاجآت والتشويق تجعل القارئ يتطلع إلى كل صفحة جديدة.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «القصر المهجور»؟",
       "options": [
@@ -692,7 +1702,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القصر-المهجور.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القصر-المهجور-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القصر-المهجور-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القصر-المهجور-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القصر-المهجور-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القصر-المهجور-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القصر-المهجور-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القصر-المهجور-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القصر-المهجور-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القصر-المهجور-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القصر-المهجور-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القصر-المهجور-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القصر-المهجور-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القصر-المهجور-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القصر-المهجور-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القصر-المهجور-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القصر-المهجور-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القصر-المهجور-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_34",
@@ -704,7 +1735,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الغزال-الذهبي.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%ba%d8%b2%d8%a7%d9%84-%d8%a7%d9%84%d8%b0%d9%87%d8%a8%d9%8a/",
-    "storyText": "قصة الغزال الذهبي هي حكاية للأطفال عن مغامرات سلامة في حماية غزال ذهبي في البرية من الصيادين، تعكس الصداقة والشجاعة والوفاء.",
+    "storyText": "في عالم مليء بالمغامرات والعجائب، تأتي قصة الغزال الذهبي لتكون واحدة من أجمل قصص الأطفال التي تُسافر بخيالهم إلى عالم من الطبيعة السحرية والصداقة الحقيقية. تبدأ القصة مع سلامة، الفتى الطيب الذي يعشق الطبيعة ويحب التواجد في البرية المحيطة بقريته. كان يقضي أيامه بجوار بحيرة صغيرة، محاطًا بالزهور وأغصان الأشجار وصوت الرياح. وفي يوم من الأيام، وبينما كان سلامة يتجول بالقرب من البحيرة، أنقذ رشا صغيرًا من بين مخالب نسر شرس. كان هذا الرشا الذهبي هو بداية صداقة مميزة بين الفتى والغزال. مع مرور الوقت، أصبح الغزال الذهبي يظهر كل يوم عند البحيرة، يتبادل المرح واللعب مع سلامة بعيدًا عن أعين البشر. ولكن، ما أن ذاع خبر الغزال الذهبي حتى أصبح مطمعًا للصيادين، الذين سعوا لاصطياده بكل الطرق. ومن هنا، تتحول قصة الغزال الذهبي إلى قصة من الشجاعة والمغامرة، حيث يحاول سلامة حماية صديقه الغزال من الأخطار المحدقة به.\n\nتأخذ القصة الأطفال في رحلة مليئة بالإثارة والتشويق، حيث يرون كيف يمكن لصداقة حقيقية أن تصمد أمام كل التحديات، وكيف يمكن للطبيعة أن تتحدث بلغة الحب والوفاء. إنها قصة تعلم الأطفال قيمة الرحمة وحب الطبيعة، وتجعلهم يعيشون في أجواء ساحرة مع كل قفزة وركضة للغزال الذهبي.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الغزال الذهبي»؟",
       "options": [
@@ -713,7 +1744,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الغزال-الذهبي.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الغزال-الذهبي-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الغزال-الذهبي-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الغزال-الذهبي-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الغزال-الذهبي-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الغزال-الذهبي-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الغزال-الذهبي-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الغزال-الذهبي-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الغزال-الذهبي-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الغزال-الذهبي-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الغزال-الذهبي-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الغزال-الذهبي-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الغزال-الذهبي-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الغزال-الذهبي-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الغزال-الذهبي-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الغزال-الذهبي-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الغزال-الذهبي-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الغزال-الذهبي-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_35",
@@ -725,7 +1777,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود_1.jpg",
     "sourceUrl": "https://kidzzstory.com/story/missing-dog-mystery-story-pdf/",
-    "storyText": "في قصة لغز الكلب المفقود نتعلم مهارات التعاون وقوة الملاحظة خلال مغامرة شيقة لفريق من الأصدقاء يتتبعون الأدلة بدقة للعثور على كلب صديقهم.",
+    "storyText": "تعد تنمية مهارات التفكير المنطقي والعمل الجماعي من أهم ما يمكن غرسة في نفوس الأطفال في سن مبكرة. وهنا تأتي قصة لغز الكلب المفقود لتقدم مغامرة بوليسية ممتعة ومثيرة، تجذب انتباه الطفل وتنمي خياله بذكاء. تدور أحداث القصة حول الصديق سمير وكلبه &#8220;ماكس&#8221; الذي يتميز بصفة عجائبية مدهشة؛ فهو كلب خفي تماماً لا يظهر منه سوى طرف ذيله البني! يؤسس سمير مع صديقه عادل الذي يعاني من فقدان السمع ولكنه يمتلك قوة ملاحظة استثنائية، وصديقته ليلى ذات التفكير التحليلي البارع، ما يسمى بـ &#8220;الفريق الخفي&#8221;. يواجه هذا الفريق تحدياً كبيراً عندما يختفي الكلب ماكس فجأة أثناء زيارتهم للمعرض السنوي للمشاركة في مسابقة حيل الكلاب.\n\nمن خلال أحداث قصة لغز الكلب المفقود، سيتعلم طفلك بطريقة شيقة وملهمة أهمية التعاون وتقبل الاختلافات، وكيف يمكن لكل شخص أن يساهم بمهاراته الفريدة في حل أصعب المشكلات. فحين يبدأ الأصدقاء رحلة البحث عن الكلب المفقود، يعتمدون على قوة ملاحظة عادل الذي يقرأ لغة الشفاه ويرصد أبسط التفاصيل (مثل حقيبة طعام الكلاب)، وذكاء ليلى في تتبع الأدلة واستخدام الحبر السري لفك اللغز. سيستمتع طفلك بتعلم التفكير النقدي بعيداً عن الاستنتاجات المتسرعة وإلقاء التهم جزافاً، ليكتشف في النهاية كيف استخدم الأصدقاء تسامحهم وذكاءهم لتحويل موقف صعب إلى فوز مبهر في المسابقة السحرية.\n\nتبدأ أحداث القصة المليئة بالغموض والتشويق مع الفتى سمير الذي يمتلك كلباً عجيباً يُدعى &#8220;ماكس&#8221;. أصبح ماكس كلباً شبه خفي بعد حادثة سقوط في بركة ماء سحرية داخل مغارة، حيث لم يعد يظهر منه سوى طرف ذيله البني فقط. ولمواجهة المواقف الغريبة وحل الألغاز، يؤسس سمير مع أقرب أصدقائه &#8220;الفريق الخفي&#8221; الذي يضم ليلى بذكائها التحليلي البارع، وعادل الذي يعاني من الصمم ولكنه يمتلك قدرة استثنائية على قراءة الشفاه وقوة ملاحظة دقيقة لا تفوتها شاردة ولا واردة.\n\nيقرر الأصدقاء الثلاثة خوض مغامرة جديدة والمشاركة بكلبهم ماكس في مسابقة استعراض الكلاب السنوية المقامة في مهرجان التسلية بالمنتزه. وللتغلب على مشكلة اختفاء الكلب حتى تتمكن لجنة التحكيم من رؤيته وتقييمه، تبتكر ليلى حيلة ذكية بصبغ ماكس بألوان الشوكولاتة المخصصة للطعام. وبمجرد وصولهم إلى المعرض المزدحم، تقع حادثة غير متوقعة؛ إذ يختفي ماكس فجأة في ظروف غامضة، تاركاً الأصدقاء في حالة من القلق والحيرة.\n\nيشرع &#8220;الفريق الخفي&#8221; فوراً في عملية بحث وتحرٍ واسعة للبحث عن كلبهم المفقود، وتتجه شكوكهم في البداية نحو شخصيات مريبة قابلوها في المنتزه، مثل الفتى المغرور نبيل الذي يمتلك كلبة ضخمة، وساحرة غريبة الأطوار تقدم عروضاً سحرية. لكن بفضل قوة ملاحظة عادل الذي ينتبه لوجود حقيبة طعام كلاب مع زميلتهم سعاد رغم أنها لا تملك كلباً، وذكاء ليلى في ربط الخيوط واستخدام الحبر السري للتواصل وتتبع الأدلة، يكتشف الفريق الحقيقة المذهلة. يتبين أن زميلتهم رنا هي من أخذت ماكس خلسة لتجربته في منزلها، ظناً منها أن الكلب الخفي لن يثير حساسية والدها المريض. بعد اعتراف رنا واعتذارها، تعيد الكلب لأصدقائه، وتقوم بمساعدتهم في اللحظات الأخيرة. يستخدم الفريق حيلة ذكية تعتمد على لعبة أرنب ينبح، ليقدم سمير وماكس عرضاً سحرياً استثنائياً يذهل لجنة التحكيم والجمهور، ويتوجون في النهاية بالجائزة الأولى بجدارة واستحقاق، لتنتهي المغامرة بنجاح مبهر للفريق الخفي.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «لغز الكلب المفقود»؟",
       "options": [
@@ -734,7 +1786,62 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود_1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-25.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-26.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-27.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-28.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-29.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-30.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-31.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-32.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-33.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-34.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-35.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-36.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-37.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-38.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-39.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-40.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-41.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-42.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-43.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-44.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-45.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-46.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-47.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-48.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-49.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-50.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/لغز-الكلب-المفقود-51.jpg"
+    ],
+    "pageCount": 52
   },
   {
     "id": "kidzz_8_12_36",
@@ -746,7 +1853,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الشوارب-الزجاجية.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%b4%d9%88%d8%a7%d8%b1%d8%a8-%d8%a7%d9%84%d8%b2%d8%ac%d8%a7%d8%ac%d9%8a%d8%a9/",
-    "storyText": "قصة الشوارب الزجاجية تحكي عن الأمير شاليش، الذي يواجه تحديات بسبب شواربه القاسية مثل الزجاج، ويتعلم أهمية الثقة والصدق مع الناس.",
+    "storyText": "في عالم مليء بالغرائب والطرائف، نجد قصة &#8220;الشوارب الزجاجية&#8221;، واحدة من تلك القصص المدهشة التي تأخذنا في رحلة عبر خيال الأطفال. تدور القصة حول الأمير شاليش، الذي كان يفتخر بشاربه الفريد من نوعه، والذي كان يعتبره رمز قوته وعظمته. كان الأمير يعاني من شواربه الطويلة والكثيفة، والتي كانت تجلب له الفخر والتقدير من الناس. لكن مع مرور الأيام، بدأت تلك الشوارب تتحول إلى مشكلة حقيقية. أصبحت شوارب الأمير صلبة مثل الزجاج، ولم يعد بإمكانه القيام بالكثير من الأنشطة اليومية بدون مساعدة.\n\nالقصة تأخذ الأطفال في مغامرة مشوقة مع الأمير وهو يحاول حل مشكلة شواربه الزجاجية، وكيف يكتشف في النهاية أن الثقة الحقيقية والاحترام لا يأتيان من المظاهر بل من الجوهر والقيم الإنسانية. ومن خلال سلسلة من الأحداث الطريفة والمواقف الغريبة، يتعلم الأمير شاليش درسًا ثمينًا عن أهمية التواضع والإخلاص للناس الذين يحكمهم. &#8220;قصة الشوارب الزجاجية&#8221; هي قصة ممتعة وهادفة للأطفال، تعلمهم كيف يمكن للمظاهر أن تكون خداعة، وكيف أن القيم الحقيقية تكمن في القلوب الصادقة والنوايا الحسنة. في هذه القصة، يجد القارئ عناصر من الفكاهة والحكمة، تجعلها واحدة من القصص المثيرة التي تأسر خيال الصغار وتعلمهم دروسًا مهمة عن الحياة بطريقة مشوقة وممتعة.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الشوارب الزجاجية»؟",
       "options": [
@@ -755,7 +1862,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الشوارب-الزجاجية.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الشوارب-الزجاجية-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الشوارب-الزجاجية-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الشوارب-الزجاجية-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الشوارب-الزجاجية-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الشوارب-الزجاجية-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الشوارب-الزجاجية-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الشوارب-الزجاجية-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الشوارب-الزجاجية-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الشوارب-الزجاجية-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الشوارب-الزجاجية-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الشوارب-الزجاجية-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الشوارب-الزجاجية-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الشوارب-الزجاجية-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الشوارب-الزجاجية-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الشوارب-الزجاجية-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الشوارب-الزجاجية-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الشوارب-الزجاجية-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_37",
@@ -767,7 +1895,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أمير-الأصداف.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a3%d9%85%d9%8a%d8%b1-%d8%a7%d9%84%d8%a3%d8%b5%d8%af%d8%a7%d9%81/",
-    "storyText": "قصة أمير الأصداف تحكي عن الصياد الفقير مبروك الذي يقابل الأميرة قلب النهار ويهديها صدفة سحرية تحمل حبًا صادقًا يفوق هدايا الأمراء.",
+    "storyText": "في أعماق عالم قصص الأطفال، تتألق &#8220;قصة أمير الأصداف&#8221; كنجمة ساطعة تجمع بين السحر والحب والشجاعة. تدور أحداث هذه القصة حول الصياد الفقير مبروك، الذي يعيش حياة بسيطة على شاطئ البحر. مبروك، بطل قصتنا، هو رجل شاب يحب البحر بكل جوارحه، ويجد في صوت الأمواج والرياح سحرًا خاصًا. رغم فقره، كان مبروك سعيدًا بما يجود به البحر عليه من رزق، حتى جاء اليوم الذي تغيرت فيه حياته إلى الأبد. بينما كان مبروك يرمي شباكه في البحر، رأى الأميرة الجميلة قلب النهار، ابنة الملك، تمتطي جوادها الأبيض. كانت هذه اللحظة بداية رحلة جديدة في حياة مبروك، رحلة ملؤها المغامرات والأماني. في تلك الليلة، وبينما كان يستمع إلى همسات البحر من خلال صدفة وجدها في الماء، سمع صوتًا غامضًا يأمره بالذهاب إلى القصر وطلب يد الأميرة.\n\nما الذي يمكن أن يحدث عندما يتحدى الصياد الفقير التقاليد ويقرر أن يطلب يد أميرة من أميرات القصر؟ هل ستُقبَل هديته البسيطة في عالم يملأه الذهب والجواهر؟ &#8220;قصة أمير الأصداف&#8221; ليست مجرد قصة عن الحب، بل هي قصة عن الإيمان بالنفس والشجاعة لمواجهة التحديات، وهي تقدم للأطفال درسًا قيّمًا في أن الحب الصادق يمكن أن يتجاوز كل العقبات.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «أمير الأصداف»؟",
       "options": [
@@ -776,7 +1904,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أمير-الأصداف.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أمير-الأصداف-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أمير-الأصداف-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أمير-الأصداف-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أمير-الأصداف-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أمير-الأصداف-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أمير-الأصداف-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أمير-الأصداف-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أمير-الأصداف-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أمير-الأصداف-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أمير-الأصداف-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أمير-الأصداف-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أمير-الأصداف-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أمير-الأصداف-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أمير-الأصداف-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أمير-الأصداف-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أمير-الأصداف-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أمير-الأصداف-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_38",
@@ -788,7 +1937,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/السنبلة-الذهبية.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%b3%d9%86%d8%a8%d9%84%d8%a9-%d8%a7%d9%84%d8%b0%d9%87%d8%a8%d9%8a%d8%a9/",
-    "storyText": "قصة السنبلة الذهبية تحكي عن فتى شجاع يواجه تحديات خطيرة ليحصل على سنبلة سحرية تنقذ قبيلته من الجوع وتعلم الأطفال معاني الشجاعة والتضحية.",
+    "storyText": "في عالم مليء بالتحديات والمغامرات، تأتي قصة &#8220;السنبلة الذهبية&#8221; لتأخذنا في رحلة مدهشة مع فتى شجاع يدعى بركة. تعيش قبيلة بركة في منطقة باردة حيث يعتمدون بشكل كبير على الصيد لتأمين طعامهم. لكن، حينما تفشل القبيلة في الحصول على ما يكفي من الطعام لفصل الشتاء القاسي، يتصاعد القلق والخوف من الجوع. بركة، الفتى الذي يظهر للقبيلة بشجاعة وعزيمة، يشعر بالمسؤولية تجاه أهله وأصدقائه. ويقرر أن ينطلق في مغامرة خطيرة للبحث عن السنبلة الذهبية، التي يُقال إنها ستجلب الخير والوفرة للقبيلة. تواجه بركة في رحلته تحديات عظيمة، من مارِدين عمالقة يحاولون منعه من الوصول إلى هدفه، إلى الصيادين الذين يريدون سرقة السنبلة منه. لكن بركة، بعزمه وإرادته القوية، يتغلب على كل هذه العقبات واحدة تلو الأخرى. هذه القصة تحمل في طياتها معاني عميقة عن الشجاعة، التضحية، والإصرار على تحقيق الهدف. وهي مناسبة جدًا كواحدة من &#8220;قصص للأطفال&#8221;، حيث تعلمهم أهمية المسؤولية والوفاء بالوعود.\n\nقصة &#8220;السنبلة الذهبية&#8221; ليست مجرد حكاية خيالية، بل هي درس في الحياة عن القوة الداخلية التي يمتلكها كل شخص منا، وكيف يمكن للإصرار والشجاعة أن يغيرا مصير أمة كاملة. تفتح هذه القصة أمام الأطفال عالم من الخيال الممزوج بالقيم الإنسانية النبيلة.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «السنبلة الذهبية»؟",
       "options": [
@@ -797,7 +1946,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/السنبلة-الذهبية.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/السنبلة-الذهبية-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/السنبلة-الذهبية-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/السنبلة-الذهبية-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/السنبلة-الذهبية-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/السنبلة-الذهبية-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/السنبلة-الذهبية-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/السنبلة-الذهبية-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/السنبلة-الذهبية-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/السنبلة-الذهبية-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/السنبلة-الذهبية-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/السنبلة-الذهبية-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/السنبلة-الذهبية-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/السنبلة-الذهبية-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/السنبلة-الذهبية-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/السنبلة-الذهبية-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/السنبلة-الذهبية-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/السنبلة-الذهبية-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_39",
@@ -809,7 +1979,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الربيع-الأصفر.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%b1%d8%a8%d9%8a%d8%b9-%d8%a7%d9%84%d8%a3%d8%b5%d9%81%d8%b1/",
-    "storyText": "قصة الربيع الأصفر تحكي عن ملك حزين يحبس الأطفال، مما يؤدي إلى ذبول مملكته، لكنه يتعلم درسًا قيمًا عن السعادة والفرح.",
+    "storyText": "في عالمٍ مليءٍ بالحدائق الغنّاء والألوان الزاهية، تحكي قصة الربيع الأصفر عن مملكة بعيدة يحكمها ملك حكيم يدعى فرج الليل. رغم حكمة هذا الملك ووفائه لشعبه، كان يعاني من حزن عميق لعدم وجود وريث له. حاول الملك التغلب على شعوره بالوحدة بإنشاء حديقة ساحرة، كانت الأفضل بين كل حدائق الممالك. ومع ذلك، لم يستطع الملك التخلص من حزنه، بل بدأ يشعر بالنفور من الأطفال الذين يملؤون الشوارع بالضحك واللعب. وفي لحظة غضب، أصدر الملك أمرًا قاسيًا بحبس الأطفال في بيوتهم، مما أدى إلى اختفاء أصواتهم البريئة من شوارع المملكة. ومرت الأيام، حتى خلت المملكة من الأطفال، وبدأت الحياة في المملكة تفقد رونقها. أصبحت الحدائق صفراء، وذبلت الأزهار، وكأن الربيع قد فارق المملكة.\n\nذات يوم، مرت سيدة الأزهار بالمملكة، لكنها لم تجد الأطفال الذين يملؤون العالم بالألوان، فلم تفتح كيسها السحري المعتاد. وعندما علم الملك فرج الليل بما حدث، قرر أن يصحح خطأه، ورافق سيدة الأزهار في رحلة سحرية إلى مملكة مجاورة حيث تتحدث الدمى واللعب. هناك، واجه الملك تحديًا كبيرًا عندما حاول إنقاذ دماه من مصير مروع. تعتبر قصة الربيع الأصفر من قصص الأطفال المؤثرة التي تتناول مواضيع الفرح والحزن، والتصالح مع الذات، وأهمية السماح للضحك واللعب بالعودة إلى حياتنا. في النهاية، يتعلم الملك درسًا قيمًا عن السعادة والحب، عندما يرى مملكته تعود إلى الحياة بفضل الأطفال.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الربيع الأصفر»؟",
       "options": [
@@ -818,7 +1988,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الربيع-الأصفر.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الربيع-الأصفر-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الربيع-الأصفر-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الربيع-الأصفر-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الربيع-الأصفر-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الربيع-الأصفر-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الربيع-الأصفر-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الربيع-الأصفر-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الربيع-الأصفر-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الربيع-الأصفر-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الربيع-الأصفر-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الربيع-الأصفر-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الربيع-الأصفر-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الربيع-الأصفر-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الربيع-الأصفر-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الربيع-الأصفر-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الربيع-الأصفر-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الربيع-الأصفر-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_40",
@@ -830,7 +2021,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الهارب.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%ad%d8%b5%d8%a7%d9%86-%d8%a7%d9%84%d9%87%d8%a7%d8%b1%d8%a8/",
-    "storyText": "قصة الحصان الهارب تحكي عن فتى بسيط يكتشف حصانًا خشبيًا سحريًا. تتطور الصداقة بينهما في رحلة مليئة بالمغامرات والمواقف المشوقة للأطفال.",
+    "storyText": "في عالم قصص الأطفال المليء بالعبر والمغامرات، تأتينا &#8220;قصة الحصان الهارب&#8221; لتأخذنا في رحلة شيقة تجمع بين الخيال والصداقة الحقيقية. تبدأ القصة في إحدى القرى الصغيرة، حيث يعيش فتى طيب القلب يُدعى رضا. رضا، الذي رغم بساطته، كان يمتلك خيالًا واسعًا وروحًا مليئة بحب الاستكشاف. عندما زار رضا مدينة الملاهي لأول مرة، كان يترقب بفارغ الصبر ركوب دوّارة الخيول الخشبية التي طالما حلم بها. لكن خيبة أمله كانت كبيرة عندما لم يجد سوى حصان خشبي صغير وباهت اللون، لم يكن يعلو ويهبط مثل بقية الخيول. ورغم ذلك، قرر رضا أن يركب الحصان الصغير. ومن هنا بدأت مغامرة لم يكن يتخيلها. اكتشف رضا أن الحصان، الذي أطلق عليه اسم &#8220;شيا&#8221;، ليس مجرد قطعة خشبية، بل كائن سحري قادر على التحدث والشعور. تعمقت الصداقة بين رضا وشيا، وأصبح الحصان مصدر سعادة له. لكن الأمور لم تبقَ على حالها، حيث تعرض شيا للعديد من المصاعب، وكان رضا دائمًا إلى جانبه.\n\nتأخذنا &#8220;قصة الحصان الهارب&#8221; في رحلة تجمع بين السحر والواقع، حيث نتعلم من خلالها قيمة الصداقة، وأهمية الحرية، وقوة الإرادة في مواجهة التحديات. إنها قصة للأطفال مليئة بالعبر والمشاعر النبيلة، تجسد كيف يمكن للصداقة الحقيقية أن تتجاوز كل العقبات.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الحصان الهارب»؟",
       "options": [
@@ -839,7 +2030,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الهارب.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الهارب-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الهارب-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الهارب-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الهارب-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الهارب-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الهارب-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الهارب-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الهارب-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الهارب-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الهارب-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الهارب-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الهارب-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الهارب-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الهارب-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الهارب-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الهارب-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الهارب-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_41",
@@ -851,7 +2063,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الذيل-المفقود.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%b0%d9%8a%d9%84-%d8%a7%d9%84%d9%85%d9%81%d9%82%d9%88%d8%af/",
-    "storyText": "قصة الذيل المفقود تروي مغامرات شمبانزي في الغابة، حيث يحاول استبدال ذيله بآخر مختلف، ويتعلم دروسًا عن الصداقة والرضا والقبول.",
+    "storyText": "في عالم مليء بالقصص الممتعة والمشوقة، تبرز &#8220;قصة الذيل المفقود&#8221; كواحدة من القصص الرائعة للأطفال التي تحكي عن مغامرات قرد شجاع يُدعى شمبانزي. يعيش شمبانزي في غابة مليئة بالحيوانات والوحوش، وكان يتمتع بذيل طويل على عكس بقية أفراد جنسه. إلا أن هذا الذيل الذي كان ينبغي أن يكون مصدر فخر له، تحول إلى مشكلة دائمة تزعجه. كان ذيل شمبانزي يشبه ذيل ابن عمه نسناس، الأمر الذي أثار استياءه ودفعه إلى البحث عن طريقة لتغيير هذا الذيل ليصبح مختلفًا ومميزًا عن بقية الحيوانات.\n\nتنطلق أحداث &#8220;قصة الذيل المفقود&#8221; بمواجهة شمبانزي مع حيوانات الغابة المختلفة، مثل الفيل والنمر والأسد وحتى الطائر شاهين. كانت كل محاولاته للحصول على ذيل جديد تبوء بالفشل، وفي كل مرة ينتهي الأمر به في مواقف صعبة تجعله يدرك أنه لا يستطيع التخلص من ذيله بهذه السهولة. خلال مغامراته، يتعلم شمبانزي دروسًا مهمة عن القناعة والصداقة والرضا بما لديه. وبدلاً من العثور على ذيل جديد، يجد نفسه في مواقف كوميدية تُعلّم الأطفال أهمية قبول الذات والإبداع في التعامل مع المشاكل. تعتبر &#8220;قصة الذيل المفقود&#8221; من قصص الأطفال التي تحمل في طياتها معاني عميقة وقيّمة. تروي بأسلوبها المرح والمشوق مغامرات قرد يبحث عن هويته، فيتعلم أن قيمته الحقيقية لا تكمن في مظهره، بل في شجاعته وصداقاته وقدرته على التأقلم مع التحديات.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الذيل المفقود»؟",
       "options": [
@@ -860,7 +2072,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الذيل-المفقود.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الذيل-المفقود-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الذيل-المفقود-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الذيل-المفقود-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الذيل-المفقود-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الذيل-المفقود-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الذيل-المفقود-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الذيل-المفقود-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الذيل-المفقود-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الذيل-المفقود-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الذيل-المفقود-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الذيل-المفقود-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الذيل-المفقود-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الذيل-المفقود-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الذيل-المفقود-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الذيل-المفقود-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الذيل-المفقود-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الذيل-المفقود-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_42",
@@ -872,7 +2105,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الديك-الفصيح.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%af%d9%8a%d9%83-%d8%a7%d9%84%d9%81%d8%b5%d9%8a%d8%ad/",
-    "storyText": "قصة الديك الفصيح تدور حول ديك مميز بصوته الجميل الذي ينافس ديكًا آخر ليحافظ على مكانته في المزرعة، مليئة بالعبر والمغامرات.",
+    "storyText": "في عالم قصص الأطفال الساحر، تأتي &#8220;قصة الديك الفصيح&#8221; لتأخذنا في رحلة ممتعة إلى مزرعة صغيرة حيث يعيش ديكٌ مميزٌ يُدعى &#8220;الديك الفصيح&#8221;. يتميز هذا الديك بريشه البراق وصوته العالي الرنان الذي يجذب انتباه الجميع. في بداية القصة، نرى كيف كان الديك الفصيح محبوبًا من قبل جميع الدجاجات والديكة في المزرعة بسبب فصاحته وصوته الجميل. كان يقف كل صباح على أعمدة السياج أو سطح المنزل، يوقظ أهل المزرعة بصياحه العذب، ويجلب الأخبار لهم بفخر. ولكن، كما هو الحال في الكثير من القصص الممتعة للأطفال، تظهر تحديات جديدة. يدخل إلى المشهد ديك آخر يُدعى &#8220;الديك الصبيح&#8221;، والذي يمتلك هو الآخر صوتًا رنانًا وجمالًا ساحرًا. يبدأ التنافس بين الديك الفصيح والصبيح لكسب إعجاب الدجاجات وإثبات من هو الأفضل. يزداد التوتر عندما يُقرَّر إقامة مناظرة بين الديكين، حيث يتفاخر كل منهما بمواهبه ومهاراته. في نهاية المطاف، ينتصر الفصيح ويعود لنيل حب الدجاجات من جديد، ولكن التباهي الزائد يجلب معه مشكلات غير متوقعة.\n\nتتوالى الأحداث عندما يقرر الملك إحضار الديك الفصيح إلى قصره لضمان صياحه كل صباح، مما يدفع الديك لمواجهة مصير غير متوقع. في نهاية المطاف، يتعلم الديك الفصيح درسًا هامًا حول التواضع والاعتراف بقدرات الآخرين. &#8220;قصة الديك الفصيح&#8221; هي قصة مليئة بالعبر والمغامرات، تجعل الأطفال يستمتعون بأحداثها المشوقة ويتعلمون منها قيمة التعاون والصداقة.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الديك الفصيح»؟",
       "options": [
@@ -881,7 +2114,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الديك-الفصيح.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الديك-الفصيح-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الديك-الفصيح-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الديك-الفصيح-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الديك-الفصيح-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الديك-الفصيح-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الديك-الفصيح-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الديك-الفصيح-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الديك-الفصيح-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الديك-الفصيح-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الديك-الفصيح-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الديك-الفصيح-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الديك-الفصيح-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الديك-الفصيح-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الديك-الفصيح-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الديك-الفصيح-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الديك-الفصيح-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الديك-الفصيح-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_43",
@@ -893,7 +2147,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الطائر.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%ad%d8%b5%d8%a7%d9%86-%d8%a7%d9%84%d8%b7%d8%a7%d8%a6%d8%b1/",
-    "storyText": "قصة شيقة عن الأمير أشرف والأميرة ياسمين، يتحدى فيها الحب مكائد الحكيم الدميم وتقاليد القصر، بمساعدة حصان طائر يحقق المستحيل.",
+    "storyText": "في عالم الحكايات والأساطير، تحمل قصص الأطفال دائمًا عِبرًا وحكمًا، تزرع في النفوس قيمًا نبيلة وتجعل العقول الصغيرة تحلّق في فضاءات الخيال. في قصة الحصان الطائر اليوم، سنتعرف على مغامرة شيّقة تجمع بين الأمير الشجاع أشرف والأميرة الجميلة ياسمين. تبدأ القصة الحصان الطائر عندما يُقدّم للأمير حصانًا عجيبًا يمكنه الطيران، ولكنه ليس هدية بسيطة؛ بل هو بداية لمغامرة لا تُنسى. يتجلى الحب الحقيقي عندما يقرر أشرف وياسمين الهروب معًا باستخدام الحصان الطائر، للهروب من القصر والخروج من أسر التقاليد الصارمة. ولكن، كما في كل القصص الخيالية، هناك عقبات كثيرة تقف في طريقهما. يظهر الحكيم الدميم الذي يسعى بخبثٍ للانتقام، ويختطف ياسمين ليأخذها بعيدًا عن أميرها.\n\nفي رحلتهما المليئة بالتحديات، يجد الأمير نفسه في مواجهة سلطان شاب يُغرَم بياسمين، ما يجعل القصة تتشابك بين الحب والمكائد. أحداث القصة تتصاعد بتتابع مشوق يناسب الأطفال، حيث تنتهي بانتصار الحب والخير على الشر. هذه القصة ليست مجرد حكاية رومانسية، بل هي درس للأطفال عن الشجاعة والوفاء والقوة في مواجهة التحديات.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الحصان الطائر»؟",
       "options": [
@@ -902,7 +2156,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الطائر.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الطائر-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الطائر-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الطائر-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الطائر-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الطائر-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الطائر-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الطائر-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الطائر-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الطائر-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الطائر-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الطائر-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الطائر-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الطائر-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الطائر-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الطائر-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الطائر-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الحصان-الطائر-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_44",
@@ -914,7 +2189,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك_1.jpg",
     "sourceUrl": "https://kidzzstory.com/story/titanic-ship-story-pdf/",
-    "storyText": "تعلم قصة سفينة التايتنك طفلك التواضع وأهمية اتباع قواعد السلامة بدقة، من خلال أحداث تاريخية لاصطدام السفينة العملاقة بجبل جليدي مفاجئ.",
+    "storyText": "التاريخ مليء بالأحداث الكبرى التي تترك بصمة لا تُنسى، وتعتبر قصة سفينة التايتنك واحدة من أعظم هذه الأحداث التي تثير فضول الكبار والصغار على حد سواء. تأخذنا هذه القصة الوثائقية الممتعة في رحلة عبر الزمن إلى عام 1912، لنتعرف على &#8220;السفينة الأعجوبة&#8221; التي اعتقد العالم بأسره أنها أقوى من أن تغرق. كانت التايتنك تبدو كقصر عائم يعج بمختلف الطبقات الاجتماعية، من أثرياء العالم إلى المهاجرين الباحثين عن حياة جديدة، مبحرين جميعاً بثقة عمياء في تكنولوجيا ذلك العصر.\n\nولكن، كيف يمكن لرحلة الأحلام أن تتحول إلى كابوس في قلب المحيط الجليدي؟ من خلال أحداث قصة سفينة التايتنك، سيتعلم طفلك درساً عميقاً حول خطورة الغرور المبالغ فيه وأهمية الاستعداد الدائم للمخاطر. فبينما كانت السفينة تتجاهل التحذيرات وتشق عباب البحر ليلاً، اصطدمت بجبل جليدي كشف عن الخلل الكبير في نقص قوارب النجاة وعدم جاهزية الطاقم. هذا الحدث التاريخي يعلم الأطفال، بطريقة غير مباشرة ومؤثرة، أن الحجم أو القوة لا يغنيان عن الحذر واتباع قواعد السلامة، وكيف أن الأخطاء البشرية والثقة الزائدة قد تؤدي إلى نتائج غير متوقعة.\n\nتستمر الإثارة في القصة لتصل إلى العصر الحديث مع مغامرة العالم روبرت بالارد واكتشافه المذهل لحطام السفينة في قاع المحيط. إنها رحلة تجمع بين التاريخ، والعلوم، والعبرة الأخلاقية، لتبني في وعي طفلك أهمية التواضع أمام الطبيعة وضرورة التعلم من أخطاء الماضي لبناء مستقبل أكثر أماناً.\n\nفي العاشر من نيسان عام 1912، انطلقت &#8220;التايتنك&#8221;، أضخم وأفخم سفينة في العالم، في رحلتها الأولى والوحيدة. أطلق عليها الخبراء والصحف لقب &#8220;السفينة الأعجوبة&#8221; والقصر العائم الذي يستحيل أن يغرق أبداً بفضل تصميمها الهندسي الدقيق وحجراتها العازلة للمياه. حملت السفينة على متنها آلاف الركاب، الذين تنوعوا بين أغنى أغنياء العالم المتجهين للترفيه، وعائلات فقيرة تهاجر بحثاً عن حياة جديدة ومستقبل أفضل. وفي منتصف ليلة الرابع عشر من نيسان، بينما كان البحر هادئاً والجميع يشعرون بالأمان، وقعت الكارثة؛ اصطدمت السفينة العملاقة بجبل جليدي مخفي في الظلام، مما أدى إلى تضرر هيكلها بشدة وبدء تسرب المياه الباردة إليها.\n\nتحولت الثقة الزائدة والمرح إلى رعب حقيقي عندما أدرك الطاقم والركاب حقيقة مفزعة؛ لم يكن هناك عدد كافٍ من قوارب النجاة لجميع المسافرين. وسط أجواء من الذعر، غاصت التايتنك في أعماق المحيط المظلم، ولم ينجُ سوى القليل ممن صعدوا إلى القوارب حتى وصلت سفينة &#8220;كارباتيا&#8221; لإنقاذهم عند الفجر. تركت هذه الفاجعة المأساوية أثراً عميقاً، وأجبرت العالم على تغيير قوانين السلامة البحرية بالكامل. وبعد مرور عقود طويلة من الغموض، تمكن العالم &#8220;روبرت بالارد&#8221; في عام 1985 من استخدام غواصة آلية لاكتشاف حطام السفينة في قاع المحيط، مقرراً تركها ترقد بسلام لتظل قصتها محفورة في ذاكرة التاريخ كدرس لا يُنسى.\n\nتحميل PDF تحميل الصور لا تنسي فك الضغط عند تحميل الصور.. أو استمتع بتحميل القصة PDF &times; قراءة قصة سفينة التايتنك مكتوبةإنه العاشر من نيسان / أبريل عام 1912. كانت السفينة الجديدة المذهلة «التايتنك» حديث العالم بأسره. استعدت السفينة للمغادرة في رحلتها الأولى عبر المحيط من بريطانيا إلى الولايات المتحدة الأميركية.\n\nأطلقت الصحف على التايتنك لقب «السفينة الأعجوبة»، وشبهوها بالقصر العائم، وكانت تحتوي على العديد من المطاعم، ومركز للبريد، وناد للرياضة.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «سفينة التايتنك»؟",
       "options": [
@@ -923,7 +2198,61 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك_1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-25.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-26.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-27.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-28.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-29.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-30.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-31.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-32.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-33.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-34.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-35.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-36.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-37.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-38.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-39.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-40.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-41.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-42.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-43.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-44.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-45.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-46.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-47.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-48.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-49.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/سفينة-التايتنك-50.jpg"
+    ],
+    "pageCount": 51
   },
   {
     "id": "kidzz_8_12_45",
@@ -935,7 +2264,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الجزيرتان.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%ac%d8%b2%d9%8a%d8%b1%d8%aa%d8%a7%d9%86/",
-    "storyText": "قصة الجزيرتان تحكي عن مسابقة شعر تتحول لصراع بين جزيرتين، وتتناول قصة حب وتضحية بين سالم وسلمى وسط التوترات والمغامرات.",
+    "storyText": "في عالم مليء بالسحر والجمال، تحدث قصة اليوم داخل مملكة ساحرة تتألف من جزيرتان، حيث كان الملك جودان يسعى دائمًا لإضفاء الجمال والبهجة على حياة شعبه. في قصة الجزيرتان، تتألق الفتيات الصغيرات بشعرهن الطويل الذي يعكس حب الملك لجمال الطبيعة. يدور الحدث المركزي في القصة حول مسابقة ملكية لاختيار أجمل شعر، حيث تتنافس فتاتان، سلمى من جزيرة الشرابة الأمامية ولولو من جزيرة البوزين، على الجائزة الملكية. ولكن التوترات بين الجزيرتين سرعان ما تتحول إلى صراع يعصف بالمملكة، ويؤدي إلى انقسامها. وبينما تعكس القصة جوانب من التنافس والغيرة، تسلط الضوء أيضًا على قوة الحب والشجاعة في مواجهة التحديات. هذه قصص للأطفال ليست مجرد حكاية عن الجمال والمنافسة، بل هي درس في التسامح والوحدة. في نهاية المطاف، نجد أن قصة سالم وسلمى تذكرنا بأهمية الحفاظ على الروابط الإنسانية رغم الخلافات. مع مغامرات مشوقة وأحداث غير متوقعة، تأخذنا القصة في رحلة مشوقة عبر جزيرتين، تاركة في قلوب الأطفال والقارئين الكبار دروسًا عميقة ومؤثرة.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الجزيرتان»؟",
       "options": [
@@ -944,7 +2273,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الجزيرتان.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الجزيرتان-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الجزيرتان-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الجزيرتان-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الجزيرتان-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الجزيرتان-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الجزيرتان-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الجزيرتان-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الجزيرتان-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الجزيرتان-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الجزيرتان-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الجزيرتان-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الجزيرتان-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الجزيرتان-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الجزيرتان-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الجزيرتان-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الجزيرتان-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الجزيرتان-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_46",
@@ -956,7 +2306,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الثعلب-التائب.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%ab%d8%b9%d9%84%d8%a8-%d8%a7%d9%84%d8%aa%d8%a7%d8%a6%d8%a8/",
-    "storyText": "قصة الثعلب التائب تحكي عن ثعلب ماكر يظهر التوبة، ويستغل ثقة الحيوانات لينفذ مكيدته، مما يؤدي إلى فوضى واختفاء الديوك والدجاجات.",
+    "storyText": "في عالم قصص الأطفال المثيرة، تأتي قصة الثعلب التائب لتأخذنا في رحلة مليئة بالدروس والعبر. تدور أحداث هذه القصة حول ثعلب ماكر يُدعى ثعلبوط، يعيش في قرية صغيرة مع مجموعة من الدجاجات والديكة. كانت الحياة في القرية بسيطة وهادئة حتى بدأ الثعلب في إظهار جانب مختلف من شخصيته، محاولًا إقناع الجميع بأنه قد تاب عن أعماله الشريرة. أخذت الدجاجات والديكة تنجذب إلى هذا الثعلب الذي يبدو أنه قد تغير، لكن الحكاية تأخذ منحى غير متوقع. ثعلبوط يخطط لمكيدة ماكرة تستهدف الجميع في القرية. من خلال استغلال ثقة الحيوانات به، يبدأ في زرع الفتنة بينهم، ويقودهم إلى أماكن مجهولة، مما يؤدي إلى اختفاء العديد من الديوك والدجاجات.\n\nتتناول قصة الثعلب التائب مفاهيم هامة مثل الثقة والحذر، وتعلم الأطفال ضرورة التفكير مليًا قبل أن يصدقوا كل ما يسمعونه. كما أنها تبرز كيف يمكن للشخصية الماكرة أن تتسبب في إحداث فوضى إذا لم يكن المرء حذرًا. هذه القصة التعليمية تقدم للأطفال مغامرة مشوقة مليئة بالعبر.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الثعلب التائب»؟",
       "options": [
@@ -965,7 +2315,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الثعلب-التائب.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الثعلب-التائب-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الثعلب-التائب-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الثعلب-التائب-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الثعلب-التائب-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الثعلب-التائب-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الثعلب-التائب-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الثعلب-التائب-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الثعلب-التائب-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الثعلب-التائب-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الثعلب-التائب-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الثعلب-التائب-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الثعلب-التائب-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الثعلب-التائب-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الثعلب-التائب-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الثعلب-التائب-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الثعلب-التائب-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الثعلب-التائب-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_47",
@@ -977,7 +2348,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/التفاحة-البلورية.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%aa%d9%81%d8%a7%d8%ad%d8%a9-%d8%a7%d9%84%d8%a8%d9%84%d9%88%d8%b1%d9%8a%d8%a9/",
-    "storyText": "ماروشيا، فتاة طيبة تواجه قسوة أختيها، وتخوض مغامرة سحرية مع تفاحة بلورية، لتنتهي قصتها بالحب والنصر في هذه القصة الملهمة.",
+    "storyText": "في قصة التفاحة البلورية حيث عالم بعيد تسوده السحر والمغامرات، كانت تعيش فتاة صغيرة تدعى ماروشيا في قرية هادئة مع والدها وزوجته وابنتيها الشريرتين. تميزت ماروشيا بجمالها وطيبتها، ولكن حياتها لم تكن سهلة، فقد كانت مكلفة بأعمال المنزل بينما تعيش أختاها في كسل وأنانية. في أحد الأيام، قرر والدها السفر إلى مدينة بعيدة لشراء مؤن وطلب من بناته اختيار هداياهن. وبينما اختارت الأختان الكبيرتان الهدايا الثمينة، طلبت ماروشيا شيئًا بسيطًا ولكنه سحري: تفاحة بلورية وصحن فضي. كانت هذه الطلبات البسيطة بداية لمغامرة ساحرة مليئة بالأحداث المدهشة. من خلال قصة التفاحة البلورية، نتعلم عن الشجاعة والصداقة، وأهمية القيم الحقيقية في الحياة. إنها قصة مشوقة من قصص الأطفال، تأخذ القراء في رحلة بين الواقع والخيال، حيث تتشابك الأخلاق والمغامرات في حبكة مشوقة تجذب الأطفال وتعلمهم دروسًا حياتية هامة. تابعوا هذه القصة لمعرفة كيف تحولت حياة ماروشيا من فتاة مغبونة إلى أميرة سعيدة وكيف انتصرت الطيبة والحق في النهاية.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «التفاحة البلورية»؟",
       "options": [
@@ -986,7 +2357,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/التفاحة-البلورية.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/التفاحة-البلورية-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/التفاحة-البلورية-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/التفاحة-البلورية-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/التفاحة-البلورية-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/التفاحة-البلورية-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/التفاحة-البلورية-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/التفاحة-البلورية-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/التفاحة-البلورية-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/التفاحة-البلورية-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/التفاحة-البلورية-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/التفاحة-البلورية-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/التفاحة-البلورية-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/التفاحة-البلورية-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/التفاحة-البلورية-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/التفاحة-البلورية-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/التفاحة-البلورية-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/التفاحة-البلورية-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_48",
@@ -998,7 +2390,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام_1.jpg",
     "sourceUrl": "https://kidzzstory.com/story/dream-collector-story-pdf/",
-    "storyText": "تعلم قصة جامع الأحلام الطفل مهارة حل المشكلات وحب المساعدة من خلال مغامرة سامر الشيقة لجمع الأحلام الهاربة قبل شروق الشمس.",
+    "storyText": "هل تساءلتم يوماً أين تذهب أحلامنا عندما نستيقظ في الصباح الباكر؟ تأخذنا قصة جامع الأحلام في رحلة خيالية ساحرة ومثيرة مع الطفل الشجاع سامر، الذي يكتشف سراً عجيباً في حديقة منزله. تبدأ المغامرة عندما يرى سامر حيوانات غريبة مثل الحمير الوحشية وكلباً أشعث، ليلتقي بعدها برجل غامض يقود شاحنة قديمة تعطلت فجأة. يكتشف سامر أن هذا الرجل مهمته جمع الأحلام قبل شروق الشمس، وإلا تحولت إلى حقيقة واجتاحت الشوارع والمنازل!\n\nهنا تبدأ الإثارة، فهل سينجح سامر في مساعدة الرجل لإنقاذ الموقف قبل فوات الأوان؟ من خلال أحداث قصة جامع الأحلام ومواقف سامر السريعة، سيتعلم طفلك قيمة المبادرة وحب المساعدة، وكيف يمكن للشجاعة وسرعة البديهة أن تحل أكبر المشكلات. عندما يتطوع سامر للبحث عن أدوات الصيانة ومطاردة الأحلام الهاربة مثل التنين المخيف والفارس النبيل، يدرك الأطفال أهمية التعاون والعمل الجماعي بأسلوب ممتع ومسلي يجذب انتباههم.\n\nتجمع هذه القصة بين الخيال الواسع والمواقف الطريفة، لتأسر انتباه الأطفال وتجعلهم يترقبون النهاية بشغف تام. ماذا سيحدث للكلب الأشعث الذي أحبه سامر؟ وهل سيتمكنون من تشغيل محرك الشاحنة قبل أن تشرق الشمس وتعم الفوضى؟ استعدوا لقراءة مليئة بالمفاجآت والمرح، حيث يندمج الواقع بالخيال في سباق شيق مع الزمن، يعلم الصغار أن مساعدة الآخرين تجلب دائماً مكافآت غير متوقعة وجميلة.\n\nتدور أحداث القصة حول الطفل سامر الذي يستيقظ باكراً ليكتشف حمارين وحشيين وكلباً أشعث في حديقته. وسرعان ما يقابل رجلاً غريباً يقود شاحنة متعطلة، ليكتشف أنه &#8220;جامع الأحلام&#8221; الذي يجب عليه جمع كل الأحلام قبل شروق الشمس لئلا تتحول إلى حقيقة وتجتاح الشوارع. يعرض سامر المساعدة في إحضار أدوات لإصلاح الشاحنة، ويقوم بمهمة مثيرة لجمع الأحلام الشاردة مثل الحمير الوحشية والتنين والفارس، وإدخالها إلى الشاحنة بصعوبة متجاوزاً ضيق الوقت. ورغم نجاحه، يختفي الكلب الأشعث الذي أحبه سامر وتمنى امتلاكه. في اللحظات الأخيرة قبل إشراق الشمس، يتمكن الرجل من إصلاح الشاحنة وتشغيلها، وبطريقة سحرية يظهر الكلب، فيهديه جامع الأحلام لسامر مكافأة له على شجاعته ومساعدته، ليعود سامر فرحاً بكلبه الجديد وتصبح أمنيته حقيقة رائعة.\n\nتحميل PDF تحميل الصور لا تنسي فك الضغط عند تحميل الصور.. أو استمتع بتحميل القصة PDF &times; قراءة قصة جامع الأحلام مكتوبةفي الصباح الباكر شعر سامر أن يومه سيكون رائعا. وقبل أن يستيقظ أفراد العائلة، جلس على شرفة المنزل يراقب حمارين وحشيين وكلبا ضخما أشعث الوبر، وهي تشرب من بركة المياه. كان سامر يتوق إلى أن يكون لديه مثل هذا الكلب، لذا قفز صارخا:\n\nوأسرع في انتعال حذاء الرياضة. فتح سامر باب الحديقة، فسارعت الحمير الوحشية تعدو بعيدا بين الزهور والكلب يطاردها. عندما هم سامر باللحاق بها لاحظ شيئا غير اعتيادي. فلقد توقفت شاحنة يعلوها الغبار في نهاية الممر وكان رجل قصير القامة، يلبس سروال العمل، واقفا على صندوق خشبي وهو ينحني تحت غطاء محرك الشاحنة.\n\nألقى سامر التحية وسأله: &#8220;من أنت؟&#8221;\n\nرد الرجل وهو يضحك ضحكة خافتة: &#8220;اقرأ اللوحة على الشاحنة.&#8221;\n\nقرأ سامر بصوت عال: &#8220;جامع الأحلام عند الفجر.&#8221; فتساءل: &#8220;ماذا يعني هذا؟&#8221;\n\nأخرج جامع الأحلام رأسه من تحت غطاء المحرك ثم ابتسم. سأل الرجل سامرا: &#8220;هل فكرت يوما: ماذا يحدث لأحلامك؟&#8221;",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «جامع الأحلام»؟",
       "options": [
@@ -1007,7 +2399,45 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام_1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-17.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-18.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-19.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-20.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-21.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-22.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-23.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-24.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-25.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-26.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-27.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-28.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-29.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-30.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-31.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-32.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-33.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2026/02/جامع-الأحلام-34.jpg"
+    ],
+    "pageCount": 35
   },
   {
     "id": "kidzz_8_12_49",
@@ -1019,7 +2449,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أبو-صير-و-أبو-قير.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a3%d8%a8%d9%88-%d8%b5%d9%8a%d8%b1-%d9%88-%d8%a3%d8%a8%d9%88-%d9%82%d9%8a%d8%b1/",
-    "storyText": "تحكي قصة أبو قير وأبو صير مغامرات الصديقين، حيث ينتصر الخير على الشر بعد سلسلة من الأحداث المثيرة التي تحمل دروسًا للأطفال.",
+    "storyText": "تعد قصة &#8220;أبو قير وأبو صير&#8221; من القصص الرائعة للأطفال، التي تحمل في طياتها دروسًا مهمة عن الصداقة، الأمانة، والعدالة. تدور أحداث القصة في مدينة الإسكندرية القديمة، حيث كان أبو صير حلاقًا ماهرًا وصديقًا لأبو قير، الصباغ المخادع. على الرغم من أن أبو صير كان يتسم بالطيبة والإخلاص، إلا أن صديقه أبو قير كان يستغل ثقة الناس ليخدعهم ويسرقهم. مع مرور الوقت، يتبع الصديقين مسارين مختلفين في الحياة، حيث يغادران الإسكندرية سويًا بحثًا عن فرص جديدة في مدينة بعيدة. بينما يحقق أبو قير النجاح بطرق ملتوية، يواجه أبو صير الظلم ويتعرض لمكيدة خطيرة قد تودي بحياته. تتصاعد الأحداث عندما يكتشف الملك حقيقة مؤامرة أبو قير، مما يؤدي إلى حكم عادل ينصف أبو صير. تعكس القصة أهمية القيم الأخلاقية في التعامل مع الآخرين وتبين للأطفال أن الخير في النهاية هو الذي ينتصر.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «أبو صير و أبو قير»؟",
       "options": [
@@ -1028,7 +2458,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أبو-صير-و-أبو-قير.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أبو-صير-و-أبو-قير-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أبو-صير-و-أبو-قير-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أبو-صير-و-أبو-قير-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أبو-صير-و-أبو-قير-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أبو-صير-و-أبو-قير-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أبو-صير-و-أبو-قير-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أبو-صير-و-أبو-قير-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أبو-صير-و-أبو-قير-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أبو-صير-و-أبو-قير-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أبو-صير-و-أبو-قير-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أبو-صير-و-أبو-قير-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أبو-صير-و-أبو-قير-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أبو-صير-و-أبو-قير-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أبو-صير-و-أبو-قير-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أبو-صير-و-أبو-قير-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أبو-صير-و-أبو-قير-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/أبو-صير-و-أبو-قير-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_50",
@@ -1040,7 +2491,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الببغاء-الصغير.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%a8%d8%a8%d8%ba%d8%a7%d8%a1-%d8%a7%d9%84%d8%b5%d8%ba%d9%8a%d8%b1/",
-    "storyText": "قصة الببغاء الصغير تروي مغامرة طائر فضولي يسعى للتعلم والحرية، ويواجه تحديات كبيرة، لكنه يجد السعادة في العودة إلى جذوره.",
+    "storyText": "في عالم مليء بالألوان والخيال، تأتي قصة الببغاء الصغير لتأسر قلوب الأطفال وتنقلهم إلى مغامرة شيقة في أعماق الغابة. هذه القصة، التي تندرج ضمن قصص للاطفال، تروي حكاية ببغاء صغير ذو ريش ملون وجميل، يعيش في غابة مليئة بالطيور والحيوانات. هذا الببغاء الفضولي والمرح يجد نفسه في مواجهة تحديات كبيرة عندما يلتقي بالآدميين لأول مرة. رغبة الببغاء الصغير في التعلم والفهم تأخذه في رحلة مليئة بالمخاطر والاكتشافات، حيث يتعلم دروسًا قيمة عن الحياة، التفكير، والمحبة.\n\nخلال رحلته، يكتشف الببغاء الصغير أن العالم أكبر بكثير مما كان يتخيل، وأن السعادة ليست مرتبطة بالمكان، بل بالمشاعر الصادقة والأصدقاء الحقيقيين. تتناول القصة موضوعات مهمة مثل الفضول، الشجاعة، والمحبة، مما يجعلها قصة مثالية للأطفال الذين يسعون لفهم العالم من حولهم بعيون بريئة وقلوب مفتوحة. قصة الببغاء الصغير ليست مجرد حكاية عن طائر صغير، بل هي درس رائع للأطفال عن قيمة الحرية وأهمية التفكير والإصرار على تحقيق الأحلام.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الببغاء الصغير»؟",
       "options": [
@@ -1049,7 +2500,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الببغاء-الصغير.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الببغاء-الصغير-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الببغاء-الصغير-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الببغاء-الصغير-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الببغاء-الصغير-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الببغاء-الصغير-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الببغاء-الصغير-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الببغاء-الصغير-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الببغاء-الصغير-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الببغاء-الصغير-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الببغاء-الصغير-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الببغاء-الصغير-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الببغاء-الصغير-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الببغاء-الصغير-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الببغاء-الصغير-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الببغاء-الصغير-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الببغاء-الصغير-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الببغاء-الصغير-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_51",
@@ -1061,7 +2533,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الابن-الطيب-واخواه-الجحودان.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%a7%d8%a8%d9%86-%d8%a7%d9%84%d8%b7%d9%8a%d8%a8-%d9%88%d8%a7%d8%ae%d9%88%d8%a7%d9%87-%d8%a7%d9%84%d8%ac%d8%ad%d9%88%d8%af%d8%a7%d9%86/",
-    "storyText": "قصة الشاطر خضر &#8211; الابن الطيب واخواه الجحودان &#8211; تروي مغامراته ضد مؤامرات أخويه، تتناول الحسد، الغدر، والتسامح، في رحلة مليئة بالعبر للأطفال.",
+    "storyText": "في عالم قصص الأطفال، تتألق قصة الشاطر خضر &#8211; الابن الطيب واخواه الجحودان &#8211; كواحدة من أروع الحكايات التي تأخذ الأطفال في رحلة مليئة بالمغامرات، العبر، والدروس القيمة. تدور أحداث هذه القصة حول الشاطر خضر، الابن الأصغر لتاجر موسر، الذي يتميز بالطيبة والذكاء، مما يجعله محط حسد وكراهية أخويه سالم وسليم. القصة تقدم نموذجًا للصراع بين الخير والشر، حيث يسعى الأخوان الجاحدان إلى التخلص من خضر للاستيلاء على ثروته وخرج الأسرار العجيب الذي يملكه.\n\nمن خلال سلسلة من الأحداث المشوقة، يجد خضر نفسه في مغامرة كبرى تتخللها مؤامرات وغدر، لكنه بفضل شجاعته وذكائه، يتمكن من النجاة والعودة إلى موطنه. القصة تحمل في طياتها رسالة قوية حول الوفاء، العدل، والعفو، حيث ينتهي المطاف بخضر إلى أن يصبح رجلًا ناجحًا، يحظى بتقدير الجميع، حتى الملك، بينما يتعلم أخوه أهمية التسامح وترك الحقد. هذه القصة &#8211; الابن الطيب واخواه الجحودان &#8211; ليست مجرد حكاية ترفيهية للأطفال، بل هي درس عميق في الأخلاق والقيم، تجعل من قراءتها تجربة لا تُنسى للصغار والكبار على حد سواء.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الابن الطيب واخواه الجحودان»؟",
       "options": [
@@ -1070,7 +2542,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الابن-الطيب-واخواه-الجحودان.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الابن-الطيب-واخواه-الجحودان-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الابن-الطيب-واخواه-الجحودان-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الابن-الطيب-واخواه-الجحودان-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الابن-الطيب-واخواه-الجحودان-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الابن-الطيب-واخواه-الجحودان-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الابن-الطيب-واخواه-الجحودان-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الابن-الطيب-واخواه-الجحودان-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الابن-الطيب-واخواه-الجحودان-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الابن-الطيب-واخواه-الجحودان-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الابن-الطيب-واخواه-الجحودان-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الابن-الطيب-واخواه-الجحودان-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الابن-الطيب-واخواه-الجحودان-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الابن-الطيب-واخواه-الجحودان-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الابن-الطيب-واخواه-الجحودان-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الابن-الطيب-واخواه-الجحودان-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الابن-الطيب-واخواه-الجحودان-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الابن-الطيب-واخواه-الجحودان-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_52",
@@ -1082,7 +2575,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الباب-الممنوع.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%a8%d8%a7%d8%a8-%d8%a7%d9%84%d9%85%d9%85%d9%86%d9%88%d8%b9/",
-    "storyText": "قصة الباب الممنوع تحكي عن شاب يُدعى إبراهيم، الذي يواجه فضولًا لا يُقاوم لفتح باب غامض، مما يقوده إلى مغامرة مليئة بالأسرار والعواقب.",
+    "storyText": "في عالم القصص المليء بالخيال والأسرار، نجد دائمًا حكايات تأسر القلوب وتثير الفضول. وخاصة عندما تكون موجهة للأطفال الصغار الذين يبحثون عن المغامرات والإثارة. ضمن قصص للأطفال، تبرز قصة الباب الممنوع كواحدة من تلك القصص التي تأخذنا في رحلة عبر مملكة بعيدة. حيث يقودنا الفضول والشجاعة إلى اكتشاف أسرار مخفية. تدور أحداث هذه القصة حول شاب يُدعى إبراهيم، الذي يجد نفسه في مملكة غامضة تحكمها ملكة جميلة وقوية. منذ لحظة وصوله، يشعر إبراهيم بالدهشة والرهبة من جمال المملكة وتفاصيلها الرائعة. ولكنه يواجه تحديًا غير متوقع عندما يتم تحذيره من الاقتراب من باب معين داخل القصر الملكي، باب مُغلق بأربعة مزاليج حديدية وقيل له ألا يفتحه أبدًا.\n\nولكن إبراهيم، الذي تغلب عليه الفضول والرغبة في استكشاف ما وراء هذا الباب الممنوع. يجد إبراهيم نفسه في صراع داخلي بين احترام الوعد الذي قطعه للملكة وبين رغبته الجامحة في معرفة الحقيقة. وبينما تتوالى الأحداث، يكتشف إبراهيم أن كل قرار يتخذه له عواقب لا يمكن التراجع عنها، مما يضيف إلى القصة بعدًا من التشويق والإثارة. قصة الباب الممنوع ليست مجرد حكاية عن الفضول، بل هي درس قيم للأطفال عن الالتزام بالوعود وفهم التبعات المترتبة على اختياراتهم. كل ذلك في إطار من الخيال الذي يحفزهم على التفكير والتأمل.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الباب الممنوع»؟",
       "options": [
@@ -1091,7 +2584,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الباب-الممنوع.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الباب-الممنوع-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الباب-الممنوع-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الباب-الممنوع-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الباب-الممنوع-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الباب-الممنوع-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الباب-الممنوع-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الباب-الممنوع-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الباب-الممنوع-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الباب-الممنوع-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الباب-الممنوع-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الباب-الممنوع-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الباب-الممنوع-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الباب-الممنوع-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الباب-الممنوع-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الباب-الممنوع-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الباب-الممنوع-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الباب-الممنوع-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_53",
@@ -1103,7 +2617,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/صياد-الحيات.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%b5%d9%8a%d8%a7%d8%af-%d8%a7%d9%84%d8%ad%d9%8a%d8%a7%d8%aa/",
-    "storyText": "قصة صياد الحيات تروي مغامرات النمس الشجاع ركتاكي، الذي يواجه بحزم الحيات الخطيرة ليحمي عائلة شادي، مقدمة للأطفال درسًا في الشجاعة.",
+    "storyText": "في عالم القصص الممتع والمليء بالمغامرات، تأخذنا &#8220;قصة صياد الحيات&#8221; إلى رحلة شيقة ومليئة بالتشويق بين حقول البطيخ وحدائق الزهور. إنها واحدة من تلك القصص للأطفال التي تعلّم الشجاعة والمثابرة، وتبث في قلوب الصغار قيمًا نبيلة من خلال أحداثها المثيرة. بطل هذه القصة هو النمس الشجاع &#8220;ركتاكي&#8221;، الذي يجد نفسه في مواجهة تحديات كبيرة تفوق حجمه الصغير، ولكنه لا يهاب المخاطر ويواجه أعداءه بشجاعة وثبات.\n\nتبدأ القصة عندما يقرر الصبي شادي أن يأخذ النمس الصغير ركتاكي إلى منزله، ليصبح جزءًا من العائلة ويكتشف بيته الجديد. وسرعان ما يجد ركتاكي نفسه في قلب مغامرة غير متوقعة، حيث يتعين عليه أن يحمي عائلة شادي من أخطار تهددها، متمثلة في الحيات السامة التي تتربص بهم. ومن هنا تبدأ قصة صياد الحيات في الكشف عن شجاعة هذا النمس الصغير، الذي لا يتوانى عن التصدي للحيات الخطيرة، مثل ناغ وناغينا، اللذان يحاولان إيذاء الأسرة. تُعد هذه القصة من قصص الأطفال المليئة بالعبر والدروس، حيث يتعلم الأطفال من خلالها أهمية الشجاعة في مواجهة التحديات، وعدم الاستسلام للخوف، وكيف يمكن للقلب الشجاع أن يكون أقوى من الخطر نفسه. إنها قصة تحكي عن الصداقة، الوفاء، والشجاعة، وتبقى محفورة في قلوب الصغار والكبار على حد سواء.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «صياد الحيات»؟",
       "options": [
@@ -1112,7 +2626,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/صياد-الحيات.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/صياد-الحيات-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/صياد-الحيات-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/صياد-الحيات-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/صياد-الحيات-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/صياد-الحيات-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/صياد-الحيات-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/صياد-الحيات-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/صياد-الحيات-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/صياد-الحيات-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/صياد-الحيات-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/صياد-الحيات-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/صياد-الحيات-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/صياد-الحيات-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/صياد-الحيات-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/صياد-الحيات-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/صياد-الحيات-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/صياد-الحيات-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_54",
@@ -1124,7 +2659,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الوزة-التي-تبيض-ذهبا.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d9%88%d8%b2%d8%a9-%d8%a7%d9%84%d8%aa%d9%8a-%d8%aa%d8%a8%d9%8a%d8%b6-%d8%b0%d9%87%d8%a8%d8%a7/",
-    "storyText": "تحكي قصة الوزة التي تبيض ذهبا عن مزارع فقير يجد وزة تبيض ذهبًا، لكنه يفقدها بسبب الطمع، متعلمًا درسًا عن القناعة.",
+    "storyText": "في عالم القصص التقليدية والحكايات الموروثة، تأخذ &#8220;قصة الوزة التي تبيض ذهبا&#8221; مكانًا مميزًا بين قصص الأطفال. هذه القصة الجميلة تحمل في طياتها دروسًا قيمة عن القناعة والطمع، وترويها الأجيال لتعليم الصغار أن السعي وراء الثروة السريعة قد يؤدي أحيانًا إلى خسارة ما هو أكثر قيمة. تدور أحداث القصة في قرية صغيرة حيث يعيش مزارع فقير يُدعى صابر مع زوجته أزهار وابنهما محروس. رغم بساطة حياتهم، كان لدى هذه العائلة طموح كبير لتغيير واقعهم والعيش في رخاء. محروس، الطفل المحب للبيض بجميع أشكاله، كان سببًا في بحث والديه عن مصدر يمكنه توفير البيض بشكل دائم. هذا البحث قادهم إلى شراء وزة غامضة من سيدة عجوز، وزة لم تكن كباقي الطيور، إذ كانت تبيض كل يوم بيضة من ذهب.\n\nتتوالى الأحداث مع هذه الوزة العجيبة، ويبدأ المزارع صابر في تحسين حالته المعيشية بفضل البيض الذهبي الذي يبيعه يوميًا. لكن الطمع يسيطر على تفكيره، ويقرر بمساعدة زوجته البحث عن طريقة للحصول على كل البيض الذهبي دفعة واحدة. هنا تبدأ الأمور بالانحدار نحو نهاية غير متوقعة، تحمل معها عبرة واضحة حول ضرورة القناعة والرضا بما يُكتب للإنسان. قصة الوزة التي تبيض ذهبا&#8221; ليست مجرد حكاية مسلية للأطفال، بل هي درس بليغ في الحكمة والتريث، تُذكّر الصغار والكبار على حد سواء بأهمية الرضا بما يملكونه، وتجنب السعي وراء الثراء السريع الذي قد يؤدي إلى عواقب غير محمودة.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الوزة التي تبيض ذهبا»؟",
       "options": [
@@ -1133,7 +2668,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الوزة-التي-تبيض-ذهبا.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الوزة-التي-تبيض-ذهبا-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الوزة-التي-تبيض-ذهبا-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الوزة-التي-تبيض-ذهبا-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الوزة-التي-تبيض-ذهبا-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الوزة-التي-تبيض-ذهبا-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الوزة-التي-تبيض-ذهبا-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الوزة-التي-تبيض-ذهبا-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الوزة-التي-تبيض-ذهبا-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الوزة-التي-تبيض-ذهبا-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الوزة-التي-تبيض-ذهبا-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الوزة-التي-تبيض-ذهبا-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الوزة-التي-تبيض-ذهبا-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الوزة-التي-تبيض-ذهبا-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الوزة-التي-تبيض-ذهبا-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الوزة-التي-تبيض-ذهبا-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الوزة-التي-تبيض-ذهبا-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الوزة-التي-تبيض-ذهبا-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_55",
@@ -1145,7 +2701,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الملك-العبوس.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d9%85%d9%84%d9%83-%d8%a7%d9%84%d8%b9%d8%a8%d9%88%d8%b3/",
-    "storyText": "قصة الملك العبوس تحكي عن ملك صارم يدعى بنغولا، يكتشف أن العمل الجاد وحده لا يكفي، ويغير قوانينه للسماح بالفرح والمرح في مملكته.",
+    "storyText": "في عالم مليء بالخيال والحكمة، تأتي قصص الأطفال لتزرع في قلوب الصغار القيم النبيلة والعبر العميقة من خلال حكايات مشوقة ومليئة بالمغامرات. ومن بين تلك القصص التي تحمل بين طياتها دروساً عن الحياة والتوازن، تأتي قصة الملك العبوس، التي تدور أحداثها في مملكة بعيدة يحكمها ملك اشتهر بعبوسه وجديته الشديدة.\n\nقصة الملك العبوس ليست مجرد حكاية تقليدية، بل هي قصة مليئة بالحكمة والمشاعر، تهدف إلى تعليم الأطفال أهمية التوازن بين العمل الجاد والاستمتاع بالحياة. تدور القصة حول الملك بنغولا، الذي كان يعكف على تسيير أمور مملكته بكل جدية والتزام، ناسياً في خضم ذلك أن الحياة تحتاج إلى لحظات من الفرح والمرح لتزدهر الأرواح وتستقيم النفوس. من خلال قصة الملك العبوس، يتعلم الأطفال أن الحياة ليست مجرد عمل واجتهاد، بل هي أيضاً لحظات من السعادة والبهجة التي يجب أن نسمح لأنفسنا بتذوقها. إن القصة تقدم لهم نموذجاً للملك بنغولا الذي اكتشف في نهاية المطاف أن الحياة المتوازنة هي التي تجمع بين العمل والاسترخاء، بين الجدية والمرح. وهكذا، تصبح قصص الأطفال وسيلة لزرع القيم الجميلة في نفوسهم منذ الصغر، وتساعدهم على فهم المعاني العميقة التي قد تغيب عن الأذهان في خضم الحياة اليومية.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الملك العبوس»؟",
       "options": [
@@ -1154,7 +2710,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الملك-العبوس.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الملك-العبوس-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الملك-العبوس-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الملك-العبوس-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الملك-العبوس-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الملك-العبوس-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الملك-العبوس-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الملك-العبوس-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الملك-العبوس-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الملك-العبوس-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الملك-العبوس-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الملك-العبوس-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الملك-العبوس-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الملك-العبوس-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الملك-العبوس-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الملك-العبوس-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الملك-العبوس-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الملك-العبوس-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_56",
@@ -1166,7 +2743,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القاق-وجرة-الماء.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d9%82%d8%a7%d9%82-%d9%88%d8%ac%d8%b1%d8%a9-%d8%a7%d9%84%d9%85%d8%a7%d8%a1/",
-    "storyText": "في قصة القاق وجرة الماء، يبحث قاقاتو العطشان في بلدة صغيرة عن الماء في جرة فارغة، ويكتشف عبر التحديات قوة الصداقة والاصرار.",
+    "storyText": "في قصة القاق وجرة الماء حيث تقع بلدة صغيرة تحيط بها الأشجار والمروج الخضراء. ويسكن الناس في بيوتٍ ملونةً وهادئة. بدأت حكاية جديدة تُحكى في قصص للأطفال. كان هناك قاق جميل يُدعى قاقاتو، يعيش في عشٍ صغير على قمة برج الساعة في وسط البلدة. هذا القاق لم يكن مثل باقي الطيور، فهو يمتاز بشغفٍ كبير واستعدادٍ دائم للمساعدة.\n\nذات يوم، خلال فصل الصيف الحار، بينما كان الناس يستعدون لمواجهة حرارة الشمس القاسية، كان قاقاتو يشعر بالعطش الشديد. ففي تلك الأيام، أصبحت جرة الماء الكبيرة التي تضعها سميرة، الفتاة الصغيرة اللطيفة التي تعيش مع جدتها، مصدرًا هامًا لانتعاش كل من يمر في الطريق. لكن جرة الماء بدأت تفرغ تدريجيًا، ولم يكن هناك ما يكفي لإرواء عطش قاقاتو. تبدأ أحداث قصة القاق وجرة الماء من هنا، حيث يقرر قاقاتو البحث عن سميرة في أرجاء البلدة الصغيرة ليجد حلاً لمشكلته. تتخلل هذه القصة مغامرات مثيرة وقصصًا تعليمية للأطفال، تبرز فيها أهمية المثابرة والإصرار على مواجهة التحديات. إذ يكتشف قاقاتو أن الحياة ليست دائمًا سهلة، وأن العزيمة والصداقة يمكن أن تجعل كل شيء ممكنًا. في رحلة بحثه، يتعلم قاقاتو دروسًا قيمة، ويكتشف كيف يمكن للصداقة والاهتمام البسيط أن يحدث فرقًا كبيرًا في حياة الآخرين.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «القاق وجرة الماء»؟",
       "options": [
@@ -1175,7 +2752,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القاق-وجرة-الماء.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القاق-وجرة-الماء-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القاق-وجرة-الماء-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القاق-وجرة-الماء-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القاق-وجرة-الماء-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القاق-وجرة-الماء-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القاق-وجرة-الماء-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القاق-وجرة-الماء-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القاق-وجرة-الماء-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القاق-وجرة-الماء-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القاق-وجرة-الماء-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القاق-وجرة-الماء-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القاق-وجرة-الماء-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القاق-وجرة-الماء-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القاق-وجرة-الماء-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القاق-وجرة-الماء-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القاق-وجرة-الماء-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/القاق-وجرة-الماء-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_57",
@@ -1187,7 +2785,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الفئران-التي-تأكل-الحديد.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d9%81%d8%a6%d8%b1%d8%a7%d9%86-%d8%a7%d9%84%d8%aa%d9%8a-%d8%aa%d8%a3%d9%83%d9%84-%d8%a7%d9%84%d8%ad%d8%af%d9%8a%d8%af/",
-    "storyText": "في قصة الفئران التي تأكل الحديد، يدور الصراع حول أمانة قضبان حديدية تعرضت للأكل من قبل الفئران، مما يسبب مشاكل بين الأصدقاء.",
+    "storyText": "في قصة الفئران التي تأكل الحديد ومنذ قديم الزمان، في قرية صغيرة محاطة بالجبال الخضراء والأنهار المتلألئة، كان هناك تاجر طيب القلب يُدعى مسعود. لم يكن مسعود غنياً، لكنه كان معروفاً بكرمه الكبير وحبه لمساعدة الآخرين. ذات يوم، قرر مسعود أن يترك قريته ويبدأ حياة جديدة في مكان بعيد، آملاً أن يحظى بفرصة أفضل لتحسين وضعه المالي. ولكن قبل أن يرحل، كان لديه أمر هام يجب عليه معالجته: كان عليه أن يبيع كل ممتلكاته لتسديد ديونه، لكن هناك شيئاً واحداً لم يكن مستعداً للتخلي عنه، وهو مجموعة من قضبان الحديد التي ورثها عن والده.\n\nفي تلك الأثناء، كان محرّم، صديق مسعود المقرب، يعيش في القرية أيضاً. محرّم كان شخصاً طيباً ولكنه لم يكن بمعزل عن المشاكل، فقد كان يواجه صعوبة في الحفاظ على ممتلكاته. عندما جاء مسعود ليودع صديقه، طلب منه أن يحتفظ بقضبان الحديد كأمانة لحين عودته، ولم يكن يعلم أن هذه القضبان ستصبح جزءاً من واحدة من أغرب قصص القرية. تحكي القصة عن &#8220;قصة الفئران التي تأكل الحديد&#8221; وكيف أن مشكلة بسيطة كالفئران قد تؤدي إلى مشكلات كبيرة ومعقدة. في عالمٍ يبدو مليئاً بالأسرار والمفاجآت، تستمر القصة لتكشف عن كيف أن الأمانة والكذب يمكن أن يغيرا مسار حياة الناس، وتجعلنا نفكر في حقيقة القيم والأصدقاء. هذه القصة ليست مجرد واحدة من &#8220;قصص للأطفال&#8221; التي تحمل عبرة، بل هي أيضاً درس في الثقة والصدق.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الفئران التي تأكل الحديد»؟",
       "options": [
@@ -1196,7 +2794,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الفئران-التي-تأكل-الحديد.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الفئران-التي-تأكل-الحديد-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الفئران-التي-تأكل-الحديد-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الفئران-التي-تأكل-الحديد-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الفئران-التي-تأكل-الحديد-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الفئران-التي-تأكل-الحديد-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الفئران-التي-تأكل-الحديد-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الفئران-التي-تأكل-الحديد-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الفئران-التي-تأكل-الحديد-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الفئران-التي-تأكل-الحديد-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الفئران-التي-تأكل-الحديد-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الفئران-التي-تأكل-الحديد-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الفئران-التي-تأكل-الحديد-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الفئران-التي-تأكل-الحديد-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الفئران-التي-تأكل-الحديد-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الفئران-التي-تأكل-الحديد-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الفئران-التي-تأكل-الحديد-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الفئران-التي-تأكل-الحديد-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_58",
@@ -1208,7 +2827,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-وخازن-الحكايات.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%b9%d9%86%d9%83%d8%a8%d9%88%d8%aa-%d9%88%d8%ae%d8%a7%d8%b2%d9%86-%d8%a7%d9%84%d8%ad%d9%83%d8%a7%d9%8a%d8%a7%d8%aa/",
-    "storyText": "في قصة العنكبوت وخازن الحكايات، يسعى العنكبوت أنانسي للحصول على حكايات سحرية من خازن الحكايات عبر تحديات مثيرة مليئة بالمخاطر والمغامرات.",
+    "storyText": "في قصة العنكبوت وخازن الحكايات وعالم بعيد جدا، حيث تنسج النجوم خيوطها الذهبية في سماء متلألئة، كان هناك عالم غامض مليء بالحكايات والأسرار. في هذا العالم، كان هناك خازن حكايات يعيش في جزيرة معلقة في الفضاء، يحفظ بين جدران صندوقه الخشبي أروع القصص وأجملها. هذا الصندوق لم يكن مجرد وعاء؛ بل كان مخبأً لمجموعة من القصص التي تشع بالسحر وتملأ النفوس بالفرح والإثارة. ولكن كيف يتمكن الناس من سماع هذه القصص العجيبة؟ لم يكن أحد يعرف الإجابة، حتى جاء العنكبوت أنانسي، أحد أذكى المخلوقات وأشهرها في العالم.\n\nفي قلب أحداث هذه القصة، نجد أنانسي العنكبوت، الذي كان يشعر بالفضول تجاه هذا الصندوق السحري. فهو لم يكن يستطيع العيش دون حكايات، وكان يتوق إلى اكتشاف ما بداخله. وفي إطار قصص للأطفال التي كانت تملأ عالمه بالألوان، قرر أن يذهب إلى خازن الحكايات ليطلب منه تلك القصص السحرية. هكذا تبدأ رحلة أنانسي المثيرة، حيث سيواجه تحديات خطيرة ويختبر شجاعته ومهاراته في محاولة لإحضار تلك القصص الرائعة إلى عالم البشر. في هذه القصة، يجتمع خيال الأطفال مع مغامرات العنكبوت في إطار من السحر والتشويق، مما يجعل من &#8220;قصة العنكبوت وخازن الحكايات&#8221; واحدة من أكثر الحكايات جذباً وإثارة في عالم القصص.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «العنكبوت وخازن الحكايات»؟",
       "options": [
@@ -1217,7 +2836,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-وخازن-الحكايات.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-وخازن-الحكايات-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-وخازن-الحكايات-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-وخازن-الحكايات-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-وخازن-الحكايات-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-وخازن-الحكايات-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-وخازن-الحكايات-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-وخازن-الحكايات-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-وخازن-الحكايات-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-وخازن-الحكايات-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-وخازن-الحكايات-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-وخازن-الحكايات-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-وخازن-الحكايات-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-وخازن-الحكايات-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-وخازن-الحكايات-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-وخازن-الحكايات-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-وخازن-الحكايات-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-وخازن-الحكايات-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_59",
@@ -1229,7 +2869,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-المشاغب-وأولاده.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%b9%d9%86%d9%83%d8%a8%d9%88%d8%aa-%d8%a7%d9%84%d9%85%d8%b4%d8%a7%d8%ba%d8%a8-%d9%88%d8%a3%d9%88%d9%84%d8%a7%d8%af%d9%87/",
-    "storyText": "في قصة العنكبوت المشاغب وأولاده، يسعى أنانسي وأولاده للتغلب على صعوبات دورة الألعاب الشرمبية في بلاد شُرُم برم، لإثبات جدارتهم.",
+    "storyText": "في قصة العنكبوت المشاغب وأولاده وأعماق غابة كثيفة، حيث الأشجار الشاهقة تلتف حولها أوراقها الخضراء وتغمرها أشعة الشمس الدافئة، تقع بلاد شُرُم برم. هنا، تُقام كل سنتين دورة الألعاب الشرمبية، وهي مهرجان رياضي كبير يتبارى فيه أبناء الحيوانات في مجموعة متنوعة من الرياضات الممتعة والمثيرة. في هذا العام، كانت دورة الألعاب أكثر إثارة من أي وقت مضى. حيث كانت القلوب تخفق بشغف وحماس، وأعين الحيوانات تراقب بشغف لمعرفة من سيفوز بالألقاب المرموقة.\n\nفي خضم هذا الحماس، كانت هناك عائلة خاصة تنتظر هذا الحدث بشغف كبير: عائلة العنكبوت المشاغب. أنانسي، العنكبوت الماكر، وابناؤه الثمانية كانوا متحمسين جدًا للمشاركة في المباريات. لكن التحدي كان كبيرًا، فقد أُثيرت ضجة كبيرة بين الحيوانات الأخرى بسبب تصرفات أنانسي الماكرة السابقة. لقد كان لهم تأثير غير مرغوب فيه، مما جعلهم غير مرحب بهم في دورة الألعاب. فهل سيتمكن أنانسي وأولاده من تخطي العقبات وكسب ثقة الجميع، أم أنهم سيواجهون صعوبات تمنعهم من تحقيق حلمهم؟ في هذه القصة المليئة بالتشويق والإثارة، نتابع مغامرات العنكبوت المشاغب وأولاده في سعيهم لإثبات جدارتهم ومشاركة الفرحة مع جميع سكان بلاد شُرُم برم. هذه قصة ملهمة تناسب جميع الأعمار، تملأ القلوب بالأمل وتعلمنا أهمية الصدق والمثابرة.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «العنكبوت المشاغب وأولاده»؟",
       "options": [
@@ -1238,7 +2878,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-المشاغب-وأولاده.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-المشاغب-وأولاده-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-المشاغب-وأولاده-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-المشاغب-وأولاده-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-المشاغب-وأولاده-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-المشاغب-وأولاده-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-المشاغب-وأولاده-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-المشاغب-وأولاده-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-المشاغب-وأولاده-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-المشاغب-وأولاده-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-المشاغب-وأولاده-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-المشاغب-وأولاده-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-المشاغب-وأولاده-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-المشاغب-وأولاده-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-المشاغب-وأولاده-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-المشاغب-وأولاده-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-المشاغب-وأولاده-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/العنكبوت-المشاغب-وأولاده-17.jpg"
+    ],
+    "pageCount": 18
   },
   {
     "id": "kidzz_8_12_60",
@@ -1250,7 +2911,7 @@
     "skill": "الفهم القرائي والقيم التربوية (٨-١٢ سنة)",
     "cover": "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الصبي-الراعي.jpg",
     "sourceUrl": "https://kidzzstory.com/story/%d8%a7%d9%84%d8%b5%d8%a8%d9%8a-%d8%a7%d9%84%d8%b1%d8%a7%d8%b9%d9%8a/",
-    "storyText": "في قصة الصبي الراعي، يختبر رامي حيلة الإنذار الكاذب بخصوص الذئب، فتتدخل القرية لإنقاذه، ليكتشف أهمية الصدق والجدية في حياته.",
+    "storyText": "في قصة الصبي الراعي وإحدى القرى الصغيرة، عاش طفل صغير يُدعى رامي. كان رامي صبيًا مليئًا بالطاقة والخيال، وكان يقضي معظم وقته في المراعي الخضراء حيث كان يساعد عائلته في رعي الأغنام. كانت حياة رامي بسيطة، مليئة بالهدوء الذي لا يتخلله سوى أصوات الأغنام وهي ترعى بين التلال. إلا أن الصبي، وعلى الرغم من كل هذا، كان يشعر بالملل أحيانًا من تكرار الروتين اليومي. لم يكن لديه ما يشغل به ذهنه سوى مراقبة الأغنام والعدّ، يومًا بعد يوم، مما دفعه في بعض الأحيان إلى التفكير في طرق جديدة لتسلية نفسه.\n\nفي يوم من الأيام، قرر رامي أن يضيف بعض الإثارة إلى يومه الهادئ. تذكر قصة قديمة كان يسمعها من كبار السن في القرية عن صبي راعٍ أطلق إنذارًا كاذبًا حول وجود ذئب. لم يستطع مقاومة الفكرة وقرر أن يجربها بنفسه، مقتنعًا بأن شيئًا لن يحدث، وأنها ستكون مجرد مزحة عابرة. بدأ رامي بالصراخ: &#8220;الذئب! الذئب!&#8221;، معتقدًا أن الأمر سيجلب بعض المتعة لروتينه الممل. كانت هذه البداية لقصة مليئة بالعبر والتعلم. فقصة الصبي الراعي ليست مجرد واحدة من قصص للاطفال التي تُروى للترفيه، بل تحمل في طياتها دروسًا عن الصدق والمسؤولية وأهمية الثقة. فكيف انتهت مغامرة رامي الصغيرة؟ هذا ما سنتعرف عليه في أحداث القصة.",
     "quiz": {
       "q": "ما الفكرة أو القيمة الرئيسة التي نتعلمها من قصة «الصبي الراعي»؟",
       "options": [
@@ -1259,7 +2920,28 @@
         "التصرف بعشوائية دون تفكير"
       ],
       "correct": 0
-    }
+    },
+    "pageImages": [
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الصبي-الراعي.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الصبي-الراعي-1.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الصبي-الراعي-2.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الصبي-الراعي-3.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الصبي-الراعي-4.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الصبي-الراعي-5.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الصبي-الراعي-6.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الصبي-الراعي-7.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الصبي-الراعي-8.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الصبي-الراعي-9.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الصبي-الراعي-10.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الصبي-الراعي-11.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الصبي-الراعي-12.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الصبي-الراعي-13.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الصبي-الراعي-14.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الصبي-الراعي-15.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الصبي-الراعي-16.jpg",
+      "https://cdn.kidzzstory.com/wp-content/uploads/2024/08/الصبي-الراعي-17.jpg"
+    ],
+    "pageCount": 18
   }
 ];
 })(window);

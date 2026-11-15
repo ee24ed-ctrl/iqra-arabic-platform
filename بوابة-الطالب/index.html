@@ -798,6 +798,224 @@
         grid-template-columns: repeat(3, 1fr);
       }
     }
+
+    /* Interactive Flipbook & 30-Question Comprehension Quiz */
+    @keyframes pageFlipIn {
+      from { opacity: 0; transform: perspective(900px) rotateY(-12deg) scale(0.98); }
+      to { opacity: 1; transform: perspective(900px) rotateY(0deg) scale(1); }
+    }
+
+    .flipbook-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .flipbook-meta-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #eff6ff;
+      border: 1.5px solid #bfdbfe;
+      border-radius: 12px;
+      padding: 8px 12px;
+      font-size: 0.85rem;
+      font-weight: 900;
+      color: var(--indigo-header);
+    }
+
+    .flipbook-progress-track {
+      width: 100%;
+      height: 8px;
+      background: #e2e8f0;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .flipbook-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #1668e3, #f59e0b);
+      border-radius: 999px;
+      transition: width 0.25s ease;
+    }
+
+    .flipbook-page-stage {
+      background: #fdfbf7;
+      border: 2px solid #cbd5e1;
+      border-radius: 18px;
+      padding: 12px;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.12), inset -6px 0 14px rgba(148, 163, 184, 0.14);
+      animation: pageFlipIn 0.28s ease;
+      text-align: center;
+    }
+
+    .flipbook-page-img {
+      width: 100%;
+      max-height: 430px;
+      object-fit: contain;
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    .flipbook-text-box {
+      background: #fff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 18px 16px;
+      font-size: 1.08rem;
+      line-height: 2;
+      font-weight: 800;
+      color: #1e293b;
+      text-align: right;
+      min-height: 180px;
+      display: flex;
+      align-items: center;
+    }
+
+    .flipbook-nav-row {
+      display: flex;
+      gap: 8px;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .flipbook-nav-btn {
+      flex: 1;
+      min-width: 120px;
+      height: 42px;
+      border: none;
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 900;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .flipbook-nav-btn.prev {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    .flipbook-nav-btn.next {
+      background: linear-gradient(180deg, #217ef8 0%, #0b51bc 100%);
+      color: #fff;
+    }
+
+    .flipbook-nav-btn.finish {
+      background: linear-gradient(180deg, #16a34a 0%, #15803d 100%);
+      color: #fff;
+    }
+
+    .flipbook-nav-btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .quiz30-tabs {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .quiz30-tab-btn {
+      border: 1.5px solid #cbd5e1;
+      background: #f8fafc;
+      color: var(--indigo-header);
+      border-radius: 10px;
+      padding: 8px 4px;
+      font-family: inherit;
+      font-size: 0.75rem;
+      font-weight: 900;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .quiz30-tab-btn.active {
+      background: linear-gradient(180deg, #217ef8 0%, #0b51bc 100%);
+      color: #fff;
+      border-color: #08439c;
+    }
+
+    .quiz30-list {
+      max-height: 360px;
+      overflow-y: auto;
+      padding-left: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .quiz30-q-card {
+      background: #f8fbff;
+      border: 1.5px solid #dbeafe;
+      border-radius: 14px;
+      padding: 10px 12px;
+    }
+
+    .quiz30-q-title {
+      font-size: 0.86rem;
+      font-weight: 900;
+      color: var(--indigo-header);
+      margin-bottom: 8px;
+    }
+
+    .quiz30-opt {
+      display: block;
+      width: 100%;
+      text-align: right;
+      background: #fff;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 7px 10px;
+      margin-bottom: 5px;
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: #1e293b;
+      cursor: pointer;
+    }
+
+    .quiz30-opt.selected {
+      background: #dbeafe;
+      border-color: #2563eb;
+      color: #1e3a8a;
+    }
+
+    .order-answer-box {
+      min-height: 38px;
+      background: #fff;
+      border: 1.5px dashed #93c5fd;
+      border-radius: 10px;
+      padding: 6px 8px;
+      margin-bottom: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .order-word-chip {
+      background: #eff6ff;
+      border: 1.5px solid #93c5fd;
+      color: #1e3a8a;
+      border-radius: 8px;
+      padding: 4px 9px;
+      font-family: inherit;
+      font-size: 0.78rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .order-word-chip.used {
+      opacity: 0.35;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
@@ -995,6 +1213,7 @@
   <script src="../assets/js/global-header.js"></script>
   <script src="../assets/js/weekly-stories.js"></script>
   <script src="../assets/js/kidzz-stories-8-12.js"></script>
+  <script src="../assets/js/story-quiz-engine.js"></script>
   <script>
     (function () {
       'use strict';
@@ -1136,6 +1355,8 @@
               ageGroup: st.ageGroup || '8-12',
               stars: st.stars || 35,
               cover: st.cover || '../assets/illustrations/paper-book-frame.jpg',
+              pageImages: Array.isArray(st.pageImages) && st.pageImages.length ? st.pageImages : [st.cover],
+              pageCount: st.pageCount || (Array.isArray(st.pageImages) ? st.pageImages.length : 1),
               sourceUrl: st.sourceUrl || '',
               readDone: false,
               listenDone: false,
@@ -1313,6 +1534,251 @@
         } catch (e) {}
       }
 
+      function buildBookPages(book) {
+        if (Array.isArray(book.pageImages) && book.pageImages.length > 0) {
+          return book.pageImages.map(function (imgUrl, idx) {
+            return {
+              type: 'image',
+              img: imgUrl,
+              pageNum: idx + 1
+            };
+          });
+        }
+        var raw = (book.storyText || '').trim();
+        var sents = raw.split(/(?<=[.!؟])\s+/).filter(Boolean);
+        var chunks = [];
+        for (var i = 0; i < sents.length; i += 2) {
+          chunks.push(sents.slice(i, i + 2).join(' '));
+        }
+        if (!chunks.length) chunks = [raw || book.title];
+        return chunks.map(function (txt, idx) {
+          return { type: 'text', text: txt, pageNum: idx + 1 };
+        });
+      }
+
+      function renderFlipbookReader(book, pageIndex) {
+        var pages = buildBookPages(book);
+        var total = pages.length;
+        var idx = Math.max(0, Math.min(pageIndex, total - 1));
+        var cur = pages[idx];
+        var pct = Math.round(((idx + 1) / total) * 100);
+        var isLast = idx === total - 1;
+
+        var stageContent = cur.type === 'image'
+          ? '<img src="' + cur.img + '" alt="' + book.title + ' - صفحة ' + (idx + 1) + '" class="flipbook-page-img" onerror="this.onerror=null;this.src=\'../assets/illustrations/paper-book-frame.jpg\';">'
+          : '<div class="flipbook-text-box">' + cur.text + '</div>';
+
+        modalBody.innerHTML =
+          '<div class="flipbook-wrap">' +
+            '<div class="flipbook-meta-bar">' +
+              '<span>📖 ' + book.title + '</span>' +
+              '<span>صفحة ' + (idx + 1) + ' من ' + total + '</span>' +
+            '</div>' +
+            '<div class="flipbook-progress-track"><div class="flipbook-progress-fill" style="width:' + pct + '%;"></div></div>' +
+            '<div class="flipbook-page-stage">' + stageContent + '</div>' +
+            '<div id="flipSummaryBox" style="display:none;background:#f5fbf4;border:1.5px solid #bbf7d0;border-radius:12px;padding:10px 12px;font-size:0.86rem;line-height:1.85;font-weight:700;color:#1e293b;max-height:140px;overflow-y:auto;">' +
+              (book.storyText || '') +
+            '</div>' +
+            '<div class="flipbook-nav-row">' +
+              '<button type="button" id="flipPrevBtn" class="flipbook-nav-btn prev"' + (idx === 0 ? ' disabled' : '') + '>▶ الصفحة السابقة</button>' +
+              (isLast
+                ? '<button type="button" id="flipFinishQuizBtn" class="flipbook-nav-btn finish">🏁 أنهيت القصة — ابدأ الاختبار (٣٠ سؤالاً) 📝</button>'
+                : '<button type="button" id="flipNextBtn" class="flipbook-nav-btn next">الصفحة التالية ◀</button>') +
+            '</div>' +
+            '<div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">' +
+              '<button type="button" id="flipToggleTextBtn" class="quiz30-tab-btn" style="padding:6px 12px;">📄 عرض/إخفاء ملخص القصة</button>' +
+              '<button type="button" id="modalSpeakBtn" class="quiz30-tab-btn" style="padding:6px 12px;">🔊 قراءة صوتية</button>' +
+              '<button type="button" id="modalGoQuizBtn" class="quiz30-tab-btn" style="padding:6px 12px;">📝 اختبار الفهم القرائي (٣٠ سؤالاً)</button>' +
+            '</div>' +
+          '</div>';
+
+        if (isLast && !book.readDone) {
+          book.readDone = true;
+          saveBookStates();
+          renderBooks();
+          renderTasksTab();
+        }
+
+        var prevBtn = document.getElementById('flipPrevBtn');
+        if (prevBtn) {
+          prevBtn.addEventListener('click', function () {
+            if (idx > 0) renderFlipbookReader(book, idx - 1);
+          });
+        }
+        var nextBtn = document.getElementById('flipNextBtn');
+        if (nextBtn) {
+          nextBtn.addEventListener('click', function () {
+            if (idx < total - 1) renderFlipbookReader(book, idx + 1);
+          });
+        }
+        var finishBtn = document.getElementById('flipFinishQuizBtn');
+        if (finishBtn) {
+          finishBtn.addEventListener('click', function () {
+            renderStoryQuiz30(book);
+          });
+        }
+        document.getElementById('flipToggleTextBtn').addEventListener('click', function () {
+          var box = document.getElementById('flipSummaryBox');
+          box.style.display = box.style.display === 'none' ? 'block' : 'none';
+        });
+        document.getElementById('modalSpeakBtn').addEventListener('click', function () {
+          speakArabic(cur.type === 'text' ? cur.text : book.storyText);
+        });
+        document.getElementById('modalGoQuizBtn').addEventListener('click', function () {
+          renderStoryQuiz30(book);
+        });
+      }
+
+      function renderStoryQuiz30(book) {
+        var quiz = window.IREAD_STORY_QUIZ ? window.IREAD_STORY_QUIZ.build30Quiz(book) : null;
+        if (!quiz) return;
+
+        var state = {
+          activeSec: 'mcqs',
+          mcqAns: {},
+          vocabAns: {},
+          orderAns: {}
+        };
+
+        function countAnswered() {
+          return Object.keys(state.mcqAns).length +
+            Object.keys(state.vocabAns).length +
+            Object.keys(state.orderAns).filter(function (k) { return (state.orderAns[k] || []).length > 0; }).length;
+        }
+
+        function renderQuizView() {
+          var answered = countAnswered();
+          var listHtml = '';
+
+          if (state.activeSec === 'mcqs') {
+            listHtml = quiz.mcqs.map(function (q, i) {
+              var picked = state.mcqAns[i];
+              var opts = q.options.map(function (opt, oi) {
+                return '<button type="button" class="quiz30-opt ' + (picked === oi ? 'selected' : '') + '" data-sec="mcqs" data-qi="' + i + '" data-oi="' + oi + '">' + opt + '</button>';
+              }).join('');
+              return '<div class="quiz30-q-card"><div class="quiz30-q-title">س' + (i + 1) + ': ' + q.q + '</div>' + opts + '</div>';
+            }).join('');
+          } else if (state.activeSec === 'vocab') {
+            listHtml = quiz.vocab.map(function (q, i) {
+              var picked = state.vocabAns[i];
+              var opts = q.options.map(function (opt, oi) {
+                return '<button type="button" class="quiz30-opt ' + (picked === oi ? 'selected' : '') + '" data-sec="vocab" data-qi="' + i + '" data-oi="' + oi + '">' + opt + '</button>';
+              }).join('');
+              return '<div class="quiz30-q-card"><div class="quiz30-q-title">س' + (i + 11) + ': ' + q.q + '</div>' + opts + '</div>';
+            }).join('');
+          } else {
+            listHtml = quiz.orders.map(function (q, i) {
+              var chosenIdx = state.orderAns[i] || [];
+              var chosenWords = chosenIdx.map(function (wi) { return q.shuffled[wi]; });
+              var chips = q.shuffled.map(function (w, wi) {
+                var used = chosenIdx.indexOf(wi) !== -1 ? 'used' : '';
+                return '<button type="button" class="order-word-chip ' + used + '" data-order-qi="' + i + '" data-wi="' + wi + '">' + w + '</button>';
+              }).join('');
+              return (
+                '<div class="quiz30-q-card">' +
+                  '<div class="quiz30-q-title">س' + (i + 21) + ': ' + q.q + '</div>' +
+                  '<div class="order-answer-box">' +
+                    (chosenWords.length ? chosenWords.map(function (cw) { return '<span class="order-word-chip" style="background:#dcfce7;border-color:#16a34a;color:#166534;">' + cw + '</span>'; }).join('') : '<span style="font-size:0.75rem;color:#64748b;">اضغط على الكلمات بالترتيب الصحيح...</span>') +
+                  '</div>' +
+                  '<div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:6px;">' + chips + '</div>' +
+                  '<button type="button" class="quiz30-tab-btn" data-order-reset="' + i + '" style="padding:3px 8px;font-size:0.7rem;">↺ إعادة ترتيب</button>' +
+                '</div>'
+              );
+            }).join('');
+          }
+
+          modalBody.innerHTML =
+            '<div>' +
+              '<div class="flipbook-meta-bar" style="margin-bottom:8px;">' +
+                '<span>📝 اختبار الفهم القرائي (٣٠ سؤالاً)</span>' +
+                '<span id="quiz30ProgressText">تمت الإجابة: ' + answered + ' / 30</span>' +
+              '</div>' +
+              '<div class="quiz30-tabs">' +
+                '<button type="button" class="quiz30-tab-btn ' + (state.activeSec === 'mcqs' ? 'active' : '') + '" data-qtab="mcqs">١. اختيار من متعدد (١٠)</button>' +
+                '<button type="button" class="quiz30-tab-btn ' + (state.activeSec === 'vocab' ? 'active' : '') + '" data-qtab="vocab">٢. معاني الكلمات (١٠)</button>' +
+                '<button type="button" class="quiz30-tab-btn ' + (state.activeSec === 'orders' ? 'active' : '') + '" data-qtab="orders">٣. الترتيب (١٠)</button>' +
+              '</div>' +
+              '<div class="quiz30-list" id="quiz30List">' + listHtml + '</div>' +
+              '<div style="display:flex;gap:8px;justify-content:center;margin-top:10px;flex-wrap:wrap;">' +
+                '<button type="button" id="submitQuiz30Btn" class="btn-lets-play" style="max-width:260px;">✅ اعتماد الإجابات وعرض النتيجة</button>' +
+              '</div>' +
+              '<div id="quiz30ResultBox" style="margin-top:10px;"></div>' +
+            '</div>';
+
+          modalBody.querySelectorAll('[data-qtab]').forEach(function (tb) {
+            tb.addEventListener('click', function () {
+              state.activeSec = tb.getAttribute('data-qtab');
+              renderQuizView();
+            });
+          });
+
+          modalBody.querySelectorAll('.quiz30-opt').forEach(function (ob) {
+            ob.addEventListener('click', function () {
+              var sec = ob.getAttribute('data-sec');
+              var qi = parseInt(ob.getAttribute('data-qi'), 10);
+              var oi = parseInt(ob.getAttribute('data-oi'), 10);
+              if (sec === 'mcqs') state.mcqAns[qi] = oi;
+              else state.vocabAns[qi] = oi;
+              renderQuizView();
+            });
+          });
+
+          modalBody.querySelectorAll('[data-order-qi]').forEach(function (wb) {
+            wb.addEventListener('click', function () {
+              var qi = parseInt(wb.getAttribute('data-order-qi'), 10);
+              var wi = parseInt(wb.getAttribute('data-wi'), 10);
+              if (!Array.isArray(state.orderAns[qi])) state.orderAns[qi] = [];
+              if (state.orderAns[qi].indexOf(wi) === -1) {
+                state.orderAns[qi].push(wi);
+                renderQuizView();
+              }
+            });
+          });
+
+          modalBody.querySelectorAll('[data-order-reset]').forEach(function (rb) {
+            rb.addEventListener('click', function () {
+              var qi = parseInt(rb.getAttribute('data-order-reset'), 10);
+              state.orderAns[qi] = [];
+              renderQuizView();
+            });
+          });
+
+          document.getElementById('submitQuiz30Btn').addEventListener('click', function () {
+            var mcqScore = 0;
+            quiz.mcqs.forEach(function (q, i) {
+              if (state.mcqAns[i] === q.correct) mcqScore++;
+            });
+            var vocabScore = 0;
+            quiz.vocab.forEach(function (q, i) {
+              if (state.vocabAns[i] === q.correct) vocabScore++;
+            });
+            var orderScore = 0;
+            quiz.orders.forEach(function (q, i) {
+              var chosen = (state.orderAns[i] || []).map(function (wi) { return q.shuffled[wi]; }).join(' ');
+              if (chosen === q.answer) orderScore++;
+            });
+            var totalScore = mcqScore + vocabScore + orderScore;
+
+            if (!book.quizDone) {
+              book.quizDone = true;
+              saveBookStates();
+              setStars(getStars() + book.stars);
+              renderBooks();
+              renderTasksTab();
+            }
+
+            document.getElementById('quiz30ResultBox').innerHTML =
+              '<div style="background:#f0fdf4;border:2px solid #86efac;border-radius:14px;padding:12px;text-align:center;color:#166534;font-weight:900;">' +
+                '<div style="font-size:1.1rem;margin-bottom:4px;">🎉 نتيجتك النهائية: ' + totalScore + ' / 30</div>' +
+                '<div style="font-size:0.8rem;">الاختيار من متعدد: ' + mcqScore + '/10 • معاني الكلمات: ' + vocabScore + '/10 • الترتيب: ' + orderScore + '/10</div>' +
+                '<div style="font-size:0.82rem;color:#b45309;margin-top:4px;">⭐ تمت إضافة +' + book.stars + ' نجمة لرصيدك!</div>' +
+              '</div>';
+          });
+        }
+
+        renderQuizView();
+      }
+
       function openBookAction(bookId, action) {
         var book = LEVEL_Z_BOOKS.find(function (b) { return b.id === bookId; });
         if (!book) return;
@@ -1321,29 +1787,7 @@
         modal.classList.add('is-open');
 
         if (action === 'read') {
-          book.readDone = true;
-          saveBookStates();
-          renderBooks();
-          renderTasksTab();
-          modalBody.innerHTML =
-            '<div style="text-align:center;margin-bottom:14px;">' +
-              '<img src="' + book.cover + '" alt="' + book.title + '" style="width:130px;height:185px;object-fit:cover;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,0.15);" onerror="this.onerror=null;this.src=\'../assets/illustrations/paper-book-frame.jpg\';">' +
-            '</div>' +
-            '<div style="background:#f5fbf4;border:1.5px solid #dcf4d9;border-radius:16px;padding:16px;font-size:1.15rem;line-height:2;font-weight:800;color:#1e293b;margin-bottom:14px;">' +
-              book.storyText +
-            '</div>' +
-            '<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">' +
-              '<button type="button" id="modalSpeakBtn" class="btn-lets-play" style="max-width:200px;background:var(--indigo-header);">🔊 قراءة صوتية للنص</button>' +
-              '<button type="button" id="modalGoQuizBtn" class="btn-lets-play" style="max-width:200px;">📝 انتقل إلى الاختبار</button>' +
-              (book.sourceUrl ? '<a href="' + book.sourceUrl + '" target="_blank" rel="noopener noreferrer" class="btn-lets-play" style="max-width:210px;background:#0f766e;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;">📖 اقرأ القصة كاملة</a>' : '') +
-            '</div>';
-
-          document.getElementById('modalSpeakBtn').addEventListener('click', function () {
-            speakArabic(book.storyText);
-          });
-          document.getElementById('modalGoQuizBtn').addEventListener('click', function () {
-            openBookAction(book.id, 'quiz');
-          });
+          renderFlipbookReader(book, 0);
         } else if (action === 'listen') {
           book.listenDone = true;
           saveBookStates();
@@ -1364,47 +1808,7 @@
             speakArabic(book.storyText);
           });
         } else if (action === 'quiz') {
-          var qObj = book.quiz;
-          var optsHtml = qObj.options.map(function (opt, idx) {
-            return '<button type="button" class="quiz-option-btn" data-idx="' + idx + '">' + opt + '</button>';
-          }).join('');
-          modalBody.innerHTML =
-            '<div>' +
-              '<div style="background:#f1ecf8;padding:12px 16px;border-radius:14px;font-weight:900;color:var(--indigo-header);margin-bottom:14px;">' +
-                '❓ ' + qObj.q +
-              '</div>' +
-              '<div id="quizOptionsWrap">' + optsHtml + '</div>' +
-              '<div id="quizResultFeedback" style="margin-top:12px;font-weight:900;text-align:center;"></div>' +
-            '</div>';
-
-          var optBtns = modalBody.querySelectorAll('.quiz-option-btn');
-          optBtns.forEach(function (ob) {
-            ob.addEventListener('click', function () {
-              var picked = parseInt(ob.getAttribute('data-idx'), 10);
-              var fb = document.getElementById('quizResultFeedback');
-              if (picked === qObj.correct) {
-                ob.style.background = '#dcfce7';
-                ob.style.borderColor = '#16a34a';
-                if (!book.quizDone) {
-                  book.quizDone = true;
-                  saveBookStates();
-                  setStars(getStars() + book.stars);
-                  renderBooks();
-                  renderTasksTab();
-                  fb.style.color = '#15803d';
-                  fb.innerHTML = '🎉 إجابة صحيحة! حصلت على +' + book.stars + ' نجمة إضافية!';
-                } else {
-                  fb.style.color = '#15803d';
-                  fb.innerHTML = '✅ أحسنت! إجابة صحيحة.';
-                }
-              } else {
-                ob.style.background = '#fee2e2';
-                ob.style.borderColor = '#dc2626';
-                fb.style.color = '#b91c1c';
-                fb.innerHTML = 'حاول مرة أخرى يا بطل!';
-              }
-            });
-          });
+          renderStoryQuiz30(book);
         }
       }
 
