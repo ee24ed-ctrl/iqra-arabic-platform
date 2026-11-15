@@ -35,11 +35,40 @@
       if (raw) {
         var arr = JSON.parse(raw);
         if (Array.isArray(arr) && arr.length) {
+          var changed = false;
           // Ensure general_supervisor exists in older saved storage
           if (!arr.some(function (u) { return u.role === 'general_supervisor'; })) {
             arr.push(DEFAULT_USERS[DEFAULT_USERS.length - 1]);
+            changed = true;
+          }
+          // Migrate legacy "مدرسة الأمل" school names to "مدرسة الساحل الأهلية"
+          arr.forEach(function (u) {
+            if (u.school && u.school.indexOf('الأمل') !== -1) {
+              u.school = 'مدرسة الساحل الأهلية';
+              changed = true;
+            }
+          });
+          if (changed) {
             localStorage.setItem(USERS_KEY, JSON.stringify(arr));
           }
+          try {
+            var curRaw = localStorage.getItem(SESSION_KEY);
+            if (curRaw && curRaw.indexOf('الأمل') !== -1) {
+              var curObj = JSON.parse(curRaw);
+              if (curObj && curObj.school && curObj.school.indexOf('الأمل') !== -1) {
+                curObj.school = 'مدرسة الساحل الأهلية';
+                localStorage.setItem(SESSION_KEY, JSON.stringify(curObj));
+              }
+            }
+            var tRaw = localStorage.getItem('iread_teacher_profile_v1');
+            if (tRaw && tRaw.indexOf('الأمل') !== -1) {
+              var tObj = JSON.parse(tRaw);
+              if (tObj && tObj.school && tObj.school.indexOf('الأمل') !== -1) {
+                tObj.school = 'مدرسة الساحل الأهلية';
+                localStorage.setItem('iread_teacher_profile_v1', JSON.stringify(tObj));
+              }
+            }
+          } catch (me) {}
           return arr;
         }
       }
