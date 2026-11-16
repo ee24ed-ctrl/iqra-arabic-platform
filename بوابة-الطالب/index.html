@@ -1275,31 +1275,11 @@
           <span>🎮 (٥) ألعاب تفاعلية ومتجر النجوم</span>
           <span style="font-size:0.88rem;color:var(--orange-main);">رصيدك: <b id="gamesStarBalance">100</b> ★</span>
         </div>
-        <p style="font-size:0.9rem;color:#475569;font-weight:700;margin-bottom:14px;">
-          العب وتدرّب على المهارات اللغوية والإملائية باستخدام نجومك:
+        <p style="font-size:0.9rem;color:#475569;font-weight:700;margin-bottom:10px;">
+          العب وتدرّب على جميع المهارات التأسيسية والفهم القرائي والإملائية (١٠ تحديات تفاعلية لكل مهارة):
         </p>
-        <div class="badge-grid">
-          <a href="../الأنشطة/index.html?id=short-vowels" class="badge-item-box" style="text-decoration:none;color:inherit;">
-            <span class="badge-item-icon">🎯</span>
-            <strong style="font-size:0.92rem;display:block;">لعبة الحركات القصيرة</strong>
-            <small style="color:var(--orange-main);font-weight:900;">ابدأ اللعب الآن ←</small>
-          </a>
-          <a href="../الأنشطة/index.html?id=shams-qamar" class="badge-item-box" style="text-decoration:none;color:inherit;">
-            <span class="badge-item-icon">☀️🌙</span>
-            <strong style="font-size:0.92rem;display:block;">اللام الشمسية والقمرية</strong>
-            <small style="color:var(--orange-main);font-weight:900;">ابدأ اللعب الآن ←</small>
-          </a>
-          <a href="../الأنشطة/index.html?id=sentence-order" class="badge-item-box" style="text-decoration:none;color:inherit;">
-            <span class="badge-item-icon">🧩</span>
-            <strong style="font-size:0.92rem;display:block;">لعبة ترتيب الجمل</strong>
-            <small style="color:var(--orange-main);font-weight:900;">ابدأ اللعب الآن ←</small>
-          </a>
-          <a href="../الأنشطة/index.html?id=synonyms" class="badge-item-box" style="text-decoration:none;color:inherit;">
-            <span class="badge-item-icon">🚀</span>
-            <strong style="font-size:0.92rem;display:block;">المرادفات والأضداد</strong>
-            <small style="color:var(--orange-main);font-weight:900;">ابدأ اللعب الآن ←</small>
-          </a>
-        </div>
+        <div id="skillGamesCatFilters" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"></div>
+        <div id="allSkillGamesGrid" class="badge-grid"></div>
       </div>
     </section>
 
@@ -1327,6 +1307,7 @@
   <script src="../assets/js/weekly-stories.js"></script>
   <script src="../assets/js/kidzz-stories-8-12.js"></script>
   <script src="../assets/js/story-quiz-engine.js"></script>
+  <script src="../assets/js/skill-games.js"></script>
   <script>
     (function () {
       'use strict';
@@ -1526,6 +1507,75 @@
       document.getElementById('letsPlayBtn').addEventListener('click', function () {
         switchStudentTab('games');
       });
+
+      // =================================================================
+      // RENDER INTERACTIVE GAMES FOR ALL SKILLS (27+ BUILT-IN & CUSTOM)
+      // =================================================================
+      var activeSkillCat = 'all';
+      function getSkillIcon(cat) {
+        if (!cat) return '🎮';
+        if (cat.indexOf('التأسيس') !== -1) return '🔤';
+        if (cat.indexOf('الفهم') !== -1) return '🧠';
+        if (cat.indexOf('الإملائية') !== -1) return '✍️';
+        if (cat.indexOf('اللغوية') !== -1) return '🧩';
+        if (cat.indexOf('الكتب') !== -1) return '📖';
+        if (cat.indexOf('الاختبارات') !== -1) return '🏆';
+        return '🎮';
+      }
+
+      function renderSkillGamesHub() {
+        var grid = document.getElementById('allSkillGamesGrid');
+        var filtersEl = document.getElementById('skillGamesCatFilters');
+        if (!grid || !window.IREAD_SKILLS) return;
+        var allSkills = typeof window.IREAD_SKILLS.getAllSkills === 'function'
+          ? window.IREAD_SKILLS.getAllSkills()
+          : (window.IREAD_SKILLS.SKILLS || []);
+        var prog = typeof window.IREAD_SKILLS.getSkillProgress === 'function'
+          ? window.IREAD_SKILLS.getSkillProgress(studentId)
+          : {};
+
+        if (filtersEl && !filtersEl.dataset.bound) {
+          var cats = ['all'];
+          allSkills.forEach(function (s) {
+            if (s.cat && cats.indexOf(s.cat) === -1) cats.push(s.cat);
+          });
+          filtersEl.innerHTML = cats.map(function (c) {
+            var label = c === 'all' ? 'الكل (' + allSkills.length + ')' : c;
+            return '<button type="button" class="filter-pill-btn' + (activeSkillCat === c ? ' active' : '') + '" data-skill-cat="' + c + '" style="padding:6px 12px;font-size:0.78rem;">' + label + '</button>';
+          }).join('');
+          filtersEl.addEventListener('click', function (ev) {
+            var btn = ev.target.closest('button[data-skill-cat]');
+            if (!btn) return;
+            activeSkillCat = btn.getAttribute('data-skill-cat');
+            filtersEl.querySelectorAll('button').forEach(function (b) {
+              b.classList.toggle('active', b === btn);
+            });
+            renderSkillGamesHub();
+          });
+          filtersEl.dataset.bound = '1';
+        }
+
+        var visible = allSkills.filter(function (s) {
+          return activeSkillCat === 'all' || s.cat === activeSkillCat;
+        });
+
+        grid.innerHTML = visible.map(function (sk) {
+          var rec = prog[sk.id];
+          var isDone = !!(rec && rec.done);
+          var statusHtml = isDone
+            ? '<small style="color:#16a34a;font-weight:900;">✓ منجزة (' + rec.score + '/' + rec.total + ') • أعد اللعب ←</small>'
+            : '<small style="color:var(--orange-main);font-weight:900;">🎮 ابدأ اللعبة (١٠ أسئلة) ←</small>';
+          return '<a href="../الأنشطة/index.html?id=' + encodeURIComponent(sk.id) + '" class="badge-item-box" data-skill-id="' + sk.id + '" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;justify-content:space-between;gap:6px;">' +
+            '<div>' +
+              '<span class="badge-item-icon">' + getSkillIcon(sk.cat) + '</span>' +
+              '<strong style="font-size:0.86rem;display:block;line-height:1.45;">' + sk.title + '</strong>' +
+              '<span style="display:inline-block;margin-top:4px;font-size:0.72rem;background:#e0f2fe;color:#0369a1;padding:2px 8px;border-radius:999px;font-weight:800;">' + (sk.cat || 'مهارات') + ' • ' + (sk.level || 'مستوى أ') + '</span>' +
+            '</div>' +
+            statusHtml +
+          '</a>';
+        }).join('');
+      }
+      renderSkillGamesHub();
 
       // =================================================================
       // RENDER BOOKS & FILTER PILLS (الكل | المنجزة | الغير منجزة)

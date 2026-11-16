@@ -137,7 +137,8 @@
       var params = new URLSearchParams(window.location.search);
       var assignedId = S.getGlobalAssignedSkill();
       var activeId = params.get('id') || assignedId;
-      var skill = S.SKILLS.find(function (x) { return x.id === activeId; }) || S.SKILLS[0];
+      var allSkills = (typeof S.getAllSkills === 'function') ? S.getAllSkills() : S.SKILLS;
+      var skill = allSkills.find(function (x) { return x.id === activeId; }) || allSkills[0];
       var isTeacherAssigned = (skill.id === assignedId);
 
       $('#assignedBadge').text(isTeacherAssigned ? '📌 المهارة الواحدة المكلف بها من المعلم' : '🎮 تحدي مهارة تفاعلية');

@@ -646,7 +646,8 @@
 
   // Returns 10 questions: 5 MCQ + 2 TF + 2 Order + 1 Match
   function getSkillQuiz(skillId) {
-    var sk = SKILLS.find(function (x) { return x.id === skillId; }) || SKILLS[0];
+    var all = getAllSkills();
+    var sk = all.find(function (x) { return x.id === skillId; }) || all[0];
     var quiz = [];
 
     sk.mcqs.forEach(function (m, idx) {
@@ -708,7 +709,8 @@
   }
 
   function saveSkillCompletion(sid, skillId, score, total, points) {
-    var sk = SKILLS.find(function (x) { return x.id === skillId; }) || SKILLS[0];
+    var all = getAllSkills();
+    var sk = all.find(function (x) { return x.id === skillId; }) || all[0];
     var doneKey = 'iread_done_' + sid;
     var doneMap = JSON.parse(localStorage.getItem(doneKey) || '{}');
     doneMap[skillId] = score + '/' + total;
@@ -738,7 +740,8 @@
 
   function getSkillReport() {
     var assignedId = getGlobalAssignedSkill();
-    var assignedSkill = SKILLS.find(function (x) { return x.id === assignedId; }) || SKILLS[0];
+    var all = getAllSkills();
+    var assignedSkill = all.find(function (x) { return x.id === assignedId; }) || all[0];
     var students = window.IREAD_WEEKLY && window.IREAD_WEEKLY.getAllStudents
       ? window.IREAD_WEEKLY.getAllStudents()
       : [{ id: 1, name: 'سارة أحمد', grade: 'الصف الأول' }, { id: 4, name: 'يوسف طارق', grade: 'الصف الرابع' }];
@@ -789,16 +792,23 @@
       custom: true,
       mcqs: [
         ['أي مما يلي يحقق مهارة «' + cleanTitle + '»؟', ['التطبيق الصحيح للمهارة أثناء القراءة', 'القراءة دون تركيز', 'تجاهل النص'], 0],
-        ['تُصنّف مهارة «' + cleanTitle + '» ضمن:', [cat || 'مهارات التأسيس', 'العمليات الحسابية', 'الرسم الحر'], 0]
+        ['تُصنّف مهارة «' + cleanTitle + '» ضمن:', [cat || 'مهارات التأسيس', 'العمليات الحسابية', 'الرسم الحر'], 0],
+        ['ما الهدف الرئيس من التدرّب على «' + cleanTitle + '»؟', ['تعزيز الطلاقة والفهم القرائي', 'إهمال علامات الترقيم', 'السرعة دون فهم'], 0],
+        ['المستوى المستهدف لمهارة «' + cleanTitle + '» هو:', [level || 'مستوى أ', 'لا يوجد مستوى', 'الترفيه فقط'], 0],
+        ['كيف يثبت الطالب إتقانه لمهارة «' + cleanTitle + '»؟', ['بقراءة الأمثلة وتطبيقها بدقة', 'بتجاوز التدريبات', 'بحفظ العنوان فقط'], 0]
       ],
       tfs: [
-        ['إتقان مهارة «' + cleanTitle + '» يقوي القراءة والفهم القرائي.', true]
+        ['إتقان مهارة «' + cleanTitle + '» يقوي القراءة والفهم القرائي.', true],
+        ['يمكن إتقان مهارة «' + cleanTitle + '» دون ممارسة أو تدريب.', false]
       ],
       orders: [
-        'يُتْقِنُ الطَّالِبُ مَهَارَةَ الْقِرَاءَةِ وَالْفَهْمِ بِمُثَابَرَةٍ'
+        'يُتْقِنُ الطَّالِبُ مَهَارَةَ الْقِرَاءَةِ وَالْفَهْمِ بِمُثَابَرَةٍ',
+        'تُعَزِّزُ التَّدْرِيبَاتُ التَّفَاعُلِيَّةُ فَهْمَ النُّصُوصِ الْعَرَبِيَّةِ'
       ],
       match: [
-        [cleanTitle, cat || 'مهارات التأسيس']
+        [cleanTitle, cat || 'مهارات التأسيس'],
+        ['المستوى الدراسي', level || 'مستوى أ'],
+        ['الهدف القرائي', 'الطلاقة والفهم']
       ]
     };
     list.push(newSkill);
