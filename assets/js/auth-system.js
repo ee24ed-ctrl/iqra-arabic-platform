@@ -29,6 +29,133 @@
     { id: 'gsup_1', role: 'general_supervisor', name: 'د. فهد العتيبي (المشرف العام)', username: 'gsup1', email: 'general@edu.gov', pass: '1234', school: 'الإدارة العامة للتعليم', sector: 'الإشراف العام على المنصة والمدارس', active: true, createdAt: '2026-10-01' }
   ];
 
+  // Real School Roster: مدرسة الساحل الأهلية (4 Teachers + 61 Students, login by National ID/Iqama & password 123456)
+  var SAHIL_ROSTER_GROUPS = [
+    {
+      teacher: { id: 'tch_islam', name: 'أ. إسلام السعيد', username: 'islam', grade: 'الصف الأول', section: 'أ', classes: 'الصف الأول الابتدائي / أ' },
+      students: [
+        ['1197111352', 'إلياس عادل إبراهيم العسيري'],
+        ['1196046096', 'أنس عبد الله محمد الحضرمي'],
+        ['2491328510', 'خالد وليد عبدالخالق حسين'],
+        ['1195059231', 'راشد إسماعيل إبراهيم شعبي'],
+        ['2491053985', 'رواد رامي رسمى بركه'],
+        ['1197244195', 'رواد عبد الكريم عواض العتيبي'],
+        ['1196384091', 'سلطان عبد الله نافع السلمي'],
+        ['1195243215', 'طلال عادل داود كلنتن'],
+        ['1196355943', 'عبد العزيز سعيد محمد الجهني'],
+        ['2492571589', 'عبد الله محمد وسيم عيسى'],
+        ['1197009531', 'فهد عبد الله فيصل البلول'],
+        ['1192511671', 'فهد علي عبدالله العمري'],
+        ['2491480543', 'محمد عبد الله حسن الحبشي'],
+        ['1192778684', 'ناصر عبد الرحيم محمد الزهراني'],
+        ['2503750578', 'عبد الله محمد كمال أبو جامع'],
+        ['1212559569', 'محمد على عبد الله غبرا']
+      ]
+    },
+    {
+      teacher: { id: 'tch_ahmed_gamal', name: 'أ. أحمد جمال', username: 'ahmed_gamal', grade: 'الصف الأول', section: 'ب', classes: 'الصف الأول الابتدائي / ب' },
+      students: [
+        ['2538617651', 'تمام إبراهيم سعيد باعوضة'],
+        ['1197531617', 'خالد ياسر خالد السوداني'],
+        ['1192657862', 'رواف عبد الله محمد البقمي'],
+        ['1193694732', 'ريان أحمد عبد الله السفري'],
+        ['2490972524', 'سعد أحمد محمود الحريري'],
+        ['1194607766', 'سعود صقر قريش علي الغامدي'],
+        ['1193478193', 'سلطان طارق محمد الجفري'],
+        ['1196596694', 'عبدالله أحمد صالح الغامدي'],
+        ['1198213587', 'عبد الله إسماعيل عبد الله الغامدي'],
+        ['1197943853', 'فارس خالد موسى الظاهري'],
+        ['1196274748', 'فهد شرف عبد الرحمن الشريف'],
+        ['1195915614', 'محمد فهد علي العمري'],
+        ['3194783423', 'نواف عبده صالح ناجي']
+      ]
+    },
+    {
+      teacher: { id: 'tch_ahmed_fahmy', name: 'أ. أحمد فهمي', username: 'ahmed_fahmy', grade: 'الصف الثاني', section: 'أ', classes: 'الصف الثاني / أ' },
+      students: [
+        ['1192988473', 'أحمد سعيد ظافر العمري'],
+        ['2480254438', 'آدم حمزه عبد الرؤوف عيسى'],
+        ['1190436640', 'ثامر سعد ثامر الغالبي'],
+        ['2472361621', 'جواد جهاد محمد الحسين'],
+        ['2465939037', 'فيصل احمد بشير مسعود'],
+        ['1192108767', 'احمد علي احمد الهلالي'],
+        ['1194976781', 'مشاري عبدالله محمد المري'],
+        ['1190716454', 'المؤيد مهند شاكر جلال'],
+        ['1191728888', 'محمد عبد الله سعد العمري'],
+        ['1189605460', 'عمار عبد الرحمن مبارك السفري'],
+        ['4643322497', 'تركي عبدالملك محمد الأحمدي'],
+        ['1194750517', 'أحمد عبدالعزيز عبد الله الحربي'],
+        ['1192280392', 'عبد الرحمن أحمد سعيد الغامدي'],
+        ['1192650750', 'عبد العزيز أحمد عبد العزيز آل الشيخ']
+      ]
+    },
+    {
+      teacher: { id: 'tch_mahmoud_awny', name: 'أ. محمود عوني', username: 'mahmoud_awny', grade: 'الصف الثاني', section: 'ب', classes: 'الصف الثاني / ب' },
+      students: [
+        ['1194881825', 'اديب عادل محمد الغامدي'],
+        ['4797697341', 'ارام غزوان محمد النونو'],
+        ['1191394111', 'ايوب شادي فوزي السليماني'],
+        ['1186872964', 'تركي عزام عوض الله الخديدي'],
+        ['1191369634', 'سلطان محمد علي عريبي'],
+        ['1191369592', 'عبدالله محمد علي عريبي'],
+        ['1192385084', 'فارس ابراهيم عبيد السيد'],
+        ['1192134045', 'هشام محمد خالد التويم'],
+        ['2461691848', 'ياس وجيه رجب ساعي'],
+        ['1191440286', 'ريان عبدالله إبراهيم الشبرمي'],
+        ['1193314703', 'محمد مهدي عامر الذويبي'],
+        ['1190041697', 'سلمان عادل محمد المحمادي'],
+        ['1194763072', 'عبد العزيز فهد محمد العمودي'],
+        ['1194029466', 'راشد محمد راشد الشبرمي'],
+        ['1194847602', 'وابل سراج عمر السيد'],
+        ['1191999786', 'بتال محمد عبيد الحربي'],
+        ['1193359526', 'محسن عبد الله عبد العالي الشريف'],
+        ['1191778016', 'زياد غرم الله سعيد الغامدى']
+      ]
+    }
+  ];
+
+  (function appendRosterToDefaultUsers() {
+    var seq = 101;
+    SAHIL_ROSTER_GROUPS.forEach(function (grp) {
+      var t = grp.teacher;
+      DEFAULT_USERS.push({
+        id: t.id,
+        role: 'teacher',
+        name: t.name,
+        username: t.username,
+        email: t.username + '@sahil.edu.sa',
+        pass: '123456',
+        school: 'مدرسة الساحل الأهلية',
+        subject: 'اللغة العربية',
+        classes: t.classes,
+        active: true,
+        createdAt: '2026-11-16'
+      });
+      grp.students.forEach(function (pair) {
+        var nid = pair[0];
+        var sname = pair[1];
+        DEFAULT_USERS.push({
+          id: 'stu_' + nid,
+          numericId: seq++,
+          nationalId: nid,
+          role: 'student',
+          name: sname,
+          username: nid,
+          email: nid + '@sahil.edu.sa',
+          pass: '123456',
+          school: 'مدرسة الساحل الأهلية',
+          grade: t.grade,
+          section: t.section,
+          level: 'المستوى (ز)',
+          assignedTeacherId: t.id,
+          assignedTeacherName: t.name,
+          active: true,
+          createdAt: '2026-11-16'
+        });
+      });
+    });
+  })();
+
   function loadUsers() {
     try {
       var raw = localStorage.getItem(USERS_KEY);
@@ -36,11 +163,13 @@
         var arr = JSON.parse(raw);
         if (Array.isArray(arr) && arr.length) {
           var changed = false;
-          // Ensure general_supervisor exists in older saved storage
-          if (!arr.some(function (u) { return u.role === 'general_supervisor'; })) {
-            arr.push(DEFAULT_USERS[DEFAULT_USERS.length - 1]);
-            changed = true;
-          }
+          // Ensure all DEFAULT_USERS (including general_supervisor, teachers, and real student IDs) exist
+          DEFAULT_USERS.forEach(function (defU) {
+            if (!arr.some(function (u) { return u.id === defU.id || u.username === defU.username; })) {
+              arr.push(defU);
+              changed = true;
+            }
+          });
           // Migrate legacy "مدرسة الأمل" school names to "مدرسة الساحل الأهلية"
           arr.forEach(function (u) {
             if (u.school && u.school.indexOf('الأمل') !== -1) {
@@ -162,13 +291,27 @@
     return { ok: true, user: newUser };
   }
 
+  function normalizeDigits(str) {
+    return String(str || '').replace(/[٠-٩]/g, function (d) {
+      return String('٠١٢٣٤٥٦٧٨٩'.indexOf(d));
+    }).replace(/[۰-۹]/g, function (d) {
+      return String('۰۱۲۳۴۵۶۷۸۹'.indexOf(d));
+    });
+  }
+
   function loginUser(identifier, password, roleFilter) {
     var users = loadUsers();
-    var key = (identifier || '').trim().toLowerCase();
+    var key = normalizeDigits((identifier || '').trim()).toLowerCase();
+    var passNorm = normalizeDigits((password || '').trim());
     var user = users.find(function (u) {
-      var matchId = u.username.toLowerCase() === key || (u.email && u.email.toLowerCase() === key) || (u.name && u.name.toLowerCase() === key);
+      var cleanName = (u.name || '').replace(/^أ\.\s*/, '').trim().toLowerCase();
+      var matchId = u.username.toLowerCase() === key ||
+        (u.nationalId && u.nationalId.toLowerCase() === key) ||
+        (u.email && u.email.toLowerCase() === key) ||
+        (u.name && u.name.toLowerCase() === key) ||
+        (cleanName && cleanName === key);
       var matchRole = !roleFilter || roleFilter === 'all' || u.role === roleFilter;
-      return matchId && matchRole && u.pass === password;
+      return matchId && matchRole && u.pass === passNorm;
     });
     // If user typed a username and selected a role on login screen with default pass 1234, allow role-based demo entry seamlessly
     if (!user && roleFilter && roleFilter !== 'all' && password === '1234') {
