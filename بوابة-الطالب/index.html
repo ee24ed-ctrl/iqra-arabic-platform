@@ -1356,6 +1356,141 @@
       color: #082f68;
       margin: 0;
     }
+
+    /* Student Edit Profile & Avatar Upload */
+    .student-avatar-wrap {
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .student-avatar-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .btn-change-photo {
+      position: absolute;
+      bottom: -4px;
+      left: -4px;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #eab308;
+      color: #06285a;
+      border: 2px solid #fff;
+      font-size: 0.72rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-edit-profile-pill {
+      background: rgba(255, 255, 255, 0.18);
+      border: 1.5px solid rgba(255, 255, 255, 0.45);
+      color: #fff;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: background 0.15s;
+    }
+
+    .btn-edit-profile-pill:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .edit-profile-panel {
+      display: none;
+      margin-top: 12px;
+      background: rgba(255, 255, 255, 0.96);
+      color: #0f172a;
+      border-radius: 16px;
+      padding: 14px;
+      border: 2px solid #fde047;
+    }
+
+    .edit-profile-panel.is-open {
+      display: block;
+    }
+
+    /* Daily Tasks Notebook (مذكرة المهام اليومية) */
+    .daily-notebook-card {
+      background: #fffdf7;
+      border: 2px solid #fcd34d;
+      border-top: 8px solid #d97706;
+      border-radius: 20px;
+      padding: 16px;
+      margin: -26px 14px 20px;
+      position: relative;
+      z-index: 4;
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.1);
+      background-image: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 35px,
+        rgba(251, 191, 36, 0.14) 36px
+      );
+    }
+
+    @media (max-width: 639px) {
+      .daily-notebook-card {
+        margin: -24px 12px 18px;
+        padding: 13px;
+      }
+    }
+
+    .notebook-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+      border-bottom: 2px dashed #fbbf24;
+    }
+
+    .notebook-date-pill {
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #f59e0b;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 900;
+    }
+
+    .notebook-task-row {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-right: 5px solid #2563eb;
+      border-radius: 14px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+    }
+
+    .notebook-task-row.is-story {
+      border-right-color: #f59e0b;
+    }
+
+    .notebook-task-row.is-done {
+      border-right-color: #16a34a;
+      background: #f0fdf4;
+    }
   </style>
   <link rel="stylesheet" href="../assets/mobile-responsive.css">
 </head>
@@ -1366,7 +1501,7 @@
   <div class="student-app-shell">
 
     <!-- ===================================================================
-         TOP ROYAL BLUE HERO WITH STUDENT IDENTITY CARD
+         TOP ROYAL BLUE HERO WITH STUDENT IDENTITY & EDIT PROFILE
          =================================================================== -->
     <header class="student-hero-redesign">
       <div class="hero-watermark" aria-hidden="true">
@@ -1375,11 +1510,18 @@
         <span>أ</span>
       </div>
       <div class="student-id-card">
-        <div class="student-avatar-ring">
-          <div class="student-avatar-inner" aria-hidden="true">🎓</div>
+        <div class="student-avatar-wrap">
+          <div class="student-avatar-ring">
+            <div class="student-avatar-inner" id="heroStudentAvatarBox">🎓</div>
+          </div>
+          <label for="studentPhotoUploadInput" class="btn-change-photo" title="تغيير الصورة" aria-label="تغيير الصورة">📷</label>
+          <input type="file" id="studentPhotoUploadInput" accept="image/*" style="display:none;">
         </div>
         <div class="student-id-info">
-          <span class="student-welcome-pill">✨ أهلاً بك في بوابة القارئ المبدع</span>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span class="student-welcome-pill">✨ بطاقة الطالب الشخصية</span>
+            <button type="button" id="toggleEditStudentBtn" class="btn-edit-profile-pill">✏️ تعديل البيانات والصورة</button>
+          </div>
           <h1 class="student-id-name" id="heroStudentName">الطالب المتميز</h1>
           <div class="student-meta-chips">
             <span class="student-meta-chip">🏫 <span id="heroStudentSchool">مدرسة الساحل الأهلية</span></span>
@@ -1390,50 +1532,95 @@
           </div>
         </div>
       </div>
+
+      <!-- Inline Edit Student Data & Photo Panel -->
+      <div id="editStudentProfilePanel" class="edit-profile-panel">
+        <div style="font-weight:900;font-size:0.9rem;color:#082f68;margin-bottom:8px;">✏️ تعديل بيانات الطالب وتغيير الصورة</div>
+        <div style="display:grid;grid-template-columns:1fr;gap:8px;">
+          <div>
+            <label style="font-size:0.78rem;font-weight:800;display:block;margin-bottom:3px;">اسم الطالب:</label>
+            <input type="text" id="editStuNameInput" class="form-control" style="border-radius:10px;font-weight:800;" placeholder="اكتب اسم الطالب">
+          </div>
+          <div>
+            <label style="font-size:0.78rem;font-weight:800;display:block;margin-bottom:4px;">اختر صورة رمزية أو ارفع صورة من جهازك:</label>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+              <button type="button" class="btn btn-sm btn-outline-primary stu-preset-avatar" data-emoji="🎓">🎓</button>
+              <button type="button" class="btn btn-sm btn-outline-primary stu-preset-avatar" data-emoji="🦁">🦁</button>
+              <button type="button" class="btn btn-sm btn-outline-primary stu-preset-avatar" data-emoji="🚀">🚀</button>
+              <button type="button" class="btn btn-sm btn-outline-primary stu-preset-avatar" data-emoji="🌟">🌟</button>
+              <label for="studentPhotoUploadInput" class="btn btn-sm btn-primary" style="margin:0;cursor:pointer;">📷 رفع صورة من الجهاز</label>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:4px;">
+            <button type="button" id="saveStudentProfileBtn" class="btn btn-sm btn-success">💾 حفظ التعديلات</button>
+            <button type="button" id="cancelStudentProfileBtn" class="btn btn-sm btn-outline-dark">إلغاء</button>
+          </div>
+          <div id="editProfileFeedback" style="font-size:0.78rem;font-weight:800;display:none;"></div>
+        </div>
+      </div>
     </header>
 
     <!-- ===================================================================
-         STUDENT STATISTICS DASHBOARD (4 KPI CARDS)
-         =================================================================== -->
-    <section class="stats-kpi-grid" aria-label="إحصائيات الطالب">
-      <div class="kpi-mini-card">
-        <div class="kpi-mini-icon">📖</div>
-        <div class="kpi-mini-val" id="completedBooksRatio">23/11</div>
-        <div class="kpi-mini-label">الكتب المنجزة (المستوى ز)</div>
-        <div class="books-progress-track" style="height:8px;">
-          <div class="books-progress-fill" id="completedBooksBar" style="width: 55%;"></div>
-        </div>
-      </div>
-
-      <div class="kpi-mini-card">
-        <div class="kpi-mini-icon">⭐</div>
-        <div class="kpi-mini-val" id="cardStarScore" style="color:#d97706;">100 ★</div>
-        <div class="kpi-mini-label">رصيد النجوم الذهبية</div>
-        <button type="button" id="letsPlayBtn" class="btn-lets-play" style="padding:5px 10px;font-size:0.76rem;border-radius:10px;">🎮 هيا نلعب</button>
-      </div>
-
-      <div class="kpi-mini-card">
-        <div class="kpi-mini-icon">🎯</div>
-        <div class="kpi-mini-val" id="statSkillsDone" style="color:#0d9488;">0 / 27</div>
-        <div class="kpi-mini-label">المهارات المتقنة</div>
-        <button type="button" onclick="if(window.switchStudentTab) window.switchStudentTab('games')" class="btn-lets-play" style="padding:5px 10px;font-size:0.76rem;border-radius:10px;background:#0d9488;">تدرّب الآن</button>
-      </div>
-
-      <div class="kpi-mini-card">
-        <div class="kpi-mini-icon">📋</div>
-        <div class="kpi-mini-val" id="statTasksCount" style="color:#4f46e5;">0</div>
-        <div class="kpi-mini-label">المهام المكلف بها</div>
-        <button type="button" onclick="if(window.switchStudentTab) window.switchStudentTab('tasks')" class="btn-lets-play" style="padding:5px 10px;font-size:0.76rem;border-radius:10px;background:#4f46e5;">عرض المهام</button>
-      </div>
-    </section>
-
-    <!-- ===================================================================
-         PANEL (١): الصفحة الرئيسية (معلومات + إحصائيات + خدمات + مهام + مكتبة)
+         PANEL (١): الصفحة الرئيسية (معلومات الطالب + مذكرة المهام اليومية فقط)
          =================================================================== -->
     <main id="tabPanelHome" class="student-tab-panel is-active">
+      <section class="daily-notebook-card" aria-label="مذكرة جدول المهام اليومية">
+        <div class="notebook-header">
+          <div>
+            <h2 class="home-section-title" style="font-size:1.05rem;">📒 مذكرة جدول المهام اليومية</h2>
+            <small style="color:#78350f;font-weight:700;">المهارات الأساسية والقصص المكلف بها الطالب اليوم</small>
+          </div>
+          <span class="notebook-date-pill" id="notebookTodayLabel">📅 اليوم</span>
+        </div>
+
+        <div id="dailyNotebookBody"></div>
+
+        <div style="margin-top:12px;padding-top:10px;border-top:1.5px dashed #fde68a;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+          <span style="font-size:0.78rem;font-weight:800;color:#475569;">هل أنهيت مهام اليوم؟ انتقل إلى تحدي القراءة والمكتبة:</span>
+          <button type="button" onclick="if(window.switchStudentTab) window.switchStudentTab('challenge')" class="btn btn-sm btn-primary">🏁 تحدي القراءة والمكتبة ←</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================================================================
+         PANEL (٢): تحدي القراءة (الإحصائيات + الخدمات + التحدي + مكتبة القصص)
+         =================================================================== -->
+    <section id="tabPanelChallenge" class="student-tab-panel">
+      <!-- 4 KPI Statistics Cards -->
+      <section class="stats-kpi-grid" style="margin:0 0 14px;" aria-label="إحصائيات الطالب">
+        <div class="kpi-mini-card">
+          <div class="kpi-mini-icon">📖</div>
+          <div class="kpi-mini-val" id="completedBooksRatio">23/11</div>
+          <div class="kpi-mini-label">الكتب المنجزة (المستوى ز)</div>
+          <div class="books-progress-track" style="height:8px;">
+            <div class="books-progress-fill" id="completedBooksBar" style="width: 55%;"></div>
+          </div>
+        </div>
+
+        <div class="kpi-mini-card">
+          <div class="kpi-mini-icon">⭐</div>
+          <div class="kpi-mini-val" id="cardStarScore" style="color:#d97706;">100 ★</div>
+          <div class="kpi-mini-label">رصيد النجوم الذهبية</div>
+          <button type="button" id="letsPlayBtn" class="btn-lets-play" style="padding:5px 10px;font-size:0.76rem;border-radius:10px;">🎮 هيا نلعب</button>
+        </div>
+
+        <div class="kpi-mini-card">
+          <div class="kpi-mini-icon">🎯</div>
+          <div class="kpi-mini-val" id="statSkillsDone" style="color:#0d9488;">0 / 27</div>
+          <div class="kpi-mini-label">المهارات المتقنة</div>
+          <button type="button" onclick="if(window.switchStudentTab) window.switchStudentTab('games')" class="btn-lets-play" style="padding:5px 10px;font-size:0.76rem;border-radius:10px;background:#0d9488;">تدرّب الآن</button>
+        </div>
+
+        <div class="kpi-mini-card">
+          <div class="kpi-mini-icon">📋</div>
+          <div class="kpi-mini-val" id="statTasksCount" style="color:#4f46e5;">0</div>
+          <div class="kpi-mini-label">المهام المكلف بها</div>
+          <button type="button" onclick="if(window.switchStudentTab) window.switchStudentTab('tasks')" class="btn-lets-play" style="padding:5px 10px;font-size:0.76rem;border-radius:10px;background:#4f46e5;">عرض المهام</button>
+        </div>
+      </section>
 
       <!-- Quick Services Hub -->
-      <section class="quick-services-grid" aria-label="خدمات الطالب السريعة">
+      <section class="quick-services-grid" style="margin:0 0 14px;" aria-label="خدمات الطالب السريعة">
         <button type="button" class="quick-service-tile" onclick="var f=document.querySelector('.filter-pill-btn[data-filter=kids_8_12]'); if(f) f.click(); document.getElementById('studentBooksGrid').scrollIntoView({behavior:'smooth'});">
           <span class="quick-service-icon" style="background:#dbeafe;color:#1d4ed8;">📖</span>
           <div><strong style="display:block;font-size:0.84rem;">قصص الابتدائية</strong><small style="color:#64748b;font-weight:700;">تصفح واقرأ بملء الشاشة</small></div>
@@ -1446,10 +1633,6 @@
           <span class="quick-service-icon" style="background:#e0e7ff;color:#4338ca;">📋</span>
           <div><strong style="display:block;font-size:0.84rem;">المهام الأسبوعية</strong><small style="color:#64748b;font-weight:700;">تكليفات المعلم</small></div>
         </button>
-        <button type="button" class="quick-service-tile" onclick="if(window.switchStudentTab) window.switchStudentTab('challenge')">
-          <span class="quick-service-icon" style="background:#dcfce7;color:#15803d;">🏁</span>
-          <div><strong style="display:block;font-size:0.84rem;">تحدي القراءة</strong><small style="color:#64748b;font-weight:700;">تقدمك نحو الوسام</small></div>
-        </button>
         <a href="../المكافآت/index.html" class="quick-service-tile">
           <span class="quick-service-icon" style="background:#fce7f3;color:#be185d;">🏅</span>
           <div><strong style="display:block;font-size:0.84rem;">شهادة التفوق</strong><small style="color:#64748b;font-weight:700;">عرض وطباعة الشهادة</small></div>
@@ -1458,37 +1641,15 @@
           <span class="quick-service-icon" style="background:#ecfeff;color:#0e7490;">📰</span>
           <div><strong style="display:block;font-size:0.84rem;">القصة الأسبوعية</strong><small style="color:#64748b;font-weight:700;">قصة وتدريب الأسبوع</small></div>
         </a>
+        <a href="../المكتبة/index.html" class="quick-service-tile">
+          <span class="quick-service-icon" style="background:#dcfce7;color:#15803d;">📚</span>
+          <div><strong style="display:block;font-size:0.84rem;">المكتبة الإضافية</strong><small style="color:#64748b;font-weight:700;">٣٠ قصة إضافية</small></div>
+        </a>
       </section>
 
-      <!-- Home Tasks & Active Skill Assignment Box -->
-      <section class="home-section-box" aria-label="المهام والمهارة المكلف بها">
-        <div class="home-section-head">
-          <h2 class="home-section-title">📌 المهام المكلف بها والمهارة النشطة</h2>
-          <button type="button" onclick="if(window.switchStudentTab) window.switchStudentTab('tasks')" style="border:none;background:#eff6ff;color:#1d4ed8;font-weight:800;font-size:0.78rem;padding:4px 10px;border-radius:999px;cursor:pointer;">عرض كل المهام ←</button>
-        </div>
-        <div id="homeAssignedSkillBox" style="margin-bottom:10px;"></div>
-        <div id="homeTasksPreview"></div>
-      </section>
-
-      <!-- Filter Pills: الكل | قصص الابتدائية | المنجزة | الغير منجزة -->
-      <div class="filter-pills-row" role="tablist" aria-label="تصفية الكتب">
-        <button type="button" class="filter-pill-btn active" data-filter="all">الكل</button>
-        <button type="button" class="filter-pill-btn" data-filter="kids_8_12">قصص الابتدائية (٨-١٢)</button>
-        <button type="button" class="filter-pill-btn" data-filter="completed">المنجزة</button>
-        <button type="button" class="filter-pill-btn" data-filter="uncompleted">الغير منجزة</button>
-      </div>
-
-      <!-- Books List / Grid -->
-      <div class="books-grid-container" id="studentBooksGrid"></div>
-    </main>
-
-    <!-- ===================================================================
-         PANEL (٢): تحدي القراءة
-         =================================================================== -->
-    <section id="tabPanelChallenge" class="student-tab-panel">
-      <div class="section-panel-card">
+      <div class="section-panel-card" style="margin-bottom:14px;">
         <div class="section-panel-title">
-          <span>🏁 (٢) تحدي القراءة – ماراثون المستويات</span>
+          <span>🏁 تحدي القراءة – ماراثون المستويات</span>
           <span style="font-size:0.88rem;color:var(--orange-main);">المستوى الحالي: (ز)</span>
         </div>
         <p style="font-size:0.92rem;color:#475569;font-weight:700;margin-bottom:14px;">
@@ -1503,11 +1664,18 @@
             <div class="books-progress-fill" id="challengeProgressBar" style="width:55%;"></div>
           </div>
         </div>
-        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
-          <button type="button" class="btn-lets-play" style="max-width:220px;" onclick="if(window.switchStudentTab) window.switchStudentTab('home')">📖 متابعة قراءة الكتب</button>
-          <a href="../المكتبة/index.html" class="btn-lets-play" style="max-width:220px;background:var(--indigo-header);text-decoration:none;display:inline-flex;align-items:center;justify-content:center;">📚 مكتبة 30 قصة إضافية</a>
-        </div>
       </div>
+
+      <!-- Filter Pills: الكل | قصص الابتدائية | المنجزة | الغير منجزة -->
+      <div class="filter-pills-row" role="tablist" aria-label="تصفية الكتب">
+        <button type="button" class="filter-pill-btn active" data-filter="all">الكل</button>
+        <button type="button" class="filter-pill-btn" data-filter="kids_8_12">قصص الابتدائية (٨-١٢)</button>
+        <button type="button" class="filter-pill-btn" data-filter="completed">المنجزة</button>
+        <button type="button" class="filter-pill-btn" data-filter="uncompleted">الغير منجزة</button>
+      </div>
+
+      <!-- Books List / Grid -->
+      <div class="books-grid-container" id="studentBooksGrid"></div>
     </section>
 
     <!-- ===================================================================
@@ -1614,16 +1782,24 @@
       var menuNameEl = document.getElementById('menuStudentName');
       if (menuNameEl) menuNameEl.textContent = studentName;
 
-      // Populate Student Hero Identity Card & Stats
-      (function populateStudentHero() {
+      // Populate Student Hero Identity Card & Edit Profile / Photo Controls
+      var stuProfileKey = 'iread_student_profile_' + studentId;
+      function loadSavedStuProfile() {
+        try { return JSON.parse(localStorage.getItem(stuProfileKey) || '{}') || {}; } catch (e) { return {}; }
+      }
+      function applyStudentHeroUI() {
+        var saved = loadSavedStuProfile();
+        var displayName = saved.name || studentName;
         var nameEl = document.getElementById('heroStudentName');
         var schoolEl = document.getElementById('heroStudentSchool');
         var classEl = document.getElementById('heroStudentClass');
         var nidEl = document.getElementById('heroStudentNid');
         var teacherEl = document.getElementById('heroStudentTeacher');
         var levelEl = document.getElementById('heroStudentLevel');
+        var avatarBox = document.getElementById('heroStudentAvatarBox');
 
-        if (nameEl) nameEl.textContent = studentName;
+        if (nameEl) nameEl.textContent = displayName;
+        if (menuNameEl) menuNameEl.textContent = displayName;
         if (schoolEl) schoolEl.textContent = (currentUser && currentUser.school) || 'مدرسة الساحل الأهلية';
         if (classEl) {
           var g = (currentUser && currentUser.grade) || 'الصف الأول';
@@ -1633,6 +1809,83 @@
         if (nidEl) nidEl.textContent = (currentUser && (currentUser.nationalId || currentUser.username)) || 'طالب';
         if (teacherEl) teacherEl.textContent = (currentUser && currentUser.assignedTeacherName) || 'معلم اللغة العربية';
         if (levelEl) levelEl.textContent = (currentUser && currentUser.level) || 'المستوى (ز)';
+        if (avatarBox) {
+          if (saved.photoDataUrl) {
+            avatarBox.innerHTML = '<img src="' + saved.photoDataUrl + '" alt="صورة الطالب">';
+          } else {
+            avatarBox.textContent = saved.emoji || '🎓';
+          }
+        }
+        if (typeof window.updateGlobalTopBarProfile === 'function') {
+          window.updateGlobalTopBarProfile(displayName, saved.photoDataUrl || null, null);
+        }
+      }
+      applyStudentHeroUI();
+
+      (function bindStudentProfileEditor() {
+        var toggleBtn = document.getElementById('toggleEditStudentBtn');
+        var panel = document.getElementById('editStudentProfilePanel');
+        var nameInp = document.getElementById('editStuNameInput');
+        var saveBtn = document.getElementById('saveStudentProfileBtn');
+        var cancelBtn = document.getElementById('cancelStudentProfileBtn');
+        var photoInp = document.getElementById('studentPhotoUploadInput');
+        var fb = document.getElementById('editProfileFeedback');
+
+        if (toggleBtn && panel) {
+          toggleBtn.addEventListener('click', function () {
+            var saved = loadSavedStuProfile();
+            if (nameInp) nameInp.value = saved.name || studentName;
+            panel.classList.toggle('is-open');
+          });
+        }
+        if (cancelBtn && panel) {
+          cancelBtn.addEventListener('click', function () { panel.classList.remove('is-open'); });
+        }
+        document.querySelectorAll('.stu-preset-avatar').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var saved = loadSavedStuProfile();
+            saved.emoji = btn.getAttribute('data-emoji') || '🎓';
+            delete saved.photoDataUrl;
+            localStorage.setItem(stuProfileKey, JSON.stringify(saved));
+            applyStudentHeroUI();
+          });
+        });
+        if (photoInp) {
+          photoInp.addEventListener('change', function (ev) {
+            var file = ev.target.files && ev.target.files[0];
+            if (!file) return;
+            var reader = new FileReader();
+            reader.onload = function (r) {
+              var saved = loadSavedStuProfile();
+              saved.photoDataUrl = r.target.result;
+              localStorage.setItem(stuProfileKey, JSON.stringify(saved));
+              applyStudentHeroUI();
+            };
+            reader.readAsDataURL(file);
+          });
+        }
+        if (saveBtn) {
+          saveBtn.addEventListener('click', function () {
+            var newName = (nameInp && nameInp.value || '').trim();
+            if (!newName) return;
+            var saved = loadSavedStuProfile();
+            saved.name = newName;
+            localStorage.setItem(stuProfileKey, JSON.stringify(saved));
+            studentName = newName;
+            localStorage.setItem('iread_selected_student_name', newName);
+            if (currentUser && currentUser.role === 'student') {
+              currentUser.name = newName;
+              try { localStorage.setItem('iread_current_user_v1', JSON.stringify(currentUser)); } catch (e) {}
+            }
+            applyStudentHeroUI();
+            if (fb) {
+              fb.style.display = 'block';
+              fb.style.color = '#16a34a';
+              fb.textContent = '✓ تم حفظ بياناتك وتحديثها بنجاح!';
+            }
+            setTimeout(function () { if (panel) panel.classList.remove('is-open'); if (fb) fb.style.display = 'none'; }, 900);
+          });
+        }
       })();
 
       // Books dataset for Level (ز) starting with "ماذا حصل لأخي رامز؟" matching the screenshot
@@ -1892,13 +2145,22 @@
       }
       renderSkillGamesHub();
 
-      // Populate Home Page KPI stats (skills done, tasks count) & quick tasks preview
+      // Populate Daily Tasks Notebook on Home + KPI stats in Challenge tab
       function renderHomeDashboardOverview() {
         var skillsDoneEl = document.getElementById('statSkillsDone');
         var tasksCountEl = document.getElementById('statTasksCount');
-        var assignedBox = document.getElementById('homeAssignedSkillBox');
-        var previewBox = document.getElementById('homeTasksPreview');
+        var todayLabel = document.getElementById('notebookTodayLabel');
+        var notebookBody = document.getElementById('dailyNotebookBody');
 
+        if (todayLabel) {
+          try {
+            todayLabel.textContent = '📅 ' + new Date().toLocaleDateString('ar-SA', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+          } catch (e) {
+            todayLabel.textContent = '📅 مهام اليوم';
+          }
+        }
+
+        var rowsHtml = [];
         if (window.IREAD_SKILLS) {
           var allSk = typeof window.IREAD_SKILLS.getAllSkills === 'function'
             ? window.IREAD_SKILLS.getAllSkills()
@@ -1912,36 +2174,49 @@
           var assignedId = typeof window.IREAD_SKILLS.getGlobalAssignedSkill === 'function'
             ? window.IREAD_SKILLS.getGlobalAssignedSkill()
             : 'short-vowels';
-          var assignedSk = allSk.find(function (s) { return s.id === assignedId; }) || allSk[0];
-          if (assignedBox && assignedSk) {
-            var isDone = !!(prog[assignedSk.id] && prog[assignedSk.id].done);
-            assignedBox.innerHTML =
-              '<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1.5px solid #93c5fd;border-radius:14px;padding:10px 12px;">' +
-                '<div>' +
-                  '<span style="font-size:0.74rem;font-weight:900;color:#1d4ed8;display:block;">🎯 المهارة الأسبوعية المكلف بها:</span>' +
-                  '<strong style="font-size:0.9rem;color:#0f172a;">' + assignedSk.title + '</strong>' +
+          var teacherId = currentUser && currentUser.assignedTeacherId ? currentUser.assignedTeacherId : '';
+          var teacherSkills = (teacherId && typeof window.IREAD_SKILLS.getTeacherAssignedSkills === 'function')
+            ? window.IREAD_SKILLS.getTeacherAssignedSkills(teacherId)
+            : [];
+          var primarySkill = allSk.find(function (s) { return s.id === assignedId; }) || allSk[0];
+          var skillTasks = teacherSkills.length ? teacherSkills.slice(0, 3) : (primarySkill ? [primarySkill] : []);
+
+          skillTasks.forEach(function (sk) {
+            var isSkDone = !!(prog[sk.id] && prog[sk.id].done);
+            rowsHtml.push(
+              '<div class="notebook-task-row' + (isSkDone ? ' is-done' : '') + '">' +
+                '<div style="flex:1;min-width:190px;">' +
+                  '<span style="font-size:0.72rem;font-weight:900;color:#1d4ed8;display:block;">🎯 مهارة أساسية للتعلّم والتدريب (' + (sk.cat || 'مهارات التأسيس') + ')</span>' +
+                  '<strong style="font-size:0.9rem;color:#0f172a;">' + sk.title + '</strong>' +
                 '</div>' +
-                '<a href="../الأنشطة/index.html?id=' + encodeURIComponent(assignedSk.id) + '" style="text-decoration:none;background:' + (isDone ? '#16a34a' : '#ee6b1e') + ';color:#fff;font-weight:900;font-size:0.8rem;padding:7px 14px;border-radius:12px;">' +
-                  (isDone ? '✓ منجزة • أعد التدريب' : '🎮 ابدأ التحدي الآن') +
+                '<a href="../الأنشطة/index.html?id=' + encodeURIComponent(sk.id) + '" style="text-decoration:none;background:' + (isSkDone ? '#16a34a' : '#2563eb') + ';color:#fff;font-weight:900;font-size:0.78rem;padding:6px 13px;border-radius:10px;flex-shrink:0;">' +
+                  (isSkDone ? '✓ تم الإتقان • أعد التدريب' : 'تعلّم وتدرّب الآن ←') +
                 '</a>' +
-              '</div>';
-          }
+              '</div>'
+            );
+          });
         }
 
         var pendingBooks = LEVEL_Z_BOOKS.filter(function (b) { return !(b.readDone && b.listenDone && b.quizDone); });
         if (tasksCountEl) tasksCountEl.textContent = String(pendingBooks.length);
-        if (previewBox) {
-          var topTasks = pendingBooks.slice(0, 3);
-          if (!topTasks.length) {
-            previewBox.innerHTML = '<div style="padding:10px;background:#dcfce7;color:#166534;border-radius:12px;font-weight:800;font-size:0.84rem;">🎉 أحسنت! أنجزت جميع المهام القرائية الحالية بنجاح.</div>';
-          } else {
-            previewBox.innerHTML = topTasks.map(function (b) {
-              return '<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 10px;border:1px solid #e2e8f0;border-radius:12px;margin-bottom:6px;background:#f8fafc;">' +
-                '<div style="font-size:0.84rem;font-weight:800;color:#1e293b;">📖 ' + b.title + '</div>' +
-                '<button type="button" onclick="openBookModal(\'' + b.id + '\', \'read\')" style="border:none;background:#1668e3;color:#fff;font-weight:800;font-size:0.76rem;padding:5px 12px;border-radius:10px;cursor:pointer;flex-shrink:0;">اقرأ الآن</button>' +
-              '</div>';
-            }).join('');
-          }
+
+        var storyTasks = pendingBooks.slice(0, 3);
+        storyTasks.forEach(function (b) {
+          rowsHtml.push(
+            '<div class="notebook-task-row is-story">' +
+              '<div style="flex:1;min-width:190px;">' +
+                '<span style="font-size:0.72rem;font-weight:900;color:#b45309;display:block;">📖 تكليف بقراءة قصة وفهمها</span>' +
+                '<strong style="font-size:0.9rem;color:#0f172a;">' + b.title + '</strong>' +
+              '</div>' +
+              '<button type="button" onclick="openBookModal(\'' + b.id + '\', \'read\')" style="border:none;background:#ee6b1e;color:#fff;font-weight:900;font-size:0.78rem;padding:6px 13px;border-radius:10px;cursor:pointer;flex-shrink:0;">اقرأ القصة ←</button>' +
+            '</div>'
+          );
+        });
+
+        if (notebookBody) {
+          notebookBody.innerHTML = rowsHtml.length
+            ? rowsHtml.join('')
+            : '<div style="padding:12px;background:#dcfce7;color:#166534;border-radius:12px;font-weight:800;font-size:0.86rem;">🎉 أحسنت! أنجزت جميع مهام اليوم بنجاح.</div>';
         }
       }
       renderHomeDashboardOverview();
