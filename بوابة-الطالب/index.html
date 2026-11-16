@@ -1124,6 +1124,238 @@
       opacity: 0.35;
       pointer-events: none;
     }
+
+    /* =====================================================================
+       CREATIVE REDESIGNED STUDENT HOME DASHBOARD
+       ===================================================================== */
+    .student-hero-redesign {
+      position: relative;
+      background: linear-gradient(135deg, #06285a 0%, #0d52b8 55%, #1d70e8 100%);
+      color: #fff;
+      padding: 20px 16px 56px;
+      border-bottom: 4px solid #eab308;
+      overflow: hidden;
+    }
+
+    .student-hero-redesign .hero-watermark {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 5.5rem;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.05);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .student-id-card {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1.5px solid rgba(255, 255, 255, 0.28);
+      border-radius: 22px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      box-shadow: 0 14px 32px rgba(4, 22, 56, 0.22);
+    }
+
+    .student-avatar-ring {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #fde047, #f59e0b);
+      padding: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 6px 16px rgba(245, 158, 11, 0.38);
+    }
+
+    .student-avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #eff6ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+
+    .student-id-info {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .student-welcome-pill {
+      display: inline-block;
+      background: rgba(234, 179, 8, 0.22);
+      border: 1px solid rgba(253, 224, 71, 0.55);
+      color: #fef08a;
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 2px 10px;
+      border-radius: 999px;
+      margin-bottom: 5px;
+    }
+
+    .student-id-name {
+      margin: 0 0 6px;
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    .student-meta-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .student-meta-chip {
+      background: rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      padding: 3px 10px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: #f8fafc;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .stats-kpi-grid {
+      position: relative;
+      z-index: 4;
+      margin: -38px 14px 16px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    @media (max-width: 767px) {
+      .stats-kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin: -34px 12px 14px;
+        gap: 9px;
+      }
+    }
+
+    .kpi-mini-card {
+      background: #ffffff;
+      border: 1.5px solid #dbeafe;
+      border-radius: 18px;
+      padding: 12px;
+      text-align: center;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 4px;
+    }
+
+    .kpi-mini-icon {
+      font-size: 1.45rem;
+      line-height: 1.1;
+    }
+
+    .kpi-mini-val {
+      font-size: 1.22rem;
+      font-weight: 900;
+      color: #082f68;
+    }
+
+    .kpi-mini-label {
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: #475569;
+    }
+
+    .quick-services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 0 14px 16px;
+    }
+
+    @media (max-width: 639px) {
+      .quick-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 12px 14px;
+        gap: 8px;
+      }
+    }
+
+    .quick-service-tile {
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 16px;
+      padding: 12px 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #0f172a;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+      transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+      text-align: right;
+    }
+
+    .quick-service-tile:hover {
+      transform: translateY(-2px);
+      border-color: #2563eb;
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.14);
+      color: #0d52b8;
+    }
+
+    .quick-service-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .home-section-box {
+      background: #ffffff;
+      border: 1.5px solid #dbeafe;
+      border-radius: 20px;
+      padding: 14px;
+      margin: 0 14px 16px;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+    }
+
+    @media (max-width: 639px) {
+      .home-section-box { margin: 0 12px 14px; padding: 12px; }
+    }
+
+    .home-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .home-section-title {
+      font-size: 0.98rem;
+      font-weight: 900;
+      color: #082f68;
+      margin: 0;
+    }
   </style>
   <link rel="stylesheet" href="../assets/mobile-responsive.css">
 </head>
@@ -1134,49 +1366,111 @@
   <div class="student-app-shell">
 
     <!-- ===================================================================
-         TOP ROYAL BLUE CURVED BACKDROP FOR SUMMARY CARDS
+         TOP ROYAL BLUE HERO WITH STUDENT IDENTITY CARD
          =================================================================== -->
-    <header class="student-top-hero">
+    <header class="student-hero-redesign">
       <div class="hero-watermark" aria-hidden="true">
-        <span>غ</span>
-        <span>ء</span>
-        <span>ث</span>
+        <span>ق</span>
+        <span>ر</span>
+        <span>أ</span>
+      </div>
+      <div class="student-id-card">
+        <div class="student-avatar-ring">
+          <div class="student-avatar-inner" aria-hidden="true">🎓</div>
+        </div>
+        <div class="student-id-info">
+          <span class="student-welcome-pill">✨ أهلاً بك في بوابة القارئ المبدع</span>
+          <h1 class="student-id-name" id="heroStudentName">الطالب المتميز</h1>
+          <div class="student-meta-chips">
+            <span class="student-meta-chip">🏫 <span id="heroStudentSchool">مدرسة الساحل الأهلية</span></span>
+            <span class="student-meta-chip">📚 <span id="heroStudentClass">الصف الأول • أ</span></span>
+            <span class="student-meta-chip">🪪 <span id="heroStudentNid">---</span></span>
+            <span class="student-meta-chip">👨‍🏫 <span id="heroStudentTeacher">المعلم المشرف</span></span>
+            <span class="student-meta-chip" style="background:rgba(234,179,8,0.28);color:#fef08a;">🏅 <span id="heroStudentLevel">المستوى (ز)</span></span>
+          </div>
+        </div>
       </div>
     </header>
 
     <!-- ===================================================================
-         TWO MINT SUMMARY CARDS OVERLAPPING THE HEADER
+         STUDENT STATISTICS DASHBOARD (4 KPI CARDS)
          =================================================================== -->
-    <section class="summary-cards-row" aria-label="ملخص إنجاز الطالب">
-      <!-- Right Card: عدد الكتب المنجزة في المستوى (ز) -->
-      <div class="mint-summary-card">
-        <div class="arabic-letters-emblem" aria-hidden="true">نُ ضَ عْ</div>
-        <p class="mint-card-desc">عدد الكتب المنجزة في<br><strong style="color:var(--indigo-header);">المستوى (ز)</strong></p>
-        <div class="books-ratio-wrap">
-          <span class="books-ratio-num" id="completedBooksRatio">23/11</span>
-          <div class="books-progress-track">
-            <div class="books-progress-fill" id="completedBooksBar" style="width: 55%;"></div>
-          </div>
+    <section class="stats-kpi-grid" aria-label="إحصائيات الطالب">
+      <div class="kpi-mini-card">
+        <div class="kpi-mini-icon">📖</div>
+        <div class="kpi-mini-val" id="completedBooksRatio">23/11</div>
+        <div class="kpi-mini-label">الكتب المنجزة (المستوى ز)</div>
+        <div class="books-progress-track" style="height:8px;">
+          <div class="books-progress-fill" id="completedBooksBar" style="width: 55%;"></div>
         </div>
       </div>
 
-      <!-- Left Card: اجمع النجوم بقراءة الكتب لشراء ألعاب -->
-      <div class="mint-summary-card">
-        <div class="stars-circle-graphic">
-          <span class="deco-star-filled">★</span>
-          <div class="stars-circle-core" id="cardStarScore">100</div>
-          <span class="deco-star-outline">☆</span>
-        </div>
-        <p class="mint-card-desc">اجمع النجوم بقراءة<br>الكتب لشراء ألعاب</p>
-        <button type="button" id="letsPlayBtn" class="btn-lets-play">هيا نلعب</button>
+      <div class="kpi-mini-card">
+        <div class="kpi-mini-icon">⭐</div>
+        <div class="kpi-mini-val" id="cardStarScore" style="color:#d97706;">100 ★</div>
+        <div class="kpi-mini-label">رصيد النجوم الذهبية</div>
+        <button type="button" id="letsPlayBtn" class="btn-lets-play" style="padding:5px 10px;font-size:0.76rem;border-radius:10px;">🎮 هيا نلعب</button>
+      </div>
+
+      <div class="kpi-mini-card">
+        <div class="kpi-mini-icon">🎯</div>
+        <div class="kpi-mini-val" id="statSkillsDone" style="color:#0d9488;">0 / 27</div>
+        <div class="kpi-mini-label">المهارات المتقنة</div>
+        <button type="button" onclick="if(window.switchStudentTab) window.switchStudentTab('games')" class="btn-lets-play" style="padding:5px 10px;font-size:0.76rem;border-radius:10px;background:#0d9488;">تدرّب الآن</button>
+      </div>
+
+      <div class="kpi-mini-card">
+        <div class="kpi-mini-icon">📋</div>
+        <div class="kpi-mini-val" id="statTasksCount" style="color:#4f46e5;">0</div>
+        <div class="kpi-mini-label">المهام المكلف بها</div>
+        <button type="button" onclick="if(window.switchStudentTab) window.switchStudentTab('tasks')" class="btn-lets-play" style="padding:5px 10px;font-size:0.76rem;border-radius:10px;background:#4f46e5;">عرض المهام</button>
       </div>
     </section>
 
     <!-- ===================================================================
-         PANEL (١): الصفحة الرئيسية (الافتراضية)
+         PANEL (١): الصفحة الرئيسية (معلومات + إحصائيات + خدمات + مهام + مكتبة)
          =================================================================== -->
     <main id="tabPanelHome" class="student-tab-panel is-active">
-      <!-- Filter Pills: الكل | المنجزة | الغير منجزة -->
+
+      <!-- Quick Services Hub -->
+      <section class="quick-services-grid" aria-label="خدمات الطالب السريعة">
+        <button type="button" class="quick-service-tile" onclick="var f=document.querySelector('.filter-pill-btn[data-filter=kids_8_12]'); if(f) f.click(); document.getElementById('studentBooksGrid').scrollIntoView({behavior:'smooth'});">
+          <span class="quick-service-icon" style="background:#dbeafe;color:#1d4ed8;">📖</span>
+          <div><strong style="display:block;font-size:0.84rem;">قصص الابتدائية</strong><small style="color:#64748b;font-weight:700;">تصفح واقرأ بملء الشاشة</small></div>
+        </button>
+        <button type="button" class="quick-service-tile" onclick="if(window.switchStudentTab) window.switchStudentTab('games')">
+          <span class="quick-service-icon" style="background:#fef3c7;color:#d97706;">🎮</span>
+          <div><strong style="display:block;font-size:0.84rem;">الألعاب التفاعلية</strong><small style="color:#64748b;font-weight:700;">٢٧+ لعبة مهارية</small></div>
+        </button>
+        <button type="button" class="quick-service-tile" onclick="if(window.switchStudentTab) window.switchStudentTab('tasks')">
+          <span class="quick-service-icon" style="background:#e0e7ff;color:#4338ca;">📋</span>
+          <div><strong style="display:block;font-size:0.84rem;">المهام الأسبوعية</strong><small style="color:#64748b;font-weight:700;">تكليفات المعلم</small></div>
+        </button>
+        <button type="button" class="quick-service-tile" onclick="if(window.switchStudentTab) window.switchStudentTab('challenge')">
+          <span class="quick-service-icon" style="background:#dcfce7;color:#15803d;">🏁</span>
+          <div><strong style="display:block;font-size:0.84rem;">تحدي القراءة</strong><small style="color:#64748b;font-weight:700;">تقدمك نحو الوسام</small></div>
+        </button>
+        <a href="../المكافآت/index.html" class="quick-service-tile">
+          <span class="quick-service-icon" style="background:#fce7f3;color:#be185d;">🏅</span>
+          <div><strong style="display:block;font-size:0.84rem;">شهادة التفوق</strong><small style="color:#64748b;font-weight:700;">عرض وطباعة الشهادة</small></div>
+        </a>
+        <a href="../القصة-الأسبوعية/index.html" class="quick-service-tile">
+          <span class="quick-service-icon" style="background:#ecfeff;color:#0e7490;">📰</span>
+          <div><strong style="display:block;font-size:0.84rem;">القصة الأسبوعية</strong><small style="color:#64748b;font-weight:700;">قصة وتدريب الأسبوع</small></div>
+        </a>
+      </section>
+
+      <!-- Home Tasks & Active Skill Assignment Box -->
+      <section class="home-section-box" aria-label="المهام والمهارة المكلف بها">
+        <div class="home-section-head">
+          <h2 class="home-section-title">📌 المهام المكلف بها والمهارة النشطة</h2>
+          <button type="button" onclick="if(window.switchStudentTab) window.switchStudentTab('tasks')" style="border:none;background:#eff6ff;color:#1d4ed8;font-weight:800;font-size:0.78rem;padding:4px 10px;border-radius:999px;cursor:pointer;">عرض كل المهام ←</button>
+        </div>
+        <div id="homeAssignedSkillBox" style="margin-bottom:10px;"></div>
+        <div id="homeTasksPreview"></div>
+      </section>
+
+      <!-- Filter Pills: الكل | قصص الابتدائية | المنجزة | الغير منجزة -->
       <div class="filter-pills-row" role="tablist" aria-label="تصفية الكتب">
         <button type="button" class="filter-pill-btn active" data-filter="all">الكل</button>
         <button type="button" class="filter-pill-btn" data-filter="kids_8_12">قصص الابتدائية (٨-١٢)</button>
@@ -1319,6 +1613,27 @@
 
       var menuNameEl = document.getElementById('menuStudentName');
       if (menuNameEl) menuNameEl.textContent = studentName;
+
+      // Populate Student Hero Identity Card & Stats
+      (function populateStudentHero() {
+        var nameEl = document.getElementById('heroStudentName');
+        var schoolEl = document.getElementById('heroStudentSchool');
+        var classEl = document.getElementById('heroStudentClass');
+        var nidEl = document.getElementById('heroStudentNid');
+        var teacherEl = document.getElementById('heroStudentTeacher');
+        var levelEl = document.getElementById('heroStudentLevel');
+
+        if (nameEl) nameEl.textContent = studentName;
+        if (schoolEl) schoolEl.textContent = (currentUser && currentUser.school) || 'مدرسة الساحل الأهلية';
+        if (classEl) {
+          var g = (currentUser && currentUser.grade) || 'الصف الأول';
+          var sec = (currentUser && currentUser.section) || 'أ';
+          classEl.textContent = g + ' • ' + sec;
+        }
+        if (nidEl) nidEl.textContent = (currentUser && (currentUser.nationalId || currentUser.username)) || 'طالب';
+        if (teacherEl) teacherEl.textContent = (currentUser && currentUser.assignedTeacherName) || 'معلم اللغة العربية';
+        if (levelEl) levelEl.textContent = (currentUser && currentUser.level) || 'المستوى (ز)';
+      })();
 
       // Books dataset for Level (ز) starting with "ماذا حصل لأخي رامز؟" matching the screenshot
       var LEVEL_Z_BOOKS = [
@@ -1576,6 +1891,60 @@
         }).join('');
       }
       renderSkillGamesHub();
+
+      // Populate Home Page KPI stats (skills done, tasks count) & quick tasks preview
+      function renderHomeDashboardOverview() {
+        var skillsDoneEl = document.getElementById('statSkillsDone');
+        var tasksCountEl = document.getElementById('statTasksCount');
+        var assignedBox = document.getElementById('homeAssignedSkillBox');
+        var previewBox = document.getElementById('homeTasksPreview');
+
+        if (window.IREAD_SKILLS) {
+          var allSk = typeof window.IREAD_SKILLS.getAllSkills === 'function'
+            ? window.IREAD_SKILLS.getAllSkills()
+            : (window.IREAD_SKILLS.SKILLS || []);
+          var prog = typeof window.IREAD_SKILLS.getSkillProgress === 'function'
+            ? window.IREAD_SKILLS.getSkillProgress(studentId)
+            : {};
+          var doneCount = allSk.filter(function (s) { return prog[s.id] && prog[s.id].done; }).length;
+          if (skillsDoneEl) skillsDoneEl.textContent = doneCount + ' / ' + allSk.length;
+
+          var assignedId = typeof window.IREAD_SKILLS.getGlobalAssignedSkill === 'function'
+            ? window.IREAD_SKILLS.getGlobalAssignedSkill()
+            : 'short-vowels';
+          var assignedSk = allSk.find(function (s) { return s.id === assignedId; }) || allSk[0];
+          if (assignedBox && assignedSk) {
+            var isDone = !!(prog[assignedSk.id] && prog[assignedSk.id].done);
+            assignedBox.innerHTML =
+              '<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1.5px solid #93c5fd;border-radius:14px;padding:10px 12px;">' +
+                '<div>' +
+                  '<span style="font-size:0.74rem;font-weight:900;color:#1d4ed8;display:block;">🎯 المهارة الأسبوعية المكلف بها:</span>' +
+                  '<strong style="font-size:0.9rem;color:#0f172a;">' + assignedSk.title + '</strong>' +
+                '</div>' +
+                '<a href="../الأنشطة/index.html?id=' + encodeURIComponent(assignedSk.id) + '" style="text-decoration:none;background:' + (isDone ? '#16a34a' : '#ee6b1e') + ';color:#fff;font-weight:900;font-size:0.8rem;padding:7px 14px;border-radius:12px;">' +
+                  (isDone ? '✓ منجزة • أعد التدريب' : '🎮 ابدأ التحدي الآن') +
+                '</a>' +
+              '</div>';
+          }
+        }
+
+        var pendingBooks = LEVEL_Z_BOOKS.filter(function (b) { return !(b.readDone && b.listenDone && b.quizDone); });
+        if (tasksCountEl) tasksCountEl.textContent = String(pendingBooks.length);
+        if (previewBox) {
+          var topTasks = pendingBooks.slice(0, 3);
+          if (!topTasks.length) {
+            previewBox.innerHTML = '<div style="padding:10px;background:#dcfce7;color:#166534;border-radius:12px;font-weight:800;font-size:0.84rem;">🎉 أحسنت! أنجزت جميع المهام القرائية الحالية بنجاح.</div>';
+          } else {
+            previewBox.innerHTML = topTasks.map(function (b) {
+              return '<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 10px;border:1px solid #e2e8f0;border-radius:12px;margin-bottom:6px;background:#f8fafc;">' +
+                '<div style="font-size:0.84rem;font-weight:800;color:#1e293b;">📖 ' + b.title + '</div>' +
+                '<button type="button" onclick="openBookModal(\'' + b.id + '\', \'read\')" style="border:none;background:#1668e3;color:#fff;font-weight:800;font-size:0.76rem;padding:5px 12px;border-radius:10px;cursor:pointer;flex-shrink:0;">اقرأ الآن</button>' +
+              '</div>';
+            }).join('');
+          }
+        }
+      }
+      renderHomeDashboardOverview();
 
       // =================================================================
       // RENDER BOOKS & FILTER PILLS (الكل | المنجزة | الغير منجزة)
