@@ -2332,6 +2332,24 @@
           var doneCount = allSk.filter(function (s) { return prog[s.id] && prog[s.id].done; }).length;
           if (skillsDoneEl) skillsDoneEl.textContent = doneCount + ' / ' + allSk.length;
 
+          var dailyAutoSk = typeof window.IREAD_SKILLS.getDailyAutoSkill === 'function'
+            ? window.IREAD_SKILLS.getDailyAutoSkill()
+            : null;
+          if (dailyAutoSk) {
+            var isDailyDone = !!(prog[dailyAutoSk.id] && prog[dailyAutoSk.id].done);
+            rowsHtml.push(
+              '<div class="notebook-task-row' + (isDailyDone ? ' is-done' : '') + '" style="border-right-color:#9333ea;background:linear-gradient(135deg,#faf5ff,#ffffff);">' +
+                '<div style="flex:1;min-width:190px;">' +
+                  '<span style="font-size:0.72rem;font-weight:900;color:#7e22ce;display:block;">🌟 مهارة اليوم التلقائية للتدريب (' + (dailyAutoSk.cat || 'مهارات التأسيس') + ')</span>' +
+                  '<strong style="font-size:0.9rem;color:#0f172a;">' + dailyAutoSk.title + '</strong>' +
+                '</div>' +
+                '<a href="../الأنشطة/index.html?id=' + encodeURIComponent(dailyAutoSk.id) + '" style="text-decoration:none;background:' + (isDailyDone ? '#16a34a' : '#7e22ce') + ';color:#fff;font-weight:900;font-size:0.78rem;padding:6px 13px;border-radius:10px;flex-shrink:0;">' +
+                  (isDailyDone ? '✓ تم الإتقان • جولة جديدة' : 'تدرّب على مهارة اليوم ←') +
+                '</a>' +
+              '</div>'
+            );
+          }
+
           var assignedId = typeof window.IREAD_SKILLS.getGlobalAssignedSkill === 'function'
             ? window.IREAD_SKILLS.getGlobalAssignedSkill()
             : 'short-vowels';

@@ -625,6 +625,144 @@
         ['أرى أن القصة ممتعة جداً', 'رأي شخصي'],
         ['لِأَنَّ القراءة تنمي العقل', 'تعليل']
       ]
+    },
+    {
+      id: 'alphabet-sounds', title: 'الحروف الهجائية وأصواتها المميزة', level: 'مستوى أ', cat: 'مهارات التأسيس',
+      mcqs: [
+        ['أي حرف من الحروف اللثوية التي نخرج فيها طرف اللسان؟', ['ث', 'س', 'ك'], 0],
+        ['أي حرف ينطق بصوت مفخم؟', ['ص', 'س', 'ت'], 0],
+        ['كم عدد حروف اللغة العربية الهجائية؟', ['٢٨ حرفاً', '٢٤ حرفاً', '٣٠ حرفاً'], 0],
+        ['أي حرف من حروف القلقلة عند السكون؟', ['ق', 'ل', 'م'], 0],
+        ['أي كلمة تبدأ بحرف الضاد (ض)؟', ['ضِفْدَع', 'دَفْتَر', 'ظَرْف'], 0]
+      ],
+      tfs: [
+        ['الحروف اللثوية هي: الثاء والذال والظاء.', true],
+        ['حرف السين وحرف الصاد لهما نفس الصوت تماماً.', false]
+      ],
+      orders: [
+        'يَنْطِقُ الطَّالِبُ الْحُرُوفَ الْهَجَائِيَّةَ نُطْقاً سَلِيماً',
+        'تَتَمَيَّزُ اللُّغَةُ الْعَرَبِيَّةُ بِجَمَالِ حُرُوفِهَا وَأَصْوَاتِهَا'
+      ],
+      match: [
+        ['ث / ذ / ظ', 'حروف لثوية'],
+        ['خ / ص / ض / ط / ظ / غ / ق', 'حروف مفخمة'],
+        ['ق / ط / ب / ج / د', 'حروف القلقلة']
+      ]
+    },
+    {
+      id: 'silent-syllables', title: 'قراءة المقطع الساكن وتهجئته', level: 'مستوى أ', cat: 'مهارات التأسيس',
+      mcqs: [
+        ['ما المقطع الساكن في كلمة «مَدْرَسَة»؟', ['مَدْ', 'رَ', 'سَة'], 0],
+        ['ما المقطع الساكن في كلمة «يَكْتُبُ»؟', ['يَكْ', 'تُ', 'بُ'], 0],
+        ['كيف ننطق الحرف الساكن؟', ['مع الحرف المتحرك الذي قبله', 'منفرداً تماماً', 'مثل المد الطويل'], 0],
+        ['أي كلمة تحتوي على مقطعين ساكنين؟', ['مُسْتَقْبَل', 'كَتَبَ', 'قَلَم'], 0],
+        ['ما المقطع الساكن في كلمة «شَمْس»؟', ['شَمْ', 'سُ', 'شَ'], 0]
+      ],
+      tfs: [
+        ['المقطع الساكن يتكون من حرف متحرك يتبعه حرف ساكن.', true],
+        ['يصح قراءة الحرف الساكن وحده دون الحرف الذي قبله.', false]
+      ],
+      orders: [
+        'يَقْرَأُ الطِّفْلُ الْمَقْطَعَ السَّاكِنَ بِطَلَاقَةٍ وَوُضُوحٍ',
+        'تُصْبِحُ الْقِرَاءَةُ أَسْهَلَ عِنْدَ تَجْزِئَةِ الْكَلِمَاتِ'
+      ],
+      match: [
+        ['مَكْتَبَة', 'مَكْـ (مقطع ساكن)'],
+        ['عُصْفُور', 'عُصْـ (مقطع ساكن)'],
+        ['مِنْشَار', 'مِنْـ (مقطع ساكن)']
+      ]
+    },
+    {
+      id: 'conjunction-prep', title: 'حروف الجر وحروف العطف في الجمل', level: 'مستوى ب', cat: 'مهارات التأسيس',
+      mcqs: [
+        ['أي كلمة تُعد من حروف الجر؟', ['إلى', 'ثم', 'كتب'], 0],
+        ['أي حرف عطف يفيد الترتيب مع التراخي (مهلة زمنية)؟', ['ثم', 'و', 'أو'], 0],
+        ['الاسم الذي يأتي بعد حرف الجر يكون:', ['مجروراً بالكسرة', 'مرفوعاً بالضمة', 'منصوباً بالفتحة'], 0],
+        ['أي جملة تحتوي على حرف الجر «فِي»؟', ['الْكِتَابُ فِي الْحَقِيبَةِ', 'ذَهَبَ أَحْمَدُ وَسَامِي', 'قَرَأَ الطَّالِبُ الْقِصَّةَ'], 0],
+        ['أي حرف عطف يفيد التخيير بين شيئين؟', ['أو', 'في', 'من'], 0]
+      ],
+      tfs: [
+        ['من حروف الجر: مِن، إِلَى، عَنْ، عَلَى، فِي، الباء، الكاف، اللام.', true],
+        ['حرف العطف «و» يفيد الترتيب مع مهلة زمنية طويلة.', false]
+      ],
+      orders: [
+        'ذَهَبَ الطَّالِبُ إِلَى الْمَكْتَبَةِ صَبَاحاً',
+        'قَرَأْتُ الْقِصَّةَ ثُمَّ أَجَبْتُ عَنِ الْأَسْئِلَةِ'
+      ],
+      match: [
+        ['مِنْ / إِلَى / فِي', 'حروف الجر'],
+        ['وَ / فَـ / ثُمَّ / أَوْ', 'حروف العطف'],
+        ['بِالْقَلَمِ', 'حرف الجر الباء']
+      ]
+    },
+    {
+      id: 'punctuation-marks', title: 'علامات الترقيم ودلالاتها في القراءة', level: 'مستوى ب', cat: 'مهارات التأسيس',
+      mcqs: [
+        ['ما العلامة التي توضع في نهاية السؤال؟', ['علامة الاستفهام (؟)', 'النقطة (.)', 'الفاصلة (،)'], 0],
+        ['ما العلامة التي توضع في نهاية الجملة التامة المعنى؟', ['النقطة (.)', 'علامة التعجب (!)', 'علامة الاستفهام (؟)'], 0],
+        ['ما العلامة المناسبة بعد جملة «ما أجملَ السماءَ»؟', ['!', '؟', '،'], 0],
+        ['تُستخدم الفاصلة (،) للفصل بين:', ['الجمل القصيرة المترابطة', 'أول الكلمة وآخرها', 'الحروف المشددة'], 0],
+        ['النقطتان الرأسيتان (:) تُوضعان بعد:', ['القول مثل: قالَ المعلمُ:', 'نهاية السؤال', 'التعجب الشديد'], 0]
+      ],
+      tfs: [
+        ['علامة التعجب (!) تُستخدم للتعبير عن الدهشة أو الفرح أو الإعجاب.', true],
+        ['تُوضع علامة الاستفهام (؟) في نهاية الجملة الخبرية العادية.', false]
+      ],
+      orders: [
+        'تُسَاعِدُ عَلَامَاتُ التَّرْقِيمِ عَلَى فَهْمِ الْمَقْرُوءِ بِدِقَّةٍ',
+        'نَقِفُ قَلِيلاً عِنْدَ الْفَاصِلَةِ وَنُتِمُّ عِنْدَ النُّقْطَةِ'
+      ],
+      match: [
+        ['(؟)', 'نهاية السؤال'],
+        ['(!)', 'التعجب والدهشة'],
+        ['(.)', 'نهاية الجملة التامة']
+      ]
+    },
+    {
+      id: 'relative-pronouns', title: 'الأسماء الموصولة واستخدامها الصحيح', level: 'مستوى ج', cat: 'المهارات اللغوية',
+      mcqs: [
+        ['ما الاسم الموصول المناسب للمفرد المذكر؟', ['الَّذِي', 'الَّتِي', 'اللَّذَانِ'], 0],
+        ['ما الاسم الموصول المناسب للمفرد المؤنث؟', ['الَّتِي', 'الَّذِي', 'الَّذِينَ'], 0],
+        ['ما الاسم الموصول المناسب لجمع المذكر؟', ['الَّذِينَ', 'الَّلَاتِي', 'الَّتِي'], 0],
+        ['أكمل: «فَازَتِ الطَّالِبَةُ ..... قَرَأَتِ الْقِصَّةَ»:', ['الَّتِي', 'الَّذِي', 'الَّذِينَ'], 0],
+        ['أكمل: «هَذَانِ هُمَا الطَّالِبَانِ ..... تَفَوَّقَا»:', ['اللَّذَانِ', 'اللَّتَانِ', 'الَّذِي'], 0]
+      ],
+      tfs: [
+        ['يُستخدم الاسم الموصول «الَّذِينَ» لجمع الذكور العقلاء.', true],
+        ['الاسم الموصول «الَّذِي» يُستخدم للمفرد المؤنث.', false]
+      ],
+      orders: [
+        'كَرَّمَ الْمُعَلِّمُ الطَّالِبَ الَّذِي أَتْقَنَ الْقِرَاءَةَ',
+        'فَازَتِ الطَّالِبَةُ الَّتِي حَفِظَتِ النَّشِيدَ'
+      ],
+      match: [
+        ['الَّذِي', 'مفرد مذكر'],
+        ['الَّتِي', 'مفرد مؤنث'],
+        ['الَّذِينَ', 'جمع مذكر']
+      ]
+    },
+    {
+      id: 'tense-verbs', title: 'التمييز بين الفعل الماضي والمضارع والأمر', level: 'مستوى ب', cat: 'المهارات اللغوية',
+      mcqs: [
+        ['أي كلمة تدل على «فعل ماضٍ» حدث وانتهى؟', ['قَرَأَ', 'يَقْرَأُ', 'اِقْرَأْ'], 0],
+        ['أي كلمة تدل على «فعل مضارع» يحدث الآن؟', ['يَكْتُبُ', 'كَتَبَ', 'اُكْتُبْ'], 0],
+        ['أي كلمة تدل على «فعل أمر» للطلب؟', ['اِقْرَأْ', 'قَرَأَ', 'تَقْرَأُ'], 0],
+        ['الفعل «ذَهَبَ» يدل على زمن:', ['الماضي', 'المضارع', 'الأمر'], 0],
+        ['الفعل «نَتَعَلَّمُ» يبدأ بأحد حروف المضارعة وهو:', ['النون', 'التاء', 'الألف'], 0]
+      ],
+      tfs: [
+        ['تُجمع حروف بداية الفعل المضارع في كلمة (نَأْتِي).', true],
+        ['الفعل الأمر يدل على حدث وقع وانتهى في الزمن الماضي.', false]
+      ],
+      orders: [
+        'قَرَأَ الطَّالِبُ الدَّرْسَ ثُمَّ كَتَبَ الْوَاجِبَ',
+        'يَجْتَهِدُ الْمُثَابِرُ كُلَّ يَوْمٍ لِيَنَالَ التَّفَوُّقَ'
+      ],
+      match: [
+        ['كَتَبَ', 'فعل ماضٍ'],
+        ['يَكْتُبُ', 'فعل مضارع'],
+        ['اُكْتُبْ', 'فعل أمر']
+      ]
     }
   ];
 
@@ -644,51 +782,158 @@
     return out;
   }
 
-  // Returns 10 questions: 5 MCQ + 2 TF + 2 Order + 1 Match
+  function randomShuffle(arr) {
+    var out = arr.slice();
+    for (var i = out.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = out[i]; out[i] = out[j]; out[j] = t;
+    }
+    return out;
+  }
+
+  function shuffleMcqOptions(opts, correctIdx) {
+    var tagged = opts.map(function (txt, idx) {
+      return { txt: txt, isCorrect: idx === correctIdx };
+    });
+    var mixed = randomShuffle(tagged);
+    var newCorrect = 0;
+    var outOpts = mixed.map(function (x, i) {
+      if (x.isCorrect) newCorrect = i;
+      return x.txt;
+    });
+    return { options: outOpts, answer: newCorrect };
+  }
+
+  function buildFillQuestions(sk, allSkills) {
+    var fills = [];
+    var extraWords = ['الْقَمَرُ', 'الْمَدْرَسَةُ', 'السَّمَاءُ', 'الْكِتَابُ', 'الشَّجَرَةُ', 'الطَّالِبُ'];
+    (sk.orders || []).forEach(function (sent) {
+      var words = splitWords(sent);
+      if (words.length >= 4) {
+        var blankIdx = Math.floor(words.length / 2);
+        var answerWord = words[blankIdx];
+        var sentenceWithBlank = words.map(function (w, i) { return i === blankIdx ? '......' : w; }).join(' ');
+        var distractors = randomShuffle(
+          words.filter(function (w, i) { return i !== blankIdx && w !== answerWord; }).concat(extraWords)
+        ).filter(function (w, i, a) { return w !== answerWord && a.indexOf(w) === i; }).slice(0, 2);
+        var optsObj = shuffleMcqOptions([answerWord].concat(distractors), 0);
+        fills.push({
+          type: 'fill',
+          typeLabel: 'أكمل الجملة بالكلمة المناسبة',
+          question: sentenceWithBlank,
+          options: optsObj.options,
+          answer: optsObj.answer
+        });
+      }
+    });
+    // Also generate a fill-the-blank from match pairs
+    if (Array.isArray(sk.match) && sk.match.length >= 3) {
+      var p = sk.match[Math.floor(Math.random() * sk.match.length)];
+      var dList = sk.match.filter(function (x) { return x[0] !== p[0]; }).map(function (x) { return x[0]; }).slice(0, 2);
+      if (dList.length === 2) {
+        var o2 = shuffleMcqOptions([p[0]].concat(dList), 0);
+        fills.push({
+          type: 'fill',
+          typeLabel: 'أكمل العبارة بما يناسبها',
+          question: 'العنصر الذي يطابق «' + p[1] + '» هو: ......',
+          options: o2.options,
+          answer: o2.answer
+        });
+      }
+    }
+    return fills;
+  }
+
+  function buildSentenceOrderQuestions(sk) {
+    var list = [];
+    var s1 = (sk.orders && sk.orders[0]) ? sk.orders[0] : 'يَبْدَأُ الطَّالِبُ دَرْسَهُ بِتَرْكِيزٍ وَنَشَاطٍ';
+    var s2 = (sk.orders && sk.orders[1]) ? sk.orders[1] : 'ثُمَّ يَتَدَرَّبُ عَلَى الْمَهَارَةِ بِإِتْقَانٍ';
+    var s3 = 'وَفِي النِّهَايَةِ يَحْصُلُ عَلَى وِسَامِ التَّفَوُّقِ';
+    var seq = [s1, s2, s3];
+    list.push({
+      type: 'order_sentences',
+      typeLabel: 'رتّب الجمل لتكوين فقرة مترابطة',
+      question: 'اضغط على الجمل بالترتيب الصحيح من البداية إلى النهاية:',
+      tokens: randomShuffle(seq),
+      correctTokens: seq
+    });
+    return list;
+  }
+
+  // Returns 12–14 randomized & diverse interactive questions per attempt
   function getSkillQuiz(skillId) {
     var all = getAllSkills();
     var sk = all.find(function (x) { return x.id === skillId; }) || all[0];
-    var quiz = [];
+    var pool = [];
 
-    sk.mcqs.forEach(function (m, idx) {
-      quiz.push({
+    // 1. Randomized MCQs (shuffled order & shuffled options)
+    randomShuffle(sk.mcqs || []).forEach(function (m) {
+      var shuf = shuffleMcqOptions(m[1], m[2]);
+      pool.push({
         type: 'mcq',
-        typeLabel: 'اختيار من متعدد (' + (idx + 1) + '/5)',
+        typeLabel: 'اختيار من متعدد',
         question: m[0],
-        options: m[1],
-        answer: m[2]
+        options: shuf.options,
+        answer: shuf.answer
       });
     });
 
-    sk.tfs.forEach(function (t, idx) {
-      quiz.push({
+    // 2. Fill in the blank ("أكمل الجمل")
+    buildFillQuestions(sk, all).forEach(function (fq) {
+      pool.push(fq);
+    });
+
+    // 3. True/False
+    randomShuffle(sk.tfs || []).forEach(function (t) {
+      pool.push({
         type: 'tf',
-        typeLabel: 'صح أم خطأ (' + (idx + 1) + '/2)',
+        typeLabel: 'صح أم خطأ',
         question: t[0],
         options: ['صح ✓', 'خطأ ✗'],
         answer: t[1] ? 0 : 1
       });
     });
 
-    sk.orders.forEach(function (sent, idx) {
+    // 4. Word ordering ("ترتيب الكلمات لتكوين جمل")
+    randomShuffle(sk.orders || []).forEach(function (sent) {
       var words = splitWords(sent);
-      quiz.push({
+      var mixedWords = randomShuffle(words);
+      if (mixedWords.join('|') === words.join('|') && mixedWords.length > 1) {
+        var tmp = mixedWords[0]; mixedWords[0] = mixedWords[mixedWords.length - 1]; mixedWords[mixedWords.length - 1] = tmp;
+      }
+      pool.push({
         type: 'order',
-        typeLabel: 'رتّب الكلمات لتكوين جملة (' + (idx + 1) + '/2)',
+        typeLabel: 'رتّب الكلمات لتكوين جملة',
         question: 'رتّب الكلمات التالية لتكوين جملة عربية صحيحة:',
-        tokens: shuffleArr(words, idx + sk.title.length),
+        tokens: mixedWords,
         correctTokens: words
       });
     });
 
-    quiz.push({
-      type: 'match',
-      typeLabel: 'صِل بين الكلمات وما يناسبها (1/1)',
-      question: 'اختر كل كلمة من العمود الأيمن ثم اضغط على ما يناسبها في العمود الأيسر:',
-      pairs: sk.match
+    // 5. Sentence ordering ("ترتيب الجمل")
+    buildSentenceOrderQuestions(sk).forEach(function (so) {
+      pool.push(so);
     });
 
-    return quiz;
+    // 6. Two-column line matching ("التوصيل بين عمودين والربط بخط")
+    if (Array.isArray(sk.match) && sk.match.length) {
+      pool.push({
+        type: 'match',
+        typeLabel: 'التوصيل بين عمودين والربط بخط',
+        question: 'اختر كل بطاقة من العمود الأيمن ثم صلها بما يناسبها في العمود الأيسر:',
+        pairs: randomShuffle(sk.match)
+      });
+    }
+
+    return randomShuffle(pool);
+  }
+
+  // Automatically publishes 1 skill per day for student daily training
+  function getDailyAutoSkill() {
+    var all = getAllSkills();
+    if (!all.length) return null;
+    var dayIdx = Math.floor(Date.now() / 86400000);
+    return all[dayIdx % all.length];
   }
 
   function getGlobalAssignedSkill() {
@@ -862,6 +1107,7 @@
     getTeacherAssignedSkills: getTeacherAssignedSkills,
     distributeSkillsToTeacher: distributeSkillsToTeacher,
     getSkillQuiz: getSkillQuiz,
+    getDailyAutoSkill: getDailyAutoSkill,
     getGlobalAssignedSkill: getGlobalAssignedSkill,
     setGlobalAssignedSkill: setGlobalAssignedSkill,
     getSkillProgress: getSkillProgress,

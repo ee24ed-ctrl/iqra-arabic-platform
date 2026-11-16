@@ -192,7 +192,13 @@
 
         var $area = $('#qArea');
 
-        if (q.type === 'mcq' || q.type === 'tf') {
+        if (q.type === 'mcq' || q.type === 'tf' || q.type === 'fill') {
+          if (q.type === 'fill') {
+            var qTitleEl = $s.find('h4');
+            if (qTitleEl.length) {
+              qTitleEl.html(q.question.replace('......', '<span id="fillBlankSlot" style="display:inline-block;min-width:72px;padding:2px 10px;margin:0 4px;border-bottom:3px dashed #2563eb;background:#eff6ff;color:#1d4ed8;border-radius:8px;text-align:center;">......</span>'));
+            }
+          }
           var letters = q.type === 'tf' ? ['✓', '✗'] : ['أ', 'ب', 'ج', 'د'];
           q.options.forEach(function (opt, i) {
             var $btn = $('<button type="button" class="opt-btn"><span class="opt-num">' + letters[i] + '</span><span>' + opt + '</span></button>');
@@ -201,6 +207,9 @@
               answered = true;
               speakArabic(opt);
               $area.find('.opt-btn').prop('disabled', true);
+              if (q.type === 'fill') {
+                $('#fillBlankSlot').text(opt).css({ borderBottomColor: i === q.answer ? '#16a34a' : '#dc2626', background: i === q.answer ? '#dcfce7' : '#fee2e2', color: i === q.answer ? '#166534' : '#991b1b' });
+              }
               if (i === q.answer) {
                 score++; streak++;
                 $btn.addClass('ok');
@@ -218,24 +227,26 @@
             });
             $area.append($btn);
           });
-        } else if (q.type === 'order') {
+        } else if (q.type === 'order' || q.type === 'order_sentences') {
+          var isSentenceMode = q.type === 'order_sentences';
           var placed = [];
-          var $drop = $('<div class="order-dropzone"><span class="text-muted small">اضغط على الكلمات بالأسفل بالترتيب الصحيح...</span></div>');
-          var $bank = $('<div class="order-bank"></div>');
+          var $drop = $('<div class="order-dropzone"><span class="text-muted small">' + (isSentenceMode ? 'اضغط على الجمل بالأسفل بالترتيب الصحيح...' : 'اضغط على الكلمات بالأسفل بالترتيب الصحيح...') + '</span></div>');
+          var $bank = $('<div class="order-bank" style="' + (isSentenceMode ? 'flex-direction:column;align-items:stretch;' : '') + '"></div>');
           var $btns = $(
             '<div class="d-flex justify-content-center flex-wrap" style="gap:10px;">' +
               '<button type="button" id="resetOrderBtn" class="btn btn-outline-secondary btn-sm font-weight-bold">🔄 إعادة الترتيب</button>' +
-              '<button type="button" id="checkOrderBtn" class="btn-3d-orange">✔️ تحقق من الجملة</button>' +
+              '<button type="button" id="checkOrderBtn" class="btn-3d-orange">' + (isSentenceMode ? '✔️ تحقق من ترتيب الجمل' : '✔️ تحقق من الجملة') + '</button>' +
             '</div>'
           );
 
           function syncOrder() {
             $drop.empty();
             if (!placed.length) {
-              $drop.html('<span class="text-muted small">اضغط على الكلمات بالأسفل بالترتيب الصحيح...</span>');
+              $drop.html('<span class="text-muted small">' + (isSentenceMode ? 'اضغط على الجمل بالأسفل بالترتيب الصحيح...' : 'اضغط على الكلمات بالأسفل بالترتيب الصحيح...') + '</span>');
             } else {
               placed.forEach(function (item, pos) {
-                var $p = $('<button type="button" class="word-chip placed">' + item.text + '</button>');
+                var label = isSentenceMode ? ('<b>(' + (pos + 1) + ')</b> ' + item.text) : item.text;
+                var $p = $('<button type="button" class="word-chip placed" style="' + (isSentenceMode ? 'width:100%;text-align:right;' : '') + '">' + label + '</button>');
                 $p.on('click', function () {
                   if (answered) return;
                   placed.splice(pos, 1);
@@ -251,7 +262,7 @@
           }
 
           q.tokens.forEach(function (tok, idx) {
-            var $c = $('<button type="button" class="word-chip" data-idx="' + idx + '">' + tok + '</button>');
+            var $c = $('<button type="button" class="word-chip" data-idx="' + idx + '" style="' + (isSentenceMode ? 'width:100%;text-align:right;' : '') + '">' + tok + '</button>');
             $c.on('click', function () {
               if (answered) return;
               speakArabic(tok);
@@ -266,19 +277,19 @@
           $('#checkOrderBtn').on('click', function () {
             if (answered) return;
             if (placed.length < q.correctTokens.length) {
-              $('#qMsg').html('<div class="alert alert-info font-weight-bold mb-0">يرجى اختيار جميع الكلمات أولاً.</div>');
+              $('#qMsg').html('<div class="alert alert-info font-weight-bold mb-0">يرجى اختيار جميع العناصر أولاً.</div>');
               return;
             }
             answered = true;
-            var userSent = placed.map(function (x) { return x.text; }).join(' ');
-            var correctSent = q.correctTokens.join(' ');
+            var userSent = placed.map(function (x) { return x.text; }).join(' | ');
+            var correctSent = q.correctTokens.join(' | ');
             if (userSent === correctSent) {
               score++; streak++;
               celebrate();
-              $('#qMsg').html('<div class="alert alert-success font-weight-bold mb-0">🌟 ترتيب ممتاز: «' + correctSent + '»</div>');
+              $('#qMsg').html('<div class="alert alert-success font-weight-bold mb-0">🌟 ترتيب ممتاز ومرتب!</div>');
             } else {
               streak = 0;
-              $('#qMsg').html('<div class="alert alert-warning font-weight-bold mb-0">💡 الترتيب الصحيح: «' + correctSent + '»</div>');
+              $('#qMsg').html('<div class="alert alert-warning font-weight-bold mb-0">💡 الترتيب الصحيح: «' + q.correctTokens.join(' — ') + '»</div>');
             }
             $('#hudScore').text(score);
             $('#hudStreak').text(streak);
@@ -286,15 +297,53 @@
           });
         } else if (q.type === 'match') {
           var leftPick = null;
+          var matchedPairs = [];
           var matchedCount = 0;
           var pairs = q.pairs;
           var rightOrder = pairs.map(function (p, i) { return { text: p[1], pairIdx: i }; });
-          // Deterministic shuffle of right column
-          rightOrder.sort(function (a, b) { return a.text.localeCompare(b.text); });
+          for (var ri = rightOrder.length - 1; ri > 0; ri--) {
+            var rj = Math.floor(Math.random() * (ri + 1));
+            var rtmp = rightOrder[ri]; rightOrder[ri] = rightOrder[rj]; rightOrder[rj] = rtmp;
+          }
 
-          var $row = $('<div class="row"></div>');
-          var $colL = $('<div class="col-6"><div class="small font-weight-bold text-muted mb-2 text-center">الكلمة</div></div>');
-          var $colR = $('<div class="col-6"><div class="small font-weight-bold text-muted mb-2 text-center">ما يناسبها</div></div>');
+          var $wrap = $('<div class="match-stage-wrap" style="position:relative;"></div>');
+          var $svg = $('<svg id="matchLinesSvg" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:5;"></svg>');
+          var $row = $('<div class="row" style="position:relative;z-index:2;"></div>');
+          var $colL = $('<div class="col-6"><div class="small font-weight-bold text-muted mb-2 text-center">العمود الأول</div></div>');
+          var $colR = $('<div class="col-6"><div class="small font-weight-bold text-muted mb-2 text-center">العمود الثاني</div></div>');
+          var lineColors = ['#16a34a', '#2563eb', '#ea580c', '#9333ea', '#0d9488'];
+
+          function redrawMatchLines() {
+            var svgEl = document.getElementById('matchLinesSvg');
+            var wrapEl = $wrap[0];
+            if (!svgEl || !wrapEl) return;
+            var wRect = wrapEl.getBoundingClientRect();
+            svgEl.setAttribute('viewBox', '0 0 ' + Math.max(1, wRect.width) + ' ' + Math.max(1, wRect.height));
+            svgEl.innerHTML = '';
+            matchedPairs.forEach(function (mp, idx) {
+              var lRect = mp.$l[0].getBoundingClientRect();
+              var rRect = mp.$r[0].getBoundingClientRect();
+              var x1 = lRect.left - wRect.left;
+              var y1 = (lRect.top + lRect.height / 2) - wRect.top;
+              var x2 = rRect.right - wRect.left;
+              var y2 = (rRect.top + rRect.height / 2) - wRect.top;
+              var col = lineColors[idx % lineColors.length];
+              var ns = 'http://www.w3.org/2000/svg';
+              var line = document.createElementNS(ns, 'line');
+              line.setAttribute('x1', x1); line.setAttribute('y1', y1);
+              line.setAttribute('x2', x2); line.setAttribute('y2', y2);
+              line.setAttribute('stroke', col);
+              line.setAttribute('stroke-width', '3.5');
+              line.setAttribute('stroke-linecap', 'round');
+              var c1 = document.createElementNS(ns, 'circle');
+              c1.setAttribute('cx', x1); c1.setAttribute('cy', y1); c1.setAttribute('r', '5'); c1.setAttribute('fill', col);
+              var c2 = document.createElementNS(ns, 'circle');
+              c2.setAttribute('cx', x2); c2.setAttribute('cy', y2); c2.setAttribute('r', '5'); c2.setAttribute('fill', col);
+              svgEl.appendChild(line);
+              svgEl.appendChild(c1);
+              svgEl.appendChild(c2);
+            });
+          }
 
           pairs.forEach(function (p, i) {
             var $lBtn = $('<button type="button" class="match-item left-item" data-pair="' + i + '">' + p[0] + '</button>');
@@ -317,6 +366,8 @@
               if (leftPick === targetPair) {
                 $lSelected.removeClass('selected').addClass('matched');
                 $(this).addClass('matched');
+                matchedPairs.push({ $l: $lSelected, $r: $(this) });
+                redrawMatchLines();
                 matchedCount++;
                 leftPick = null;
                 if (matchedCount === pairs.length) {
@@ -325,8 +376,8 @@
                   celebrate();
                   $('#hudScore').text(score);
                   $('#hudStreak').text(streak);
-                  $('#qMsg').html('<div class="alert alert-success font-weight-bold mb-0">🎯 ممتاز! وصلت جميع الكلمات بشكل صحيح!</div>');
-                  $('#nextQBtn').text('🏆 عرض النتيجة والمكافأة ←').removeClass('d-none');
+                  $('#qMsg').html('<div class="alert alert-success font-weight-bold mb-0">🎯 ممتاز! تم التوصيل والربط بالخطوط بنجاح!</div>');
+                  $('#nextQBtn').text(qIdx === quiz.length - 1 ? '🏆 عرض النتيجة والمكافأة ←' : 'السؤال التالي ←').removeClass('d-none');
                 }
               } else {
                 var $btn = $(this);
@@ -338,7 +389,9 @@
           });
 
           $row.append($colL, $colR);
-          $area.append($row);
+          $wrap.append($svg, $row);
+          $area.append($wrap);
+          $(window).off('resize.matchLines').on('resize.matchLines', redrawMatchLines);
         }
 
         $('#nextQBtn').on('click', function () {
@@ -361,20 +414,23 @@
           '<div class="text-center py-3">' +
             '<img src="../assets/generated/quiz-celebration.jpg" alt="مكافأة الإنجاز" style="width:190px;height:140px;object-fit:cover;border-radius:18px;border:3px solid #fbbf24;box-shadow:0 8px 22px rgba(245,158,11,0.25);" class="mb-3">' +
             '<h2 class="font-weight-bold text-success mb-2">🏆 أحسنت يا ' + sname + '!</h2>' +
-            '<p class="lead mb-3">أتممت جميع أسئلة مهارة <strong>«' + skill.title + '»</strong> (5 اختيار، 2 صح وخطأ، 2 ترتيب كلمات، 1 توصيل)</p>' +
+            '<p class="lead mb-3">أتممت جميع التحديات المتنوعة لمهارة <strong>«' + skill.title + '»</strong></p>' +
             '<div class="d-flex justify-content-center flex-wrap mb-4" style="gap:12px;">' +
               '<div class="p-3 bg-light rounded" style="min-width:140px;border:2px solid #bbf7d0;"><div class="small text-muted">النتيجة</div><strong class="h4 text-success">' + score + ' / ' + total + '</strong></div>' +
               '<div class="p-3 bg-light rounded" style="min-width:140px;border:2px solid #fde68a;"><div class="small text-muted">نقاط المكافأة</div><strong class="h4 text-warning">+' + earnedPoints + ' نقطة</strong></div>' +
             '</div>' +
-            '<div class="alert alert-info font-weight-bold mb-4">✅ تم تسجيل إنجازك وإظهاره للمعلم والمشرف التربوي والإدارة المدرسية!</div>' +
+            '<div class="alert alert-info font-weight-bold mb-4">✅ تم تسجيل إنجازك وإضافته لإشاراتك في بوابة الطالب!</div>' +
             '<div class="d-flex justify-content-center flex-wrap" style="gap:10px;">' +
-              '<a href="../المكافآت/index.html" class="btn btn-warning text-white font-weight-bold">🏆 سجل المكافآت</a>' +
-              '<a href="../بوابة-المعلم/index.html#skillReportSection" class="btn btn-primary font-weight-bold">📊 تقرير المعلم</a>' +
-              '<a href="../لوحة-الإدارة/index.html" class="btn btn-dark font-weight-bold">🏫 لوحة الإدارة والمشرفين</a>' +
+              '<button type="button" id="retryQuizRandomBtn" class="btn-3d-orange">🔄 جولة جديدة بأسئلة عشوائية</button>' +
               '<a href="../بوابة-الطالب/index.html" class="btn btn-outline-secondary font-weight-bold">العودة لبوابة الطالب</a>' +
             '</div>' +
           '</div>'
         );
+        $('#retryQuizRandomBtn').on('click', function () {
+          quiz = S.getSkillQuiz(skill.id);
+          qIdx = 0; score = 0; streak = 0;
+          renderQuestion();
+        });
       }
 
       renderQuestion();
