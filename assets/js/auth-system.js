@@ -17,14 +17,13 @@
   var CLASS_GRADES = ['الصف الأول', 'الصف الثاني', 'الصف الثالث', 'الصف الرابع', 'الصف الخامس', 'الصف السادس'];
   var CLASS_SECTIONS = ['أ', 'ب', 'ج'];
 
+  var SUPABASE_URL = 'https://lxhopgrkmzdsjtzxcfuk.supabase.co';
+  var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx4aG9wZ3JrbXpkc2p0enhjZnVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg1NjEwODIsImV4cCI6MjA5NDEzNzA4Mn0.uw42L4ZgUnHCmEIwF9exCrG2IxVquNYKJRpjNMJw9uc';
+  var DUMMY_IDS = { stu_1: 1, stu_2: 1, stu_3: 1, stu_4: 1, stu_5: 1, tch_1: 1 };
+  var SERVER_DB = null;
+
   var DEFAULT_USERS = [
-    { id: 'stu_1', numericId: 1, role: 'student', name: 'سارة أحمد', username: 'sara', email: 'sara@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الأول', section: 'أ', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
-    { id: 'stu_2', numericId: 2, role: 'student', name: 'عمر خالد', username: 'omar', email: 'omar@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الثاني', section: 'ب', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
-    { id: 'stu_3', numericId: 3, role: 'student', name: 'ليلى محمود', username: 'layla', email: 'layla@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الثالث', section: 'ج', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
-    { id: 'stu_4', numericId: 4, role: 'student', name: 'يوسف طارق', username: 'yusuf', email: 'yusuf@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الرابع', section: 'أ', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
-    { id: 'stu_5', numericId: 5, role: 'student', name: 'نور الهدى', username: 'noor', email: 'noor@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', grade: 'الصف الخامس', section: 'ب', level: 'المستوى (ز)', assignedTeacherId: 'tch_1', assignedTeacherName: 'أ. مريم العلي', active: true, createdAt: '2026-10-01' },
-    { id: 'tch_1', role: 'teacher', name: 'أ. مريم العلي', username: 'teacher1', email: 'mariam@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', subject: 'اللغة العربية', classes: 'الصف الأول – السادس (أ، ب، ج)', active: true, createdAt: '2026-10-01' },
-    { id: 'adm_1', role: 'admin', name: 'أ. خالد المنصور (مدير المدرسة)', username: 'admin1', email: 'principal@school.edu', pass: '1234', school: 'مدارس الساحل الأهلية', jobTitle: 'مدير المدرسة', active: true, createdAt: '2026-10-01' },
+    { id: 'adm_1', role: 'admin', name: 'أ. خالد المنصور (مدير المدرسة)', username: 'admin1', email: 'principal@school.edu', pass: '1234', school: 'مدرسة الساحل الأهلية', jobTitle: 'مدير المدرسة', active: true, createdAt: '2026-10-01' },
     { id: 'sup_1', role: 'supervisor', name: 'د. عبدالله السالم (مشرف تربوي)', username: 'sup1', email: 'supervisor@edu.gov', pass: '1234', school: 'إدارة التعليم – مكتب الإشراف', sector: 'الإشراف التربوي – اللغة العربية', active: true, createdAt: '2026-10-01' },
     { id: 'gsup_1', role: 'general_supervisor', name: 'د. فهد العتيبي (المشرف العام)', username: 'gsup1', email: 'general@edu.gov', pass: '1234', school: 'الإدارة العامة للتعليم', sector: 'الإشراف العام على المنصة والمدارس', active: true, createdAt: '2026-10-01' }
   ];
@@ -425,60 +424,121 @@
     });
   })();
 
+  // Purge legacy dummy accounts & stale student names from browser cache
+  (function purgeDummyStorage() {
+    try {
+      var cur = JSON.parse(localStorage.getItem(SESSION_KEY) || 'null');
+      if (cur && DUMMY_IDS[cur.id]) {
+        localStorage.removeItem(SESSION_KEY);
+      }
+      var selName = localStorage.getItem('iread_selected_student_name');
+      if (selName === 'يوسف طارق' || selName === 'سارة أحمد' || selName === 'عمر خالد' || selName === 'ليلى محمود' || selName === 'نور الهدى') {
+        localStorage.removeItem('iread_selected_student_name');
+        localStorage.removeItem('iread_selected_student_id');
+      }
+    } catch (e) {}
+  })();
+
   function loadUsers() {
+    if (SERVER_DB && Array.isArray(SERVER_DB.users) && SERVER_DB.users.length) {
+      return SERVER_DB.users.filter(function (u) { return !DUMMY_IDS[u.id]; });
+    }
     try {
       var raw = localStorage.getItem(USERS_KEY);
       if (raw) {
         var arr = JSON.parse(raw);
         if (Array.isArray(arr) && arr.length) {
-          var changed = false;
-          // Ensure all DEFAULT_USERS (including general_supervisor, teachers, and real student IDs) exist
+          arr = arr.filter(function (u) { return !DUMMY_IDS[u.id]; });
           DEFAULT_USERS.forEach(function (defU) {
             if (!arr.some(function (u) { return u.id === defU.id || u.username === defU.username; })) {
               arr.push(defU);
-              changed = true;
             }
           });
-          // Migrate legacy "مدرسة الأمل" school names to "مدرسة الساحل الأهلية"
           arr.forEach(function (u) {
             if (u.school && u.school.indexOf('الأمل') !== -1) {
               u.school = 'مدرسة الساحل الأهلية';
-              changed = true;
             }
           });
-          if (changed) {
-            localStorage.setItem(USERS_KEY, JSON.stringify(arr));
-          }
-          try {
-            var curRaw = localStorage.getItem(SESSION_KEY);
-            if (curRaw && curRaw.indexOf('الأمل') !== -1) {
-              var curObj = JSON.parse(curRaw);
-              if (curObj && curObj.school && curObj.school.indexOf('الأمل') !== -1) {
-                curObj.school = 'مدرسة الساحل الأهلية';
-                localStorage.setItem(SESSION_KEY, JSON.stringify(curObj));
-              }
-            }
-            var tRaw = localStorage.getItem('iread_teacher_profile_v1');
-            if (tRaw && tRaw.indexOf('الأمل') !== -1) {
-              var tObj = JSON.parse(tRaw);
-              if (tObj && tObj.school && tObj.school.indexOf('الأمل') !== -1) {
-                tObj.school = 'مدرسة الساحل الأهلية';
-                localStorage.setItem('iread_teacher_profile_v1', JSON.stringify(tObj));
-              }
-            }
-          } catch (me) {}
           return arr;
         }
       }
     } catch (e) {}
-    localStorage.setItem(USERS_KEY, JSON.stringify(DEFAULT_USERS));
     return DEFAULT_USERS.slice();
   }
 
+  function pushDbToServer(dbObj) {
+    if (!dbObj || typeof fetch !== 'function') return;
+    try {
+      fetch(SUPABASE_URL + '/rest/v1/system_settings?on_conflict=id', {
+        method: 'POST',
+        headers: {
+          apikey: SUPABASE_KEY,
+          Authorization: 'Bearer ' + SUPABASE_KEY,
+          'Content-Type': 'application/json',
+          Prefer: 'resolution=merge-duplicates,return=minimal'
+        },
+        body: JSON.stringify({
+          id: 'iread_db_v1',
+          app_name: 'منصة أقرأ بالعربية - قاعدة البيانات',
+          school_name: 'مدرسة الساحل الأهلية',
+          classification_thresholds: dbObj
+        })
+      }).catch(function () {});
+    } catch (e) {}
+  }
+
+  function syncFromServer() {
+    if (typeof fetch !== 'function') return Promise.resolve(null);
+    return fetch(SUPABASE_URL + '/rest/v1/system_settings?id=eq.iread_db_v1&select=classification_thresholds', {
+      cache: 'no-store',
+      headers: {
+        apikey: SUPABASE_KEY,
+        Authorization: 'Bearer ' + SUPABASE_KEY
+      }
+    }).then(function (r) {
+      if (!r.ok) throw new Error('supabase status ' + r.status);
+      return r.json();
+    }).then(function (rows) {
+      var db = rows && rows[0] && rows[0].classification_thresholds;
+      if (db && Array.isArray(db.users) && db.users.length) {
+        SERVER_DB = db;
+        localStorage.removeItem(USERS_KEY);
+        // Refresh active user from external DB if logged in
+        var cur = getCurrentUser();
+        if (cur && cur.id) {
+          var fresh = db.users.find(function (u) { return u.id === cur.id; });
+          if (fresh) setCurrentUser(fresh);
+        }
+        try { window.dispatchEvent(new CustomEvent('iread:db-synced', { detail: db })); } catch (ev) {}
+        return db;
+      }
+      return null;
+    }).catch(function () {
+      // Fallback to server-hosted JSON database
+      return fetch('/assets/data/users-db.json?t=' + Date.now(), { cache: 'no-store' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (db) {
+          if (db && Array.isArray(db.users)) {
+            SERVER_DB = db;
+            try { window.dispatchEvent(new CustomEvent('iread:db-synced', { detail: db })); } catch (ev) {}
+          }
+          return db;
+        }).catch(function () { return null; });
+    });
+  }
+
+  var readyPromise = syncFromServer();
+
   function saveUsers(users) {
-    localStorage.setItem(USERS_KEY, JSON.stringify(users));
-    var customStudents = users.filter(function (u) {
-      return u.role === 'student' && Number(u.numericId) > 5;
+    var cleanUsers = (users || []).filter(function (u) { return !DUMMY_IDS[u.id]; });
+    if (!SERVER_DB) {
+      SERVER_DB = { version: '2026-11-16.2', users: cleanUsers, skillProgress: {}, bookProgress: {}, studentStats: {}, appSettings: {} };
+    } else {
+      SERVER_DB.users = cleanUsers;
+    }
+    pushDbToServer(SERVER_DB);
+    var customStudents = cleanUsers.filter(function (u) {
+      return u.role === 'student';
     }).map(function (u) {
       return { id: u.numericId, name: u.name, grade: u.grade || 'الصف الأول', level: u.level || 'المستوى (ز)', school: u.school || '' };
     });
@@ -707,6 +767,8 @@
     ROLE_META: ROLE_META,
     CLASS_GRADES: CLASS_GRADES,
     CLASS_SECTIONS: CLASS_SECTIONS,
+    ready: readyPromise,
+    syncFromServer: syncFromServer,
     loadUsers: loadUsers,
     registerUser: registerUser,
     loginUser: loginUser,

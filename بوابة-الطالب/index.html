@@ -1492,7 +1492,7 @@
       background: #f0fdf4;
     }
   </style>
-  <link rel="stylesheet" href="../assets/mobile-responsive.css">
+  <link rel="stylesheet" href="../assets/mobile-responsive.css?v=20261116_3">
 </head>
 <body>
 
@@ -1679,20 +1679,30 @@
     </div>
   </div>
 
-  <script src="../assets/js/auth-system.js"></script>
-  <script src="../assets/js/global-header.js"></script>
+  <script src="../assets/js/auth-system.js?v=20261116_3"></script>
+  <script src="../assets/js/global-header.js?v=20261116_3"></script>
   <script src="../assets/js/weekly-stories.js"></script>
   <script src="../assets/js/kidzz-stories-8-12.js"></script>
   <script src="../assets/js/story-quiz-engine.js"></script>
-  <script src="../assets/js/skill-games.js"></script>
+  <script src="../assets/js/skill-games.js?v=20261116_3"></script>
   <script>
     (function () {
       'use strict';
 
       var A = window.IREAD_AUTH;
       var currentUser = A ? A.getCurrentUser() : null;
-      var studentId = localStorage.getItem('iread_selected_student_id') || (currentUser && currentUser.numericId) || '4';
-      var studentName = (currentUser && currentUser.role === 'student' && currentUser.name) || localStorage.getItem('iread_selected_student_name') || 'يوسف طارق';
+      var studentId = (currentUser && currentUser.numericId) || localStorage.getItem('iread_selected_student_id') || '101';
+      var studentName = (currentUser && currentUser.role === 'student' && currentUser.name) || localStorage.getItem('iread_selected_student_name') || 'طالب مدرسة الساحل';
+
+      window.addEventListener('iread:db-synced', function () {
+        var freshUser = A ? A.getCurrentUser() : null;
+        if (freshUser && freshUser.role === 'student') {
+          currentUser = freshUser;
+          studentName = freshUser.name;
+          studentId = String(freshUser.numericId || studentId);
+          if (typeof applyStudentHeroUI === 'function') applyStudentHeroUI();
+        }
+      });
 
       var menuNameEl = document.getElementById('menuStudentName');
       if (menuNameEl) menuNameEl.textContent = studentName;
