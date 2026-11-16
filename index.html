@@ -975,7 +975,7 @@
     (function () {
       'use strict';
 
-      var BASE_PREFIX = window.location.pathname.indexOf('/التسجيل/') !== -1 ? '../' : './';
+      var BASE_PREFIX = decodeURIComponent(window.location.pathname || '').indexOf('/التسجيل/') !== -1 ? '../' : './';
       var flashScreen = document.getElementById('flashIntroScreen');
       var flashVideo = document.getElementById('flashIntroVideo');
       var replayFlashBtn = document.getElementById('replayFlashBtn');
