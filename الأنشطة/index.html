@@ -130,7 +130,7 @@
 
       $('#assignedBadge').text(isTeacherAssigned ? '📌 المهارة الواحدة المكلف بها من المعلم' : '🎮 تحدي مهارة تفاعلية');
       $('#actTitle').text(skill.title);
-      $('#actMeta').text(skill.cat + ' – ' + skill.level + ' | الطالب النشط: ' + sname);
+      $('#actMeta').text(skill.cat + ' | الطالب النشط: ' + sname);
 
       var quiz = S.getSkillQuiz(skill.id);
       var qIdx = 0;
@@ -167,7 +167,7 @@
 
         $s.append(
           '<div class="game-hud">' +
-            '<span class="hud-pill">🎮 ' + skill.level + '</span>' +
+            '<span class="hud-pill">🎮 تحدي المهارة</span>' +
             '<span class="hud-pill">السؤال ' + (qIdx + 1) + ' من ' + quiz.length + '</span>' +
             '<span class="hud-pill">⭐ النتيجة: <span id="hudScore">' + score + '</span></span>' +
             '<span class="hud-pill">🔥 التتابع: <span id="hudStreak">' + streak + '</span></span>' +

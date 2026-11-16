@@ -1491,6 +1491,157 @@
       border-right-color: #16a34a;
       background: #f0fdf4;
     }
+
+    /* Modern Interactive Games Cards & Star Store */
+    .games-hero-bar {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #0ea5e9 100%);
+      color: #fff;
+      border-radius: 18px;
+      padding: 14px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
+    }
+
+    .star-balance-pill {
+      background: linear-gradient(135deg, #fef08a, #f59e0b);
+      color: #451a03;
+      font-weight: 900;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
+    }
+
+    .star-store-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .star-shop-card {
+      background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%);
+      border: 1.5px solid #fde68a;
+      border-radius: 16px;
+      padding: 12px 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 6px;
+      box-shadow: 0 6px 14px rgba(245, 158, 11, 0.1);
+    }
+
+    .star-shop-card.is-owned {
+      background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
+      border-color: #86efac;
+    }
+
+    .games-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+      gap: 12px;
+    }
+
+    .game-tile-card {
+      background: #ffffff;
+      border: 1.5px solid #dbeafe;
+      border-top: 5px solid #2563eb;
+      border-radius: 18px;
+      padding: 13px 12px;
+      text-decoration: none !important;
+      color: #0f172a !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+      transition: transform 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .game-tile-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 26px rgba(37, 99, 235, 0.16);
+    }
+
+    .game-tile-card.is-done {
+      border-top-color: #16a34a;
+      background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
+    }
+
+    .game-tile-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: #eff6ff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.45rem;
+      margin-bottom: 6px;
+    }
+
+    .game-play-cta {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 7px 10px;
+      border-radius: 11px;
+      font-weight: 900;
+      font-size: 0.78rem;
+      color: #fff;
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
+      box-shadow: 0 3px 0 #c2410c;
+    }
+
+    .game-tile-card.is-done .game-play-cta {
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      box-shadow: 0 3px 0 #15803d;
+    }
+
+    /* 100 Achievement Badges Grid */
+    .badges-100-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+      gap: 10px;
+    }
+
+    .badge-100-card {
+      border-radius: 16px;
+      padding: 11px 8px;
+      text-align: center;
+      position: relative;
+      transition: transform 0.16s ease, opacity 0.2s ease;
+    }
+
+    .badge-100-card.is-locked {
+      background: #f8fafc;
+      border: 1.5px dashed #cbd5e1;
+      opacity: 0.36;
+      filter: grayscale(100%);
+    }
+
+    .badge-100-card.is-unlocked {
+      background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%);
+      border: 2px solid #eab308;
+      opacity: 1;
+      filter: none;
+      box-shadow: 0 8px 20px rgba(234, 179, 8, 0.24);
+    }
+
+    .badge-100-num {
+      position: absolute;
+      top: 6px;
+      left: 7px;
+      font-size: 0.65rem;
+      font-weight: 900;
+      color: #64748b;
+    }
   </style>
   <link rel="stylesheet" href="../assets/mobile-responsive.css?v=20261116_3">
 </head>
@@ -1529,7 +1680,6 @@
             <span class="student-meta-chip">📚 <span id="heroStudentClass">الصف الأول • أ</span></span>
             <span class="student-meta-chip">🪪 <span id="heroStudentNid">---</span></span>
             <span class="student-meta-chip">👨‍🏫 <span id="heroStudentTeacher">المعلم المشرف</span></span>
-            <span class="student-meta-chip" style="background:rgba(234,179,8,0.28);color:#fef08a;">🏅 <span id="heroStudentLevel">المستوى (ز)</span></span>
           </div>
         </div>
       </div>
@@ -1611,52 +1761,45 @@
     </section>
 
     <!-- ===================================================================
-         PANEL (٤): إنجازات وإشارات
+         PANEL (٤): إنجازات وإشارات (١٠٠ إشارة)
          =================================================================== -->
     <section id="tabPanelBadges" class="student-tab-panel">
       <div class="section-panel-card">
-        <div class="section-panel-title">
-          <span>🏅 (٤) إنجازات وإشارات الطالب</span>
+        <div class="section-panel-title" style="margin-bottom:8px;">
+          <span>🏅 إنجازات وإشارات الطالب (١٠٠ إشارة)</span>
+          <span id="badgesEarnedRatio" style="font-size:0.84rem;background:#fef3c7;color:#92400e;padding:4px 12px;border-radius:999px;font-weight:900;">0 / 100 مكتسبة</span>
         </div>
-        <div class="badge-grid">
-          <div class="badge-item-box">
-            <span class="badge-item-icon">🌟</span>
-            <strong style="font-size:0.92rem;display:block;">نجم الاستماع</strong>
-            <small style="color:#4b5563;font-weight:700;">استمع إلى 11 قصة بتركيز</small>
-          </div>
-          <div class="badge-item-box">
-            <span class="badge-item-icon">📖</span>
-            <strong style="font-size:0.92rem;display:block;">قارئ المستوى (ز)</strong>
-            <small style="color:#4b5563;font-weight:700;">أتم قراءة القصص المصورة</small>
-          </div>
-          <div class="badge-item-box">
-            <span class="badge-item-icon">🧠</span>
-            <strong style="font-size:0.92rem;display:block;">بطل الاستيعاب</strong>
-            <small style="color:#4b5563;font-weight:700;">اجتاز اختبارات الفهم بتفوق</small>
-          </div>
-          <div class="badge-item-box">
-            <span class="badge-item-icon">🏆</span>
-            <strong style="font-size:0.92rem;display:block;">وسام 100+ نجمة</strong>
-            <small style="color:#4b5563;font-weight:700;">جمع أكثر من 100 نجمة ذهبية</small>
-          </div>
+        <p style="font-size:0.84rem;color:#475569;font-weight:700;margin-bottom:10px;">
+          تظهر الإشارات باهتة قبل تحقيقها، وتضيء بألوانها الكاملة فور إتمامك للقصص والاختبارات والمهارات:
+        </p>
+        <div id="badgesFilterRow" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;">
+          <button type="button" class="filter-pill-btn active" data-badge-filter="all" style="padding:5px 12px;font-size:0.78rem;">الكل (١٠٠)</button>
+          <button type="button" class="filter-pill-btn" data-badge-filter="unlocked" style="padding:5px 12px;font-size:0.78rem;">المكتسبة ✓</button>
+          <button type="button" class="filter-pill-btn" data-badge-filter="locked" style="padding:5px 12px;font-size:0.78rem;">قيد الإنجاز 🔒</button>
         </div>
+        <div id="student100BadgesGrid" class="badges-100-grid"></div>
       </div>
     </section>
 
     <!-- ===================================================================
-         PANEL (٥): ألعاب تفاعلية
+         PANEL (٥): ألعاب تفاعلية ومتجر النجوم
          =================================================================== -->
     <section id="tabPanelGames" class="student-tab-panel">
       <div class="section-panel-card">
-        <div class="section-panel-title">
-          <span>🎮 (٥) ألعاب تفاعلية ومتجر النجوم</span>
-          <span style="font-size:0.88rem;color:var(--orange-main);">رصيدك: <b id="gamesStarBalance">100</b> ★</span>
+        <div class="games-hero-bar">
+          <div>
+            <h2 style="margin:0;font-size:1.05rem;font-weight:900;color:#fff;">🎮 الألعاب التفاعلية ومتجر النجوم</h2>
+            <small style="opacity:0.9;font-weight:700;">العب وتدرّب على المهارات واجمع النجوم لفتح جوائز المتجر</small>
+          </div>
+          <div class="star-balance-pill">رصيدك: <b id="gamesStarBalance">100</b> ★</div>
         </div>
-        <p style="font-size:0.9rem;color:#475569;font-weight:700;margin-bottom:10px;">
-          العب وتدرّب على جميع المهارات التأسيسية والفهم القرائي والإملائية (١٠ تحديات تفاعلية لكل مهارة):
-        </p>
-        <div id="skillGamesCatFilters" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;"></div>
-        <div id="allSkillGamesGrid" class="badge-grid"></div>
+
+        <h3 style="font-size:0.94rem;font-weight:900;color:#082f68;margin:0 0 8px;">🛍️ متجر النجوم</h3>
+        <div id="starStoreGrid" class="star-store-grid"></div>
+
+        <h3 style="font-size:0.94rem;font-weight:900;color:#082f68;margin:6px 0 8px;">🎯 ألعاب المهارات التفاعلية</h3>
+        <div id="skillGamesCatFilters" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;"></div>
+        <div id="allSkillGamesGrid" class="games-cards-grid"></div>
       </div>
     </section>
 
@@ -1981,20 +2124,187 @@
         grid.innerHTML = visible.map(function (sk) {
           var rec = prog[sk.id];
           var isDone = !!(rec && rec.done);
-          var statusHtml = isDone
-            ? '<small style="color:#16a34a;font-weight:900;">✓ منجزة (' + rec.score + '/' + rec.total + ') • أعد اللعب ←</small>'
-            : '<small style="color:var(--orange-main);font-weight:900;">🎮 ابدأ اللعبة (١٠ أسئلة) ←</small>';
-          return '<a href="../الأنشطة/index.html?id=' + encodeURIComponent(sk.id) + '" class="badge-item-box" data-skill-id="' + sk.id + '" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;justify-content:space-between;gap:6px;">' +
+          var ctaLabel = isDone
+            ? '✓ منجزة (' + rec.score + '/' + rec.total + ') • أعد اللعب'
+            : '▶ العب الآن (١٠ تحديات)';
+          return '<a href="../الأنشطة/index.html?id=' + encodeURIComponent(sk.id) + '" class="game-tile-card' + (isDone ? ' is-done' : '') + '" data-skill-id="' + sk.id + '">' +
             '<div>' +
-              '<span class="badge-item-icon">' + getSkillIcon(sk.cat) + '</span>' +
-              '<strong style="font-size:0.86rem;display:block;line-height:1.45;">' + sk.title + '</strong>' +
-              '<span style="display:inline-block;margin-top:4px;font-size:0.72rem;background:#e0f2fe;color:#0369a1;padding:2px 8px;border-radius:999px;font-weight:800;">' + (sk.cat || 'مهارات') + ' • ' + (sk.level || 'مستوى أ') + '</span>' +
+              '<span class="game-tile-icon">' + getSkillIcon(sk.cat) + '</span>' +
+              '<strong style="font-size:0.88rem;display:block;line-height:1.45;color:#0f172a;">' + sk.title + '</strong>' +
+              '<span style="display:inline-block;margin-top:5px;font-size:0.72rem;background:#e0f2fe;color:#0369a1;padding:2px 8px;border-radius:999px;font-weight:800;">' + (sk.cat || 'مهارات اللغة العربية') + '</span>' +
             '</div>' +
-            statusHtml +
+            '<span class="game-play-cta">' + ctaLabel + '</span>' +
           '</a>';
         }).join('');
       }
       renderSkillGamesHub();
+
+      // =================================================================
+      // STAR STORE (متجر النجوم)
+      // =================================================================
+      var STAR_SHOP_KEY = 'iread_star_shop_' + studentId;
+      var STAR_SHOP_ITEMS = [
+        { id: 'crown_gold', icon: '👑', name: 'تاج القارئ الذهبي', cost: 40 },
+        { id: 'lion_badge', icon: '🦁', name: 'وسام الأسد القارئ', cost: 50 },
+        { id: 'rocket_pro', icon: '🚀', name: 'صاروخ التفوق', cost: 60 },
+        { id: 'rainbow_art', icon: '🎨', name: 'إطار الألوان الملكي', cost: 75 },
+        { id: 'bright_star', icon: '🌟', name: 'نجمة الإبداع الساطعة', cost: 90 },
+        { id: 'writer_bag', icon: '📚', name: 'حقيبة الأديب الصغير', cost: 120 }
+      ];
+
+      function getOwnedShopItems() {
+        try { return JSON.parse(localStorage.getItem(STAR_SHOP_KEY) || '[]') || []; } catch (e) { return []; }
+      }
+
+      function renderStarStore() {
+        var box = document.getElementById('starStoreGrid');
+        if (!box) return;
+        var owned = getOwnedShopItems();
+        var stars = getStars();
+        box.innerHTML = STAR_SHOP_ITEMS.map(function (it) {
+          var isOwned = owned.indexOf(it.id) !== -1;
+          var canBuy = stars >= it.cost;
+          return '<div class="star-shop-card' + (isOwned ? ' is-owned' : '') + '">' +
+            '<div>' +
+              '<div style="font-size:1.9rem;line-height:1.2;">' + it.icon + '</div>' +
+              '<strong style="font-size:0.82rem;color:#0f172a;display:block;margin-top:4px;">' + it.name + '</strong>' +
+            '</div>' +
+            (isOwned
+              ? '<span style="background:#dcfce7;color:#166534;padding:4px 8px;border-radius:999px;font-size:0.74rem;font-weight:900;">✓ مُقتنى</span>'
+              : '<button type="button" data-buy-item="' + it.id + '" style="border:none;border-radius:10px;padding:6px 8px;font-size:0.76rem;font-weight:900;cursor:pointer;background:' + (canBuy ? '#f59e0b' : '#cbd5e1') + ';color:' + (canBuy ? '#fff' : '#475569') + ';">شراء (' + it.cost + ' ★)</button>') +
+          '</div>';
+        }).join('');
+
+        box.querySelectorAll('button[data-buy-item]').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var itemId = btn.getAttribute('data-buy-item');
+            var item = STAR_SHOP_ITEMS.find(function (x) { return x.id === itemId; });
+            if (!item) return;
+            var curStars = getStars();
+            if (curStars < item.cost) return;
+            var list = getOwnedShopItems();
+            if (list.indexOf(item.id) === -1) list.push(item.id);
+            localStorage.setItem(STAR_SHOP_KEY, JSON.stringify(list));
+            setStars(curStars - item.cost);
+            renderStarStore();
+            if (typeof render100Badges === 'function') render100Badges();
+          });
+        });
+      }
+      renderStarStore();
+
+      // =================================================================
+      // 100 ACHIEVEMENT BADGES (باهتة قبل الإنجاز، كاملة الألوان عند التحقيق)
+      // =================================================================
+      var activeBadgeFilter = 'all';
+      function build100BadgesList() {
+        var readCount = LEVEL_Z_BOOKS.filter(function (b) { return b.readDone; }).length;
+        var quizCount = LEVEL_Z_BOOKS.filter(function (b) { return b.quizDone; }).length;
+        var stars = getStars();
+        var ownedCount = getOwnedShopItems().length;
+        var skillProg = (window.IREAD_SKILLS && typeof window.IREAD_SKILLS.getSkillProgress === 'function')
+          ? window.IREAD_SKILLS.getSkillProgress(studentId)
+          : {};
+        var allSkills = (window.IREAD_SKILLS && typeof window.IREAD_SKILLS.getAllSkills === 'function')
+          ? window.IREAD_SKILLS.getAllSkills()
+          : ((window.IREAD_SKILLS && window.IREAD_SKILLS.SKILLS) || []);
+        var doneSkillsCount = allSkills.filter(function (s) { return skillProg[s.id] && skillProg[s.id].done; }).length;
+
+        var list = [];
+        // 1..30: Reading story milestones
+        var readIcons = ['📖', '📘', '📗', '📙', '📕', '📚'];
+        for (var r = 1; r <= 30; r++) {
+          var targetR = r * 2;
+          list.push({
+            num: r,
+            icon: readIcons[(r - 1) % readIcons.length],
+            title: 'قارئ ' + targetR + ' قصة',
+            desc: 'أتم قراءة ' + targetR + ' قصة بنجاح',
+            unlocked: readCount >= targetR
+          });
+        }
+        // 31..60: Reading comprehension quiz milestones
+        for (var q = 1; q <= 30; q++) {
+          list.push({
+            num: 30 + q,
+            icon: q % 3 === 0 ? '🧠' : (q % 2 === 0 ? '📝' : '✨'),
+            title: 'بطل الفهم (' + q + ')',
+            desc: 'اجتاز ' + q + ' اختبار فهم قرائي',
+            unlocked: quizCount >= q
+          });
+        }
+        // 61..87: 27 Arabic foundational & comprehension skills mastery
+        for (var si = 0; si < 27; si++) {
+          var sk = allSkills[si];
+          var skTitle = sk ? sk.title.split('(')[0].trim() : ('إتقان المهارة ' + (si + 1));
+          list.push({
+            num: 61 + si,
+            icon: '🎯',
+            title: skTitle,
+            desc: 'أتقن لعبة المهارة بنجاح',
+            unlocked: !!(sk && skillProg[sk.id] && skillProg[sk.id].done)
+          });
+        }
+        // 88..100: Stars, Shop & Excellence honors
+        var honors = [
+          { icon: '⭐', title: 'جامع ١٠٠ نجمة', desc: 'حصل على ١٠٠ نجمة ذهبية', unlocked: stars >= 100 },
+          { icon: '🌟', title: 'جامع ١٥٠ نجمة', desc: 'حصل على ١٥٠ نجمة ذهبية', unlocked: stars >= 150 },
+          { icon: '💫', title: 'جامع ٢٠٠ نجمة', desc: 'حصل على ٢٠٠ نجمة ذهبية', unlocked: stars >= 200 },
+          { icon: '🌠', title: 'جامع ٣٠٠ نجمة', desc: 'حصل على ٣٠٠ نجمة ذهبية', unlocked: stars >= 300 },
+          { icon: '🛍️', title: 'أول هدية من المتجر', desc: 'اشترى جائزة من متجر النجوم', unlocked: ownedCount >= 1 },
+          { icon: '🎁', title: 'مقتني ٣ جوائز', desc: 'امتلك ٣ جوائز من المتجر', unlocked: ownedCount >= 3 },
+          { icon: '👑', title: 'ملك متجر النجوم', desc: 'امتلك جميع جوائز المتجر', unlocked: ownedCount >= 6 },
+          { icon: '🔤', title: 'مبدع التأسيس', desc: 'أتقن ٥ مهارات تأسيسية', unlocked: doneSkillsCount >= 5 },
+          { icon: '✍️', title: 'فارس الإملاء', desc: 'أتقن ١٠ مهارات لغوية', unlocked: doneSkillsCount >= 10 },
+          { icon: '🏅', title: 'نجم الفهم القرائي', desc: 'أتقن ١٥ مهارة قرائية', unlocked: doneSkillsCount >= 15 },
+          { icon: '🥇', title: 'القارئ الذهبي', desc: 'أتقن ٢٠ مهارة و١٠ قصص', unlocked: doneSkillsCount >= 20 && readCount >= 10 },
+          { icon: '🏫', title: 'سفير مدرسة الساحل', desc: 'نموذج مشرف للقراءة', unlocked: readCount >= 1 && quizCount >= 1 },
+          { icon: '🏆', title: 'وسام المئة الذهبي', desc: 'أتم ٥٠ إنجازاً في المنصة', unlocked: (readCount + quizCount + doneSkillsCount) >= 50 }
+        ];
+        honors.forEach(function (h, hi) {
+          list.push({ num: 88 + hi, icon: h.icon, title: h.title, desc: h.desc, unlocked: h.unlocked });
+        });
+        return list;
+      }
+
+      function render100Badges() {
+        var grid = document.getElementById('student100BadgesGrid');
+        var ratioEl = document.getElementById('badgesEarnedRatio');
+        var filterRow = document.getElementById('badgesFilterRow');
+        if (!grid) return;
+
+        if (filterRow && !filterRow.dataset.bound) {
+          filterRow.addEventListener('click', function (ev) {
+            var btn = ev.target.closest('button[data-badge-filter]');
+            if (!btn) return;
+            activeBadgeFilter = btn.getAttribute('data-badge-filter');
+            filterRow.querySelectorAll('button').forEach(function (b) { b.classList.toggle('active', b === btn); });
+            render100Badges();
+          });
+          filterRow.dataset.bound = '1';
+        }
+
+        var all100 = build100BadgesList();
+        var earnedCount = all100.filter(function (b) { return b.unlocked; }).length;
+        if (ratioEl) ratioEl.textContent = earnedCount + ' / 100 مكتسبة';
+
+        var visible = all100.filter(function (b) {
+          if (activeBadgeFilter === 'unlocked') return b.unlocked;
+          if (activeBadgeFilter === 'locked') return !b.unlocked;
+          return true;
+        });
+
+        grid.innerHTML = visible.map(function (b) {
+          return '<div class="badge-100-card ' + (b.unlocked ? 'is-unlocked' : 'is-locked') + '">' +
+            '<span class="badge-100-num">#' + b.num + '</span>' +
+            '<div style="font-size:1.85rem;line-height:1.2;margin-top:4px;">' + b.icon + '</div>' +
+            '<strong style="font-size:0.78rem;display:block;color:#0f172a;margin-top:4px;line-height:1.35;">' + b.title + '</strong>' +
+            '<small style="font-size:0.68rem;color:#475569;display:block;margin-top:2px;line-height:1.3;">' + b.desc + '</small>' +
+            '<span style="display:inline-block;margin-top:5px;font-size:0.66rem;font-weight:900;color:' + (b.unlocked ? '#16a34a' : '#64748b') + ';">' + (b.unlocked ? '✓ مكتسبة' : '🔒 باهتة') + '</span>' +
+          '</div>';
+        }).join('');
+      }
+      render100Badges();
 
       // Populate Daily Tasks Notebook on Home + KPI stats in Challenge tab
       function renderHomeDashboardOverview() {
