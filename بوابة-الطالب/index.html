@@ -1501,8 +1501,9 @@
   <div class="student-app-shell">
 
     <!-- ===================================================================
-         TOP ROYAL BLUE HERO WITH STUDENT IDENTITY & EDIT PROFILE
+         PANEL (١): الصفحة الرئيسية (معلومات الطالب + مذكرة المهام اليومية فقط)
          =================================================================== -->
+    <main id="tabPanelHome" class="student-tab-panel is-active">
     <header class="student-hero-redesign">
       <div class="hero-watermark" aria-hidden="true">
         <span>ق</span>
@@ -1560,10 +1561,6 @@
       </div>
     </header>
 
-    <!-- ===================================================================
-         PANEL (١): الصفحة الرئيسية (معلومات الطالب + مذكرة المهام اليومية فقط)
-         =================================================================== -->
-    <main id="tabPanelHome" class="student-tab-panel is-active">
       <section class="daily-notebook-card" aria-label="مذكرة جدول المهام اليومية">
         <div class="notebook-header">
           <div>
@@ -1583,93 +1580,12 @@
     </main>
 
     <!-- ===================================================================
-         PANEL (٢): تحدي القراءة (الإحصائيات + الخدمات + التحدي + مكتبة القصص)
+         PANEL (٢): تحدي القراءة (مكتبة القصص والتحدي)
          =================================================================== -->
     <section id="tabPanelChallenge" class="student-tab-panel">
-      <!-- 4 KPI Statistics Cards -->
-      <section class="stats-kpi-grid" style="margin:0 0 14px;" aria-label="إحصائيات الطالب">
-        <div class="kpi-mini-card">
-          <div class="kpi-mini-icon">📖</div>
-          <div class="kpi-mini-val" id="completedBooksRatio">23/11</div>
-          <div class="kpi-mini-label">الكتب المنجزة (المستوى ز)</div>
-          <div class="books-progress-track" style="height:8px;">
-            <div class="books-progress-fill" id="completedBooksBar" style="width: 55%;"></div>
-          </div>
-        </div>
-
-        <div class="kpi-mini-card">
-          <div class="kpi-mini-icon">⭐</div>
-          <div class="kpi-mini-val" id="cardStarScore" style="color:#d97706;">100 ★</div>
-          <div class="kpi-mini-label">رصيد النجوم الذهبية</div>
-          <button type="button" id="letsPlayBtn" class="btn-lets-play" style="padding:5px 10px;font-size:0.76rem;border-radius:10px;">🎮 هيا نلعب</button>
-        </div>
-
-        <div class="kpi-mini-card">
-          <div class="kpi-mini-icon">🎯</div>
-          <div class="kpi-mini-val" id="statSkillsDone" style="color:#0d9488;">0 / 27</div>
-          <div class="kpi-mini-label">المهارات المتقنة</div>
-          <button type="button" onclick="if(window.switchStudentTab) window.switchStudentTab('games')" class="btn-lets-play" style="padding:5px 10px;font-size:0.76rem;border-radius:10px;background:#0d9488;">تدرّب الآن</button>
-        </div>
-
-        <div class="kpi-mini-card">
-          <div class="kpi-mini-icon">📋</div>
-          <div class="kpi-mini-val" id="statTasksCount" style="color:#4f46e5;">0</div>
-          <div class="kpi-mini-label">المهام المكلف بها</div>
-          <button type="button" onclick="if(window.switchStudentTab) window.switchStudentTab('tasks')" class="btn-lets-play" style="padding:5px 10px;font-size:0.76rem;border-radius:10px;background:#4f46e5;">عرض المهام</button>
-        </div>
-      </section>
-
-      <!-- Quick Services Hub -->
-      <section class="quick-services-grid" style="margin:0 0 14px;" aria-label="خدمات الطالب السريعة">
-        <button type="button" class="quick-service-tile" onclick="var f=document.querySelector('.filter-pill-btn[data-filter=kids_8_12]'); if(f) f.click(); document.getElementById('studentBooksGrid').scrollIntoView({behavior:'smooth'});">
-          <span class="quick-service-icon" style="background:#dbeafe;color:#1d4ed8;">📖</span>
-          <div><strong style="display:block;font-size:0.84rem;">قصص الابتدائية</strong><small style="color:#64748b;font-weight:700;">تصفح واقرأ بملء الشاشة</small></div>
-        </button>
-        <button type="button" class="quick-service-tile" onclick="if(window.switchStudentTab) window.switchStudentTab('games')">
-          <span class="quick-service-icon" style="background:#fef3c7;color:#d97706;">🎮</span>
-          <div><strong style="display:block;font-size:0.84rem;">الألعاب التفاعلية</strong><small style="color:#64748b;font-weight:700;">٢٧+ لعبة مهارية</small></div>
-        </button>
-        <button type="button" class="quick-service-tile" onclick="if(window.switchStudentTab) window.switchStudentTab('tasks')">
-          <span class="quick-service-icon" style="background:#e0e7ff;color:#4338ca;">📋</span>
-          <div><strong style="display:block;font-size:0.84rem;">المهام الأسبوعية</strong><small style="color:#64748b;font-weight:700;">تكليفات المعلم</small></div>
-        </button>
-        <a href="../المكافآت/index.html" class="quick-service-tile">
-          <span class="quick-service-icon" style="background:#fce7f3;color:#be185d;">🏅</span>
-          <div><strong style="display:block;font-size:0.84rem;">شهادة التفوق</strong><small style="color:#64748b;font-weight:700;">عرض وطباعة الشهادة</small></div>
-        </a>
-        <a href="../القصة-الأسبوعية/index.html" class="quick-service-tile">
-          <span class="quick-service-icon" style="background:#ecfeff;color:#0e7490;">📰</span>
-          <div><strong style="display:block;font-size:0.84rem;">القصة الأسبوعية</strong><small style="color:#64748b;font-weight:700;">قصة وتدريب الأسبوع</small></div>
-        </a>
-        <a href="../المكتبة/index.html" class="quick-service-tile">
-          <span class="quick-service-icon" style="background:#dcfce7;color:#15803d;">📚</span>
-          <div><strong style="display:block;font-size:0.84rem;">المكتبة الإضافية</strong><small style="color:#64748b;font-weight:700;">٣٠ قصة إضافية</small></div>
-        </a>
-      </section>
-
-      <div class="section-panel-card" style="margin-bottom:14px;">
-        <div class="section-panel-title">
-          <span>🏁 تحدي القراءة – ماراثون المستويات</span>
-          <span style="font-size:0.88rem;color:var(--orange-main);">المستوى الحالي: (ز)</span>
-        </div>
-        <p style="font-size:0.92rem;color:#475569;font-weight:700;margin-bottom:14px;">
-          أكمل قراءة واستماع واختبار 23 كتاباً في المستوى (ز) للحصول على وسام بطل تحدي القراءة والانتقال للمستوى التالي!
-        </p>
-        <div style="background:#f5fbf4;border:1.5px solid #dcf4d9;border-radius:16px;padding:14px;">
-          <div style="display:flex;justify-content:space-between;font-weight:900;margin-bottom:8px;">
-            <span>تقدمك في تحدي المستوى (ز)</span>
-            <span id="challengeRatioText">11 من 23 كتاباً</span>
-          </div>
-          <div class="books-progress-track" style="height:16px;">
-            <div class="books-progress-fill" id="challengeProgressBar" style="width:55%;"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Filter Pills: الكل | قصص الابتدائية | المنجزة | الغير منجزة -->
+      <!-- Filter Pills: الكل | المنجزة | الغير منجزة -->
       <div class="filter-pills-row" role="tablist" aria-label="تصفية الكتب">
         <button type="button" class="filter-pill-btn active" data-filter="all">الكل</button>
-        <button type="button" class="filter-pill-btn" data-filter="kids_8_12">قصص الابتدائية (٨-١٢)</button>
         <button type="button" class="filter-pill-btn" data-filter="completed">المنجزة</button>
         <button type="button" class="filter-pill-btn" data-filter="uncompleted">الغير منجزة</button>
       </div>
@@ -1688,7 +1604,7 @@
           <span style="font-size:0.84rem;background:#dcfce7;color:#166534;padding:3px 10px;border-radius:999px;">مكلف من المعلم</span>
         </div>
         <p style="font-size:0.9rem;color:#475569;font-weight:700;margin-bottom:12px;">
-          المهام والقصص المطلوب إنجازها هذا الأسبوع (قراءة + استماع + اختبار الفهم القرائي):
+          المهام والقصص المطلوب إنجازها هذا الأسبوع (قراءة + اختبار الفهم القرائي):
         </p>
         <div id="studentAssignedTasksList"></div>
       </div>
@@ -1888,85 +1804,8 @@
         }
       })();
 
-      // Books dataset for Level (ز) starting with "ماذا حصل لأخي رامز؟" matching the screenshot
-      var LEVEL_Z_BOOKS = [
-        {
-          id: 'ramiz-brother',
-          title: 'ماذا حصل لأخي رامز؟',
-          stars: 35,
-          cover: '../assets/ramiz-book-cover.jpg',
-          readDone: false,
-          listenDone: true,
-          quizDone: false,
-          storyText: 'فِي يَوْمٍ مِنَ الأَيَّامِ، نَظَرَ الصَّغِيرُ إِلَى أَخِيهِ رَامِزٍ بِدَهْشَةٍ وَقَالَ: «مَاذَا حَصَلَ لِأَخِي رَامِزٍ؟ لَقَدْ أَصْبَحَ طَوِيلاً جِدّاً وَيَقْفِزُ بِخِفَّةٍ كَالْبَهْلَوَانِ!». ضَحِكَتِ الأُمُّ وَقَالَتْ: «إِنَّهُ يَتَدَرَّبُ عَلَى الْمَشْيِ عَلَى الرِّكَامِ الخَشَبِيَّةِ لِعَرْضِ المَدْرَسَةِ الْمَسْرَحِيِّ!». فَرِحَ الصَّغِيرُ وَصَفَّقَ لِأَخِيهِ رَامِزٍ بِحَمَاسٍ كَبِيرٍ.',
-          quiz: {
-            q: 'لماذا بدا الأخ رامز طويلاً جداً في القصة؟',
-            options: [
-              'لأنه كان يتدرب على المشي على الركام الخشبية لعرض المدرسة',
-              'لأنه صعد فوق سطح المنزل',
-              'لأنه كان يركب دراجة هوائية كبيرة'
-            ],
-            correct: 0
-          }
-        },
-        {
-          id: 'space-journey',
-          title: 'رحلة إلى كوكب المعرفة',
-          stars: 35,
-          cover: '../assets/generated/story-science.jpg',
-          readDone: true,
-          listenDone: true,
-          quizDone: true,
-          storyText: 'انْطَلَقَ رَائِدُ الفَضَاءِ الصَّغِيرُ فِي مَرْكَبَتِهِ الفَضَائِيَّةِ لِيَسْتَكْشِفَ الكَوَاكِبَ وَالنُّجُومَ المُلَوَّنَةَ، وَسَجَّلَ فِي دَفْتَرِهِ أَسْمَاءَ الكَوَاكِبِ وَأَحْجَامَهَا بِاللُّغَةِ العَرَبِيَّةِ الفُصْحَى.',
-          quiz: {
-            q: 'ماذا سجّل رائد الفضاء الصغير في دفتره؟',
-            options: [
-              'أسماء الكواكب وأحجامها باللغة العربية',
-              'أسماء البحار والمحيطات فقط',
-              'جدول المباريات الرياضية'
-            ],
-            correct: 0
-          }
-        },
-        {
-          id: 'nature-secret',
-          title: 'سر الحديقة العجيبة',
-          stars: 30,
-          cover: '../assets/generated/story-nature.jpg',
-          readDone: false,
-          listenDone: false,
-          quizDone: false,
-          storyText: 'تَعَاوَنَ الأَصْدِقَاءُ فِي زِرَاعَةِ الأَشْجَارِ وَسِقَايَةِ الأَزْهَارِ فِي حَدِيقَةِ الحَيِّ، فَأَزْهَرَتِ الحَدِيقَةُ وَعَادَتِ الطُّيُورُ تُغَرِّدُ فَوْقَ الأَغْصَانِ كُلَّ صَبَاحٍ.',
-          quiz: {
-            q: 'كيف أزهرت الحديقة وعادت إليها الطيور؟',
-            options: [
-              'بتعاون الأصدقاء في زراعة الأشجار وسقاية الأزهار',
-              'بسبب إغلاق الحديقة طوال العام',
-              'بسبب قطع الأغصان'
-            ],
-            correct: 0
-          }
-        },
-        {
-          id: 'school-champions',
-          title: 'أبطال القراءة في مدرستنا',
-          stars: 40,
-          cover: '../assets/generated/story-school.jpg',
-          readDone: true,
-          listenDone: true,
-          quizDone: true,
-          storyText: 'أَقَامَتْ مَدَارِسُ السَّاحِلِ الأَهْلِيَّةُ مُسَابَقَةً كُبْرَى لِأَبْطَالِ القِرَاءَةِ، وَقَرَأَ كُلُّ طَالِبٍ قِصَّتَهُ المُفَضَّلَةَ أَمَامَ زُمَلَائِهِ بِلُغَةٍ عَرَبِيَّةٍ سَلِيمَةٍ وَصَوْتٍ وَاضِحٍ.',
-          quiz: {
-            q: 'كيف قرأ الطلاب قصصهم في المسابقة؟',
-            options: [
-              'بلغة عربية سليمة وصوت واضح',
-              'بصوت منخفض جداً دون تشكيل',
-              'دون فهم لمعاني الكلمات'
-            ],
-            correct: 0
-          }
-        }
-      ];
+      // Books dataset populated from KIDZZ_STORIES_8_12
+      var LEVEL_Z_BOOKS = [];
 
       var STORAGE_KEY = 'iread_student_lvl_z_' + studentId;
       var STARS_KEY = 'iread_student_stars_' + studentId;
@@ -2072,9 +1911,12 @@
         });
       });
 
-      document.getElementById('letsPlayBtn').addEventListener('click', function () {
-        switchStudentTab('games');
-      });
+      var lpBtn = document.getElementById('letsPlayBtn');
+      if (lpBtn) {
+        lpBtn.addEventListener('click', function () {
+          switchStudentTab('games');
+        });
+      }
 
       // =================================================================
       // RENDER INTERACTIVE GAMES FOR ALL SKILLS (27+ BUILT-IN & CUSTOM)
@@ -2229,25 +2071,26 @@
 
       function updateSummaryCounters() {
         var extraCompleted = LEVEL_Z_BOOKS.filter(function (b) {
-          return b.readDone && b.listenDone && b.quizDone;
+          return b.readDone && b.quizDone;
         }).length;
-        // Base 11 completed out of 23 matching screenshot "23/11"
-        var completedCount = Math.min(23, 9 + extraCompleted);
-        document.getElementById('completedBooksRatio').textContent = '23/' + completedCount;
-        var pct = Math.min(100, Math.round((completedCount / 23) * 100));
-        document.getElementById('completedBooksBar').style.width = pct + '%';
+        var completedCount = extraCompleted;
+        var totalBooks = LEVEL_Z_BOOKS.length || 1;
+        var ratioEl = document.getElementById('completedBooksRatio');
+        var barEl = document.getElementById('completedBooksBar');
+        if (ratioEl) ratioEl.textContent = totalBooks + '/' + completedCount;
+        var pct = Math.min(100, Math.round((completedCount / totalBooks) * 100));
+        if (barEl) barEl.style.width = pct + '%';
 
         var chText = document.getElementById('challengeRatioText');
         var chBar = document.getElementById('challengeProgressBar');
-        if (chText) chText.textContent = completedCount + ' من 23 كتاباً';
+        if (chText) chText.textContent = completedCount + ' من ' + totalBooks + ' كتاباً';
         if (chBar) chBar.style.width = pct + '%';
       }
 
       function renderBooks() {
         booksGrid.innerHTML = '';
         var filtered = LEVEL_Z_BOOKS.filter(function (b) {
-          var isCompleted = b.readDone && b.listenDone && b.quizDone;
-          if (activeFilter === 'kids_8_12') return b.ageGroup === '8-12';
+          var isCompleted = b.readDone && b.quizDone;
           if (activeFilter === 'completed') return isCompleted;
           if (activeFilter === 'uncompleted') return !isCompleted;
           return true;
@@ -2267,16 +2110,12 @@
               '</div>' +
             '</div>' +
             '<div class="book-cover-stage">' +
-              '<img src="' + b.cover + '" alt="' + b.title + '" class="book-cover-img" data-book-id="' + b.id + '" data-action="read" onerror="this.onerror=null;this.src=\'../assets/illustrations/paper-book-frame.jpg\';">' +
+              '<img src="' + b.cover + '" alt="' + b.title + '" class="book-cover-img" data-book-id="' + b.id + '" data-action="read" onerror="this.onerror=null;this.src=\'../assets/generated/paper-book-frame.jpg\';">' +
             '</div>' +
             '<div class="book-card-actions">' +
               '<button type="button" class="book-action-btn btn-act-read ' + (b.readDone ? 'is-done' : '') + '" data-book-id="' + b.id + '" data-action="read">' +
                 '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>' +
                 '<span>قراءة</span>' +
-              '</button>' +
-              '<button type="button" class="book-action-btn btn-act-listen ' + (b.listenDone ? 'is-done' : '') + '" data-book-id="' + b.id + '" data-action="listen">' +
-                (b.listenDone ? '<span class="check-circle-navy">✓</span>' : '<span>🔊</span>') +
-                '<span>استماع</span>' +
               '</button>' +
               '<button type="button" class="book-action-btn btn-act-quiz ' + (b.quizDone ? 'is-done' : '') + '" data-book-id="' + b.id + '" data-action="quiz">' +
                 '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>' +
@@ -2295,7 +2134,7 @@
         if (!tasksBox) return;
         tasksBox.innerHTML = '';
         LEVEL_Z_BOOKS.forEach(function (b) {
-          var isDone = b.readDone && b.listenDone && b.quizDone;
+          var isDone = b.readDone && b.quizDone;
           var row = document.createElement('div');
           row.style.cssText = 'display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:#f5fbf4;border:1.5px solid #dcf4d9;border-radius:14px;margin-bottom:10px;gap:10px;flex-wrap:wrap;';
           row.innerHTML =
