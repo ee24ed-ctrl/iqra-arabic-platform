@@ -250,11 +250,8 @@
         '<a href="' + prefix + 'بوابة-الطالب/index.html#home" class="iread-role-opt active" data-student-tab="home"><span class="iread-opt-ico">🏠</span><span>الصفحة الرئيسية</span></a>' +
         '<a href="' + prefix + 'بوابة-الطالب/index.html#challenge" class="iread-role-opt" data-student-tab="challenge"><span class="iread-opt-ico">🏁</span><span>تحدي القراءة</span></a>' +
         '<a href="' + prefix + 'بوابة-الطالب/index.html#tasks" class="iread-role-opt" data-student-tab="tasks"><span class="iread-opt-ico">📋</span><span>المهام الأسبوعية</span></a>' +
-        '<a href="' + prefix + 'بوابة-الطالب/index.html#games" class="iread-role-opt" data-student-tab="games"><span class="iread-opt-ico">🎮</span><span>الألعاب التفاعلية (٢٧+ مهارة)</span></a>' +
-        '<a href="' + prefix + 'بوابة-الطالب/index.html#badges" class="iread-role-opt" data-student-tab="badges"><span class="iread-opt-ico">🏅</span><span>إنجازاتي وشهادتي</span></a>' +
-        '<a href="' + prefix + 'القصة-الأسبوعية/index.html" class="iread-role-opt"><span class="iread-opt-ico">📰</span><span>القصة الأسبوعية</span></a>' +
-        '<a href="' + prefix + 'المكتبة/index.html" class="iread-role-opt"><span class="iread-opt-ico">📚</span><span>مكتبة القصص الإضافية</span></a>' +
-        '<a href="' + prefix + 'المكافآت/index.html" class="iread-role-opt"><span class="iread-opt-ico">🏆</span><span>شهادة التفوق والمكافآت</span></a>'
+        '<a href="' + prefix + 'بوابة-الطالب/index.html#games" class="iread-role-opt" data-student-tab="games"><span class="iread-opt-ico">🎮</span><span>الألعاب التفاعلية</span></a>' +
+        '<a href="' + prefix + 'بوابة-الطالب/index.html#badges" class="iread-role-opt" data-student-tab="badges"><span class="iread-opt-ico">🏅</span><span>إنجازاتي</span></a>'
       );
     }
     if (role === 'teacher') {
