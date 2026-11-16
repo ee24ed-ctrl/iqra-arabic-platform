@@ -84,6 +84,9 @@
 }
 
 
+/* Hide legacy duplicate portal-header globally across all pages */
+.portal-header { display: none !important; }
+
 /* Prevent WordPress Kindori preloader from blocking page view */
 #cms-loadding, .cms-loader { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
 

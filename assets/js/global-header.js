@@ -247,29 +247,32 @@
   function buildRoleSpecificMenuItems(role, prefix) {
     if (role === 'student') {
       return (
-        '<a href="' + prefix + 'بوابة-الطالب/index.html#home" class="iread-role-opt active" data-student-tab="home"><span style="color:#ee6b1e;font-weight:900;">(١)</span><span>الصفحة الرئيسية</span></a>' +
-        '<a href="' + prefix + 'بوابة-الطالب/index.html#challenge" class="iread-role-opt" data-student-tab="challenge"><span style="color:#ee6b1e;font-weight:900;">(٢)</span><span>تحدي القراءة</span></a>' +
-        '<a href="' + prefix + 'بوابة-الطالب/index.html#tasks" class="iread-role-opt" data-student-tab="tasks"><span style="color:#ee6b1e;font-weight:900;">(٣)</span><span>المهام</span></a>' +
-        '<a href="' + prefix + 'بوابة-الطالب/index.html#badges" class="iread-role-opt" data-student-tab="badges"><span style="color:#ee6b1e;font-weight:900;">(٤)</span><span>إنجازات وإشارات</span></a>' +
-        '<a href="' + prefix + 'بوابة-الطالب/index.html#games" class="iread-role-opt" data-student-tab="games"><span style="color:#ee6b1e;font-weight:900;">(٥)</span><span>ألعاب تفاعلية</span></a>'
+        '<a href="' + prefix + 'بوابة-الطالب/index.html#home" class="iread-role-opt active" data-student-tab="home"><span class="iread-opt-ico">🏠</span><span>الصفحة الرئيسية</span></a>' +
+        '<a href="' + prefix + 'بوابة-الطالب/index.html#challenge" class="iread-role-opt" data-student-tab="challenge"><span class="iread-opt-ico">🏁</span><span>تحدي القراءة</span></a>' +
+        '<a href="' + prefix + 'بوابة-الطالب/index.html#tasks" class="iread-role-opt" data-student-tab="tasks"><span class="iread-opt-ico">📋</span><span>المهام الأسبوعية</span></a>' +
+        '<a href="' + prefix + 'بوابة-الطالب/index.html#games" class="iread-role-opt" data-student-tab="games"><span class="iread-opt-ico">🎮</span><span>الألعاب التفاعلية (٢٧+ مهارة)</span></a>' +
+        '<a href="' + prefix + 'بوابة-الطالب/index.html#badges" class="iread-role-opt" data-student-tab="badges"><span class="iread-opt-ico">🏅</span><span>إنجازاتي وشهادتي</span></a>' +
+        '<a href="' + prefix + 'القصة-الأسبوعية/index.html" class="iread-role-opt"><span class="iread-opt-ico">📰</span><span>القصة الأسبوعية</span></a>' +
+        '<a href="' + prefix + 'المكتبة/index.html" class="iread-role-opt"><span class="iread-opt-ico">📚</span><span>مكتبة القصص الإضافية</span></a>' +
+        '<a href="' + prefix + 'المكافآت/index.html" class="iread-role-opt"><span class="iread-opt-ico">🏆</span><span>شهادة التفوق والمكافآت</span></a>'
       );
     }
     if (role === 'teacher') {
       return (
-        '<a href="' + prefix + 'بوابة-المعلم/index.html#home" class="iread-role-opt active" data-teacher-tab="home"><span style="color:#ee6b1e;font-weight:900;">(١)</span><span>الصفحة الرئيسية للمعلم</span></a>' +
-        '<a href="' + prefix + 'بوابة-المعلم/index.html#students" class="iread-role-opt" data-teacher-tab="students"><span style="color:#ee6b1e;font-weight:900;">(٢)</span><span>إدارة الطلاب</span></a>' +
-        '<a href="' + prefix + 'بوابة-المعلم/index.html#weekly-story" class="iread-role-opt" data-teacher-tab="weekly-story"><span style="color:#ee6b1e;font-weight:900;">(٣)</span><span>تحدي قراءة القصص الأسبوعي</span></a>' +
-        '<a href="' + prefix + 'بوابة-المعلم/index.html#participation-report" class="iread-role-opt" data-teacher-tab="participation-report"><span style="color:#ee6b1e;font-weight:900;">(٤)</span><span>تقرير عن الطلاب ونسبة مشاركتهم</span></a>' +
-        '<a href="' + prefix + 'بوابة-المعلم/index.html#badges-admin" class="iread-role-opt" data-teacher-tab="badges-admin"><span style="color:#ee6b1e;font-weight:900;">(٥)</span><span>إدارة الإشارات والإنجازات للطلاب</span></a>'
+        '<a href="' + prefix + 'بوابة-المعلم/index.html#home" class="iread-role-opt active" data-teacher-tab="home"><span class="iread-opt-ico">🏠</span><span>الصفحة الرئيسية للمعلم</span></a>' +
+        '<a href="' + prefix + 'بوابة-المعلم/index.html#students" class="iread-role-opt" data-teacher-tab="students"><span class="iread-opt-ico">👨‍🎓</span><span>إدارة الطلاب والفصول</span></a>' +
+        '<a href="' + prefix + 'بوابة-المعلم/index.html#weekly-story" class="iread-role-opt" data-teacher-tab="weekly-story"><span class="iread-opt-ico">📖</span><span>تحدي القصص الأسبوعي</span></a>' +
+        '<a href="' + prefix + 'بوابة-المعلم/index.html#participation-report" class="iread-role-opt" data-teacher-tab="participation-report"><span class="iread-opt-ico">📊</span><span>تقارير الطلاب ونسب المشاركة</span></a>' +
+        '<a href="' + prefix + 'بوابة-المعلم/index.html#badges-admin" class="iread-role-opt" data-teacher-tab="badges-admin"><span class="iread-opt-ico">🏅</span><span>إدارة الأوسمة والإنجازات</span></a>'
       );
     }
     // admin, supervisor, or general_supervisor: only their own dashboard sections
     var myHome = prefix + (ROLE_HOMES[role] || 'لوحة-الإدارة/index.html?role=' + role);
     return (
-      '<a href="' + myHome + '" class="iread-role-opt active"><span style="color:#ee6b1e;font-weight:900;">(١)</span><span>لوحة المتابعة الرئيسية</span></a>' +
-      '<a href="' + myHome + '#adminKpis" class="iread-role-opt"><span style="color:#ee6b1e;font-weight:900;">(٢)</span><span>مؤشرات الأداء والإحصاءات</span></a>' +
-      '<a href="' + myHome + '#usersTableBody" class="iread-role-opt"><span style="color:#ee6b1e;font-weight:900;">(٣)</span><span>سجل الحسابات والمدارس</span></a>' +
-      '<a href="' + myHome + '#supNoteForm" class="iread-role-opt"><span style="color:#ee6b1e;font-weight:900;">(٤)</span><span>التوصيات والتقارير</span></a>'
+      '<a href="' + myHome + '" class="iread-role-opt active"><span class="iread-opt-ico">🏠</span><span>لوحة المتابعة الرئيسية</span></a>' +
+      '<a href="' + myHome + '#adminKpis" class="iread-role-opt"><span class="iread-opt-ico">📊</span><span>مؤشرات الأداء والإحصاءات</span></a>' +
+      '<a href="' + myHome + '#usersTableBody" class="iread-role-opt"><span class="iread-opt-ico">👥</span><span>سجل الحسابات والمدارس</span></a>' +
+      '<a href="' + myHome + '#supNoteForm" class="iread-role-opt"><span class="iread-opt-ico">📝</span><span>التوصيات والتقارير</span></a>'
     );
   }
 
@@ -323,17 +326,33 @@
       '  width: 34px; height: 34px; border-radius: 50%; object-fit: cover;' +
       '  border: 2px solid #ffffff; box-shadow: 0 2px 8px rgba(8, 45, 102, 0.15); flex-shrink: 0;' +
       '}' +
+      '.iread-menu-backdrop {' +
+      '  position: fixed; inset: 0; background: rgba(6, 40, 90, 0.45);' +
+      '  backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px);' +
+      '  z-index: 10001; opacity: 0; visibility: hidden; pointer-events: none;' +
+      '  transition: opacity 0.25s ease;' +
+      '}' +
+      '.iread-menu-backdrop.is-open {' +
+      '  opacity: 1; visibility: visible; pointer-events: auto;' +
+      '}' +
       '.iread-slide-menu {' +
-      '  position: absolute; top: 54px; right: 0; width: 290px; background: #ffffff;' +
-      '  border-radius: 22px; border: 1.5px solid #d5e6f8;' +
-      '  box-shadow: 0 20px 50px rgba(8, 45, 102, 0.22); padding: 12px; z-index: 1000;' +
-      '  opacity: 0; visibility: hidden; pointer-events: none;' +
-      '  transform: translateY(-8px) scale(0.97); transform-origin: top right;' +
-      '  transition: all 0.2s ease;' +
+      '  position: fixed; top: 0; right: 0; width: 300px; max-width: 86vw;' +
+      '  height: 100vh; height: 100dvh; background: #ffffff;' +
+      '  border-radius: 22px 0 0 22px; border-left: 2px solid #d5e6f8;' +
+      '  box-shadow: -12px 0 40px rgba(6, 40, 90, 0.22); padding: 16px 14px;' +
+      '  z-index: 10002; overflow-y: auto; display: flex; flex-direction: column;' +
+      '  transform: translateX(100%); visibility: hidden; pointer-events: none;' +
+      '  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.28s;' +
       '}' +
       '.iread-slide-menu.is-open {' +
-      '  opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0) scale(1);' +
+      '  transform: translateX(0); visibility: visible; pointer-events: auto;' +
       '}' +
+      '.iread-opt-ico {' +
+      '  width: 32px; height: 32px; border-radius: 10px; background: #eff6ff;' +
+      '  display: inline-flex; align-items: center; justify-content: center;' +
+      '  font-size: 1rem; flex-shrink: 0;' +
+      '}' +
+      '.iread-role-opt.active .iread-opt-ico { background: #1668e3; color: #fff; }' +
       '.iread-role-switcher-pop {' +
       '  position: absolute; top: 54px; left: 0; width: 255px; background: #ffffff;' +
       '  border-radius: 20px; border: 1.5px solid #d5e6f8;' +
@@ -436,17 +455,21 @@
           '</a>' +
         '</div>' +
 
-        '<!-- Right Slide-down Menu (خاص بصلاحية المستخدم المسجل فقط دون أي انتقال للأدوار الأخرى) -->' +
-        '<nav id="ireadGlobalSlideMenu" class="iread-slide-menu" aria-label="قائمة الحساب">' +
-          '<div style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;margin-bottom:6px;background:#f2f7fd;border-radius:12px;">' +
-            '<span style="font-size:0.85rem;font-weight:900;color:#082f68;">القائمة الرئيسية</span>' +
-            '<span style="font-size:0.74rem;font-weight:800;color:#1668e3;">🔒 ' + roleLabel + '</span>' +
+        '<!-- Right-to-Left Off-Canvas Slide Drawer -->' +
+        '<div id="ireadMenuBackdrop" class="iread-menu-backdrop"></div>' +
+        '<nav id="ireadGlobalSlideMenu" class="iread-slide-menu" aria-label="قائمة خدمات الموقع">' +
+          '<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;margin-bottom:10px;background:linear-gradient(135deg,#06285a,#0d52b8);border-radius:14px;color:#fff;">' +
+            '<div>' +
+              '<div style="font-size:0.92rem;font-weight:900;">خدمات المنصة</div>' +
+              '<div style="font-size:0.74rem;font-weight:800;color:#fde047;">🔒 ' + roleLabel + ' • ' + cleanName + '</div>' +
+            '</div>' +
+            '<button type="button" id="ireadCloseDrawerBtn" aria-label="إغلاق القائمة" style="width:32px;height:32px;border-radius:50%;border:none;background:rgba(255,255,255,0.2);color:#fff;font-weight:900;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;">✕</button>' +
           '</div>' +
-          '<div style="display:flex;flex-direction:column;gap:4px;">' +
+          '<div style="display:flex;flex-direction:column;gap:4px;flex:1;">' +
             buildRoleSpecificMenuItems(role, prefix) +
           '</div>' +
-          '<div style="height:1px;background:#dce9f8;margin:8px 0;"></div>' +
-          '<button type="button" id="ireadMenuLogoutAction" class="iread-role-opt" style="color:#dc2626;justify-content:center;">' +
+          '<div style="height:1px;background:#dce9f8;margin:10px 0;"></div>' +
+          '<button type="button" id="ireadMenuLogoutAction" class="iread-role-opt" style="background:#fef2f2;color:#dc2626;justify-content:center;font-weight:900;">' +
             '<span>🚪</span><span>تسجيل الخروج الآمن</span>' +
           '</button>' +
         '</nav>' +
@@ -479,11 +502,19 @@
 
     var menuBtn = document.getElementById('ireadGlobalMenuBtn');
     var slideMenu = document.getElementById('ireadGlobalSlideMenu');
+    var menuBackdrop = document.getElementById('ireadMenuBackdrop');
+    var closeDrawerBtn = document.getElementById('ireadCloseDrawerBtn');
     var userPill = document.getElementById('ireadUserPill');
     var rolePop = document.getElementById('ireadRoleSwitcherPop');
     var topLogoutBtn = document.getElementById('ireadTopLogoutBtn');
     var menuLogoutBtn = document.getElementById('ireadMenuLogoutAction');
     var cardLogoutBtn = document.getElementById('ireadCardLogoutAction');
+
+    function setDrawerOpen(open) {
+      slideMenu.classList.toggle('is-open', open);
+      if (menuBackdrop) menuBackdrop.classList.toggle('is-open', open);
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
 
     function performSecureLogout(e) {
       if (e) e.preventDefault();
@@ -502,14 +533,15 @@
     menuBtn.addEventListener('click', function (e) {
       e.stopPropagation();
       rolePop.classList.remove('is-open');
-      var isOpen = slideMenu.classList.contains('is-open');
-      slideMenu.classList.toggle('is-open', !isOpen);
-      menuBtn.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+      setDrawerOpen(!slideMenu.classList.contains('is-open'));
     });
+
+    if (menuBackdrop) menuBackdrop.addEventListener('click', function () { setDrawerOpen(false); });
+    if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', function () { setDrawerOpen(false); });
 
     userPill.addEventListener('click', function (e) {
       e.stopPropagation();
-      slideMenu.classList.remove('is-open');
+      setDrawerOpen(false);
       rolePop.classList.toggle('is-open');
     });
 
@@ -587,7 +619,7 @@
         var tabKey = link.getAttribute('data-student-tab');
         if (activateStudentTabOnPage(tabKey, true)) {
           e.preventDefault();
-          slideMenu.classList.remove('is-open');
+          setDrawerOpen(false);
           menuBtn.setAttribute('aria-expanded', 'false');
         }
       });
@@ -647,7 +679,7 @@
         var tabKey = link.getAttribute('data-teacher-tab');
         if (activateTeacherTabOnPage(tabKey, true)) {
           e.preventDefault();
-          slideMenu.classList.remove('is-open');
+          setDrawerOpen(false);
           menuBtn.setAttribute('aria-expanded', 'false');
         }
       });
@@ -672,7 +704,7 @@
 
     document.addEventListener('click', function (e) {
       if (!header.contains(e.target)) {
-        slideMenu.classList.remove('is-open');
+        setDrawerOpen(false);
         rolePop.classList.remove('is-open');
       }
     });
