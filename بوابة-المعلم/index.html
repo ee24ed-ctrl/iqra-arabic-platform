@@ -868,59 +868,59 @@
       </div>
     </header>
 
-    <!-- 4 Summary KPI Cards Overlapping the Curved Hero (عدد الطلاب، عدد الكتب، التحديات، نسبة المشاركة) -->
-    <section class="teacher-summary-grid" aria-label="ملخص إحصائيات المعلم">
-      <div class="teacher-kpi-card">
-        <div class="kpi-icon-badge">👨‍🎓</div>
-        <div class="kpi-number" id="kpiStudentsCount">6</div>
-        <div class="kpi-label">عدد الطلاب المسجلين</div>
-      </div>
-
-      <div class="teacher-kpi-card">
-        <div class="kpi-icon-badge">📚</div>
-        <div class="kpi-number" id="kpiBooksCount">36</div>
-        <div class="kpi-label">عدد الكتب والقصص</div>
-      </div>
-
-      <div class="teacher-kpi-card">
-        <div class="kpi-icon-badge">🎯</div>
-        <div class="kpi-number" id="kpiAssignedCount">14</div>
-        <div class="kpi-label">المهارات والتحديات المسندة</div>
-      </div>
-
-      <div class="teacher-kpi-card">
-        <div class="kpi-icon-badge">📊</div>
-        <div class="kpi-number" id="kpiAvgParticipation">89%</div>
-        <div class="kpi-label">متوسط مشاركة الطلاب</div>
-      </div>
-    </section>
-
     <!-- Quick Section Switcher Strip (mirrors the 5 items in the Top-Right Hamburger Menu ☰) -->
-    <nav class="teacher-nav-strip no-print" id="teacherQuickNav" aria-label="أقسام صفحة المعلم">
+    <nav class="teacher-nav-strip no-print" id="teacherQuickNav" aria-label="أقسام صفحة المعلم" style="margin-top:-26px;position:relative;z-index:5;">
       <button type="button" class="teacher-nav-pill active" data-switch-teacher="home">
-        <span class="num-tag">(١)</span><span>الصفحة الرئيسية للمعلم</span>
+        <span>🏠 الصفحة الرئيسية للمعلم</span>
       </button>
       <button type="button" class="teacher-nav-pill" data-switch-teacher="students">
-        <span class="num-tag">(٢)</span><span>إدارة الطلاب</span>
+        <span>👨‍🎓 إدارة الطلاب والفصول</span>
       </button>
       <button type="button" class="teacher-nav-pill" data-switch-teacher="weekly-story">
-        <span class="num-tag">(٣)</span><span>تحدي قراءة القصص الأسبوعي</span>
+        <span>📖 تحدي قراءة القصص الأسبوعي</span>
       </button>
       <button type="button" class="teacher-nav-pill" data-switch-teacher="participation-report">
-        <span class="num-tag">(٤)</span><span>تقرير الطلاب ونسبة مشاركتهم</span>
+        <span>📊 تقرير نسب المشاركة والطلاب</span>
       </button>
       <button type="button" class="teacher-nav-pill" data-switch-teacher="badges-admin">
-        <span class="num-tag">(٥)</span><span>إدارة الإشارات والإنجازات</span>
+        <span>🏅 إدارة الأوسمة والإنجازات</span>
       </button>
     </nav>
 
     <!-- ===================================================================
-         (١) الصفحة الرئيسية للمعلم: معلومات المعلم + عدد الطلاب + عدد الكتب + تعديل بياناته وصورته
+         (١) الصفحة الرئيسية للمعلم: معلومات المعلم + عدد الطلاب + الإحصائيات فقط
          =================================================================== -->
     <section id="teacherPanelHome" class="teacher-tab-panel is-active" aria-label="الصفحة الرئيسية للمعلم">
 
-      <!-- بطاقة معلومات المعلم وتعديل البيانات والصورة -->
-      <div class="panel-card" id="teacherProfileEditCard">
+      <!-- 4 Summary KPI Cards (في الصفحة الرئيسية للمعلم فقط) -->
+      <section class="teacher-summary-grid" style="margin:0 0 16px;" aria-label="ملخص إحصائيات المعلم">
+        <div class="teacher-kpi-card">
+          <div class="kpi-icon-badge">👨‍🎓</div>
+          <div class="kpi-number" id="kpiStudentsCount">0</div>
+          <div class="kpi-label">عدد الطلاب المسجلين</div>
+        </div>
+
+        <div class="teacher-kpi-card">
+          <div class="kpi-icon-badge">📚</div>
+          <div class="kpi-number" id="kpiBooksCount">60+</div>
+          <div class="kpi-label">عدد القصص المتاحة</div>
+        </div>
+
+        <div class="teacher-kpi-card">
+          <div class="kpi-icon-badge">🎯</div>
+          <div class="kpi-number" id="kpiAssignedCount">0</div>
+          <div class="kpi-label">المهارات والتحديات المسندة</div>
+        </div>
+
+        <div class="teacher-kpi-card">
+          <div class="kpi-icon-badge">📊</div>
+          <div class="kpi-number" id="kpiAvgParticipation">0%</div>
+          <div class="kpi-label">متوسط مشاركة الطلاب</div>
+        </div>
+      </section>
+
+      <!-- بطاقة تعديل بيانات المعلم (تظهر عند الضغط على تعديل بياناتي) -->
+      <div class="panel-card" id="teacherProfileEditCard" style="display:none;">
         <div class="panel-card-header">
           <h2 class="panel-card-title"><span>(١)</span><span>الصفحة الرئيسية للمعلم – بياناتي وصورتي الشخصية</span></h2>
           <span class="badge-pill">🔒 ملف المعلم الشخصي</span>
@@ -1023,32 +1023,22 @@
 
         <!-- إسناد جماعي لجميع الطلاب أو لفصل محدد -->
         <div style="background:var(--sky-soft);border:1.5px solid var(--sky-border);border-radius:18px;padding:14px;margin-bottom:14px;">
-          <div style="font-weight:900;font-size:0.95rem;color:var(--navy-deep);margin-bottom:10px;">⚡ إسناد جماعي سريع لجميع طلاب الفصل</div>
+          <div style="font-weight:900;font-size:0.95rem;color:var(--navy-deep);margin-bottom:10px;">⚡ اختيار وإسناد المهارات وتحدي القراءة (تظهر مباشرة في مذكرة الطالب اليومية)</div>
           <div class="form-grid two-col">
             <div class="field-group">
-              <label for="bulkSkillSelect">إسناد مهارة أساسية لجميع الطلاب المعروضين</label>
+              <label for="bulkSkillSelect">قائمة جميع المهارات الأساسية والفهم القرائي (اختر وأسند للطلاب)</label>
               <div class="assign-row">
-                <select id="bulkSkillSelect" class="field-select">
-                  <option value="مهارة الحركات القصيرة والمدود (المستوى أ)">مهارة الحركات القصيرة والمدود (المستوى أ)</option>
-                  <option value="مهارة التنوين والشدة واللام الشمسية (المستوى ب)">مهارة التنوين والشدة واللام الشمسية (المستوى ب)</option>
-                  <option value="مهارة تحليل الكلمات والجمل الفعلية (المستوى ج)">مهارة تحليل الكلمات والجمل الفعلية (المستوى ج)</option>
-                  <option value="مهارة الاستيعاب القرائي واستنتاج الفكرة الرئيسة (المستوى ز)">مهارة الاستيعاب القرائي واستنتاج الفكرة الرئيسة (المستوى ز)</option>
-                  <option value="مهارة الطلاقة القرائية والتعبير الصوتي">مهارة الطلاقة القرائية والتعبير الصوتي</option>
-                </select>
-                <button type="button" id="bulkAssignSkillBtn" class="btn-primary-blue" style="white-space:nowrap;padding:10px 14px;font-size:0.82rem;">+ إسناد للكل</button>
+                <select id="bulkSkillSelect" class="field-select"></select>
+                <button type="button" id="bulkAssignSkillBtn" class="btn-primary-blue" style="white-space:nowrap;padding:10px 14px;font-size:0.82rem;">+ إسناد المهارة</button>
               </div>
+              <div id="teacherAllSkillsChecklist" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;max-height:145px;overflow-y:auto;padding:6px;background:#fff;border:1px solid #cbd5e1;border-radius:12px;"></div>
             </div>
 
             <div class="field-group">
-              <label for="bulkChallengeSelect">إسناد تحدي قراءة لجميع الطلاب المعروضين</label>
+              <label for="bulkChallengeSelect">اختيار قصة / تحدي القراءة لإسناده إلى الطلاب</label>
               <div class="assign-row">
-                <select id="bulkChallengeSelect" class="field-select">
-                  <option value="تحدي قراءة ٥ قصص في المستوى (ز) خلال أسبوع">تحدي قراءة ٥ قصص في المستوى (ز) خلال أسبوع</option>
-                  <option value="تحدي القارئ الذهبي: قراءة ١٠ كتب مع اجتياز الاختبار">تحدي القارئ الذهبي: قراءة ١٠ كتب مع اجتياز الاختبار</option>
-                  <option value="تحدي الاستماع الذكي وتسجيل القراءة الجهورية">تحدي الاستماع الذكي وتسجيل القراءة الجهورية</option>
-                  <option value="تحدي نجوم القراءة السريعة (١٠٠ نجمة)">تحدي نجوم القراءة السريعة (١٠٠ نجمة)</option>
-                </select>
-                <button type="button" id="bulkAssignChallengeBtn" class="btn-orange-action" style="white-space:nowrap;padding:10px 14px;font-size:0.82rem;">🏆 إسناد للكل</button>
+                <select id="bulkChallengeSelect" class="field-select"></select>
+                <button type="button" id="bulkAssignChallengeBtn" class="btn-orange-action" style="white-space:nowrap;padding:10px 14px;font-size:0.82rem;">🏆 إسناد التحدي</button>
               </div>
             </div>
           </div>
@@ -1384,7 +1374,7 @@
           level: 'المستوى (ز)',
           stars: 35,
           skill: 'الفهم القرائي واستنتاج الأحداث',
-          cover: '../assets/illustrations/story-school.jpg'
+          cover: '../assets/generated/story-school.jpg'
         },
         {
           id: 'plants',
@@ -1392,7 +1382,7 @@
           level: 'المستوى (ز)',
           stars: 40,
           skill: 'القراءة العلمية واستخراج المعلومات',
-          cover: '../assets/illustrations/story-nature.jpg'
+          cover: '../assets/generated/story-nature.jpg'
         },
         {
           id: 'space',
@@ -1400,7 +1390,7 @@
           level: 'المستوى (ب)',
           stars: 45,
           skill: 'الخيال العلمي والمفردات الجديدة',
-          cover: '../assets/illustrations/story-science.jpg'
+          cover: '../assets/generated/story-science.jpg'
         },
         {
           id: 'school_day',
@@ -1408,7 +1398,7 @@
           level: 'المستوى (أ)',
           stars: 30,
           skill: 'الحركات القصيرة والطلاقة القرائية',
-          cover: '../assets/illustrations/home-features-kids.jpg'
+          cover: '../assets/generated/home-features-kids.jpg'
         },
         {
           id: 'golden_book',
@@ -1416,7 +1406,7 @@
           level: 'المستوى (ج)',
           stars: 50,
           skill: 'تحليل التراكيب والجمل الفعلية',
-          cover: '../assets/illustrations/paper-book-frame.jpg'
+          cover: '../assets/generated/paper-book-frame.jpg'
         },
         {
           id: 'champion',
@@ -1424,7 +1414,7 @@
           level: 'المستوى (ز)',
           stars: 50,
           skill: 'التلخيص واستنتاج الفكرة الرئيسة',
-          cover: '../assets/illustrations/quiz-celebration.jpg'
+          cover: '../assets/generated/quiz-celebration.jpg'
         }
       ];
 
@@ -1555,18 +1545,20 @@
         }, 3200);
       }
 
-      // 1. Load & Save Teacher Profile
+      // 1. Load & Save Teacher Profile (Bound to logged-in teacher from external DB)
       function loadTeacherProfile() {
+        var cu = window.IREAD_AUTH && typeof window.IREAD_AUTH.getCurrentUser === 'function' ? window.IREAD_AUTH.getCurrentUser() : null;
         var def = {
-          name: 'أ. مريم العلي',
-          subject: 'معلمة اللغة العربية ومهارات القراءة',
-          school: 'مدارس الساحل الأهلية',
-          classes: 'الصف الأول والثاني والثالث – المستويات (أ – ز)',
-          bio: 'أهلاً بأبطال القراءة! هدفنا هذا الأسبوع قراءة القصة الأسبوعية بتركيز وحصد وسام القارئ الذهبي.',
-          avatar: PRESET_TEACHER_AVATARS[0]
+          name: (cu && cu.role === 'teacher' && cu.name) ? cu.name : 'معلم اللغة العربية',
+          subject: (cu && cu.subject) ? cu.subject : 'اللغة العربية ومهارات الفهم القرائي',
+          school: (cu && cu.school) ? cu.school : 'مدرسة الساحل الأهلية',
+          classes: (cu && cu.classes) ? cu.classes : 'الفصول المسندة',
+          bio: 'أهلاً بأبطال القراءة! هدفنا هذا الأسبوع إتقان المهارات القرائية وقراءة القصص بتركيز.',
+          avatar: (cu && cu.customAvatar) ? cu.customAvatar : PRESET_TEACHER_AVATARS[0]
         };
+        var pKey = cu && cu.id ? ('iread_teacher_profile_' + cu.id) : TEACHER_PROFILE_KEY;
         try {
-          var raw = localStorage.getItem(TEACHER_PROFILE_KEY);
+          var raw = localStorage.getItem(pKey);
           if (raw) {
             var parsed = JSON.parse(raw);
             return Object.assign({}, def, parsed);
@@ -1577,33 +1569,21 @@
 
       function saveTeacherProfile(profile) {
         try {
-          localStorage.setItem(TEACHER_PROFILE_KEY, JSON.stringify(profile));
-          var curRaw = localStorage.getItem('iread_current_user_v1');
-          if (curRaw) {
-            var cur = JSON.parse(curRaw);
-            if (cur && cur.role === 'teacher') {
-              cur.name = profile.name;
-              cur.school = profile.school;
-              cur.customAvatar = profile.avatar;
-              localStorage.setItem('iread_current_user_v1', JSON.stringify(cur));
-            }
+          var cu = window.IREAD_AUTH && typeof window.IREAD_AUTH.getCurrentUser === 'function' ? window.IREAD_AUTH.getCurrentUser() : null;
+          var pKey = cu && cu.id ? ('iread_teacher_profile_' + cu.id) : TEACHER_PROFILE_KEY;
+          localStorage.setItem(pKey, JSON.stringify(profile));
+          if (cu && cu.role === 'teacher') {
+            cu.name = profile.name;
+            cu.school = profile.school;
+            cu.customAvatar = profile.avatar;
+            localStorage.setItem('iread_current_user_v1', JSON.stringify(cu));
           }
         } catch (e) {}
       }
 
-      // 2. Load & Save Students
+      // 2. Load & Save Students (Real students from external DB only — no dummy data)
       function loadStudents() {
-        var list = null;
-        try {
-          var raw = localStorage.getItem(TEACHER_STUDENTS_KEY);
-          if (raw) {
-            var parsed = JSON.parse(raw);
-            if (Array.isArray(parsed) && parsed.length > 0) list = parsed;
-          }
-        } catch (e) {}
-        if (!list) {
-          list = JSON.parse(JSON.stringify(DEFAULT_STUDENTS));
-        }
+        var list = [];
         try {
           if (window.IREAD_AUTH && typeof window.IREAD_AUTH.loadUsers === 'function') {
             var cu = window.IREAD_AUTH.getCurrentUser();
@@ -1616,28 +1596,25 @@
               return true;
             });
             teacherStudents.forEach(function (u) {
-              var exists = list.some(function (s) {
-                return s.authId === u.id || s.name === u.name;
+              list.push({
+                id: u.numericId || u.id,
+                authId: u.id,
+                nationalId: u.nationalId || u.username,
+                name: u.name,
+                grade: u.grade || 'الصف الأول',
+                section: u.section || 'أ',
+                booksRead: 0,
+                totalBooksGoal: 20,
+                quizAvg: 0,
+                participation: 75,
+                stars: 100,
+                skills: [],
+                challenges: [],
+                badges: []
               });
-              if (!exists) {
-                list.push({
-                  id: u.id,
-                  authId: u.id,
-                  name: u.name,
-                  grade: u.grade || 'الصف الأول',
-                  section: u.section || 'أ',
-                  level: u.level || 'مستوى أ',
-                  points: 0,
-                  books: 0,
-                  participation: 50,
-                  skills: [],
-                  badges: []
-                });
-              }
             });
           }
         } catch (e) {}
-        localStorage.setItem(TEACHER_STUDENTS_KEY, JSON.stringify(list));
         return list;
       }
 
@@ -1924,7 +1901,7 @@
           var isSel = st.id === selectedStoryId ? 'selected' : '';
           return (
             '<div class="story-pick-card ' + isSel + '" data-story-id="' + st.id + '">' +
-              '<img class="story-pick-cover" src="' + st.cover + '" alt="' + st.title + '" onerror="this.onerror=null;this.src=\'../assets/illustrations/paper-book-frame.jpg\';">' +
+              '<img class="story-pick-cover" src="' + st.cover + '" alt="' + st.title + '" onerror="this.onerror=null;this.src=\'../assets/generated/paper-book-frame.jpg\';">' +
               '<div class="story-pick-title">' + st.title + '</div>' +
               '<div style="font-size:0.75rem;color:#476288;font-weight:800;">' + st.level + ' • ⭐ ' + st.stars + ' نجمة</div>' +
             '</div>'
@@ -2193,7 +2170,68 @@
       document.getElementById('heroQuickEditBtn').addEventListener('click', function () {
         window.switchTeacherTab('home');
         var card = document.getElementById('teacherProfileEditCard');
-        if (card) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (card) {
+          card.style.display = card.style.display === 'none' ? 'block' : 'none';
+          if (card.style.display === 'block') card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+
+      // Populate ALL Skills (27+) & Reading Challenge Stories into Teacher Assignment Controls
+      function populateTeacherSkillAndChallengePickers() {
+        var skillSel = document.getElementById('bulkSkillSelect');
+        var checklistEl = document.getElementById('teacherAllSkillsChecklist');
+        var chSel = document.getElementById('bulkChallengeSelect');
+        var allSkills = (window.IREAD_SKILLS && typeof window.IREAD_SKILLS.getAllSkills === 'function')
+          ? window.IREAD_SKILLS.getAllSkills()
+          : ((window.IREAD_SKILLS && window.IREAD_SKILLS.SKILLS) || []);
+
+        if (skillSel && allSkills.length) {
+          skillSel.innerHTML = allSkills.map(function (sk) {
+            return '<option value="' + sk.id + '">' + sk.title + ' (' + (sk.cat || 'مهارة') + ')</option>';
+          }).join('');
+        }
+        if (checklistEl && allSkills.length) {
+          checklistEl.innerHTML = allSkills.map(function (sk) {
+            return '<label style="display:inline-flex;align-items:center;gap:4px;background:#f8fafc;border:1px solid #cbd5e1;border-radius:999px;padding:3px 10px;font-size:0.74rem;font-weight:800;cursor:pointer;">' +
+              '<input type="checkbox" class="teacher-skill-pick" value="' + sk.id + '"> ' + sk.title +
+            '</label>';
+          }).join('');
+        }
+        if (chSel) {
+          var stories = Array.isArray(window.KIDZZ_STORIES_8_12) ? window.KIDZZ_STORIES_8_12 : [];
+          chSel.innerHTML = stories.slice(0, 25).map(function (st) {
+            return '<option value="' + st.id + '">📖 قصة تحدي القراءة: ' + st.title + '</option>';
+          }).join('');
+        }
+      }
+      populateTeacherSkillAndChallengePickers();
+
+      function saveTeacherDailyTasksToStudents(skillIds, storyObj) {
+        var cu = window.IREAD_AUTH && typeof window.IREAD_AUTH.getCurrentUser === 'function' ? window.IREAD_AUTH.getCurrentUser() : null;
+        var tid = (cu && cu.id) || 'global';
+        var keys = ['iread_teacher_daily_tasks_' + tid, 'iread_teacher_daily_tasks_global'];
+        keys.forEach(function (k) {
+          var cur = { skillIds: [], stories: [] };
+          try { cur = JSON.parse(localStorage.getItem(k) || 'null') || cur; } catch (e) {}
+          cur.skillIds = Array.isArray(cur.skillIds) ? cur.skillIds : [];
+          cur.stories = Array.isArray(cur.stories) ? cur.stories : [];
+          if (Array.isArray(skillIds)) {
+            skillIds.forEach(function (sid) {
+              if (sid && cur.skillIds.indexOf(sid) === -1) cur.skillIds.unshift(sid);
+            });
+          }
+          if (storyObj && storyObj.id && !cur.stories.some(function (s) { return s.id === storyObj.id; })) {
+            cur.stories.unshift(storyObj);
+          }
+          try { localStorage.setItem(k, JSON.stringify(cur)); } catch (e) {}
+        });
+      }
+
+      window.addEventListener('iread:db-synced', function () {
+        teacherProfile = loadTeacherProfile();
+        studentsList = loadStudents();
+        renderTeacherProfileUI();
+        renderAll();
       });
 
       // ===================================================================
@@ -2234,27 +2272,58 @@
 
       // 3. Bulk Assign Skill & Bulk Assign Challenge
       document.getElementById('bulkAssignSkillBtn').addEventListener('click', function () {
-        var sk = document.getElementById('bulkSkillSelect').value;
+        var checkedSkillIds = Array.from(document.querySelectorAll('.teacher-skill-pick:checked')).map(function (c) { return c.value; });
+        var selId = document.getElementById('bulkSkillSelect').value;
+        var chosenIds = checkedSkillIds.length ? checkedSkillIds : (selId ? [selId] : []);
+        if (!chosenIds.length) return;
+        var allSkills = (window.IREAD_SKILLS && typeof window.IREAD_SKILLS.getAllSkills === 'function')
+          ? window.IREAD_SKILLS.getAllSkills()
+          : ((window.IREAD_SKILLS && window.IREAD_SKILLS.SKILLS) || []);
+        var chosenTitles = chosenIds.map(function (id) {
+          var found = allSkills.find(function (s) { return s.id === id; });
+          return found ? found.title : id;
+        });
+
         var filtered = getFilteredStudents();
         filtered.forEach(function (s) {
           s.skills = s.skills || [];
-          if (s.skills.indexOf(sk) === -1) s.skills.push(sk);
+          chosenTitles.forEach(function (t) {
+            if (s.skills.indexOf(t) === -1) s.skills.push(t);
+          });
         });
+
+        if (window.IREAD_SKILLS) {
+          if (typeof window.IREAD_SKILLS.setGlobalAssignedSkill === 'function') {
+            window.IREAD_SKILLS.setGlobalAssignedSkill(chosenIds[0]);
+          }
+          var cu = window.IREAD_AUTH && typeof window.IREAD_AUTH.getCurrentUser === 'function' ? window.IREAD_AUTH.getCurrentUser() : null;
+          if (cu && typeof window.IREAD_SKILLS.distributeSkillsToTeacher === 'function') {
+            window.IREAD_SKILLS.distributeSkillsToTeacher(cu.id, chosenIds);
+          }
+        }
+        saveTeacherDailyTasksToStudents(chosenIds, null);
         saveStudents(studentsList);
         renderAll();
-        showToast('📘 تم إسناد المهارة الأساسية لعدد (' + filtered.length + ') من الطلاب');
+        showToast('📘 تم إسناد (' + chosenTitles.length + ') مهارة لعدد (' + filtered.length + ') من الطلاب وتحديث مذكرتهم اليومية');
       });
 
       document.getElementById('bulkAssignChallengeBtn').addEventListener('click', function () {
-        var ch = document.getElementById('bulkChallengeSelect').value;
+        var chSel = document.getElementById('bulkChallengeSelect');
+        var chId = chSel.value;
+        var chText = chSel.options[chSel.selectedIndex] ? chSel.options[chSel.selectedIndex].text : chId;
+        var stories = Array.isArray(window.KIDZZ_STORIES_8_12) ? window.KIDZZ_STORIES_8_12 : [];
+        var stObj = stories.find(function (x) { return x.id === chId; });
+        var storyTitle = stObj ? stObj.title : chText;
+
         var filtered = getFilteredStudents();
         filtered.forEach(function (s) {
           s.challenges = s.challenges || [];
-          if (s.challenges.indexOf(ch) === -1) s.challenges.push(ch);
+          if (s.challenges.indexOf(storyTitle) === -1) s.challenges.push(storyTitle);
         });
+        saveTeacherDailyTasksToStudents(null, { id: chId, title: storyTitle });
         saveStudents(studentsList);
         renderAll();
-        showToast('🏆 تم إسناد تحدي القراءة لعدد (' + filtered.length + ') من الطلاب');
+        showToast('🏆 تم إسناد قصة تحدي القراءة «' + storyTitle + '» لعدد (' + filtered.length + ') من الطلاب في مذكرتهم اليومية');
       });
 
       // 4. Filter & Add New Student

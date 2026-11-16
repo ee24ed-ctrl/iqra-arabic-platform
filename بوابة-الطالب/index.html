@@ -2358,15 +2358,36 @@
           });
         }
 
-        var pendingBooks = LEVEL_Z_BOOKS.filter(function (b) { return !(b.readDone && b.listenDone && b.quizDone); });
+        var teacherIdForTasks = currentUser && currentUser.assignedTeacherId ? currentUser.assignedTeacherId : '';
+        var teacherAssignedStories = [];
+        try {
+          var tdRaw = localStorage.getItem('iread_teacher_daily_tasks_' + (teacherIdForTasks || 'global')) || localStorage.getItem('iread_teacher_daily_tasks_global');
+          if (tdRaw) {
+            var tdObj = JSON.parse(tdRaw);
+            if (tdObj && Array.isArray(tdObj.stories)) teacherAssignedStories = tdObj.stories;
+          }
+        } catch (e) {}
+
+        var pendingBooks = LEVEL_Z_BOOKS.filter(function (b) { return !(b.readDone && b.quizDone); });
         if (tasksCountEl) tasksCountEl.textContent = String(pendingBooks.length);
 
-        var storyTasks = pendingBooks.slice(0, 3);
+        var assignedIds = teacherAssignedStories.map(function (s) { return s.id; });
+        var prioritizedBooks = [];
+        assignedIds.forEach(function (bid) {
+          var found = LEVEL_Z_BOOKS.find(function (b) { return b.id === bid; });
+          if (found) prioritizedBooks.push(found);
+        });
+        pendingBooks.forEach(function (b) {
+          if (prioritizedBooks.indexOf(b) === -1) prioritizedBooks.push(b);
+        });
+
+        var storyTasks = prioritizedBooks.slice(0, 3);
         storyTasks.forEach(function (b) {
+          var isTeacherPicked = assignedIds.indexOf(b.id) !== -1;
           rowsHtml.push(
             '<div class="notebook-task-row is-story">' +
               '<div style="flex:1;min-width:190px;">' +
-                '<span style="font-size:0.72rem;font-weight:900;color:#b45309;display:block;">📖 تكليف بقراءة قصة وفهمها</span>' +
+                '<span style="font-size:0.72rem;font-weight:900;color:#b45309;display:block;">' + (isTeacherPicked ? '📌 تكليف من المعلم بقراءة القصة' : '📖 تكليف بقراءة قصة وفهمها') + '</span>' +
                 '<strong style="font-size:0.9rem;color:#0f172a;">' + b.title + '</strong>' +
               '</div>' +
               '<button type="button" onclick="openBookModal(\'' + b.id + '\', \'read\')" style="border:none;background:#ee6b1e;color:#fff;font-weight:900;font-size:0.78rem;padding:6px 13px;border-radius:10px;cursor:pointer;flex-shrink:0;">اقرأ القصة ←</button>' +
