@@ -717,6 +717,111 @@
         max-width: 520px;
       }
     }
+
+    /* =====================================================================
+       5. SINGLE-SCREEN MOBILE LOCK (صفحة واحدة بدون تمرير على الجوال)
+       ===================================================================== */
+    @media (max-width: 639px) {
+      html, body {
+        height: 100dvh;
+        overflow: hidden;
+      }
+      .auth-page-wrapper {
+        height: 100dvh;
+        min-height: 100dvh;
+        max-height: 100dvh;
+        overflow: hidden;
+        justify-content: space-between;
+      }
+      .auth-shell {
+        flex: 1 1 auto;
+        min-height: 0;
+        width: 100%;
+        justify-content: space-evenly;
+        padding-bottom: 4px;
+      }
+      .hero-banner-box {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-banner-img {
+        width: 100%;
+        height: auto;
+        max-height: 30dvh;
+        object-fit: cover;
+        object-position: center center;
+      }
+      .form-column {
+        margin-top: -8px;
+        padding: 0 14px;
+        flex: 1 1 auto;
+        justify-content: center;
+        min-height: 0;
+      }
+      .auth-card {
+        padding: 14px 16px;
+        border-radius: 24px;
+      }
+      .auth-card h2 {
+        font-size: 1.08rem !important;
+        margin: 0 0 10px !important;
+      }
+      .pill-input-group {
+        margin-bottom: 9px;
+      }
+      .pill-input {
+        height: 44px;
+        font-size: 0.94rem;
+      }
+      .forgot-row {
+        margin: 0 4px 10px;
+      }
+      .forgot-btn {
+        font-size: 0.84rem;
+      }
+      .btn-glossy-primary {
+        height: 46px;
+        font-size: 1.06rem;
+        margin-bottom: 8px;
+      }
+      .btn-pill-outline {
+        height: 44px;
+        font-size: 1.02rem;
+      }
+      .lang-switcher-row {
+        margin-top: 10px;
+        gap: 10px;
+      }
+      .lang-pill {
+        height: 38px;
+        font-size: 0.9rem;
+      }
+      .slogan-section {
+        margin-top: 8px;
+      }
+      .book-divider {
+        margin-bottom: 2px;
+      }
+      .book-divider svg {
+        width: 24px;
+        height: 20px;
+      }
+      .slogan-text {
+        font-size: 0.96rem;
+      }
+      .bottom-wave-wrap {
+        flex-shrink: 0;
+      }
+      .bottom-wave-svg {
+        height: 34px;
+      }
+      .auth-card:has(#registerViewForm:not(.d-none)) {
+        max-height: 64dvh;
+        overflow-y: auto;
+      }
+    }
   </style>
   <link rel="stylesheet" href="../assets/mobile-responsive.css">
 </head>
