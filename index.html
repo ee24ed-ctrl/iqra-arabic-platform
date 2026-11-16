@@ -777,13 +777,7 @@
 
           <!-- LOGIN VIEW (Default) -->
           <form id="loginViewForm" autocomplete="on">
-            <div class="role-selector-grid" id="loginRoleGrid">
-              <button type="button" class="role-pill-btn active" data-role="student"><span>🎓</span><span>طالب</span></button>
-              <button type="button" class="role-pill-btn" data-role="teacher"><span>👩‍🏫</span><span>معلم</span></button>
-              <button type="button" class="role-pill-btn" data-role="admin"><span>🏫</span><span>مدير</span></button>
-              <button type="button" class="role-pill-btn" data-role="supervisor"><span>🧭</span><span>مشرف تربوي</span></button>
-              <button type="button" class="role-pill-btn" data-role="general_supervisor"><span>🏛️</span><span>مشرف عام</span></button>
-            </div>
+            <h2 style="text-align:center;font-size:1.25rem;font-weight:900;color:#082f68;margin:0 0 16px;">تسجيل الدخول</h2>
 
             <!-- Username Pill -->
             <div class="pill-input-group">
@@ -904,19 +898,7 @@
           <!-- Feedback Message Box -->
           <div id="authFeedbackBox" class="auth-feedback" role="status" aria-live="polite"></div>
 
-          <!-- Quick Demo & Platform Navigation Strip -->
-          <div class="quick-access-box">
-            <div class="quick-access-title" id="quickAccessTitle">⚡ دخول مباشر حسب الصفة أو استعراض المنصة:</div>
-            <div class="quick-chips">
-              <button type="button" class="quick-chip demo-login-chip" data-role="student">🎓 طالب</button>
-              <button type="button" class="quick-chip demo-login-chip" data-role="teacher">👩‍🏫 معلم</button>
-              <button type="button" class="quick-chip demo-login-chip" data-role="admin">🏫 مدير</button>
-              <button type="button" class="quick-chip demo-login-chip" data-role="supervisor">🧭 مشرف تربوي</button>
-              <button type="button" class="quick-chip demo-login-chip" data-role="general_supervisor">🏛️ مشرف عام</button>
-              <a href="./home.html" class="quick-chip">🏠 المنصة الرئيسية</a>
-              <button type="button" id="replayFlashBtn" class="quick-chip">🎬 فيديو البداية</button>
-            </div>
-          </div>
+
 
         </div>
 
@@ -1090,21 +1072,10 @@
         });
       }
 
-      var DEFAULT_ROLE_USERS = {
-        student: 'yusuf',
-        teacher: 'teacher1',
-        admin: 'admin1',
-        supervisor: 'sup1',
-        general_supervisor: 'gsup1'
-      };
-
       // Forgot Password Helper
       if (forgotPassBtn) {
         forgotPassBtn.addEventListener('click', function () {
-          var defUser = DEFAULT_ROLE_USERS[selectedRole] || 'yusuf';
-          loginIdentifier.value = defUser;
-          loginPass.value = '1234';
-          showFeedback('info', '💡 تم تعبئة بيانات الدخول الافتراضية (اسم المستخدم: <b>' + defUser + '</b> | كلمة المرور: <b>1234</b>). اضغط على <b>تسجيل الدخول</b> الآن.');
+          showFeedback('info', '💡 للدخول: أدخل رقم الهوية / الإقامة وكلمة المرور <b>123456</b> للطلاب، أو تواصل مع إدارة المدرسة لاستعادة كلمة المرور.');
         });
       }
 
@@ -1150,14 +1121,9 @@
           e.preventDefault();
           var A = window.IREAD_AUTH;
           if (!A) return;
-          var res = A.loginUser(loginIdentifier.value, loginPass.value, selectedRole);
+          var res = A.loginUser(loginIdentifier.value, loginPass.value);
           if (!res.ok) {
-            // Try without role filter in case username belongs to a specific role directly
-            res = A.loginUser(loginIdentifier.value, loginPass.value);
-          }
-          if (!res.ok) {
-            var defU = DEFAULT_ROLE_USERS[selectedRole] || 'yusuf';
-            showFeedback('error', res.error || ('بيانات الدخول غير صحيحة. جرب: ' + defU + ' وكلمة المرور: 1234'));
+            showFeedback('error', res.error || 'بيانات الدخول غير صحيحة. تأكد من اسم المستخدم وكلمة المرور.');
             return;
           }
           showFeedback('success', '✅ أهلاً بك يا ' + res.user.name + '! جاري تحويلك إلى صفحتك...');

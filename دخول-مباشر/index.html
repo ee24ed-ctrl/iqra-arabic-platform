@@ -762,13 +762,7 @@
 
           <!-- LOGIN VIEW (Default) -->
           <form id="loginViewForm" autocomplete="on">
-            <div class="role-selector-grid" id="loginRoleGrid">
-              <button type="button" class="role-pill-btn active" data-role="student"><span>ًںژ“</span><span>ط·ط§ظ„ط¨</span></button>
-              <button type="button" class="role-pill-btn" data-role="teacher"><span>ًں‘©â€چًںڈ«</span><span>ظ…ط¹ظ„ظ…</span></button>
-              <button type="button" class="role-pill-btn" data-role="admin"><span>ًںڈ«</span><span>ظ…ط¯ظٹط±</span></button>
-              <button type="button" class="role-pill-btn" data-role="supervisor"><span>ًں§­</span><span>ظ…ط´ط±ظپ طھط±ط¨ظˆظٹ</span></button>
-              <button type="button" class="role-pill-btn" data-role="general_supervisor"><span>ًںڈ›ï¸ڈ</span><span>ظ…ط´ط±ظپ ط¹ط§ظ…</span></button>
-            </div>
+            <h2 style="text-align:center;font-size:1.25rem;font-weight:900;color:#082f68;margin:0 0 16px;">تسجيل الدخول</h2>
 
             <!-- Username Pill -->
             <div class="pill-input-group">
@@ -883,19 +877,6 @@
 
           <!-- Feedback Message Box -->
           <div id="authFeedbackBox" class="auth-feedback" role="status" aria-live="polite"></div>
-
-          <!-- Quick Demo & Platform Navigation Strip -->
-          <div class="quick-access-box">
-            <div class="quick-access-title" id="quickAccessTitle">âڑ، ط¯ط®ظˆظ„ ظ…ط¨ط§ط´ط± ط­ط³ط¨ ط§ظ„طµظپط© ط£ظˆ ط§ط³طھط¹ط±ط§ط¶ ط§ظ„ظ…ظ†طµط©:</div>
-            <div class="quick-chips">
-              <button type="button" class="quick-chip demo-login-chip" data-role="student">ًںژ“ ط·ط§ظ„ط¨</button>
-              <button type="button" class="quick-chip demo-login-chip" data-role="teacher">ًں‘©â€چًںڈ« ظ…ط¹ظ„ظ…</button>
-              <button type="button" class="quick-chip demo-login-chip" data-role="admin">ًںڈ« ظ…ط¯ظٹط±</button>
-              <button type="button" class="quick-chip demo-login-chip" data-role="supervisor">ًں§­ ظ…ط´ط±ظپ طھط±ط¨ظˆظٹ</button>
-              <button type="button" class="quick-chip demo-login-chip" data-role="general_supervisor">ًںڈ›ï¸ڈ ظ…ط´ط±ظپ ط¹ط§ظ…</button>
-              <a href="../home.html" class="quick-chip">ًںڈ  ط§ظ„ظ…ظ†طµط© ط§ظ„ط±ط¦ظٹط³ظٹط©</a>
-              <button type="button" id="replayFlashBtn" class="quick-chip">ًںژ¬ ظپظٹط¯ظٹظˆ ط§ظ„ط¨ط¯ط§ظٹط©</button>
-            </div>
           </div>
 
         </div>
@@ -1070,118 +1051,12 @@
         });
       }
 
-      var DEFAULT_ROLE_USERS = {
-        student: 'yusuf',
-        teacher: 'teacher1',
-        admin: 'admin1',
-        supervisor: 'sup1',
-        general_supervisor: 'gsup1'
-      };
-
       // Forgot Password Helper
       if (forgotPassBtn) {
         forgotPassBtn.addEventListener('click', function () {
-          var defUser = DEFAULT_ROLE_USERS[selectedRole] || 'yusuf';
-          loginIdentifier.value = defUser;
-          loginPass.value = '1234';
-          showFeedback('info', 'ًں’، طھظ… طھط¹ط¨ط¦ط© ط¨ظٹط§ظ†ط§طھ ط§ظ„ط¯ط®ظˆظ„ ط§ظ„ط§ظپطھط±ط§ط¶ظٹط© (ط§ط³ظ… ط§ظ„ظ…ط³طھط®ط¯ظ…: <b>' + defUser + '</b> | ظƒظ„ظ…ط© ط§ظ„ظ…ط±ظˆط±: <b>1234</b>). ط§ط¶ط؛ط· ط¹ظ„ظ‰ <b>طھط³ط¬ظٹظ„ ط§ظ„ط¯ط®ظˆظ„</b> ط§ظ„ط¢ظ†.');
-        });
-      }
-
-      // Switch between Login and Register forms
-      if (openRegisterBtn) {
-        openRegisterBtn.addEventListener('click', function () {
-          loginViewForm.classList.add('d-none');
-          registerViewForm.classList.remove('d-none');
-          feedbackBox.className = 'auth-feedback';
-        });
-      }
-
-      if (backToLoginBtn) {
-        backToLoginBtn.addEventListener('click', function () {
-          registerViewForm.classList.add('d-none');
-          loginViewForm.classList.remove('d-none');
-          feedbackBox.className = 'auth-feedback';
-        });
-      }
-
-      // Role pills in Login & Register forms
-      var roleBtns = document.querySelectorAll('.role-pill-btn');
-      roleBtns.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          selectedRole = btn.getAttribute('data-role') || 'student';
-          roleBtns.forEach(function (b) {
-            b.classList.toggle('active', b.getAttribute('data-role') === selectedRole);
-          });
+          showFeedback('info', '💡 للدخول: أدخل رقم الهوية / الإقامة وكلمة المرور <b>123456</b> للطلاب، أو تواصل مع إدارة المدرسة لاستعادة كلمة المرور.');
         });
       });
-
-      function redirectUser(user) {
-        var A = window.IREAD_AUTH;
-        var meta = (A && A.ROLE_META && A.ROLE_META[user.role]) ? A.ROLE_META[user.role] : { home: 'ط¨ظˆط§ط¨ط©-ط§ظ„ط·ط§ظ„ط¨/index.html' };
-        setTimeout(function () {
-          window.location.href = BASE_PREFIX + meta.home;
-        }, 650);
-      }
-
-      // Login Submit
-      if (loginViewForm) {
-        loginViewForm.addEventListener('submit', function (e) {
-          e.preventDefault();
-          var A = window.IREAD_AUTH;
-          if (!A) return;
-          var res = A.loginUser(loginIdentifier.value, loginPass.value, selectedRole);
-          if (!res.ok) {
-            // Try without role filter in case username belongs to a specific role directly
-            res = A.loginUser(loginIdentifier.value, loginPass.value);
-          }
-          if (!res.ok) {
-            var defU = DEFAULT_ROLE_USERS[selectedRole] || 'yusuf';
-            showFeedback('error', res.error || ('ط¨ظٹط§ظ†ط§طھ ط§ظ„ط¯ط®ظˆظ„ ط؛ظٹط± طµط­ظٹط­ط©. ط¬ط±ط¨: ' + defU + ' ظˆظƒظ„ظ…ط© ط§ظ„ظ…ط±ظˆط±: 1234'));
-            return;
-          }
-          showFeedback('success', 'âœ… ط£ظ‡ظ„ط§ظ‹ ط¨ظƒ ظٹط§ ' + res.user.name + '! ط¬ط§ط±ظٹ طھط­ظˆظٹظ„ظƒ ط¥ظ„ظ‰ طµظپط­طھظƒ...');
-          redirectUser(res.user);
-        });
-      }
-
-      // Register Submit
-      if (registerViewForm) {
-        registerViewForm.addEventListener('submit', function (e) {
-          e.preventDefault();
-          var A = window.IREAD_AUTH;
-          if (!A) return;
-          var res = A.registerUser({
-            role: selectedRole,
-            name: document.getElementById('regFullName').value,
-            username: document.getElementById('regUsername').value,
-            pass: document.getElementById('regPassword').value,
-            school: document.getElementById('regSchool').value,
-            grade: document.getElementById('regGrade').value,
-            level: document.getElementById('regLevel').value
-          });
-          if (!res.ok) {
-            showFeedback('error', res.error);
-            return;
-          }
-          showFeedback('success', 'ًںژ‰ طھظ… ط¥ظ†ط´ط§ط، ط­ط³ط§ط¨ظƒ ط¨ظ†ط¬ط§ط­ ظٹط§ ' + res.user.name + '! ط¬ط§ط±ظٹ ط§ظ„ط¯ط®ظˆظ„...');
-          redirectUser(res.user);
-        });
-      }
-
-      // Quick Demo Login Chips
-      var demoChips = document.querySelectorAll('.demo-login-chip');
-      demoChips.forEach(function (chip) {
-        chip.addEventListener('click', function () {
-          var role = chip.getAttribute('data-role');
-          var A = window.IREAD_AUTH;
-          if (!A) return;
-          var res = A.quickDemoLogin(role);
-          if (res.ok) {
-            showFeedback('success', 'âڑ، طھظ… ط§ظ„ط¯ط®ظˆظ„ ط§ظ„ط³ط±ظٹط¹ ط¨ط­ط³ط§ط¨: ' + res.user.name);
-            redirectUser(res.user);
-          }
-        });
       });
 
       // Language Switcher (ط§ظ„ط¹ط±ط¨ظٹط© / English)
