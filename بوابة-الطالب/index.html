@@ -2408,7 +2408,7 @@
                 '<span style="font-size:0.72rem;font-weight:900;color:#b45309;display:block;">' + (isTeacherPicked ? '📌 تكليف من المعلم بقراءة القصة' : '📖 تكليف بقراءة قصة وفهمها') + '</span>' +
                 '<strong style="font-size:0.9rem;color:#0f172a;">' + b.title + '</strong>' +
               '</div>' +
-              '<button type="button" onclick="openBookModal(\'' + b.id + '\', \'read\')" style="border:none;background:#ee6b1e;color:#fff;font-weight:900;font-size:0.78rem;padding:6px 13px;border-radius:10px;cursor:pointer;flex-shrink:0;">اقرأ القصة ←</button>' +
+              '<button type="button" data-book-id="' + b.id + '" data-action="read" style="border:none;background:#ee6b1e;color:#fff;font-weight:900;font-size:0.78rem;padding:6px 13px;border-radius:10px;cursor:pointer;flex-shrink:0;">اقرأ القصة ←</button>' +
             '</div>'
           );
         });
@@ -2930,6 +2930,7 @@
           window.location.href = '../اختبار-القصة/index.html?bookId=' + encodeURIComponent(book.id);
         }
       }
+      window.openBookModal = openBookAction;
 
       document.addEventListener('click', function (e) {
         var trigger = e.target.closest('[data-book-id][data-action]');

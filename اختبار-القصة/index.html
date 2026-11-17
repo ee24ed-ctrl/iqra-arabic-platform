@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>اختبار الفهم القرائي التفاعلي – أقرأ بالعربية</title>
   <link rel="icon" href="../favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Noto+Naskh+Arabic:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/awesome5.min.css">
   <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/theme.css">
@@ -14,23 +17,10 @@
       direction: rtl;
       text-align: right;
       background: linear-gradient(180deg, #eff6ff 0%, #f8fafc 100%);
-      font-family: Tahoma, Arial, sans-serif;
+      font-family: 'Noto Naskh Arabic', 'Cairo', Tahoma, Arial, sans-serif;
+      font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+      letter-spacing: 0;
       min-height: 100vh;
-    }
-
-    .portal-banner {
-      background: linear-gradient(120deg, rgba(28, 90, 166, 0.94), rgba(19, 64, 120, 0.94)),
-        url("../wp-content/uploads/2022/06/bg-page-title-copy.webp") center/cover no-repeat;
-      color: #fff;
-      padding: 24px 0;
-      text-align: center;
-    }
-
-    .portal-banner h1 {
-      color: #fff;
-      font-weight: 800;
-      font-size: 1.45rem;
-      margin-bottom: 4px;
     }
 
     .act-card {
@@ -98,11 +88,13 @@
     .q-type-order { background: linear-gradient(135deg, #ea580c, #f59e0b); }
 
     .q-question-title {
-      font-size: 1.12rem;
-      font-weight: 800;
+      font-family: 'Noto Naskh Arabic', 'Cairo', Arial, sans-serif;
+      font-size: 1.38rem;
+      font-weight: 700;
       color: #0f172a;
       margin-bottom: 14px;
-      line-height: 1.7;
+      line-height: 2.15;
+      letter-spacing: 0;
     }
 
     .opt-btn {
@@ -112,12 +104,14 @@
       gap: 10px;
       width: 100%;
       text-align: right !important;
-      padding: 11px 14px;
+      padding: 12px 16px;
       border-radius: 15px;
       border: 2px solid #cbd5e1;
       background: #f8fafc;
-      font-size: 0.94rem;
-      line-height: 1.55 !important;
+      font-family: 'Noto Naskh Arabic', 'Cairo', Arial, sans-serif;
+      font-size: 1.2rem;
+      line-height: 2.0 !important;
+      letter-spacing: 0;
       font-weight: 700;
       color: #1e293b;
       cursor: pointer;
@@ -128,7 +122,7 @@
     .opt-btn > span:last-child {
       flex: 1;
       text-align: right;
-      line-height: 1.55;
+      line-height: 2.0;
     }
 
     .opt-btn:hover:not(:disabled) {
@@ -178,11 +172,13 @@
     }
 
     .word-chip {
-      padding: 7px 12px;
+      padding: 8px 14px;
       border-radius: 12px;
-      font-weight: 800;
-      font-size: 0.9rem;
-      line-height: 1.4 !important;
+      font-family: 'Noto Naskh Arabic', 'Cairo', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      line-height: 1.9 !important;
+      letter-spacing: 0;
       border: 2px solid #f59e0b;
       background: #fffbeb;
       color: #92400e;
@@ -244,37 +240,24 @@
     }
 
     @media (max-width: 640px) {
-      .portal-banner { padding: 14px 0; }
-      .portal-banner h1 { font-size: 1.05rem; }
-      #quizStoryMeta { font-size: 0.76rem !important; }
-      #quizCoverImg { width: 54px !important; height: 54px !important; }
       .act-card { padding: 14px; border-radius: 18px; border-width: 2px; }
       .game-hud { padding: 8px 10px; gap: 6px; border-radius: 13px; margin-bottom: 10px; }
       .hud-pill { font-size: 0.73rem; padding: 3px 9px; gap: 4px; }
       .q-progress-track { height: 6px; margin-bottom: 10px; }
       .q-type-pill { font-size: 0.74rem; padding: 4px 10px; margin-bottom: 8px; }
-      .q-question-title { font-size: 0.92rem; line-height: 1.55; margin-bottom: 10px; }
-      .opt-btn { font-size: 0.82rem; line-height: 1.48 !important; padding: 9px 11px; gap: 8px; border-radius: 13px; margin-bottom: 8px; }
-      .opt-btn > span:last-child { line-height: 1.48; }
-      .opt-num { width: 25px; height: 25px; font-size: 0.76rem; }
-      .word-chip { font-size: 0.8rem; padding: 6px 10px; }
-      .btn-3d-orange, .btn-3d-green { font-size: 0.82rem; padding: 8px 14px; line-height: 1.4 !important; }
+      .q-question-title { font-size: 1.15rem; line-height: 2.0; margin-bottom: 10px; }
+      .opt-btn { font-size: 1.04rem; line-height: 1.9 !important; padding: 10px 12px; gap: 8px; border-radius: 13px; margin-bottom: 8px; }
+      .opt-btn > span:last-child { line-height: 1.9; }
+      .opt-num { width: 26px; height: 26px; font-size: 0.78rem; }
+      .word-chip { font-size: 1.02rem; line-height: 1.85 !important; padding: 6px 11px; }
+      .btn-3d-orange, .btn-3d-green { font-size: 0.84rem; padding: 8px 14px; line-height: 1.4 !important; }
     }
   </style>
 </head>
 <body>
   <div id="ireadTopBarMount"></div>
 
-  <section class="portal-banner">
-    <div class="container">
-      <img id="quizCoverImg" src="../assets/generated/paper-book-frame.jpg" alt="غلاف القصة" style="width:74px;height:74px;object-fit:cover;border-radius:16px;border:3px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,0.22);" class="mb-2" onerror="this.onerror=null;this.src='../assets/generated/paper-book-frame.jpg';">
-      <div class="mb-1"><span class="badge badge-warning text-white px-3 py-1">📝 اختبار الفهم القرائي الشامل (٣٠ سؤالاً)</span></div>
-      <h1 id="quizStoryTitle">اختبار القصة</h1>
-      <p id="quizStoryMeta" class="mb-0" style="font-size:0.88rem;opacity:0.92;">سؤال تلو الآخر: ١٠ اختيار من متعدد • ١٠ معاني كلمات • ١٠ ترتيب</p>
-    </div>
-  </section>
-
-  <main class="container py-4">
+  <main class="container py-3">
     <div class="row">
       <div class="col-lg-8 mx-auto">
         <div class="act-card" id="quizStage"></div>
@@ -327,8 +310,10 @@
       var allBooks = builtInBooks.concat(Array.isArray(window.KIDZZ_STORIES_8_12) ? window.KIDZZ_STORIES_8_12 : []);
       var book = allBooks.find(function (b) { return b.id === bookId; }) || allBooks[0];
 
-      document.getElementById('quizStoryTitle').textContent = book.title;
-      document.getElementById('quizCoverImg').src = book.cover || '../assets/generated/paper-book-frame.jpg';
+      var qTitleEl = document.getElementById('quizStoryTitle');
+      var qCoverEl = document.getElementById('quizCoverImg');
+      if (qTitleEl) qTitleEl.textContent = book.title;
+      if (qCoverEl) qCoverEl.src = book.cover || '../assets/generated/paper-book-frame.jpg';
 
       var quizObj = window.IREAD_STORY_QUIZ.build30Quiz(book);
       var queue = [];
