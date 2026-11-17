@@ -5,24 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>الألعاب التفاعلية للمهارات – أقرأ بالعربية</title>
   <link rel="icon" href="../favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Noto+Naskh+Arabic:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/awesome5.min.css">
   <link rel="stylesheet" href="../wp-content/themes/kindori/assets/css/theme.css">
   <link rel="stylesheet" href="../assets/mobile-responsive.css?v=20261116_3">
   <style>
-    body { direction: rtl; text-align: right; background: linear-gradient(180deg, #eff6ff 0%, #f8fafc 100%); font-family: Tahoma, Arial, sans-serif; min-height: 100vh; }
+    body {
+      direction: rtl; text-align: right;
+      background: linear-gradient(180deg, #eff6ff 0%, #f8fafc 100%);
+      font-family: 'Noto Naskh Arabic', 'Cairo', Tahoma, Arial, sans-serif;
+      font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+      letter-spacing: 0;
+      min-height: 100vh;
+    }
     .portal-header { background: #fff; box-shadow: 0 4px 18px rgba(0,0,0,0.06); padding: 12px 0; }
     .portal-header img.logo { max-height: 48px; }
-    .portal-banner {
-      background: linear-gradient(120deg, rgba(28, 90, 166, 0.94), rgba(19, 64, 120, 0.94)),
-        url("../wp-content/uploads/2022/06/bg-page-title-copy.webp") center/cover no-repeat;
-      color: #fff; padding: 34px 0; text-align: center;
-    }
-    .portal-banner h1 { color: #fff; font-weight: 800; margin-bottom: 6px; }
     .act-card {
-      background: #fff; border-radius: 24px; padding: 28px;
+      background: #fff; border-radius: 24px; padding: 24px;
       box-shadow: 0 16px 38px rgba(28, 90, 166, 0.12); border: 3px solid #93c5fd;
       position: relative; overflow: hidden; animation: fadeSlideIn 0.35s ease-out;
+    }
+    .act-card h4 {
+      font-family: 'Noto Naskh Arabic', 'Cairo', Arial, sans-serif;
+      font-size: 1.45rem;
+      line-height: 2.2;
+      font-weight: 700;
+      letter-spacing: 0;
     }
     .game-hud {
       display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px;
@@ -44,7 +55,8 @@
     .opt-btn {
       display: flex; align-items: center; gap: 12px; width: 100%; text-align: right;
       padding: 14px 18px; border-radius: 16px; border: 2px solid #cbd5e1; background: #f8fafc;
-      font-size: 1.12rem; font-weight: 800; color: #1e293b; cursor: pointer; margin-bottom: 10px;
+      font-family: 'Noto Naskh Arabic', 'Cairo', Arial, sans-serif;
+      font-size: 1.32rem; line-height: 2.1; font-weight: 700; letter-spacing: 0; color: #1e293b; cursor: pointer; margin-bottom: 10px;
       transition: transform 0.15s, border-color 0.2s, background 0.2s;
     }
     .opt-btn:hover:not(:disabled) { transform: translateY(-2px); border-color: #2563eb; background: #eff6ff; }
@@ -64,7 +76,8 @@
     }
     .order-bank { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 16px; }
     .word-chip {
-      padding: 10px 16px; border-radius: 12px; font-weight: 800; font-size: 1.05rem;
+      padding: 10px 16px; border-radius: 12px; font-weight: 700; font-size: 1.24rem; line-height: 2.0; letter-spacing: 0;
+      font-family: 'Noto Naskh Arabic', 'Cairo', Arial, sans-serif;
       border: 2px solid #f59e0b; background: #fffbeb; color: #92400e; cursor: pointer;
       box-shadow: 0 3px 0 #d97706;
     }
@@ -73,8 +86,9 @@
 
     /* Matching Pairs */
     .match-item {
-      width: 100%; text-align: center; padding: 13px 14px; border-radius: 14px; font-weight: 800;
-      font-size: 1.05rem; border: 2px solid #cbd5e1; background: #fff; color: #0f172a;
+      width: 100%; text-align: center; padding: 13px 14px; border-radius: 14px; font-weight: 700;
+      font-family: 'Noto Naskh Arabic', 'Cairo', Arial, sans-serif;
+      font-size: 1.24rem; line-height: 2.0; letter-spacing: 0; border: 2px solid #cbd5e1; background: #fff; color: #0f172a;
       cursor: pointer; margin-bottom: 10px; transition: all 0.16s;
     }
     .match-item.selected { border-color: #7c3aed; background: #f3e8ff; color: #5b21b6; transform: scale(1.02); }
@@ -95,16 +109,7 @@
   </style>
 </head>
 <body>
-  <section class="portal-banner">
-    <div class="container">
-      <img src="../assets/generated/arcade-hero.jpg" alt="الألعاب التفاعلية" style="width:96px;height:96px;object-fit:cover;border-radius:50%;border:4px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,0.2);" class="mb-2">
-      <div class="mb-2"><span class="badge badge-warning text-white px-3 py-1" id="assignedBadge">📌 المهارة المكلف بها من المعلم</span></div>
-      <h1 id="actTitle">المهارة التفاعلية</h1>
-      <p id="actMeta" class="mb-0"></p>
-    </div>
-  </section>
-
-  <main class="container py-4">
+  <main class="container py-3">
     <div class="row">
       <div class="col-lg-9 mx-auto">
         <!-- Assigned Skill Intro / Single-Question Game Stage -->
@@ -126,27 +131,12 @@
       var activeId = params.get('id') || assignedId;
       var allSkills = (typeof S.getAllSkills === 'function') ? S.getAllSkills() : S.SKILLS;
       var skill = allSkills.find(function (x) { return x.id === activeId; }) || allSkills[0];
-      var isTeacherAssigned = (skill.id === assignedId);
-
-      $('#assignedBadge').text(isTeacherAssigned ? '📌 المهارة الواحدة المكلف بها من المعلم' : '🎮 تحدي مهارة تفاعلية');
-      $('#actTitle').text(skill.title);
-      $('#actMeta').text(skill.cat + ' | الطالب النشط: ' + sname);
 
       var quiz = S.getSkillQuiz(skill.id);
       var qIdx = 0;
       var score = 0;
       var streak = 0;
       var answered = false;
-
-      function speakArabic(text) {
-        if ('speechSynthesis' in window) {
-          window.speechSynthesis.cancel();
-          var u = new SpeechSynthesisUtterance(text);
-          u.lang = 'ar-SA';
-          u.rate = 0.9;
-          window.speechSynthesis.speak(u);
-        }
-      }
 
       function celebrate() {
         var $stage = $('#actStage');
@@ -167,7 +157,7 @@
 
         $s.append(
           '<div class="game-hud">' +
-            '<span class="hud-pill">🎮 تحدي المهارة</span>' +
+            '<span class="hud-pill">🎮 ' + skill.title + '</span>' +
             '<span class="hud-pill">السؤال ' + (qIdx + 1) + ' من ' + quiz.length + '</span>' +
             '<span class="hud-pill">⭐ النتيجة: <span id="hudScore">' + score + '</span></span>' +
             '<span class="hud-pill">🔥 التتابع: <span id="hudStreak">' + streak + '</span></span>' +
@@ -177,9 +167,8 @@
           '</div>' +
           '<div class="d-flex justify-content-between align-items-center flex-wrap mb-2" style="gap:8px;">' +
             '<span class="q-type-pill q-type-' + q.type + '">' + q.typeLabel + '</span>' +
-            '<button type="button" id="speakQBtn" class="btn btn-outline-primary btn-sm font-weight-bold">🔊 استمع للسؤال</button>' +
           '</div>' +
-          '<h4 class="font-weight-bold text-dark my-3" style="line-height:1.7;">' + q.question + '</h4>' +
+          '<h4 class="font-weight-bold text-dark my-3">' + q.question + '</h4>' +
           '<div id="qArea"></div>' +
           '<div id="qMsg" class="mt-3"></div>' +
           '<div class="d-flex justify-content-between align-items-center mt-4">' +
@@ -187,8 +176,6 @@
             '<button type="button" id="nextQBtn" class="btn-3d-green d-none">السؤال التالي ←</button>' +
           '</div>'
         );
-
-        $('#speakQBtn').on('click', function () { speakArabic(q.question); });
 
         var $area = $('#qArea');
 
@@ -205,7 +192,6 @@
             $btn.on('click', function () {
               if (answered) return;
               answered = true;
-              speakArabic(opt);
               $area.find('.opt-btn').prop('disabled', true);
               if (q.type === 'fill') {
                 $('#fillBlankSlot').text(opt).css({ borderBottomColor: i === q.answer ? '#16a34a' : '#dc2626', background: i === q.answer ? '#dcfce7' : '#fee2e2', color: i === q.answer ? '#166534' : '#991b1b' });
@@ -265,7 +251,6 @@
             var $c = $('<button type="button" class="word-chip" data-idx="' + idx + '" style="' + (isSentenceMode ? 'width:100%;text-align:right;' : '') + '">' + tok + '</button>');
             $c.on('click', function () {
               if (answered) return;
-              speakArabic(tok);
               placed.push({ idx: idx, text: tok });
               syncOrder();
             });
@@ -352,7 +337,6 @@
               $colL.find('.left-item').removeClass('selected');
               $(this).addClass('selected');
               leftPick = i;
-              speakArabic(p[0]);
             });
             $colL.append($lBtn);
           });
